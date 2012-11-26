@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="627bbfc0-2ae4-435f-90fd-bc778a987149" name="Default" comment="added some files and fixed typos.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WInS_Demos.iws" afterPath="$PROJECT_DIR$/WInS_Demos.iws" />
+    </list>
+    <ignored path="WInS_Demos.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/classes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/public/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/META-INF/schemas/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/public/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/endorsed/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/net.sf.antcontrib_1.1.0.0_1-0b2/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/org.apache.ant_1.7.1/bin/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/org.apache.ant_1.7.1/etc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/org.apache.ant_1.7.1/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/features/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/org.apache.ant_1.7.1/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/net.sf.antcontrib_1.1.0.0_1-0b2/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/quickstart/resources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/lib/upgrade/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/quickstart/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/ext/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/wlst/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/wlst/modules/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/scripts/wlst/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/scripts/db/oracle/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/scripts/db/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/scripts/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/domains/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/applications/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/bin/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/bin/international/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/ext/jdbc/mysql/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/ext/jdbc/oracle/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/oracle/920/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/ext/jdbc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/db2/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/sybase/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/oracle/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/mysql/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/informix/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/org.apache.ant_1.7.1/etc/checkstyle/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/registry/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/profiles/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/patch_jars/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/backup/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/endorsed/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/deployable-libraries/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/bin/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/quickstart/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/wlst/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/templates/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/profiles/default/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/profiles/default/sys_manifest_classpath/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/utils/config/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/utils/config/10.3/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/PortalConfig/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/en-us/console-search/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/en-us/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/help/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/APP-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/APP-INF/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skeletons/console/js/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/en-us/taskhelp/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/en-us/taskhelp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/lnxia64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/sol/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/win32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/mssql/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/db/oracle/817/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/ext/jdbc/oracle/11g/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/aixppc32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/lnxi686/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/lnx_x86_64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/lnx_s390x/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/include/platform/hp-ux/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/wsee_scj/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/datasources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/javaeedatasources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/application/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/datasourcefactory/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/application/virtualdatasources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/virtualdatasources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/application/datasources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/diagnostics/module/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/diagnostics/image/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/diagnostics/archive/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/classes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/xmlregistry/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/changemgmt/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webapp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/templates/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/session/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/stores/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/safdestination/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/server/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/remotesafcontext/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/safagent/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/producer/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/quota/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/pathservice/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/modules/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/message/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/foreignjms/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/distributeddestinations/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/destinations/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/consumer/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/connection/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/bridgedestination/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/tasks/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/singletonservice/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/work/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/virtualhost/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/machine/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/logfilter/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/server/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/migration/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/cluster/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/jndi/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/domain/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skeletons/console/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skeletons/console/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skins/console/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skins/console/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skins/console/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/markup/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skeletons/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/skins/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/markup/layout/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/markup/lookandfeel/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/markup/menu/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/markup/shell/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/sca/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/quicklinks/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/preferences/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/persistence/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/navtree/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/mbeansearch/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webservice/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/wtc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jcom/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/filet3/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/core/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/connector/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/summary/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/status/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/contentheader/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/diagnostics/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/app/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/layouts/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/ui/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/bridge/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/javascript/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/library/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/mail/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jndi/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jolt/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jdbc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/ejb/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/home/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/help/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/utils/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/images/deployment/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/consolehelp/framework/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/errorhandling/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/uniformdistdestination/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/subscribers/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/bea/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/monitors/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/group/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/providers/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/users/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/utils/JStree/images/j2ee/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skins/wlsconsole/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/utils/JStree/html/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/utils/JStree/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/utils/JStree/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/javascript/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webservice/webservicesecurity/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webservice/webservicesecurity/tokenhandler/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/attribute/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/logfilter/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/general/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/traps/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/realm/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/workcontext/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/policies/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/security/compatibility/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/navtree/JStree/html/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/navtree/JStree/images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/navtree/JStree/images/j2ee/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/navtree/JStree/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/uniformdistdestination/subscribers/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/jms/modules/system/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skeletons/wlsconsole/css/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skeletons/wlsconsole/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skeletons/wlsconsole/js/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/features/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/markup/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skeletons/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/skins/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/features/js/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/markup/layout/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/markup/lookandfeel/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/markup/menu/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/framework/markup/shell/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/bea/console/utils/diagnostics/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/bea/console/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/bea/console/utils/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/com/bea/console/utils/diagnostics/query/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/css/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/templates/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/src/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webservice/webservicesecurity/credentialprovider/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/snmp/proxy/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/PortalConfig/webservice/preDiablo/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/common/nodemanager/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/autodeploy/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/s390x/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/bin/nodemanager/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/security/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/bin/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/console-ext/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/logs/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/startup/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/security/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/nodemanager/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/jms/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/jdbc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/init-info/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/bin/service_migration/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/bin/server_migration/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/deployments/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/diagnostics/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/server/native/linux/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/server/native/linux/i686/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/server/native/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/server/lib/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/sip/server/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/.internal/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/store/default/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/patch_wls1211/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/utils/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/modules/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/security/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/pending/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/tmp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/config/configCache/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/logs/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/cache/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/pending/jdbc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/cache/diagnostics/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/logs/diagnostic_images/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/store/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/conf/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/ldapfiles/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/backup/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/log/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/ldap/replicadata/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/domain_bak/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/data/store/diagnostics/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/unix/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/schema/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/persistence/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/mbeantypes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/console-ext/templates/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/console-ext/autodeploy/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-xa-adp/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-notran-adp51/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-local-adp/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-notran-adp/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-notran-adp51/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-xa-adp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-local-adp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/jms-notran-adp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/console-ext/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/compatibility/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/x86_64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/s3990/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/win/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/i686/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/macosx/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/ia64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/linux/s390/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/win/32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/win/x64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/win/64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/wsee_scj/benchmarks/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/winx64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/win64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/aix-ppc32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/aix-ppc64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/hpux-ipf32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/hpux-ipf64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/hpux-parisc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/hpux-parisc64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/linux-i686/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/linux-ia64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/linux-s390_31/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/linux-s390x/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/linux-x86_64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/solaris-sparc/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/solaris-sparc64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/solaris-x64/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/solaris-x86/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/C/win32/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/native/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/locale/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/quickstart/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/Oracle/Software/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/weblogic-integration-test-example-12.1.1.0/META-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/weblogic-integration-test-example-12.1.1.0/WEB-INF/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/generated-test-sources/test-annotations/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/maven-archiver/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/generated-test-sources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/generated-sources/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/weblogic-integration-test-example-12.1.1.0/WEB-INF/classes/servlets/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/classes/servlets/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/test-classes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/weblogic-integration-test-example-12.1.1.0/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/generated-sources/annotations/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/test-classes/servlets/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/classes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/weblogic-integration-test-example-12.1.1.0/WEB-INF/classes/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/surefire/" />
+    <ignored path="maven-examples/weblogic-integration-test-example/target/" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="WInS_Demos" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="25" selection-start="1021" selection-end="1025" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="61" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="normal.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="26" selection-start="595" selection-end="595" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuditInterceptor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AuditInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.086872585">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AccountBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="13" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-examples/weblogic-integration-test-example/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-examples/weblogic-deployment-example/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-examples/simple-maven-example/pom.xml" />
+        <option value="$PROJECT_DIR$/maven-examples/deployment-profiles-example/pom.xml" />
+        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/pom.xml" />
+        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" />
+        <option value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-listener-solo/pom.xml" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/pom.xml" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven-architecture/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-deployable/pom.xml" />
+        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/pom.xml" />
+        <option value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/pom.xml" />
+        <option value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="keepSourceFolders" value="false" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <option name="groupStructurally" value="true" />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="environment" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="environment" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Profiles" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProfilesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.6" />
+    <option name="skipTests" value="true" />
+    <option name="vmOptions" value="-Xms1g -Xmx1g -XX:MaxPermSize=512m -XX:PermSize=512m" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="60" />
+    <option name="y" value="22" />
+    <option name="width" value="1620" />
+    <option name="height" value="1028" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="maven-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settings.project.maven.runner" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <PyConsoleSettings />
+    </option>
+    <option name="myDjangoConsoleState">
+      <PyConsoleSettings />
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.oracle.example.jms.stuckthreads" />
+      <recent name="com.oracle.example.jms" />
+      <recent name="com.oracle.example.jms.jdbchogger" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper-war/src/main/filter" />
+      <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper-war" />
+      <recent name="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
+      <recent name="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/src/main/webapp/WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
+      <recent name="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-listener/src/main/java/com.oracle.example.wldf.stuck" />
+      <recent name="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
+      <recent name="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst" />
+      <recent name="$PROJECT_DIR$/environment/saf-target-domain/src/main/wlst" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.UOOProducer">
+    <configuration default="false" name="UOOProducer" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.oracle.example.jms.uoo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.oracle.example.jms.uoo.UOOProducer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="uoo-sender" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="weblogic-examples-domain" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="MULTIPROCESS" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="weblogic-examples-domain" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="maven-examples" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
+      <extension name="snapshooter" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.UOOProducer" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/common" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/common" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/common/common-deployable" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/common/common-deployable" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/common/common-deployable/common-ejb" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/common/common-deployable/common-ejb" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/environment" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/environment" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/environment/saf-target-domain" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/environment/saf-target-domain" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/environment/weblogic-examples-domain" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/environment/weblogic-examples-domain" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-event-producer" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-event-producer" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/fast-swap" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/fast-swap" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/maven-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/maven-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/shared-libraries" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/shared-libraries" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/side-by-side-deployment" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/side-by-side-deployment" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-ejb-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-ejb-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-examples-common" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-examples-common" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-mbean-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-mbean-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-rest-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-rest-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-ws-example" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-ws-example" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../workshop-1035" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../workshop-1035" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$/../workshop-1035" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/../workshop-1035" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="627bbfc0-2ae4-435f-90fd-bc778a987149" name="Default" comment="" />
+      <created>1346908700181</created>
+      <updated>1346908700181</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Intellij project files">
+      <created>1346916239107</created>
+      <updated>1346916239108</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fixed project files for coherence web">
+      <created>1346916272103</created>
+      <updated>1346916272103</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new dir">
+      <created>1347144972103</created>
+      <updated>1347144972103</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactored coherence-web-exampels to new dir">
+      <created>1347145126102</created>
+      <updated>1347145126102</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactored coherence-web-exampels to new dir">
+      <created>1347145167101</created>
+      <updated>1347145167101</updated>
+    </task>
+    <task id="LOCAL-00006" summary="completed coherence domain script">
+      <created>1347145299101</created>
+      <updated>1347145299101</updated>
+    </task>
+    <task id="LOCAL-00007" summary="removed unneeded classes">
+      <created>1347146395101</created>
+      <updated>1347146395101</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added OPS resources to weblogic-examples-domain, merged coherence-examples and saf-source to weblogic-examples">
+      <created>1347158422102</created>
+      <updated>1347158422102</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new">
+      <created>1347159265102</created>
+      <updated>1347159265102</updated>
+    </task>
+    <task id="LOCAL-00010" summary="increased default delays">
+      <created>1347159812102</created>
+      <updated>1347159812102</updated>
+    </task>
+    <task id="LOCAL-00011" summary="reveresed order ot managed servers in clustered t3 address">
+      <created>1347159871102</created>
+      <updated>1347159871102</updated>
+    </task>
+    <task id="LOCAL-00012" summary="updated port for coherence examples domain">
+      <created>1347160021102</created>
+      <updated>1347160021102</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactored domain configs">
+      <created>1347208265214</created>
+      <updated>1347208265214</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test commit">
+      <created>1347209243103</created>
+      <updated>1347209243103</updated>
+    </task>
+    <task id="LOCAL-00015" summary="finalized environment scripts">
+      <created>1347212367152</created>
+      <updated>1347212367152</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Increased timeout to 2s">
+      <created>1347216194101</created>
+      <updated>1347216194101</updated>
+    </task>
+    <task id="LOCAL-00017" summary="moved service-migration to end">
+      <created>1347216215101</created>
+      <updated>1347216215101</updated>
+    </task>
+    <task id="LOCAL-00018" summary="removed undeploy-on-clean">
+      <created>1347216239101</created>
+      <updated>1347216239101</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added credentials for undeploy">
+      <created>1347219816109</created>
+      <updated>1347219816109</updated>
+    </task>
+    <task id="LOCAL-00020" summary="reduced memory settings">
+      <created>1347219836102</created>
+      <updated>1347219836102</updated>
+    </task>
+    <task id="LOCAL-00021" summary="moved senders to demo profile">
+      <created>1347227363110</created>
+      <updated>1347227363110</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fixed duplicate profile ID">
+      <created>1347227532101</created>
+      <updated>1347227532101</updated>
+    </task>
+    <task id="LOCAL-00023" summary="updated paths for new workshop name">
+      <created>1347253600102</created>
+      <updated>1347253600102</updated>
+    </task>
+    <task id="LOCAL-00024" summary="updated cluster name">
+      <created>1347253772100</created>
+      <updated>1347253772100</updated>
+    </task>
+    <task id="LOCAL-00025" summary="split message batches into different try/catch">
+      <created>1347257001103</created>
+      <updated>1347257001103</updated>
+    </task>
+    <task id="LOCAL-00026" summary="removed jsf reference, updated coherence to 3.7 from 3.7.0.0">
+      <created>1347258452101</created>
+      <updated>1347258452101</updated>
+    </task>
+    <task id="LOCAL-00027" summary="removed .jar from coherence library name">
+      <created>1347258634101</created>
+      <updated>1347258634101</updated>
+    </task>
+    <task id="LOCAL-00028" summary="removed .jar from coherence library name">
+      <created>1347258651102</created>
+      <updated>1347258651102</updated>
+    </task>
+    <task id="LOCAL-00029" summary="removed javaee-rs">
+      <created>1347259023101</created>
+      <updated>1347259023101</updated>
+    </task>
+    <task id="LOCAL-00030" summary="updated to create tables">
+      <created>1347259065102</created>
+      <updated>1347259065102</updated>
+    </task>
+    <task id="LOCAL-00031" summary="updated demo provile to have test as default goal">
+      <created>1347298606125</created>
+      <updated>1347298606126</updated>
+    </task>
+    <task id="LOCAL-00032" summary="removed 7001 from t3 clustered address">
+      <created>1347299427103</created>
+      <updated>1347299427103</updated>
+    </task>
+    <task id="LOCAL-00033" summary="updated JMS endpoint addresses">
+      <created>1347299520101</created>
+      <updated>1347299520101</updated>
+    </task>
+    <task id="LOCAL-00034" summary="updated JMS endpoint">
+      <created>1347299555101</created>
+      <updated>1347299555101</updated>
+    </task>
+    <task id="LOCAL-00035" summary="updated MDB name and workmanager settings">
+      <created>1347299791101</created>
+      <updated>1347299791101</updated>
+    </task>
+    <task id="LOCAL-00036" summary="added default goal">
+      <created>1347299869101</created>
+      <updated>1347299869101</updated>
+    </task>
+    <task id="LOCAL-00037" summary="updated to stop WebLogic before Coherence">
+      <created>1347300334101</created>
+      <updated>1347300334101</updated>
+    </task>
+    <task id="LOCAL-00038" summary="updated saf domain to one server">
+      <created>1347300943101</created>
+      <updated>1347300943101</updated>
+    </task>
+    <task id="LOCAL-00039" summary="repaired workmanager sizes and association">
+      <created>1347303492102</created>
+      <updated>1347303492102</updated>
+    </task>
+    <task id="LOCAL-00040" summary="updated JNDI names of migration queues">
+      <created>1347306769109</created>
+      <updated>1347306769110</updated>
+    </task>
+    <task id="LOCAL-00041" summary="updated JNDI names and added migration JMS module">
+      <created>1347306786103</created>
+      <updated>1347306786103</updated>
+    </task>
+    <task id="LOCAL-00042" summary="renamed migration modules">
+      <created>1347307095101</created>
+      <updated>1347307095101</updated>
+    </task>
+    <task id="LOCAL-00043" summary="updated to call migration module functino">
+      <created>1347307174101</created>
+      <updated>1347307174101</updated>
+    </task>
+    <task id="LOCAL-00044" summary="removed reference to JSF libs">
+      <created>1347307475101</created>
+      <updated>1347307475101</updated>
+    </task>
+    <task id="LOCAL-00045" summary="updated wait time">
+      <created>1347307664102</created>
+      <updated>1347307664102</updated>
+    </task>
+    <task id="LOCAL-00046" summary="new">
+      <created>1347915822104</created>
+      <updated>1347915822104</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Initial working version">
+      <created>1347916443102</created>
+      <updated>1347916443102</updated>
+    </task>
+    <task id="LOCAL-00048" summary="updated with more modules">
+      <created>1347924716102</created>
+      <updated>1347924716102</updated>
+    </task>
+    <task id="LOCAL-00049" summary="removed">
+      <created>1347927226102</created>
+      <updated>1347927226102</updated>
+    </task>
+    <task id="LOCAL-00050" summary="updated 503 page location&#10;">
+      <created>1347927329102</created>
+      <updated>1347927329102</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added aussie-tripper&#10;">
+      <created>1347983342105</created>
+      <updated>1347983342105</updated>
+    </task>
+    <task id="LOCAL-00052" summary="udpated custom error pages&#10;">
+      <created>1348121846102</created>
+      <updated>1348121846102</updated>
+    </task>
+    <task id="LOCAL-00053" summary="changed order of servers in T3 address">
+      <created>1348121878101</created>
+      <updated>1348121878101</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fixed to ensure proper replciated topic behavior">
+      <created>1348121913103</created>
+      <updated>1348121913103</updated>
+    </task>
+    <task id="LOCAL-00055" summary="removed min threads constraint">
+      <created>1348121935101</created>
+      <updated>1348121935101</updated>
+    </task>
+    <task id="LOCAL-00056" summary="added OPS artifacts">
+      <created>1348121966101</created>
+      <updated>1348121966101</updated>
+    </task>
+    <task id="LOCAL-00057" summary="updated to listen to topic not queue">
+      <created>1348121983101</created>
+      <updated>1348121983102</updated>
+    </task>
+    <task id="LOCAL-00058" summary="udpated package name">
+      <created>1348122028102</created>
+      <updated>1348122028102</updated>
+    </task>
+    <task id="LOCAL-00059" summary="updated annotations for PDT settings">
+      <created>1348122049101</created>
+      <updated>1348122049101</updated>
+    </task>
+    <task id="LOCAL-00060" summary="updates to maven POM files">
+      <created>1348122129101</created>
+      <updated>1348122129102</updated>
+    </task>
+    <task id="LOCAL-00061" summary="udpated \\ to // for linux &amp; all OS">
+      <created>1348122175101</created>
+      <updated>1348122175102</updated>
+    </task>
+    <task id="LOCAL-00062">
+      <created>1348122190101</created>
+      <updated>1348122190102</updated>
+    </task>
+    <task id="LOCAL-00063" summary="intellij project files">
+      <created>1348122355101</created>
+      <updated>1348122355102</updated>
+    </task>
+    <task id="LOCAL-00064" summary="removed Oracle dir from Zip Distro">
+      <created>1348123156103</created>
+      <updated>1348123156103</updated>
+    </task>
+    <task id="LOCAL-00065" summary="helper scripts">
+      <created>1348263157102</created>
+      <updated>1348263157102</updated>
+    </task>
+    <task id="LOCAL-00066" summary="added some files and fixed typos.">
+      <created>1353967629105</created>
+      <updated>1353967629105</updated>
+    </task>
+    <task id="LOCAL-00067" summary="added some files and fixed typos.">
+      <created>1353967737101</created>
+      <updated>1353967737101</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="60" y="22" width="1620" height="1028" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30319735" sideWeight="0.9964564" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32745314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.21940464" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13295165" sideWeight="0.6515987" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24681933" sideWeight="0.6515987" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34840134" sideWeight="0.93603545" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32741398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some files and fixed typos." />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="renamed migration modules" />
+    <MESSAGE value="updated to call migration module functino" />
+    <MESSAGE value="removed reference to JSF libs" />
+    <MESSAGE value="updated wait time" />
+    <MESSAGE value="new" />
+    <MESSAGE value="Initial working version" />
+    <MESSAGE value="updated with more modules" />
+    <MESSAGE value="removed" />
+    <MESSAGE value="updated 503 page location&#10;" />
+    <MESSAGE value="added aussie-tripper&#10;" />
+    <MESSAGE value="udpated custom error pages&#10;" />
+    <MESSAGE value="changed order of servers in T3 address" />
+    <MESSAGE value="fixed to ensure proper replciated topic behavior" />
+    <MESSAGE value="removed min threads constraint" />
+    <MESSAGE value="added OPS artifacts" />
+    <MESSAGE value="updated to listen to topic not queue" />
+    <MESSAGE value="udpated package name" />
+    <MESSAGE value="updated annotations for PDT settings" />
+    <MESSAGE value="updates to maven POM files" />
+    <MESSAGE value="udpated \\ to // for linux &amp; all OS" />
+    <MESSAGE value="intellij project files" />
+    <MESSAGE value="removed Oracle dir from Zip Distro" />
+    <MESSAGE value="helper scripts" />
+    <MESSAGE value="updated default goals on poms" />
+    <MESSAGE value="added some files and fixed typos." />
+  </component>
+  <component name="VssConfiguration">
+    <option name="CLIENT_PATH" value="" />
+    <option name="SRCSAFEINI_PATH" value="" />
+    <option name="USER_NAME" value="" />
+    <option name="PWD" value="" />
+    <CheckoutOptions>
+      <option name="COMMENT" value="" />
+      <option name="DO_NOT_GET_LATEST_VERSION" value="false" />
+      <option name="REPLACE_WRITABLE" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckoutOptions>
+    <CheckinOptions>
+      <option name="COMMENT" value="" />
+      <option name="KEEP_CHECKED_OUT" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckinOptions>
+    <AddOptions>
+      <option name="STORE_ONLY_LATEST_VERSION" value="false" />
+      <option name="CHECK_OUT_IMMEDIATELY" value="false" />
+    </AddOptions>
+    <UndocheckoutOptions>
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="REPLACE_LOCAL_COPY" value="2" />
+      <option name="RECURSIVE" value="false" />
+    </UndocheckoutOptions>
+    <GetOptions>
+      <option name="REPLACE_WRITABLE" value="0" />
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="ANSWER_NEGATIVELY" value="false" />
+      <option name="ANSWER_POSITIVELY" value="false" />
+      <option name="RECURSIVE" value="false" />
+      <option name="VERSION" />
+    </GetOptions>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/common/common-deployable/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="6" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="41" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/veryslow.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-ws-example/pom (2).xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="16" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/WEB-INF/weblogic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.534846" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="25" selection-start="1021" selection-end="1025" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="61" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="595" selection-end="595" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AccountBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AuditInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.086872585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>coherence-web-split-storage:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>workmanager-web-app</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
