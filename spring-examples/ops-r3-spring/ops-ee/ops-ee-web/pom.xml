@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ==================================================================================== -->
+
+  <parent>
+    <groupId>com.oracle.demo.ops</groupId>
+    <artifactId>ops-common-deployable</artifactId>
+    <version>3.0</version>
+    <relativePath>../../ops-common/ops-common-deployable/pom.xml</relativePath>
+  </parent>
+
+  <!-- ==================================================================================== -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oracle.demo.ops</groupId>
+  <artifactId>ops-ee-web</artifactId>
+  <packaging>war</packaging>
+  <version>3.0</version>
+  <name>ops-ee-web</name>
+  <url>https://www.samplecode.oracle.com/sf/projects/oracle-parcel-svc</url>
+
+  <!-- ==================================================================================== -->
+
+  <properties>
+    <path.from.top>oracle-parcel-service/ops-ee/${project.artifactId}</path.from.top>
+  </properties>
+
+  <!-- ==================================================================================== -->
+
+  <scm>
+    <connection>scm:svn:${project.scm.url}</connection>
+    <developerConnection>scm:svn:${project.scm.url}</developerConnection>
+    <url>${ops.scm.url}/${path.from.top}</url>
+  </scm>
+
+  <!-- ==================================================================================== -->
+
+  <repositories>
+    <repository>
+      <id>prime-repo</id>
+      <name>Prime Technology Maven Repository</name>
+      <url>http://repository.prime.com.tr</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+
+  <!-- ==================================================================================== -->
+
+  <build>
+    <defaultGoal>deploy</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.1.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <archive>
+            <manifestEntries>
+              <Extension-Name>${project.artifactId}</Extension-Name>
+
+              <Specification-Title>${project.description}</Specification-Title>
+              <Specification-Version>${project.version}</Specification-Version>
+              <Specification-Vendor>Oracle</Specification-Vendor>
+
+              <Implementation-Title>${project.artifactId}</Implementation-Title>
+              <Implementation-Version>${project.version}.${maven.build.timestamp}
+              </Implementation-Version>
+              <Implementation-Vendor>Oracle</Implementation-Vendor>
+              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+
+              <Extension-List>coherence</Extension-List>
+              <!--<Extension-List>coherence active-cache</Extension-List>-->
+
+              <coherence-Extension-Name>coherence</coherence-Extension-Name>
+              <coherence-Specification-Version>3.7.1.1</coherence-Specification-Version>
+
+              <active-cache-Extension-Name>active-cache</active-cache-Extension-Name>
+              <active-cache-Specification-Version>1.0</active-cache-Specification-Version>
+
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- ==================================================================================== -->
+
+  <dependencies>
+    <dependency>
+      <groupId>org.primefaces</groupId>
+      <artifactId>primefaces</artifactId>
+      <version>2.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.primefaces.themes</groupId>
+      <artifactId>blitzer</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <dependency>
+      <groupId>com.oracle.demo.ops</groupId>
+      <artifactId>ops-domain-services-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle.demo.ops</groupId>
+      <artifactId>ops-services-impl</artifactId>
+      <version>3.0</version>
+      <type>ejb</type>
+    </dependency>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <dependency>
+      <groupId>com.oracle.demo.ops</groupId>
+      <artifactId>ops-util</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle.coherence</groupId>
+      <artifactId>coherence</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>

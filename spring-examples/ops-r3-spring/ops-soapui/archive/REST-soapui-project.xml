@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="REST" soapui-version="3.6.1" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://research.sun.com/wadl/2006/10" name="REST" type="rest" basePath="/ops-rest-ws/rest-api/" definitionUrl="http://10.0.0.51:7101/ops-rest-ws/rest-api/application.wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.0.0.51:7101/ops-rest-ws/rest-api/application.wadl"><con:part><con:url>http://10.0.0.51:7101/ops-rest-ws/rest-api/application.wadl</con:url><con:content><![CDATA[<application xmlns="http://research.sun.com/wadl/2006/10">
+  <doc jersey:generatedBy="Jersey: 1.1.5.1 03/10/2010 02:41 PM" xmlns:jersey="http://jersey.dev.java.net/"/>
+  <resources base="http://10.0.0.51:7101/ops-rest-ws/rest-api/">
+    <resource path="parcelService">
+      <method name="GET" id="getXml">
+        <response>
+          <representation mediaType="application/xml"/>
+        </response>
+      </method>
+      <method name="PUT" id="putXml">
+        <request>
+          <representation mediaType="application/xml"/>
+        </request>
+      </method>
+      <resource path="shipment/test">
+        <method name="GET" id="testShipmentManagerAvailable">
+          <response>
+            <representation mediaType="text/html"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="parcel/test">
+        <method name="GET" id="testParcelManagerAvailable">
+          <response>
+            <representation mediaType="text/html"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/shipment/list">
+        <method name="GET" id="listShipments">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/shipment/track/{id}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="locateShipment">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/parcel/list">
+        <method name="GET" id="listParcels">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/parcel/create">
+        <method name="POST" id="createParcel">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/shipment/create1">
+        <method name="POST" id="createShipmentFromWizard">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/shipment/create">
+        <method name="POST" id="createShipmentFromWizard">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param type="xs:string" style="query" name="to_addressLine1" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_addressLine2" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_city" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_state" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_postalCode" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_addressLine1" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_addressLine2" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_city" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_state" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_postalCode" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_contents" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_weight" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_height" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_width" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_length" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="1/parcel">
+      <resource path="/ping">
+        <method name="GET" id="ping">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/parcelManager">
+        <method name="GET" id="testParcelManagerAvailable">
+          <response>
+            <representation mediaType="text/html"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all">
+        <method name="GET" id="listParcels_default">
+          <response>
+            <representation mediaType="application/xml"/>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all.json">
+        <method name="GET" id="listParcels_json">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all.xml">
+        <method name="GET" id="listParcels_xml">
+          <response>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelById_default">
+          <response>
+            <representation mediaType="application/xml"/>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}.json">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelById_json">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}.xml">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelById_xml">
+          <response>
+            <representation mediaType="text/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}/log">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelLogEvents_default">
+          <response>
+            <representation mediaType="application/xml"/>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}/log.json">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelLogEvents_json">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}/log.xml">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelLogEvents_xml">
+          <response>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="all/log.json">
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getAllParcelLogEvents">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/log/{id}/add.json">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="POST" id="postLogEvent2">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="2/parcel">
+      <resource path="/ping">
+        <method name="GET" id="ping">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/parcelManager">
+        <method name="GET" id="testParcelManagerAvailable">
+          <response>
+            <representation mediaType="text/html"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all{path:.*}">
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="listParcels">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}{path:.*}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelById">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/log/add.json">
+        <method name="PUT" id="putLogEvent">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+        <method name="POST" id="postLogEvent">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/log/{id}/add.json">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="POST" id="postLogEvent2">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="log/{id}{path:.*}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getParcelLogEvents_default">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="log/list.json">
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getAllParcelLogEvents">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="2/shipment">
+      <method name="PUT" id="putJSON">
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <method name="POST" id="postJSON">
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <resource path="/all{path:.*}">
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="listShipments">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="text/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}{path:.*}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <param type="xs:string" style="template" name="path" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getShipmentById">
+          <response>
+            <representation mediaType="application/json"/>
+            <representation mediaType="text/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/prototype.json">
+        <method name="GET" id="getShipmentPrototype">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+    <resource path="1/shipment">
+      <method name="PUT" id="putJSON">
+        <request>
+          <representation mediaType="application/json"/>
+        </request>
+        <response>
+          <representation mediaType="application/json"/>
+        </response>
+      </method>
+      <resource path="/all">
+        <method name="GET" id="listShipments_default">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all.json">
+        <method name="GET" id="listShipments_json">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/all.xml">
+        <method name="GET" id="listShipments_xml">
+          <response>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getShipmentById_default">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}.json">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getShipmentById_json">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="{id}.xml">
+        <param type="xs:int" style="template" name="id" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <method name="GET" id="getShipmentById_xml">
+          <response>
+            <representation mediaType="application/xml"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/create">
+        <method name="POST" id="postJSON">
+          <request>
+            <representation mediaType="application/json"/>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+        <method name="POST" id="createShipment">
+          <request>
+            <representation mediaType="application/x-www-form-urlencoded">
+              <param type="xs:string" style="query" name="to_addressLine1" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_addressLine2" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_city" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_state" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="to_postalCode" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_addressLine1" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_addressLine2" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_city" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_state" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="from_postalCode" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_contents" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_weight" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_height" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_width" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+              <param type="xs:string" style="query" name="parcel_length" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+            </representation>
+          </request>
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+      <resource path="/prototype.json">
+        <method name="GET" id="getShipmentPrototype">
+          <response>
+            <representation mediaType="application/json"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://research.sun.com/wadl/2006/10</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:endpoint>http://adc2180341.us.oracle.com:7101</con:endpoint></con:endpoints><con:resource name="2/shipment" path="2/shipment"><con:settings/><con:parameters/><con:resource name="/all{path:.*}" path="/all{path:.*}"><con:settings/><con:parameters><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - listShipments" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}{path:.*}" path="{id}{path:.*}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getShipmentById" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>text/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/prototype.json" path="/prototype.json"><con:settings/><con:parameters/><con:method name="GET - getShipmentPrototype" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:method name="PUT - putJSON" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST - postJSON" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="1/shipment" path="1/shipment"><con:settings/><con:parameters/><con:resource name="/all" path="/all"><con:settings/><con:parameters/><con:method name="GET - listShipments_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/all.json" path="/all.json"><con:settings/><con:parameters/><con:method name="GET - listShipments_json" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/all.xml" path="/all.xml"><con:settings/><con:parameters/><con:method name="GET - listShipments_xml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}" path="{id}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getShipmentById_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="1087" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="{id}.json" path="{id}.json"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getShipmentById_json" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}.xml" path="{id}.xml"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getShipmentById_xml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/create" path="/create"><con:settings/><con:parameters/><con:method name="POST - postJSON" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST - createShipment" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/prototype.json" path="/prototype.json"><con:settings/><con:parameters/><con:method name="GET - getShipmentPrototype" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:method name="PUT - putJSON" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="2/parcel" path="2/parcel"><con:settings/><con:parameters/><con:resource name="/ping" path="/ping"><con:settings/><con:parameters/><con:method name="GET - ping" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/parcelManager" path="/parcelManager"><con:settings/><con:parameters/><con:method name="GET - testParcelManagerAvailable" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/all{path:.*}" path="/all{path:.*}"><con:settings/><con:parameters><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - listParcels" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}{path:.*}" path="{id}{path:.*}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelById" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/log/add.json" path="/log/add.json"><con:settings/><con:parameters/><con:method name="PUT - putLogEvent" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method><con:method name="POST - postLogEvent" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/log/{id}/add.json" path="/log/{id}/add.json"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - postLogEvent2" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="log/{id}{path:.*}" path="log/{id}{path:.*}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelLogEvents_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="log/list.json" path="log/list.json"><con:settings/><con:parameters><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getAllParcelLogEvents" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:resource><con:resource name="parcelService" path="parcelService"><con:settings/><con:parameters/><con:resource name="shipment/test" path="shipment/test"><con:settings/><con:parameters/><con:method name="GET - testShipmentManagerAvailable" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="parcel/test" path="parcel/test"><con:settings/><con:parameters/><con:method name="GET - testParcelManagerAvailable" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/shipment/list" path="/shipment/list"><con:settings/><con:parameters/><con:method name="GET - listShipments" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/shipment/track/{id}" path="/shipment/track/{id}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - locateShipment" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/parcel/list" path="/parcel/list"><con:settings/><con:parameters/><con:method name="GET - listParcels" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/parcel/create" path="/parcel/create"><con:settings/><con:parameters/><con:method name="POST - createParcel" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/shipment/create1" path="/shipment/create1"><con:settings/><con:parameters/><con:method name="POST - createShipmentFromWizard" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/shipment/create" path="/shipment/create"><con:settings/><con:parameters/><con:method name="POST - createShipmentFromWizard" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:method name="GET - getXml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method><con:method name="PUT - putXml" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="1/parcel" path="1/parcel"><con:settings/><con:parameters/><con:resource name="/ping" path="/ping"><con:settings/><con:parameters/><con:method name="GET - ping" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/parcelManager" path="/parcelManager"><con:settings/><con:parameters/><con:method name="GET - testParcelManagerAvailable" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/html</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/all" path="/all"><con:settings/><con:parameters/><con:method name="GET - listParcels_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/all.json" path="/all.json"><con:settings/><con:parameters/><con:method name="GET - listParcels_json" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/all.xml" path="/all.xml"><con:settings/><con:parameters/><con:method name="GET - listParcels_xml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}" path="{id}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelById_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}.json" path="{id}.json"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelById_json" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}.xml" path="{id}.xml"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelById_xml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>text/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}/log" path="{id}/log"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelLogEvents_default" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="{id}/log.json" path="{id}/log.json"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelLogEvents_json" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="10" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource><con:resource name="{id}/log.xml" path="{id}/log.xml"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getParcelLogEvents_xml" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="all/log.json" path="all/log.json"><con:settings/><con:parameters><con:parameter><con:name>path</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET - getAllParcelLogEvents" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1"><con:settings/><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:parameters/></con:request></con:method></con:resource><con:resource name="/log/{id}/add.json" path="/log/{id}/add.json"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:int</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="POST - postLogEvent2" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/json</con:mediaType><con:params/><con:element xsi:nil="true"/><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request> {
+      "parcelId": 10,
+      "date": null,
+      "parcelStatus": "BILLING_INFO_RECEIVED",
+      "location": "1",
+      "message": "Billing information Received",
+      "createdDate": 1299784146467,
+      "modifiedDate": 1299784146467
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="10" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request></con:method></con:resource></con:resource></con:interface><con:testSuite name="CreateSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create" searchProperties="true" id="7cdb6384-4d8f-47aa-9e9d-2fa560f4d4ae"><con:settings/><con:testStep type="groovy" name="Generate ExternalReferenceId"><con:settings/><con:config><script>def externalRefId = "${java.util.UUID.randomUUID()}";
+</script></con:config></con:testStep><con:testStep type="transfer" name="Transfer ExternalReferenceId"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>externalIdTransfer</con:name><con:sourceType>result</con:sourceType><con:sourceStep>Generate ExternalReferenceId</con:sourceStep><con:targetType>ExternalReferenceId</con:targetType><con:targetStep>RequestProperties</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="properties" name="RequestProperties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ExternalReferenceId</con:name><con:value>1447b3db-e761-486e-b7df-5bf7d5ad05a1</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="CreateShipment"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/1/shipment" methodName="PUT - putJSON" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CreateShipment" mediaType="application/json" postQueryString="false" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+   "externalReferenceId": "${RequestProperties#ExternalReferenceId}",
+   "toAddress":    {
+      "addressee": "Jeff West",
+      "addressLine1": "123 Main St",
+      "addressLine2": null,
+      "city": "Los Angeles",
+      "state": "CA",
+      "postalCode": "90036"
+   },
+   "fromAddress":    {
+      "addressee": "Larry Ellison",
+      "addressLine1": "Oracle HQ",
+      "addressLine2": null,
+      "city": "Redwood Shores",
+      "state": "CA",
+      "postalCode": "12345"
+   },
+   "shippingServiceName": null,
+   "parcels":    [
+            {
+         "contents": "stuff",
+         "height": 1,
+         "width": 2,
+         "length": 3,
+         "weight": 4,
+         "parcelStatus": "BILLING_INFO_RECEIVED"
+      },
+            {
+         "contents": "more stuff",
+         "height": 1,
+         "width": 2,
+         "length": 3,
+         "weight": 4,
+         "parcelStatus": "BILLING_INFO_RECEIVED"
+      }
+   ]
+}</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="transfer" name="Transfer Response Properties"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" transferToAll="false" ignoreEmpty="false" transferChildNodes="false" useXQuery="false"><con:name>id</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>CreateShipment</con:sourceStep><con:sourcePath>declare namespace ns1='http://10.0.0.51/ops-rest-ws/rest-api/1/shipment';
+//ns1:Response[1]/ns1:id[1]
+</con:sourcePath><con:targetType>Id</con:targetType><con:targetStep>CreateShipmentResponse</con:targetStep><con:targetPath/></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>parcelId-1</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>CreateShipment</con:sourceStep><con:sourcePath>declare namespace ns1='http://10.0.0.51/ops-rest-ws/rest-api/1/shipment';
+//ns1:Response[1]/ns1:parcels[1]/ns1:e[1]/ns1:id[1]</con:sourcePath><con:targetType>ParcelId-1</con:targetType><con:targetStep>CreateShipmentResponse</con:targetStep><con:targetPath/></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" disabled="false" entitize="false" ignoreEmpty="false" transferChildNodes="false" transferToAll="false" useXQuery="false"><con:name>parcelId-2</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>CreateShipment</con:sourceStep><con:sourcePath>declare namespace ns1='http://10.0.0.51/ops-rest-ws/rest-api/1/shipment';
+//ns1:Response[1]/ns1:parcels[1]/ns1:e[2]/ns1:id[1]</con:sourcePath><con:targetType>ParcelId-2</con:targetType><con:targetStep>CreateShipmentResponse</con:targetStep><con:targetPath xsi:nil="true"/></con:transfers></con:config></con:testStep><con:testStep type="properties" name="CreateShipmentResponse"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Id</con:name><con:value>26151</con:value></con:property><con:property><con:name>ParcelId-1</con:name><con:value>26153</con:value></con:property><con:property><con:name>ParcelId-2</con:name><con:value>26154</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="GetShipment-1"><con:settings/><con:config service="REST" methodName="GET - getShipmentById_json" resourcePath="/ops-rest-ws/rest-api/1/shipment/{id}.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetShipment-1" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#Id}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetShipment-2"><con:settings/><con:config service="REST" methodName="GET - getShipmentById_json" resourcePath="/ops-rest-ws/rest-api/1/shipment/{id}.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetShipment-2" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#Id}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-BILLING_INFO_RECEIVED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-BILLING_INFO_RECEIVED" mediaType="application/json" postQueryString="false" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "BILLING_INFO_RECEIVED",
+      "location": "1",
+      "message": "Billing information Received"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-1"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-1" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-PARCEL_RECEIVED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-PARCEL_RECEIVED" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "PARCEL_RECEIVED",
+      "location": "1",
+      "message": "Parcel Received at Station"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-2"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-2" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-IN_TRANSIT-1"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-IN_TRANSIT-1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "1",
+      "message": "In Transit from location 1"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-3"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-3" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-4"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-4" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-IN_TRANSIT-2"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-IN_TRANSIT-2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "2",
+      "message": "In Transit from location 2"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-5"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-5" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-6"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-6" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-IN_TRANSIT-3"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-IN_TRANSIT-3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "3",
+      "message": "In Transit from location 3"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-7"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-7" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-8"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-8" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-1-DELIVERED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-1-DELIVERED" mediaType="application/json" postQueryString="false" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "DELIVERED",
+      "location": "4",
+      "message": "Parcel Delivered!"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-1-9"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-1-9" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="delay" name="Delay 2s"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-BILLING_INFO_RECEIVED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-BILLING_INFO_RECEIVED" mediaType="application/json" postQueryString="false" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "BILLING_INFO_RECEIVED",
+      "location": "1",
+      "message": "Billing information Received"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-1"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-1" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-PARCEL_RECEIVED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-PARCEL_RECEIVED" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "PARCEL_RECEIVED",
+      "location": "1",
+      "message": "Parcel Received at Station"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-2"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-2" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-IN_TRANSIT-1"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-IN_TRANSIT-1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "1",
+      "message": "In Transit from location 1"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-3"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-3" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-4"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-4" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-IN_TRANSIT-2"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-IN_TRANSIT-2" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "2",
+      "message": "In Transit from location 2"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-5"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-5" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-6"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-6" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-IN_TRANSIT-3"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-IN_TRANSIT-3" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "IN_TRANSIT",
+      "location": "3",
+      "message": "In Transit from location 3"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-7"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-7" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-8"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-8" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ParcelEvent-2-DELIVERED"><con:settings/><con:config service="REST" resourcePath="/ops-rest-ws/rest-api/2/parcel/log/{id}/add.json" methodName="POST - postLogEvent2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ParcelEvent-2-DELIVERED" mediaType="application/json" postQueryString="false" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request>{
+      "parcelStatus": "DELIVERED",
+      "location": "4",
+      "message": "Parcel Delivered!"
+   }</con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#parcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetParcelLog-2-9"><con:settings/><con:config service="REST" methodName="GET - getParcelLogEvents_json" resourcePath="/ops-rest-ws/rest-api/1/parcel/{id}/log.json" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetParcelLog-2-9" mediaType="application/xml" accept="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="id" value="${CreateShipmentResponse#ParcelId-1}" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:loadTest name="JAX-RS Load Test"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>15</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>300</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>500</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval><con:reportParameters/></con:loadTest><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting></con:soapui-project>

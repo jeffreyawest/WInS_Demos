@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
+  <component name="ArtifactManager">
+    <artifact type="war" name="ops-spring-rest:war">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-rest/target</output-path>
+      <root id="archive" name="ops-spring-rest-3.0.war">
+        <element id="artifact" artifact-name="ops-spring-rest:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-spring-rest:war exploded">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-rest/target/ops-spring-rest-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-spring-rest/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-spring-rest" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jpa:2.0.8" />
+            <element id="library" level="project" name="Maven: log4j:log4j:1.2.12" />
+            <element id="library" level="project" name="Maven: logkit:logkit:1.0.1" />
+            <element id="library" level="project" name="Maven: avalon-framework:avalon-framework:4.1.3" />
+            <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.3" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-dao:2.0.8" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:2.0.8" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework.ws:spring-ws-core:2.0.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework.ws:spring-xml:2.0.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-oxm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.6.1" />
+            <element id="library" level="project" name="Maven: cglib:cglib:2.2.2" />
+            <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+            <element id="archive" name="ops-spring-services-3.0.jar">
+              <element id="module-output" name="ops-spring-services" />
+            </element>
+            <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-event-handlers-3.0.jar">
+              <element id="module-output" name="ops-event-handlers" />
+            </element>
+            <element id="library" level="project" name="Maven: com.oracle.weblogic:weblogic-spring:12.1.1.0" />
+            <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
+            <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
+            <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-jax-ws-shipment:war">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-shipment/target</output-path>
+      <root id="archive" name="ops-jax-ws-shipment-3.0.war">
+        <element id="artifact" artifact-name="ops-jax-ws-shipment:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-jax-ws-shipment:war exploded">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-shipment/target/ops-jax-ws-shipment-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-jax-ws-shipment/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-jax-ws-shipment" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-services-impl-3.0.jar">
+              <element id="module-output" name="ops-services-impl" />
+            </element>
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-services-impl:ejb">
+      <output-path>$PROJECT_DIR$/ops-services/ops-services-impl/target</output-path>
+      <root id="archive" name="ops-services-impl-3.0.jar">
+        <element id="artifact" artifact-name="ops-services-impl:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-services-impl:ejb exploded">
+      <output-path>$PROJECT_DIR$/ops-services/ops-services-impl/target/ops-services-impl-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-services-impl/ejb/EJB" />
+        <element id="module-output" name="ops-services-impl" />
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-ee-rest:war">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-rest/target</output-path>
+      <root id="archive" name="ops-ee-rest-3.0.war">
+        <element id="artifact" artifact-name="ops-ee-rest:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-ee-rest:war exploded">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-rest/target/ops-ee-rest-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-ee-rest/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-ee-rest" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-ee-web:war">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-web/target</output-path>
+      <root id="archive" name="ops-ee-web-3.0.war">
+        <element id="artifact" artifact-name="ops-ee-web:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-ee-web:war exploded">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-web/target/ops-ee-web-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-ee-web/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-ee-web" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.primefaces:primefaces:2.2" />
+            <element id="library" level="project" name="Maven: org.primefaces.themes:blitzer:1.0.0" />
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-services-impl-3.0.jar">
+              <element id="module-output" name="ops-services-impl" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-domain-services-tlg:ejb">
+      <output-path>$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/target</output-path>
+      <root id="archive" name="ops-domain-services-tlg-3.0.jar">
+        <element id="artifact" artifact-name="ops-domain-services-tlg:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-domain-services-tlg:ejb exploded">
+      <output-path>$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/target/ops-domain-services-tlg-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-domain-services-tlg/ejb/EJB" />
+        <element id="module-output" name="ops-domain-services-tlg" />
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-jax-ws-parcel:war">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-parcel/target</output-path>
+      <root id="archive" name="ops-jax-ws-parcel-3.0.war">
+        <element id="artifact" artifact-name="ops-jax-ws-parcel:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-jax-ws-parcel:war exploded">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-parcel/target/ops-jax-ws-parcel-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-jax-ws-parcel/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-jax-ws-parcel" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-services-impl-3.0.jar">
+              <element id="module-output" name="ops-services-impl" />
+            </element>
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-spring-ws:war">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-ws/target</output-path>
+      <root id="archive" name="ops-spring-ws-3.0.war">
+        <element id="artifact" artifact-name="ops-spring-ws:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-spring-ws:war exploded">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-ws/target/ops-spring-ws-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-spring-ws/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-spring-ws" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework.ws:spring-oxm:1.5.9" />
+            <element id="library" level="project" name="Maven: org.springframework.ws:spring-xml:2.0.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework.ws:spring-ws-core:2.0.2.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-oxm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.6.1" />
+            <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-spring-services-3.0.jar">
+              <element id="module-output" name="ops-spring-services" />
+            </element>
+            <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.5.RELEASE" />
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+            <element id="archive" name="ops-event-handlers-3.0.jar">
+              <element id="module-output" name="ops-event-handlers" />
+            </element>
+            <element id="library" level="project" name="Maven: com.oracle.weblogic:weblogic-spring:12.1.1.0" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-domain-services-impl:ejb">
+      <output-path>$PROJECT_DIR$/ops-domain/ops-domain-services-impl/target</output-path>
+      <root id="archive" name="ops-domain-services-impl-3.0.jar">
+        <element id="artifact" artifact-name="ops-domain-services-impl:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-domain-services-impl:ejb exploded">
+      <output-path>$PROJECT_DIR$/ops-domain/ops-domain-services-impl/target/ops-domain-services-impl-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-domain-services-impl/ejb/EJB" />
+        <element id="module-output" name="ops-domain-services-impl" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-domain-services-api:ejb">
+      <output-path>$PROJECT_DIR$/ops-domain/ops-domain-services-api/target</output-path>
+      <root id="archive" name="ops-domain-services-api-3.0.jar">
+        <element id="artifact" artifact-name="ops-domain-services-api:ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-domain-services-api:ejb exploded">
+      <output-path>$PROJECT_DIR$/ops-domain/ops-domain-services-api/target/ops-domain-services-api-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-domain-services-api/ejb/EJB" />
+        <element id="module-output" name="ops-domain-services-api" />
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-spring-jms:war">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-jms/target</output-path>
+      <root id="archive" name="ops-spring-jms-3.0.war">
+        <element id="artifact" artifact-name="ops-spring-jms:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-spring-jms:war exploded">
+      <output-path>$PROJECT_DIR$/ops-spring/ops-spring-jms/target/ops-spring-jms-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-spring-jms/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-spring-jms" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework:spring-jms:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.1" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:3.0.5.RELEASE" />
+            <element id="archive" name="ops-spring-services-3.0.jar">
+              <element id="module-output" name="ops-spring-services" />
+            </element>
+            <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-event-handlers-3.0.jar">
+              <element id="module-output" name="ops-event-handlers" />
+            </element>
+            <element id="library" level="project" name="Maven: com.oracle.weblogic:weblogic-spring:12.1.1.0" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-ee-message-driven:war">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-message-driven/target</output-path>
+      <root id="archive" name="ops-ee-message-driven-3.0.war">
+        <element id="artifact" artifact-name="ops-ee-message-driven:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-ee-message-driven:war exploded">
+      <output-path>$PROJECT_DIR$/ops-ee/ops-ee-message-driven/target/ops-ee-message-driven-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-ee-message-driven/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-ee-message-driven" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="archive" name="ops-services-impl-3.0.jar">
+              <element id="module-output" name="ops-services-impl" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api" />
+            </element>
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api" />
+            </element>
+            <element id="archive" name="ops-event-handlers-3.0.jar">
+              <element id="module-output" name="ops-event-handlers" />
+            </element>
+            <element id="archive" name="ops-domain-model-3.0.jar">
+              <element id="module-output" name="ops-domain-model" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+  </component>
+  <component name="CCaseConfig">
+    <option name="checkoutReserved" value="false" />
+    <option name="markExternalChangeAsUpToDate" value="true" />
+    <option name="checkInUseHijack" value="true" />
+    <option name="useUcmModel" value="true" />
+    <option name="synchOutside" value="false" />
+    <option name="isHistoryResticted" value="true" />
+    <option name="useIdenticalSwitch" value="true" />
+    <option name="synchActivitiesOnRefresh" value="true" />
+    <option name="lastScr" value="" />
+    <option name="scrTextFileName" value="" />
+    <option name="historyRevisionsNumber" value="4" />
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="?*.properties" />
+      <entry name="?*.xml" />
+      <entry name="?*.gif" />
+      <entry name="?*.png" />
+      <entry name="?*.jpeg" />
+      <entry name="?*.jpg" />
+      <entry name="?*.html" />
+      <entry name="?*.dtd" />
+      <entry name="?*.tld" />
+      <entry name="?*.ftl" />
+    </wildcardResourcePatterns>
+    <annotationProcessing enabled="false" useClasspath="true" />
+  </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg" />
+    <file type="ejb" url="file://$PROJECT_DIR$/ops-domain/ops-domain-services-api" />
+    <file type="ejb" url="file://$PROJECT_DIR$/ops-domain/ops-domain-services-impl" />
+    <file type="ejb" url="file://$PROJECT_DIR$/ops-services/ops-services-impl" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-ee/ops-ee-message-driven" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-ee/ops-ee-rest" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-ee/ops-ee-web" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-parcel" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-shipment" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-spring/ops-spring-jms" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-spring/ops-spring-rest" />
+    <file type="web" url="file://$PROJECT_DIR$/ops-spring/ops-spring-ws" />
+  </component>
+  <component name="IdProvider" IDEtalkID="A36441139076C09B27D261E9340993AD" />
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.6" />
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" value="" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+  </component>
+  <component name="JsfProjectComponent">
+    <option name="faceletsSupport" value="ENABLED" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="activeProfiles">
+      <list>
+        <option value="enable-eclipselink" />
+        <option value="deploy-vbox" />
+        <option value="enable-weblogic-deployment" />
+      </list>
+    </option>
+  </component>
+  <component name="ModuleEditorState">
+    <option name="LAST_EDITED_MODULE_NAME" />
+    <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="Palette2">
+    <group name="Swing">
+      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+      </item>
+      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+        <initial-values>
+          <property name="text" value="Button" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="RadioButton" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="CheckBox" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+        <initial-values>
+          <property name="text" value="Label" />
+        </initial-values>
+      </item>
+      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+          <preferred-size width="150" height="-1" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+          <preferred-size width="150" height="50" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+          <preferred-size width="200" height="200" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+      </item>
+      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+      </item>
+      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+          <preferred-size width="-1" height="20" />
+        </default-constraints>
+      </item>
+      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+      </item>
+      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+      </item>
+    </group>
+  </component>
+  <component name="ProjectCodeStyleSettingsManager">
+    <option name="PER_PROJECT_SETTINGS">
+      <value>
+        <XML>
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
+        </XML>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state />
+    </entry>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ops-cache/ops-cache.iml" filepath="$PROJECT_DIR$/ops-cache/ops-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-cache-config/ops-cache-config.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-cache-config/ops-cache-config.iml" group="ops-domain-tlg and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common.iml" filepath="$PROJECT_DIR$/ops-common/ops-common.iml" group="ops-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-deployable/ops-common-deployable.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-deployable/ops-common-deployable.iml" group="ops-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-ejb/ops-common-ejb.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-ejb/ops-common-ejb.iml" group="ops-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-spring/ops-common-spring.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-spring/ops-common-spring.iml" group="ops-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-ws/ops-common-ws.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-ws/ops-common-ws.iml" group="ops-common and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-core/ops-core.iml" filepath="$PROJECT_DIR$/ops-core/ops-core.iml" group="ops-core and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain.iml" group="ops-domain and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-model/ops-domain-model.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-model/ops-domain-model.iml" group="ops-domain and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-model-tlg/ops-domain-model-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-model-tlg/ops-domain-model-tlg.iml" group="ops-domain-tlg and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" group="ops-domain and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" group="ops-domain and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/ops-domain-services-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/ops-domain-services-tlg.iml" group="ops-domain-tlg and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-tlg.iml" group="ops-domain-tlg and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee.iml" group="ops-ee and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" group="ops-ee and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-rest/ops-ee-rest.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-rest/ops-ee-rest.iml" group="ops-ee and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-web/ops-ee-web.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-web/ops-ee-web.iml" group="ops-ee and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-ee-ws.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-ee-ws.iml" group="ops-ee and modules/ops-ee-ws and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-core/ops-event-handlers/ops-event-handlers.iml" filepath="$PROJECT_DIR$/ops-core/ops-event-handlers/ops-event-handlers.iml" group="ops-core and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" group="ops-ee and modules/ops-ee-ws and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" group="ops-ee and modules/ops-ee-ws and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services.iml" filepath="$PROJECT_DIR$/ops-services/ops-services.iml" group="ops-services and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services-api/ops-services-api.iml" filepath="$PROJECT_DIR$/ops-services/ops-services-api/ops-services-api.iml" group="ops-services and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services-impl/ops-services-impl.iml" filepath="$PROJECT_DIR$/ops-services/ops-services-impl/ops-services-impl.iml" group="ops-services and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-shipment-notifier/ops-shipment-notifier.iml" filepath="$PROJECT_DIR$/ops-shipment-notifier/ops-shipment-notifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-jms/ops-spring-jms.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-jms/ops-spring-jms.iml" group="ops-spring and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-rest/ops-spring-rest.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-rest/ops-spring-rest.iml" group="ops-spring and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-services/ops-spring-services.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-services/ops-spring-services.iml" group="ops-spring and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-ws/ops-spring-ws.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-ws/ops-spring-ws.iml" group="ops-spring and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-core/ops-util/ops-util.iml" filepath="$PROJECT_DIR$/ops-core/ops-util/ops-util.iml" group="ops-core and modules" />
+      <module fileurl="file://$PROJECT_DIR$/ops-webapp/ops-webapp.iml" filepath="$PROJECT_DIR$/ops-webapp/ops-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ops-wldf/ops-wldf.iml" filepath="$PROJECT_DIR$/ops-wldf/ops-wldf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oracle-parcel-service.iml" filepath="$PROJECT_DIR$/oracle-parcel-service.iml" />
+    </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="StarteamConfiguration">
+    <option name="SERVER" value="" />
+    <option name="PORT" value="49201" />
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="PROJECT" value="" />
+    <option name="VIEW" value="" />
+    <option name="ALTERNATIVE_WORKING_PATH" value="" />
+    <option name="LOCK_ON_CHECKOUT" value="false" />
+    <option name="UNLOCK_ON_CHECKIN" value="false" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://svn.java.net/svn/oracle-pacel-svc~ops-r3-ee6/oracle-parcel-service-r3" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://svn.java.net/svn/oracle-pacel-svc~ops-r3-ee6/oracle-parcel-service-r3" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="svn" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="libraryTable">
+    <library name="Maven: aopalliance:aopalliance:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: asm:asm:3.3.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.3.1/asm-3.3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.3.1/asm-3.3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.3.1/asm-3.3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: avalon-framework:avalon-framework:4.1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/avalon-framework/avalon-framework/4.1.3/avalon-framework-4.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/avalon-framework/avalon-framework/4.1.3/avalon-framework-4.1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/avalon-framework/avalon-framework/4.1.3/avalon-framework-4.1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: cglib:cglib:2.2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib/2.2.2/cglib-2.2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib/2.2.2/cglib-2.2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib/2.2.2/cglib-2.2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.oracle.coherence:coherence:3.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/coherence/coherence/3.7/coherence-3.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/coherence/coherence/3.7/coherence-3.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/coherence/coherence/3.7/coherence-3.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.oracle.weblogic:weblogic-spring:10.3.5">
+      <CLASSES>
+        <root url="jar://C:/wls1211/wlserver_12.1/server/lib/weblogic-spring.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic-spring/10.3.5/weblogic-spring-10.3.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic-spring/10.3.5/weblogic-spring-10.3.5-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.oracle.weblogic:weblogic-spring:12.1.1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic-spring/12.1.1.0/weblogic-spring-12.1.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic-spring/12.1.1.0/weblogic-spring-12.1.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic-spring/12.1.1.0/weblogic-spring-12.1.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.oracle.weblogic:wljmsclient:10.3.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/wljmsclient/10.3.4/wljmsclient-10.3.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/wljmsclient/10.3.4/wljmsclient-10.3.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/wljmsclient/10.3.4/wljmsclient-10.3.4-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.jersey:jersey-bundle:1.1.5.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.1.5.1/jersey-bundle-1.1.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.1.5.1/jersey-bundle-1.1.5.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-bundle/1.1.5.1/jersey-bundle-1.1.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.jersey:jersey-core:1.1.5.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.1.5.1/jersey-core-1.1.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.1.5.1/jersey-core-1.1.5.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.1.5.1/jersey-core-1.1.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.jersey:jersey-json:1.1.5.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-json/1.1.5.1/jersey-json-1.1.5.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-json/1.1.5.1/jersey-json-1.1.5.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-json/1.1.5.1/jersey-json-1.1.5.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.org.apache.xml.internal:resolver:20050927">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/org/apache/xml/internal/resolver/20050927/resolver-20050927-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.bind:jaxb-impl:2.1.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.12/jaxb-impl-2.1.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.bind:jaxb-impl:2.1.6">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/jaxb-impl/2.1.6/jaxb-impl-2.1.6-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.messaging.saaj:saaj-impl:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/messaging/saaj/saaj-impl/1.3/saaj-impl-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.stream.buffer:streambuffer:0.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/buffer/streambuffer/0.7/streambuffer-0.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.stream:sjsxp:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/stream/sjsxp/1.0/sjsxp-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.xml.ws:jaxws-rt:2.1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/ws/jaxws-rt/2.1.3/jaxws-rt-2.1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-codec:commons-codec:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.2/commons-codec-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.2/commons-codec-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.2/commons-codec-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-httpclient:commons-httpclient:3.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-logging:commons-logging:1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1/commons-logging-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1/commons-logging-1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1/commons-logging-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: commons-logging:commons-logging:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.activation:activation:1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.servlet:servlet-api:2.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.3/servlet-api-2.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.ws.rs:jsr311-api:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.bind:jaxb-api:2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.soap:saaj-api:1.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/soap/saaj-api/1.3/saaj-api-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/soap/saaj-api/1.3/saaj-api-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/soap/saaj-api/1.3/saaj-api-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.stream:stax-api:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0/stax-api-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0/stax-api-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0/stax-api-1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.stream:stax-api:1.0-2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax.xml.ws:jaxws-api:2.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/xml/ws/jaxws-api/2.1/jaxws-api-2.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: javax:javaee-api:6.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/6.0/javaee-api-6.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/6.0/javaee-api-6.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/javaee-api/6.0/javaee-api-6.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: junit:junit:3.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8/junit-3.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8/junit-3.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8/junit-3.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: log4j:log4j:1.2.12">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.12/log4j-1.2.12.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.12/log4j-1.2.12-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.12/log4j-1.2.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: logkit:logkit:1.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/logkit/logkit/1.0.1/logkit-1.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/logkit/logkit/1.0.1/logkit-1.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/logkit/logkit/1.0.1/logkit-1.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ws/commons/schema/XmlSchema/1.4.7/XmlSchema-1.4.7.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ws/commons/schema/XmlSchema/1.4.7/XmlSchema-1.4.7-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ws/commons/schema/XmlSchema/1.4.7/XmlSchema-1.4.7-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.1.1/jackson-core-asl-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.1.1/jackson-core-asl-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-core-asl/1.1.1/jackson-core-asl-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-jaxrs:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.1.1/jackson-jaxrs-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.1.1/jackson-jaxrs-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-jaxrs/1.1.1/jackson-jaxrs-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.1.1/jackson-mapper-asl-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.1.1/jackson-mapper-asl-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jackson/jackson-mapper-asl/1.1.1/jackson-mapper-asl-1.1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.codehaus.jettison:jettison:1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.1/jettison-1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/jettison/jettison/1.1/jettison-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.eclipselink:eclipselink:2.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/eclipselink/eclipselink/2.0/eclipselink-2.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/eclipselink/eclipselink/2.0/eclipselink-2.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/eclipselink/eclipselink/2.0/eclipselink-2.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.persistence:eclipselink:2.3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jvnet.staxex:stax-ex:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jvnet:mimepull:1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/mimepull/1.1/mimepull-1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/mimepull/1.1/mimepull-1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/mimepull/1.1/mimepull-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.primefaces.themes:blitzer:1.0.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/blitzer/1.0.0/blitzer-1.0.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/blitzer/1.0.0/blitzer-1.0.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/blitzer/1.0.0/blitzer-1.0.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.primefaces:primefaces:2.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/2.2/primefaces-2.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/2.2/primefaces-2.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/primefaces/2.2/primefaces-2.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.ws:spring-oxm:1.5.9">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-oxm/1.5.9/spring-oxm-1.5.9.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-oxm/1.5.9/spring-oxm-1.5.9-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-oxm/1.5.9/spring-oxm-1.5.9-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.ws:spring-ws-core:2.0.2.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/2.0.2.RELEASE/spring-ws-core-2.0.2.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/2.0.2.RELEASE/spring-ws-core-2.0.2.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/2.0.2.RELEASE/spring-ws-core-2.0.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework.ws:spring-xml:2.0.2.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-xml/2.0.2.RELEASE/spring-xml-2.0.2.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-xml/2.0.2.RELEASE/spring-xml-2.0.2.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-xml/2.0.2.RELEASE/spring-xml-2.0.2.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-aop:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.0.5.RELEASE/spring-aop-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-asm:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-asm/3.0.5.RELEASE/spring-asm-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-beans:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.0.5.RELEASE/spring-beans-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-context-support:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/3.0.5.RELEASE/spring-context-support-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-context:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/3.0.5.RELEASE/spring-context-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-core:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.0.5.RELEASE/spring-core-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-dao:2.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-dao/2.0.8/spring-dao-2.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-dao/2.0.8/spring-dao-2.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-dao/2.0.8/spring-dao-2.0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-expression:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/3.0.5.RELEASE/spring-expression-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-jdbc:2.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.8/spring-jdbc-2.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.8/spring-jdbc-2.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/2.0.8/spring-jdbc-2.0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.0.5.RELEASE/spring-jdbc-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.0.5.RELEASE/spring-jdbc-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.0.5.RELEASE/spring-jdbc-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-jms:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/3.0.5.RELEASE/spring-jms-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/3.0.5.RELEASE/spring-jms-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/3.0.5.RELEASE/spring-jms-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-jpa:2.0.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jpa/2.0.8/spring-jpa-2.0.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jpa/2.0.8/spring-jpa-2.0.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jpa/2.0.8/spring-jpa-2.0.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-orm:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-oxm:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-oxm/3.0.5.RELEASE/spring-oxm-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-oxm/3.0.5.RELEASE/spring-oxm-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-oxm/3.0.5.RELEASE/spring-oxm-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-tx:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.0.5.RELEASE/spring-tx-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.0.5.RELEASE/spring-tx-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.0.5.RELEASE/spring-tx-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-web:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.springframework:spring-webmvc:3.0.5.RELEASE">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.0.5.RELEASE/spring-webmvc-3.0.5.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: stax:stax-api:1.0.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/stax/stax-api/1.0.1/stax-api-1.0.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/stax/stax-api/1.0.1/stax-api-1.0.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: wsdl4j:wsdl4j:1.6.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/wsdl4j/wsdl4j/1.6.1/wsdl4j-1.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/wsdl4j/wsdl4j/1.6.1/wsdl4j-1.6.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/wsdl4j/wsdl4j/1.6.1/wsdl4j-1.6.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</project>
+

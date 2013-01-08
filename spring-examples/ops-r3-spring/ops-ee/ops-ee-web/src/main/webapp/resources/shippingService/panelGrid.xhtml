@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:parcel="http://java.sun.com/jsf/composite/parcel"
+      xmlns:address="http://java.sun.com/jsf/composite/address"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+<h:body>
+
+  <composite:interface>
+    <composite:attribute
+        name="service"
+        required="false"
+        />
+
+  </composite:interface>
+
+  <composite:implementation>
+    <h:outputStylesheet library="css" name="main.css" target="body"/>
+
+    <h:panelGrid columns="2">
+      <h:outputText value="ID"/>
+      <h:outputText value="#{cc.attrs.service.id}"/>
+
+      <h:outputText value="Name"/>
+      <h:outputText value="#{cc.attrs.service.name}"/>
+
+      <h:outputText value="Description"/>
+      <h:outputText value="#{cc.attrs.service.description}"/>
+
+      <h:outputText value="Cost"/>
+      <h:outputText value="#{cc.attrs.service.cost}"/>
+    </h:panelGrid>
+
+  </composite:implementation>
+
+</h:body>
+
+</html>

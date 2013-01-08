@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+
+<h:body>
+
+  <composite:interface>
+    <composite:attribute
+        required="false"
+        name="address"
+        type="com.oracle.demo.ops.domain.Address"/>
+  </composite:interface>
+
+  <composite:implementation>
+    
+    <h:panelGrid columns="2" columnClasses="label, value" styleClass="default-table">
+        <h:outputText value="Addressee"/>
+        <h:outputText value="#{cc.attrs.address.addressee}"/>
+
+        <h:outputText value="Line 1"/>
+        <h:outputText value="#{cc.attrs.address.addressLine1}"/>
+
+        <h:outputText value="Line 2"/>
+        <h:outputText value="#{cc.attrs.address.addressLine2}"/>
+
+        <h:outputText value="City"/>
+        <h:outputText value="#{cc.attrs.address.city}"/>
+
+        <h:outputText value="State"/>
+        <h:outputText value="#{cc.attrs.address.state}"/>
+
+        <h:outputText value="Postal Code"/>
+        <h:outputText value="#{cc.attrs.address.postalCode}"/>   
+    </h:panelGrid>
+
+  </composite:implementation>
+
+</h:body>
+
+</html>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:parcel="http://java.sun.com/jsf/composite/parcel"
+      xmlns:parcelLog="http://java.sun.com/jsf/composite/parcelLog"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xml:lang="en" lang="en">
+<h:head>
+  <title>Example Page for Paging with JPA and AJAX</title>
+  <h:outputStylesheet name="main.css" library="css"/>
+</h:head>
+<h:body>
+
+  <ui:composition template="/templates/common/layout.xhtml">
+
+    <ui:define name="content">
+      <h:form id="top_form">
+
+        <h:panelGrid id="inputArea" columns="2">
+          <h:outputText value="First Result (int)"/>
+          <p:inputText id="inputFirstResult"
+                       actionListener="#{ParcelControllerBean.actionListener}"
+                       valueChangeListener="#{ParcelControllerBean.valueChangeListener}"
+                       value="#{ParcelControllerBean.inputFirstResult}">
+
+            <p:ajax event="blur"
+                    update="top_form:table_wrapper:results_table"
+                    actionListener="#{ParcelControllerBean.updateParcelEventPageEventListener}"/>
+          </p:inputText>
+
+          <h:outputText value="Max Results (int)"/>
+          <p:inputText id="inputmaxResults"
+                       actionListener="#{ParcelControllerBean.actionListener}"
+                       valueChangeListener="#{ParcelControllerBean.valueChangeListener}"
+                       value="#{ParcelControllerBean.inputMaxResults}">
+
+            <p:ajax event="blur"
+                    update="top_form:table_wrapper:results_table"
+                    actionListener="#{ParcelControllerBean.updateParcelEventPageEventListener}"/>
+          </p:inputText>
+
+        </h:panelGrid>
+
+        <parcelLog:dataTable id="table_wrapper" tableId="results_table"
+                             parcelLogEventList="#{ParcelControllerBean.parcelLog}"/>
+
+      </h:form>
+    </ui:define>
+
+  </ui:composition>
+
+</h:body>
+</html>

@@ -1,0 +1,376 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <!-- ==================================================================================== -->
+
+  <parent>
+    <artifactId>ops-common</artifactId>
+    <groupId>com.oracle.demo.ops</groupId>
+    <version>3.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <!-- ==================================================================================== -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oracle.demo.ops</groupId>
+  <artifactId>ops-common-deployable</artifactId>
+  <version>3.0</version>
+  <name>ops-common-deployable</name>
+  <packaging>pom</packaging>
+
+  <!-- ==================================================================================== -->
+
+  <properties>
+    <path.from.top>oracle-parcel-service/ops-common/${project.artifactId}</path.from.top>
+    <weblogic.Deployer.isLibrary>false</weblogic.Deployer.isLibrary>
+  </properties>
+
+  <!-- ==================================================================================== -->
+
+  <scm>
+    <connection>scm:svn:${project.scm.url}</connection>
+    <developerConnection>scm:svn:${project.scm.url}</developerConnection>
+    <url>${ops.scm.url}/${path.from.top}</url>
+  </scm>
+
+  <!-- ==================================================================================== -->
+
+  <profiles>
+
+    <profile>
+      <id>deploy-local</id>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://localhost:7001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>ops-cluster-1</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+    <profile>
+      <id>deploy-vbox</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://192.168.56.102:7001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>ops-cluster-1</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <profile>
+      <id>deploy-managed</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://adc2180341.us.oracle.com:7001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>ops-cluster-1</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+    <!--############################### -->
+
+    <profile>
+      <id>deploy-beast</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://beast:8001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>ops-cluster-1</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+
+    <profile>
+      <id>deploy-beast-admin</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://beast:8001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>AdminServer</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+
+    <profile>
+      <id>undeploy-on-clean</id>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>wls-maven-plugin</artifactId>
+            <version>12.1.1.0</version>
+
+            <executions>
+              <execution>
+                <id>weblogic-undeploy</id>
+                <phase>clean</phase>
+                <goals>
+                  <goal>undeploy</goal>
+                </goals>
+
+                <configuration>
+                  <adminurl>${weblogic.Deployer.adminurl}</adminurl>
+                  <user>${weblogic.Deployer.user}</user>
+                  <password>${weblogic.Deployer.password}</password>
+                  <name>${project.artifactId}</name>
+                  <targets>${weblogic.Deployer.application.targets}</targets>
+                </configuration>
+              </execution>
+            </executions>
+
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+    <profile>
+      <id>enable-weblogic-deployment</id>
+      <build>
+        <plugins>
+
+          <plugin>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>wls-maven-plugin</artifactId>
+
+            <executions>
+              <execution>
+                <id>weblogic-deploy</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>deploy</goal>
+                </goals>
+
+                <configuration>
+                  <adminurl>${weblogic.Deployer.adminurl}</adminurl>
+                  <user>${weblogic.Deployer.user}</user>
+                  <password>${weblogic.Deployer.password}</password>
+                  <source>${project.build.directory}/${project.build.finalName}.${project.packaging}
+                  </source>
+                  <name>${project.artifactId}</name>
+                  <targets>${weblogic.Deployer.application.targets}</targets>
+                  <remote>${weblogic.Deployer.remote}</remote>
+                  <upload>${weblogic.Deployer.upload}</upload>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+
+    <profile>
+      <id>enable-eclipselink</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>2.1.1</version>
+              <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <archive>
+                  <manifestEntries>
+                    <Extension-Name>${project.artifactId}</Extension-Name>
+
+                    <Specification-Title>${project.description}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>Oracle</Specification-Vendor>
+
+                    <Implementation-Title>${project.artifactId}</Implementation-Title>
+                    <Implementation-Version>${project.version}.${maven.build.timestamp}
+                    </Implementation-Version>
+                    <Implementation-Vendor>Oracle</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+
+                    <!--<Extension-List>coherence active-cache</Extension-List>
+
+                    <coherence-Extension-Name>coherence</coherence-Extension-Name>
+                    <coherence-Specification-Version>3.7.1.1</coherence-Specification-Version>
+
+                    <active-cache-Extension-Name>active-cache</active-cache-Extension-Name>
+                    <active-cache-Specification-Version>1.0</active-cache-Specification-Version>-->
+
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </plugin>
+
+          </plugins>
+        </pluginManagement>
+      </build>
+
+      <dependencies>
+        <dependency>
+          <groupId>com.oracle.demo.ops</groupId>
+          <artifactId>ops-domain-model</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.oracle.demo.ops</groupId>
+          <artifactId>ops-domain-services-impl</artifactId>
+        </dependency>
+
+      </dependencies>
+    </profile>
+
+    <profile>
+      <id>enable-toplink-grid</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <build>
+        <pluginManagement>
+          <plugins>
+
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <version>2.1.1</version>
+              <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <archive>
+                  <manifestEntries>
+                    <Extension-Name>${project.artifactId}</Extension-Name>
+
+                    <Specification-Title>${project.description}</Specification-Title>
+                    <Specification-Version>${project.version}</Specification-Version>
+                    <Specification-Vendor>Oracle</Specification-Vendor>
+
+                    <Implementation-Title>${project.artifactId}</Implementation-Title>
+                    <Implementation-Version>${project.version}.${maven.build.timestamp}
+                    </Implementation-Version>
+                    <Implementation-Vendor>Oracle</Implementation-Vendor>
+                    <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+
+                    <Extension-List>coherence toplink-grid active-cache</Extension-List>
+
+                    <coherence-Extension-Name>coherence</coherence-Extension-Name>
+                    <coherence-Specification-Version>3.7.1.1</coherence-Specification-Version>
+
+                    <active-cache-Extension-Name>active-cache</active-cache-Extension-Name>
+                    <active-cache-Specification-Version>1.0</active-cache-Specification-Version>
+
+                    <toplink-grid-Extension-Name>toplink-grid</toplink-grid-Extension-Name>
+                    <toplink-grid-Specification-Version>1.0</toplink-grid-Specification-Version>
+
+                  </manifestEntries>
+                </archive>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+
+      <dependencies>
+        <dependency>
+          <groupId>com.oracle.demo.ops</groupId>
+          <artifactId>ops-domain-model-tlg</artifactId>
+        </dependency>
+
+        <dependency>
+          <groupId>com.oracle.demo.ops</groupId>
+          <artifactId>ops-domain-services-tlg</artifactId>
+        </dependency>
+
+      </dependencies>
+    </profile>
+  </profiles>
+
+  <!-- ==================================================================================== -->
+
+  <build>
+    <defaultGoal>install</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <pluginManagement>
+      <plugins>
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ear-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+            <version>5</version>
+            <defaultLibBundleDir>APP-INF/lib</defaultLibBundleDir>
+          </configuration>
+        </plugin>
+        <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>2.1.1</version>
+          <configuration>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
+
+  </build>
+
+</project>

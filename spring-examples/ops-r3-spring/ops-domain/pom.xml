@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ==================================================================================== -->
+
+  <parent>
+    <groupId>com.oracle.demo.ops</groupId>
+    <artifactId>ops-common</artifactId>
+    <version>3.0</version>
+    <relativePath>../ops-common/pom.xml</relativePath>
+  </parent>
+
+  <!-- ==================================================================================== -->
+
+  <artifactId>ops-domain</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oracle.demo.ops</groupId>
+  <version>3.0</version>
+  <packaging>pom</packaging>
+  <name>ops-domain</name>
+
+  <!-- ==================================================================================== -->
+
+  <properties>
+    <path.from.top>oracle-parcel-service/${project.artifactId}</path.from.top>
+  </properties>
+
+  <!-- ==================================================================================== -->
+
+    <scm>
+      <connection>scm:svn:${project.scm.url}</connection>
+      <developerConnection>scm:svn:${project.scm.url}</developerConnection>
+      <url>${ops.scm.url}/${path.from.top}</url>
+    </scm>
+
+  <!-- ==================================================================================== -->
+
+  <modules>
+    <module>ops-domain-model</module>
+    <module>ops-domain-services-api</module>
+    <module>ops-domain-services-impl</module>
+  </modules>
+
+  <!-- ==================================================================================== -->
+
+  <build>
+    <defaultGoal>deploy</defaultGoal>
+  </build>
+
+</project>

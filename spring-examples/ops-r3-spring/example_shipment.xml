@@ -1,0 +1,34 @@
+<ship:Shipment>
+  <ship1:ToAddress>
+    <com:Addressee>Jeff West</com:Addressee>
+    <com:AddressLine1>123 Main St</com:AddressLine1>
+    <com:City>Los Angeles</com:City>
+    <com:State>CA</com:State>
+    <com:PostalCode>90036</com:PostalCode>
+  </ship1:ToAddress>
+  <ship1:FromAddress>
+    <com:Addressee>Larry Ellison</com:Addressee>
+    <com:AddressLine1>Oracle HQ</com:AddressLine1>    
+    <com:City>Redwood Shores</com:City>
+    <com:State>CA</com:State>
+    <com:PostalCode>12345</com:PostalCode>
+  </ship1:FromAddress>
+  <ship1:ShippingServiceName>?</ship1:ShippingServiceName>
+  <!--1 or more repetitions:-->
+  <ship1:Parcel>
+    <ship1:Contents>stuff</ship1:Contents>
+    <ship1:Height>1</ship1:Height>
+    <ship1:Width>2</ship1:Width>
+    <ship1:Length>3</ship1:Length>
+    <ship1:Weight>4</ship1:Weight>
+    <ship1:ParcelStatus>?</ship1:ParcelStatus>
+  </ship1:Parcel>
+  <ship1:Parcel>
+    <ship1:Contents>more stuff</ship1:Contents>
+    <ship1:Height>1</ship1:Height>
+    <ship1:Width>2</ship1:Width>
+    <ship1:Length>3</ship1:Length>
+    <ship1:Weight>4</ship1:Weight>
+    <ship1:ParcelStatus>?</ship1:ParcelStatus>
+  </ship1:Parcel>
+</ship:Shipment>

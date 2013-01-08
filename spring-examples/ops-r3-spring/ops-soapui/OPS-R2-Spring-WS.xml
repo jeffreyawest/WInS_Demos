@@ -1,0 +1,1379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="OPS R2 Spring-WS Project" resourceRoot="" soapui-version="4.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="shipmentPort_springwsSoap11" type="wsdl" bindingName="{http://demo.oracle.com/ops/domain/schema/common}shipmentPort_springwsSoap11" soapVersion="1_1" anonymous="optional" definition="http://10.0.0.51:7101/ops-spring-ws/shipmentService/shipment.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.0.0.51:7101/ops-spring-ws/shipmentService/shipment.wsdl"><con:part><con:url>http://10.0.0.51:7101/ops-spring-ws/shipmentService/shipment.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://demo.oracle.com/ops/domain/schema/common" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch0="http://demo.oracle.com/ops/domain/schema/common" xmlns:sch1="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:sch2="http://demo.oracle.com/ops/domain/services/shipment" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://demo.oracle.com/ops/domain/schema/common">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/schema/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType abstract="true" name="BaseObject">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="BaseEntity">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="BaseParameter">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="xs:string"/>
+              <xs:element minOccurs="0" name="Value" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Address">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Addressee" type="xs:string"/>
+              <xs:element minOccurs="0" name="AddressLine1" type="xs:string"/>
+              <xs:element minOccurs="0" name="AddressLine2" type="xs:string"/>
+              <xs:element minOccurs="0" name="City" type="xs:string"/>
+              <xs:element minOccurs="0" name="State" type="xs:string"/>
+              <xs:element minOccurs="0" name="PostalCode" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="WebServiceRequestHeader" type="tns:WebServiceRequestHeaderType"/>
+      <xs:complexType name="WebServiceRequestHeaderType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SourceSystem" type="xs:string"/>
+          <xs:element minOccurs="0" name="SourceSystemUser" type="xs:string"/>
+          <xs:element minOccurs="0" name="SourceSystemTxId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="WebServiceResponseHeader" type="tns:WebServiceResponseHeaderType"/>
+      <xs:complexType name="WebServiceResponseHeaderType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestHeader" type="tns:WebServiceRequestHeaderType"/>
+          <xs:element minOccurs="0" name="TxId" type="xs:string"/>
+          <xs:element minOccurs="0" name="RequestSuccess" type="tns:BooleanString"/>
+          <xs:element minOccurs="0" name="ResponseMessage" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="BooleanString">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TRUE"/>
+          <xs:enumeration value="FALSE"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:common="http://demo.oracle.com/ops/domain/schema/common" xmlns:tns="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/common"/>
+      <xs:element name="Shipment" type="tns:ShipmentType"/>
+      <xs:complexType name="ShipmentType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ExternalReferenceId" type="xs:string"/>
+              <xs:element name="ToAddress" type="common:Address"/>
+              <xs:element name="FromAddress" type="common:Address"/>
+              <xs:element name="ShippingServiceName" type="tns:ShippingServiceName"/>
+              <xs:element maxOccurs="unbounded" ref="tns:Parcel"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="Parcel" type="tns:ParcelType"/>
+      <xs:complexType name="ParcelType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ShipmentId" type="xs:int"/>
+              <xs:element name="Contents" type="xs:string"/>
+              <xs:element name="Height" type="xs:int"/>
+              <xs:element name="Width" type="xs:int"/>
+              <xs:element name="Length" type="xs:int"/>
+              <xs:element name="Weight" type="xs:int"/>
+              <xs:element name="ParcelStatus" type="tns:ParcelStatus"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ParcelLogEvent" type="tns:ParcelLogEventType"/>
+      <xs:complexType name="ParcelLogEventType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ParcelId" type="xs:int"/>
+              <xs:element name="Date" type="xs:dateTime"/>
+              <xs:element name="ParcelStatus" type="tns:ParcelStatus"/>
+              <xs:element name="Location" type="xs:string"/>
+              <xs:element name="Message" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ShippingService">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="tns:ShippingServiceName"/>
+              <xs:element minOccurs="0" name="Description" type="xs:string"/>
+              <xs:element minOccurs="0" name="Cost" type="xs:double"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="ParcelStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BILLING_INFO_RECEIVED"/>
+          <xs:enumeration value="PARCEL_RECEIVED"/>
+          <xs:enumeration value="IN_TRANSIT"/>
+          <xs:enumeration value="DELIVERED"/>
+          <xs:enumeration value="DELIVERY_EXCEPTION"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ShippingServiceName">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BASIC"/>
+          <xs:enumeration value="EXPEDITED"/>
+          <xs:enumeration value="NEXT_DAY_AIR"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ShipmentStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="IN_PROGRESS"/>
+          <xs:enumeration value="COMPLETE"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/services/shipment" xmlns:common="http://demo.oracle.com/ops/domain/schema/common" xmlns:shipping="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:tns="http://demo.oracle.com/ops/domain/services/shipment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/common"/>
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/shipping"/>
+      <xs:element name="CreateShipmentRequest" type="tns:CreateShipmentRequestType"/>
+      <xs:complexType name="CreateShipmentRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateShipmentResponse" type="tns:CreateShipmentResponseType"/>
+      <xs:complexType name="CreateShipmentResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SendNewShipmentViaJMSRequest" type="tns:SendNewShipmentViaJMSRequestType"/>
+      <xs:complexType name="SendNewShipmentViaJMSRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SendNewShipmentViaJMSResponse" type="tns:SendNewShipmentViaJMSResponseType"/>
+      <xs:complexType name="SendNewShipmentViaJMSResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetShipmentByIdRequest" type="tns:GetShipmentByIdRequestType"/>
+      <xs:complexType name="GetShipmentByIdRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ShipmentId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetShipmentByIdResponse" type="tns:GetShipmentByIdResponseType"/>
+      <xs:complexType name="GetShipmentByIdResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetShipmentByExternalIdRequest" type="tns:GetShipmentByExternalIdRequestType"/>
+      <xs:complexType name="GetShipmentByExternalIdRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ExternalReferenceId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetShipmentByExternalIdResponse" type="tns:GetShipmentByExternalIdResponseType"/>
+      <xs:complexType name="GetShipmentByExternalIdResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="Shipment" type="shipping:ShipmentType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetShipmentByIdRequest">
+    <wsdl:part element="sch2:GetShipmentByIdRequest" name="GetShipmentByIdRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetShipmentByExternalIdRequest">
+    <wsdl:part element="sch2:GetShipmentByExternalIdRequest" name="GetShipmentByExternalIdRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateShipmentRequest">
+    <wsdl:part element="sch2:CreateShipmentRequest" name="CreateShipmentRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetShipmentByExternalIdResponse">
+    <wsdl:part element="sch2:GetShipmentByExternalIdResponse" name="GetShipmentByExternalIdResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendNewShipmentViaJMSRequest">
+    <wsdl:part element="sch2:SendNewShipmentViaJMSRequest" name="SendNewShipmentViaJMSRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateShipmentResponse">
+    <wsdl:part element="sch2:CreateShipmentResponse" name="CreateShipmentResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetShipmentByIdResponse">
+    <wsdl:part element="sch2:GetShipmentByIdResponse" name="GetShipmentByIdResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendNewShipmentViaJMSResponse">
+    <wsdl:part element="sch2:SendNewShipmentViaJMSResponse" name="SendNewShipmentViaJMSResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="shipmentPort_springws">
+    <wsdl:operation name="GetShipmentById">
+      <wsdl:input message="tns:GetShipmentByIdRequest" name="GetShipmentByIdRequest"></wsdl:input>
+      <wsdl:output message="tns:GetShipmentByIdResponse" name="GetShipmentByIdResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipmentByExternalId">
+      <wsdl:input message="tns:GetShipmentByExternalIdRequest" name="GetShipmentByExternalIdRequest"></wsdl:input>
+      <wsdl:output message="tns:GetShipmentByExternalIdResponse" name="GetShipmentByExternalIdResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipment">
+      <wsdl:input message="tns:CreateShipmentRequest" name="CreateShipmentRequest"></wsdl:input>
+      <wsdl:output message="tns:CreateShipmentResponse" name="CreateShipmentResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewShipmentViaJMS">
+      <wsdl:input message="tns:SendNewShipmentViaJMSRequest" name="SendNewShipmentViaJMSRequest"></wsdl:input>
+      <wsdl:output message="tns:SendNewShipmentViaJMSResponse" name="SendNewShipmentViaJMSResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="shipmentPort_springwsSoap11" type="tns:shipmentPort_springws">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetShipmentById">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetShipmentByIdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetShipmentByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipmentByExternalId">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetShipmentByExternalIdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetShipmentByExternalIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipment">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="CreateShipmentRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateShipmentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewShipmentViaJMS">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SendNewShipmentViaJMSRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SendNewShipmentViaJMSResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="shipmentPort_springwsService">
+    <wsdl:port binding="tns:shipmentPort_springwsSoap11" name="shipmentPort_springwsSoap11">
+      <soap:address location="http://10.0.0.51:7101/ops-spring-ws/shipmentService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="CreateShipment" bindingOperationName="CreateShipment" type="Request-Response" outputName="CreateShipmentResponse" inputName="CreateShipmentRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship1="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:CreateShipmentRequest>
+				<ship:RequestHeader>
+					<!--Optional:-->
+					<com:SourceSystem>?</com:SourceSystem>
+					<!--Optional:-->
+					<com:SourceSystemUser>?</com:SourceSystemUser>
+					<!--Optional:-->
+					<com:SourceSystemTxId>?</com:SourceSystemTxId>
+				</ship:RequestHeader>
+				<ship:Shipment>
+               <ship1:ExternalReferenceId>foobar</ship1:ExternalReferenceId>
+
+					<ship1:ToAddress>
+						<com:Addressee>Jeff West</com:Addressee>
+						<com:AddressLine1>123 Main St</com:AddressLine1>
+						<com:City>Los Angeles</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>90036</com:PostalCode>
+					</ship1:ToAddress>
+					<ship1:FromAddress>
+						<com:Addressee>Larry Ellison</com:Addressee>
+						<com:AddressLine1>Oracle HQ</com:AddressLine1>
+						<com:City>Redwood Shores</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>12345</com:PostalCode>
+					</ship1:FromAddress>
+					<ship1:ShippingServiceName>?</ship1:ShippingServiceName>
+					<!--1 or more repetitions:-->
+					<ship1:Parcel>
+						<ship1:Contents>stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+					<ship1:Parcel>
+						<ship1:Contents>more stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+				</ship:Shipment>
+      </ship:CreateShipmentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/CreateShipmentRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Full Shipment"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship1="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:CreateShipmentRequest>
+				<ship:RequestHeader>
+					<!--Optional:-->
+					<com:SourceSystem>?</com:SourceSystem>
+					<!--Optional:-->
+					<com:SourceSystemUser>?</com:SourceSystemUser>
+					<!--Optional:-->
+					<com:SourceSystemTxId>?</com:SourceSystemTxId>
+				</ship:RequestHeader>
+				<ship:Shipment>
+               <ship1:ExternalReferenceId>foobar</ship1:ExternalReferenceId>
+
+					<ship1:ToAddress>
+						<com:Addressee>Jeff West</com:Addressee>
+						<com:AddressLine1>123 Main St</com:AddressLine1>
+						<com:City>Los Angeles</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>90036</com:PostalCode>
+					</ship1:ToAddress>
+					<ship1:FromAddress>
+						<com:Addressee>Larry Ellison</com:Addressee>
+						<com:AddressLine1>Oracle HQ</com:AddressLine1>
+						<com:City>Redwood Shores</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>12345</com:PostalCode>
+					</ship1:FromAddress>
+					<ship1:ShippingServiceName>?</ship1:ShippingServiceName>
+					<!--1 or more repetitions:-->
+					<ship1:Parcel>
+						<ship1:Contents>stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+					<ship1:Parcel>
+						<ship1:Contents>more stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+				</ship:Shipment>
+      </ship:CreateShipmentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/CreateShipmentRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="GetShipmentByExternalId" bindingOperationName="GetShipmentByExternalId" type="Request-Response" outputName="GetShipmentByExternalIdResponse" inputName="GetShipmentByExternalIdRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByExternalIdRequest>
+         <ship:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </ship:RequestHeader>
+         <ship:ExternalReferenceId>?</ship:ExternalReferenceId>
+      </ship:GetShipmentByExternalIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByExternalIdRequest"/></con:call><con:call name="TestSuite - GetShipmentByExternalId"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByExternalIdRequest>
+         <ship:ExternalReferenceId>${RequestProperties#ExternalId}</ship:ExternalReferenceId>
+      </ship:GetShipmentByExternalIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByExternalIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="GetShipmentById" bindingOperationName="GetShipmentById" type="Request-Response" outputName="GetShipmentByIdResponse" inputName="GetShipmentByIdRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByIdRequest>
+         <ship:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </ship:RequestHeader>
+         <ship:ShipmentId>?</ship:ShipmentId>
+      </ship:GetShipmentByIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByIdRequest"/></con:call><con:call name="TestSuite - GetShipmentById"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByIdRequest>
+         <ship:ShipmentId>${ResponseProperties#Id}</ship:ShipmentId>
+      </ship:GetShipmentByIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="SendNewShipmentViaJMS" bindingOperationName="SendNewShipmentViaJMS" type="Request-Response" outputName="SendNewShipmentViaJMSResponse" inputName="SendNewShipmentViaJMSRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship1="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:SendNewShipmentViaJMSRequest>
+         <ship:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </ship:RequestHeader>
+         <ship:Shipment>
+            <com:Id>?</com:Id>
+            <!--Optional:-->
+            <com:CreatedDate>?</com:CreatedDate>
+            <!--Optional:-->
+            <com:ModifiedDate>?</com:ModifiedDate>
+            <ship1:ExternalReferenceId>?</ship1:ExternalReferenceId>
+            <ship1:ToAddress>
+               <com:Id>?</com:Id>
+               <!--Optional:-->
+               <com:CreatedDate>?</com:CreatedDate>
+               <!--Optional:-->
+               <com:ModifiedDate>?</com:ModifiedDate>
+               <!--Optional:-->
+               <com:Addressee>?</com:Addressee>
+               <!--Optional:-->
+               <com:AddressLine1>?</com:AddressLine1>
+               <!--Optional:-->
+               <com:AddressLine2>?</com:AddressLine2>
+               <!--Optional:-->
+               <com:City>?</com:City>
+               <!--Optional:-->
+               <com:State>?</com:State>
+               <!--Optional:-->
+               <com:PostalCode>?</com:PostalCode>
+            </ship1:ToAddress>
+            <ship1:FromAddress>
+               <com:Id>?</com:Id>
+               <!--Optional:-->
+               <com:CreatedDate>?</com:CreatedDate>
+               <!--Optional:-->
+               <com:ModifiedDate>?</com:ModifiedDate>
+               <!--Optional:-->
+               <com:Addressee>?</com:Addressee>
+               <!--Optional:-->
+               <com:AddressLine1>?</com:AddressLine1>
+               <!--Optional:-->
+               <com:AddressLine2>?</com:AddressLine2>
+               <!--Optional:-->
+               <com:City>?</com:City>
+               <!--Optional:-->
+               <com:State>?</com:State>
+               <!--Optional:-->
+               <com:PostalCode>?</com:PostalCode>
+            </ship1:FromAddress>
+            <ship1:ShippingServiceName>?</ship1:ShippingServiceName>
+            <!--1 or more repetitions:-->
+            <ship1:Parcel>
+               <com:Id>?</com:Id>
+               <!--Optional:-->
+               <com:CreatedDate>?</com:CreatedDate>
+               <!--Optional:-->
+               <com:ModifiedDate>?</com:ModifiedDate>
+               <ship1:ShipmentId>?</ship1:ShipmentId>
+               <ship1:Contents>?</ship1:Contents>
+               <ship1:Height>?</ship1:Height>
+               <ship1:Width>?</ship1:Width>
+               <ship1:Length>?</ship1:Length>
+               <ship1:Weight>?</ship1:Weight>
+               <ship1:ParcelStatus>?</ship1:ParcelStatus>
+            </ship1:Parcel>
+         </ship:Shipment>
+      </ship:SendNewShipmentViaJMSRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/SendNewShipmentViaJMSRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="parcelPort_springwsSoap11" type="wsdl" bindingName="{http://demo.oracle.com/ops/domain/schema/common}parcelPort_springwsSoap11" soapVersion="1_1" anonymous="optional" definition="http://10.0.0.51:7101/ops-spring-ws/parcelService/parcel.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://10.0.0.51:7101/ops-spring-ws/parcelService/parcel.wsdl"><con:part><con:url>http://10.0.0.51:7101/ops-spring-ws/parcelService/parcel.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://demo.oracle.com/ops/domain/schema/common" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch0="http://demo.oracle.com/ops/domain/schema/common" xmlns:sch1="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:sch2="http://demo.oracle.com/ops/domain/services/parcel" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://demo.oracle.com/ops/domain/schema/common">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/schema/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType abstract="true" name="BaseObject">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="BaseEntity">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseObject">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="BaseParameter">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="xs:string"/>
+              <xs:element minOccurs="0" name="Value" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="Address">
+        <xs:complexContent>
+          <xs:extension base="tns:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Addressee" type="xs:string"/>
+              <xs:element minOccurs="0" name="AddressLine1" type="xs:string"/>
+              <xs:element minOccurs="0" name="AddressLine2" type="xs:string"/>
+              <xs:element minOccurs="0" name="City" type="xs:string"/>
+              <xs:element minOccurs="0" name="State" type="xs:string"/>
+              <xs:element minOccurs="0" name="PostalCode" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="WebServiceRequestHeader" type="tns:WebServiceRequestHeaderType"/>
+      <xs:complexType name="WebServiceRequestHeaderType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SourceSystem" type="xs:string"/>
+          <xs:element minOccurs="0" name="SourceSystemUser" type="xs:string"/>
+          <xs:element minOccurs="0" name="SourceSystemTxId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="WebServiceResponseHeader" type="tns:WebServiceResponseHeaderType"/>
+      <xs:complexType name="WebServiceResponseHeaderType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RequestHeader" type="tns:WebServiceRequestHeaderType"/>
+          <xs:element minOccurs="0" name="TxId" type="xs:string"/>
+          <xs:element minOccurs="0" name="RequestSuccess" type="tns:BooleanString"/>
+          <xs:element minOccurs="0" name="ResponseMessage" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="BooleanString">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="TRUE"/>
+          <xs:enumeration value="FALSE"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:common="http://demo.oracle.com/ops/domain/schema/common" xmlns:tns="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/common"/>
+      <xs:element name="Shipment" type="tns:ShipmentType"/>
+      <xs:complexType name="ShipmentType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ExternalReferenceId" type="xs:string"/>
+              <xs:element name="ToAddress" type="common:Address"/>
+              <xs:element name="FromAddress" type="common:Address"/>
+              <xs:element name="ShippingServiceName" type="tns:ShippingServiceName"/>
+              <xs:element maxOccurs="unbounded" ref="tns:Parcel"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="Parcel" type="tns:ParcelType"/>
+      <xs:complexType name="ParcelType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ShipmentId" type="xs:int"/>
+              <xs:element name="Contents" type="xs:string"/>
+              <xs:element name="Height" type="xs:int"/>
+              <xs:element name="Width" type="xs:int"/>
+              <xs:element name="Length" type="xs:int"/>
+              <xs:element name="Weight" type="xs:int"/>
+              <xs:element name="ParcelStatus" type="tns:ParcelStatus"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ParcelLogEvent" type="tns:ParcelLogEventType"/>
+      <xs:complexType name="ParcelLogEventType">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element name="ParcelId" type="xs:int"/>
+              <xs:element name="Date" type="xs:dateTime"/>
+              <xs:element name="ParcelStatus" type="tns:ParcelStatus"/>
+              <xs:element name="Location" type="xs:string"/>
+              <xs:element name="Message" type="xs:string"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="ShippingService">
+        <xs:complexContent>
+          <xs:extension base="common:BaseEntity">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="Name" type="tns:ShippingServiceName"/>
+              <xs:element minOccurs="0" name="Description" type="xs:string"/>
+              <xs:element minOccurs="0" name="Cost" type="xs:double"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:simpleType name="ParcelStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BILLING_INFO_RECEIVED"/>
+          <xs:enumeration value="PARCEL_RECEIVED"/>
+          <xs:enumeration value="IN_TRANSIT"/>
+          <xs:enumeration value="DELIVERED"/>
+          <xs:enumeration value="DELIVERY_EXCEPTION"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ShippingServiceName">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BASIC"/>
+          <xs:enumeration value="EXPEDITED"/>
+          <xs:enumeration value="NEXT_DAY_AIR"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="ShipmentStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="IN_PROGRESS"/>
+          <xs:enumeration value="COMPLETE"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://demo.oracle.com/ops/domain/services/parcel" xmlns:common="http://demo.oracle.com/ops/domain/schema/common" xmlns:shipping="http://demo.oracle.com/ops/domain/schema/shipping" xmlns:tns="http://demo.oracle.com/ops/domain/services/parcel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/common"/>
+      <xs:import namespace="http://demo.oracle.com/ops/domain/schema/shipping"/>
+      <xs:element name="GetParcelByIdRequest" type="tns:GetParcelByIdRequestType"/>
+      <xs:complexType name="GetParcelByIdRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ParcelId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetParcelByIdResponse" type="tns:GetParcelByIdResponseType"/>
+      <xs:complexType name="GetParcelByIdResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="Parcel" type="shipping:ParcelType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddParcelLogEventRequest" type="tns:AddParcelLogEventRequestType"/>
+      <xs:complexType name="AddParcelLogEventRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ParcelLogEvent" type="shipping:ParcelLogEventType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddParcelLogEventResponseType" type="tns:AddParcelLogEventResponseType"/>
+      <xs:complexType name="AddParcelLogEventResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="ParcelLogEvent" type="shipping:ParcelLogEventType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddParcelLogEventJMSPROXYRequest" type="tns:AddParcelLogEventJMSPROXYRequestType"/>
+      <xs:complexType name="AddParcelLogEventJMSPROXYRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ParcelLogEvent" type="shipping:ParcelLogEventType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AddParcelLogEventJMSPROXYResponse" type="tns:AddParcelLogEventJMSPROXYResponseType"/>
+      <xs:complexType name="AddParcelLogEventJMSPROXYResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element name="ParcelLogEvent" type="shipping:ParcelLogEventType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetParcelEventLogRequest" type="tns:GetParcelEventLogRequestType"/>
+      <xs:complexType name="GetParcelEventLogRequestType">
+        <xs:sequence>
+          <xs:element name="RequestHeader" type="common:WebServiceRequestHeaderType"/>
+          <xs:element name="ParcelId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="GetParcelEventLogResponse" type="tns:GetParcelEventLogResponseType"/>
+      <xs:complexType name="GetParcelEventLogResponseType">
+        <xs:sequence>
+          <xs:element name="ResponseHeader" type="common:WebServiceResponseHeaderType"/>
+          <xs:element maxOccurs="unbounded" name="ParcelLogEvent" type="shipping:ParcelLogEventType"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetParcelByIdRequest">
+    <wsdl:part element="sch2:GetParcelByIdRequest" name="GetParcelByIdRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetParcelEventLogRequest">
+    <wsdl:part element="sch2:GetParcelEventLogRequest" name="GetParcelEventLogRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetParcelByIdResponse">
+    <wsdl:part element="sch2:GetParcelByIdResponse" name="GetParcelByIdResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AddParcelLogEventJMSPROXYRequest">
+    <wsdl:part element="sch2:AddParcelLogEventJMSPROXYRequest" name="AddParcelLogEventJMSPROXYRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AddParcelLogEventRequest">
+    <wsdl:part element="sch2:AddParcelLogEventRequest" name="AddParcelLogEventRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetParcelEventLogResponse">
+    <wsdl:part element="sch2:GetParcelEventLogResponse" name="GetParcelEventLogResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AddParcelLogEventJMSPROXYResponse">
+    <wsdl:part element="sch2:AddParcelLogEventJMSPROXYResponse" name="AddParcelLogEventJMSPROXYResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="parcelPort_springws">
+    <wsdl:operation name="GetParcelById">
+      <wsdl:input message="tns:GetParcelByIdRequest" name="GetParcelByIdRequest"></wsdl:input>
+      <wsdl:output message="tns:GetParcelByIdResponse" name="GetParcelByIdResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParcelEventLog">
+      <wsdl:input message="tns:GetParcelEventLogRequest" name="GetParcelEventLogRequest"></wsdl:input>
+      <wsdl:output message="tns:GetParcelEventLogResponse" name="GetParcelEventLogResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParcelLogEventJMSPROXY">
+      <wsdl:input message="tns:AddParcelLogEventJMSPROXYRequest" name="AddParcelLogEventJMSPROXYRequest"></wsdl:input>
+      <wsdl:output message="tns:AddParcelLogEventJMSPROXYResponse" name="AddParcelLogEventJMSPROXYResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParcelLogEvent">
+      <wsdl:input message="tns:AddParcelLogEventRequest" name="AddParcelLogEventRequest"></wsdl:input>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="parcelPort_springwsSoap11" type="tns:parcelPort_springws">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetParcelById">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetParcelByIdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetParcelByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParcelEventLog">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="GetParcelEventLogRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetParcelEventLogResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParcelLogEventJMSPROXY">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="AddParcelLogEventJMSPROXYRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AddParcelLogEventJMSPROXYResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParcelLogEvent">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="AddParcelLogEventRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="parcelPort_springwsService">
+    <wsdl:port binding="tns:parcelPort_springwsSoap11" name="parcelPort_springwsSoap11">
+      <soap:address location="http://10.0.0.51:7101/ops-spring-ws/parcelService/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:endpoint>http://127.0.0.1:7101/ops-spring-ws/parcelService/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="AddParcelLogEvent" bindingOperationName="AddParcelLogEvent" type="One-Way" inputName="AddParcelLogEventRequest" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventRequest>
+         <par:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </par:RequestHeader>
+         <par:ParcelLogEvent>
+            <com:Id>?</com:Id>
+            <!--Optional:-->
+            <com:CreatedDate>?</com:CreatedDate>
+            <!--Optional:-->
+            <com:ModifiedDate>?</com:ModifiedDate>
+            <ship:ParcelId>?</ship:ParcelId>
+            <ship:Date>?</ship:Date>
+            <ship:ParcelStatus>?</ship:ParcelStatus>
+            <ship:Location>?</ship:Location>
+            <ship:Message>?</ship:Message>
+         </par:ParcelLogEvent>
+      </par:AddParcelLogEventRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="AddParcelLogEventJMSPROXY" bindingOperationName="AddParcelLogEventJMSPROXY" type="Request-Response" outputName="AddParcelLogEventJMSPROXYResponse" inputName="AddParcelLogEventJMSPROXYRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>3</ship:ParcelId>
+               <ship:ParcelStatus>DELIVERED</ship:ParcelStatus>
+               <ship:Location>4</ship:Location>
+               <ship:Message>Package delivered!</ship:Message>
+            </par:ParcelLogEvent>
+
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-BILLING_INFO_RECEIVED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>BILLING_INFO_RECEIVED</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Billing information Received</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-PARCEL_RECEIVED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>PARCEL_RECEIVED</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Parcel received!</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-IN_TRANSIT-1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Package arrived at location 1</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-DELIVERED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>DELIVERED</ship:ParcelStatus>
+               <ship:Location>4</ship:Location>
+               <ship:Message>Package delivered!</ship:Message>
+            </par:ParcelLogEvent>
+
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-BILLING_INFO_RECEIVED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>BILLING_INFO_RECEIVED</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Billing information Received</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-DELIVERED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>DELIVERED</ship:ParcelStatus>
+               <ship:Location>4</ship:Location>
+               <ship:Message>Package delivered!</ship:Message>
+            </par:ParcelLogEvent>
+
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-IN_TRANSIT-1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Package arrived at location 1</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-PARCEL_RECEIVED"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>PARCEL_RECEIVED</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Parcel received!</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-IN_TRANSIT-2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Package arrived at location 2</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-1-IN_TRANSIT-3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>3</ship:Location>
+               <ship:Message>Package arrived at location 3</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-IN_TRANSIT-2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Package arrived at location 2</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Parcel-2-IN_TRANSIT-3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>3</ship:Location>
+               <ship:Message>Package arrived at location 3</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="GetParcelById" bindingOperationName="GetParcelById" type="Request-Response" outputName="GetParcelByIdResponse" inputName="GetParcelByIdRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelByIdRequest>
+         <par:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </par:RequestHeader>
+         <par:ParcelId>3</par:ParcelId>
+      </par:GetParcelByIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelByIdRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="GetParcelEventLog" bindingOperationName="GetParcelEventLog" type="Request-Response" outputName="GetParcelEventLogResponse" inputName="GetParcelEventLogRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:RequestHeader>
+            <!--Optional:-->
+            <com:SourceSystem>?</com:SourceSystem>
+            <!--Optional:-->
+            <com:SourceSystemUser>?</com:SourceSystemUser>
+            <!--Optional:-->
+            <com:SourceSystemTxId>?</com:SourceSystemTxId>
+         </par:RequestHeader>
+         <par:ParcelId>26254</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="GetParcelLog-1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call name="GetParcelLog-2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="Spring-WS TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create, Get, Log, GetLot" searchProperties="true" discardOkResults="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" id="50eba3d8-6b04-43b3-b34a-cb07b5591916"><con:settings/><con:testStep type="groovy" name="Generate ExternalReferenceId"><con:settings/><con:config><script>def guidVal = "${java.util.UUID.randomUUID()}";
+</script></con:config></con:testStep><con:testStep type="transfer" name="Transfer ExternalReferenceId"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>GUID</con:name><con:sourceType>result</con:sourceType><con:sourceStep>Generate ExternalReferenceId</con:sourceStep><con:targetType>ExternalId</con:targetType><con:targetStep>RequestProperties</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="properties" name="RequestProperties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ExternalId</con:name><con:value>14f50cb3-9b4b-476f-abb2-8894a475b41e</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="CreateShipment - Full Shipment"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>shipmentPort_springwsSoap11</con:interface><con:operation>CreateShipment</con:operation><con:request name="CreateShipment - Full Shipment" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship1="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:CreateShipmentRequest>
+				<ship:RequestHeader>
+					<!--Optional:-->
+					<com:SourceSystem>?</com:SourceSystem>
+					<!--Optional:-->
+					<com:SourceSystemUser>?</com:SourceSystemUser>
+					<!--Optional:-->
+					<com:SourceSystemTxId>?</com:SourceSystemTxId>
+				</ship:RequestHeader>
+				<ship:Shipment>
+               <ship1:ExternalReferenceId>${RequestProperties#ExternalId}</ship1:ExternalReferenceId>
+
+					<ship1:ToAddress>
+						<com:Addressee>Jeff West</com:Addressee>
+						<com:AddressLine1>123 Main St</com:AddressLine1>
+						<com:City>Los Angeles</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>90036</com:PostalCode>
+					</ship1:ToAddress>
+					<ship1:FromAddress>
+						<com:Addressee>Larry Ellison</com:Addressee>
+						<com:AddressLine1>Oracle HQ</com:AddressLine1>
+						<com:City>Redwood Shores</com:City>
+						<com:State>CA</com:State>
+						<com:PostalCode>12345</com:PostalCode>
+					</ship1:FromAddress>
+					<ship1:ShippingServiceName>?</ship1:ShippingServiceName>
+					<!--1 or more repetitions:-->
+					<ship1:Parcel>
+						<ship1:Contents>stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+					<ship1:Parcel>
+						<ship1:Contents>more stuff</ship1:Contents>
+						<ship1:Height>1</ship1:Height>
+						<ship1:Width>2</ship1:Width>
+						<ship1:Length>3</ship1:Length>
+						<ship1:Weight>4</ship1:Weight>
+						<ship1:ParcelStatus>?</ship1:ParcelStatus>
+					</ship1:Parcel>
+				</ship:Shipment>
+      </ship:CreateShipmentRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/CreateShipmentRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer Response Properties"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false" disabled="false"><con:name>CreateShipmentResponse</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateShipment - Full Shipment</con:sourceStep><con:sourcePath>declare namespace ns3='http://demo.oracle.com/ops/domain/services/shipment';
+declare namespace ns4='http://demo.oracle.com/ops/domain/schema/shipping';
+declare namespace ns2='http://demo.oracle.com/ops/domain/schema/common';
+//ns3:CreateShipmentResponse[1]/ns3:Shipment[1]/ns2:Id[1]</con:sourcePath><con:targetType>Id</con:targetType><con:targetStep>ResponseProperties</con:targetStep><con:targetPath/></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" transferChildNodes="false" useXQuery="false" ignoreEmpty="false" entitize="false"><con:name>transferParcel1Id</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateShipment - Full Shipment</con:sourceStep><con:sourcePath>declare namespace ns3='http://demo.oracle.com/ops/domain/services/shipment';
+declare namespace ns4='http://demo.oracle.com/ops/domain/schema/shipping';
+declare namespace ns2='http://demo.oracle.com/ops/domain/schema/common';
+//ns3:CreateShipmentResponse[1]/ns3:Shipment[1]/ns4:Parcel[1]/ns2:Id[1]</con:sourcePath><con:targetType>ParcelId-1</con:targetType><con:targetStep>ResponseProperties</con:targetStep><con:targetPath/></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" useXQuery="false" transferChildNodes="false" entitize="false" transferToAll="false"><con:name>transferParcel2Id</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateShipment - Full Shipment</con:sourceStep><con:sourcePath>declare namespace ns3='http://demo.oracle.com/ops/domain/services/shipment';
+declare namespace ns4='http://demo.oracle.com/ops/domain/schema/shipping';
+declare namespace ns2='http://demo.oracle.com/ops/domain/schema/common';
+//ns3:CreateShipmentResponse[1]/ns3:Shipment[1]/ns4:Parcel[2]/ns2:Id[1]</con:sourcePath><con:targetType>ParcelId-2</con:targetType><con:targetStep>ResponseProperties</con:targetStep><con:targetPath/></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" useXQuery="false" entitize="false" transferToAll="false" transferChildNodes="false" ignoreEmpty="false"><con:name>ExternalId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>CreateShipment - Full Shipment</con:sourceStep><con:sourcePath>declare namespace ns3='http://demo.oracle.com/ops/domain/services/shipment';
+declare namespace ns4='http://demo.oracle.com/ops/domain/schema/shipping';
+declare namespace ns2='http://demo.oracle.com/ops/domain/schema/common';
+//ns3:CreateShipmentResponse[1]/ns3:Shipment[1]/ns4:ExternalReferenceId[1]</con:sourcePath><con:targetType>ExternalId</con:targetType><con:targetStep>ResponseProperties</con:targetStep></con:transfers></con:config></con:testStep><con:testStep type="properties" name="ResponseProperties"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Id</con:name><con:value>167312</con:value></con:property><con:property><con:name>ParcelId-1</con:name><con:value>167313</con:value></con:property><con:property><con:name>ParcelId-2</con:name><con:value>167314</con:value></con:property><con:property><con:name>ExternalId</con:name><con:value>14f50cb3-9b4b-476f-abb2-8894a475b41e</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="GetShipmentById - TestSuite - GetShipmentById"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>shipmentPort_springwsSoap11</con:interface><con:operation>GetShipmentById</con:operation><con:request name="GetShipmentById - TestSuite - GetShipmentById" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByIdRequest>
+         <ship:ShipmentId>${ResponseProperties#Id}</ship:ShipmentId>
+      </ship:GetShipmentByIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByIdRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetShipmentByExternalId - TestSuite - GetShipmentByExternalId"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>shipmentPort_springwsSoap11</con:interface><con:operation>GetShipmentByExternalId</con:operation><con:request name="GetShipmentByExternalId - TestSuite - GetShipmentByExternalId" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/shipmentService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ship="http://demo.oracle.com/ops/domain/services/shipment" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ship:GetShipmentByExternalIdRequest>
+         <ship:ExternalReferenceId>${RequestProperties#ExternalId}</ship:ExternalReferenceId>
+      </ship:GetShipmentByExternalIdRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/shipmentPort_springws/GetShipmentByExternalIdRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-BILLING_INFO_RECEIVED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-BILLING_INFO_RECEIVED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>BILLING_INFO_RECEIVED</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Billing information Received</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-1" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-PARCEL_RECEIVED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-PARCEL_RECEIVED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>PARCEL_RECEIVED</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Parcel received!</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-2" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-1" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Package arrived at location 1</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-3" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-4" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-2" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Package arrived at location 2</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-5" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-6" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-IN_TRANSIT-3" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>3</ship:Location>
+               <ship:Message>Package arrived at location 3</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-7" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-8" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-1-DELIVERED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-1-DELIVERED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-1}</ship:ParcelId>
+               <ship:ParcelStatus>DELIVERED</ship:ParcelStatus>
+               <ship:Location>4</ship:Location>
+               <ship:Message>Package delivered!</ship:Message>
+            </par:ParcelLogEvent>
+
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-1-9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-1-9" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-1}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="delay" name="Delay 1s"><con:settings/><con:config><delay>2000</delay></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-BILLING_INFO_RECEIVED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-BILLING_INFO_RECEIVED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>BILLING_INFO_RECEIVED</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Billing information Received</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-1" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-PARCEL_RECEIVED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-PARCEL_RECEIVED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>PARCEL_RECEIVED</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Parcel received!</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-2" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-1" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>1</ship:Location>
+               <ship:Message>Package arrived at location 1</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-3" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-4" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-2" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>2</ship:Location>
+               <ship:Message>Package arrived at location 2</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-5" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-6" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-3"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-IN_TRANSIT-3" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>IN_TRANSIT</ship:ParcelStatus>
+               <ship:Location>3</ship:Location>
+               <ship:Message>Package arrived at location 3</ship:Message>
+            </par:ParcelLogEvent>
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-7" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-8" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="AddParcelLogEventJMSPROXY - Parcel-2-DELIVERED"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>AddParcelLogEventJMSPROXY</con:operation><con:request name="AddParcelLogEventJMSPROXY - Parcel-2-DELIVERED" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common" xmlns:ship="http://demo.oracle.com/ops/domain/schema/shipping">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:AddParcelLogEventJMSPROXYRequest>
+            <par:ParcelLogEvent>
+               <ship:ParcelId>${ResponseProperties#ParcelId-2}</ship:ParcelId>
+               <ship:ParcelStatus>DELIVERED</ship:ParcelStatus>
+               <ship:Location>4</ship:Location>
+               <ship:Message>Package delivered!</ship:Message>
+            </par:ParcelLogEvent>
+
+      </par:AddParcelLogEventJMSPROXYRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/AddParcelLogEventJMSPROXYRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetParcelEventLog - GetParcelLog-2-9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>parcelPort_springwsSoap11</con:interface><con:operation>GetParcelEventLog</con:operation><con:request name="GetParcelEventLog - GetParcelLog-2-9" outgoingWss="" incomingWss="" timeout="" wssPasswordType=""><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://10.0.0.51:7101/ops-spring-ws/parcelService/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:par="http://demo.oracle.com/ops/domain/services/parcel" xmlns:com="http://demo.oracle.com/ops/domain/schema/common">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <par:GetParcelEventLogRequest>
+         <par:ParcelId>${ResponseProperties#ParcelId-2}</par:ParcelId>
+      </par:GetParcelEventLogRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://demo.oracle.com/ops/domain/schema/common/parcelPort_springws/GetParcelEventLogRequest"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest name="JAX-WS Load Test"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>15</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>300</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>500</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>createShipment</con:name><con:value>createShipment</con:value></con:property><con:property><con:name>xource</con:name><con:value>xorce</con:value></con:property><con:property><con:name>sourceprop</con:name><con:value>sor</con:value></con:property></con:properties><con:wssContainer/></con:soapui-project>

@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ==================================================================================== -->
+
+  <parent>
+    <groupId>com.oracle.demo.ops</groupId>
+    <artifactId>ops-common</artifactId>
+    <version>3.0</version>
+    <relativePath>../../ops-common/pom.xml</relativePath>
+  </parent>
+
+  <!-- ==================================================================================== -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oracle.demo.ops</groupId>
+  <artifactId>ops-web-jquery</artifactId>
+  <packaging>war</packaging>
+  <version>3.0</version>
+  <name>ops-webapp-jquery</name>
+  <url>https://www.samplecode.oracle.com/sf/projects/oracle-parcel-svc</url>
+
+  <!-- ==================================================================================== -->
+
+  <build>
+    <defaultGoal>deploy</defaultGoal>
+    <finalName>ops-webapp-jquery</finalName>
+    <plugins>
+
+    </plugins>
+  </build>
+
+  <!-- ==================================================================================== -->
+
+  <dependencies>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>

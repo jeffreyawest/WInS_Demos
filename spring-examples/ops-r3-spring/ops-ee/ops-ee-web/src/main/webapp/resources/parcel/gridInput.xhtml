@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xml:lang="en" lang="en">
+<head>
+</head>
+<body>
+
+<composite:interface>
+  <composite:attribute
+          name="parcel"
+          required="true"
+          type="com.oracle.demo.ops.domain.Parcel"/>
+</composite:interface>
+
+<composite:implementation>
+
+  <h:panelGrid columns="2" columnClasses="label, value">
+    <h:outputText value="Parcel Contents: *"/>
+    <p:inputText required="true"
+                 label="parcel_contents"
+                 value="#{cc.attrs.contents}"/>
+
+    <h:outputText value="Parcel Weight: "/>
+    <p:inputText required="true"
+                 label="parcel_weight"
+                 value="#{cc.attrs.weight}"/>
+
+    <h:outputText value="Parcel Height: *"/>
+    <p:inputText required="true"
+                 label="parcel_height"
+                 value="#{cc.attrs.height}"/>
+
+    <h:outputText value="Parcel Width: *"/>
+    <p:inputText required="true"
+                 label="parcel_width"
+                 value="#{cc.attrs.width}"/>
+
+    <h:outputText value="Parcel Length: *"/>
+    <p:inputText required="true"
+                 label="parcel_length"
+                 value="#{cc.attrs.length}"/>
+  </h:panelGrid>
+
+</composite:implementation>
+
+
+</body>
+</html>

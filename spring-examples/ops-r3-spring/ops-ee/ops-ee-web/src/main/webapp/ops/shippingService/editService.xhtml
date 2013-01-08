@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:shippingService="http://java.sun.com/jsf/composite/shippingService"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xml:lang="en" lang="en">
+<h:head>
+  <h:outputStylesheet name="main.css" library="css"/>
+</h:head>
+<h:body>
+
+  <ui:composition template="/templates/common/layout.xhtml">
+
+    <ui:define name="content">
+
+      <p:panel id="edit_service_panel" header="Add Shipping Service">
+
+        <h:form>
+          <shippingService:gridInput
+              shippingService="#{ServiceControllerBean.selectedShippingService}"/>
+          
+          <h:commandButton id="update_button"
+                           value="Update"
+                           action="/ops/shippingServices/listServices?faces-redirect=true"
+                           actionListener="#{ServiceControllerBean.editShippingServiceActionListener}"/>
+        </h:form>
+
+      </p:panel>
+
+    </ui:define>
+  </ui:composition>
+
+</h:body>
+</html>

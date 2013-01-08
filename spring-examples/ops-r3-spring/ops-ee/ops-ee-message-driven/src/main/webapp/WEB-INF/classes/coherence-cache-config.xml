@@ -1,0 +1,163 @@
+<cache-config>
+  <caching-scheme-mapping>
+    <!-- BEGIN TOPLINK GRID CACHE SCHEME MAPPING -->
+    <cache-mapping>
+      <cache-name>DistributedJeff</cache-name>
+      <scheme-name>dist-jeff</scheme-name>
+    </cache-mapping>
+    <cache-mapping>
+      <cache-name>Address</cache-name>
+      <scheme-name>GridCache</scheme-name>
+    </cache-mapping>
+    <cache-mapping>
+      <cache-name>Parcel</cache-name>
+      <scheme-name>GridCache</scheme-name>
+    </cache-mapping>
+    <cache-mapping>
+      <cache-name>Shipment</cache-name>
+      <scheme-name>GridCache</scheme-name>
+    </cache-mapping>
+    <cache-mapping>
+      <cache-name>ShippingService</cache-name>
+      <scheme-name>GridRead</scheme-name>
+    </cache-mapping>
+    <cache-mapping>
+      <cache-name>ParcelEvent</cache-name>
+      <scheme-name>GridEntity</scheme-name>
+    </cache-mapping>
+    <!-- END TOPLINK GRID CACHE SCHEME MAPPING -->
+
+    <!-- for notification added by chuk-->
+    <cache-mapping>
+      <cache-name>ops-notification-cache</cache-name>
+      <scheme-name>ops-back-cache</scheme-name>
+    </cache-mapping>
+
+  </caching-scheme-mapping>
+  <!--
+      CACHING SCHEMES
+  -->
+  <caching-schemes>
+    <!-- for notification added by chuk-->
+    <distributed-scheme>
+      <scheme-name>basic-cache</scheme-name>
+      <service-name>MyBasicCache</service-name>
+      <backing-map-scheme>
+        <local-scheme/>
+      </backing-map-scheme>
+      <autostart>true</autostart>
+    </distributed-scheme>
+
+    <distributed-scheme>
+      <scheme-name>ops-back-cache</scheme-name>
+      <service-name>OPSBackCache</service-name>
+      <backing-map-scheme>
+        <local-scheme>
+          <eviction-policy>LRU</eviction-policy>
+          <high-units>100m</high-units>
+          <unit-calculator>BINARY</unit-calculator>
+          <cachestore-scheme></cachestore-scheme>
+        </local-scheme>
+      </backing-map-scheme>
+
+      <autostart>true</autostart>
+    </distributed-scheme>
+
+
+    <!-- BEGIN TOPLINK GRID CACHE SCHEME DEFINITION -->
+    <distributed-scheme>
+      <scheme-name>GridCache</scheme-name>
+      <service-name>EclipseLinkJPA</service-name>
+      <serializer>
+        <class-name>oracle.eclipselink.coherence.integrated.cache.WrapperSerializer</class-name>
+      </serializer>
+      <backing-map-scheme>
+        <local-scheme>
+          <scheme-name>unlimited-backing-map</scheme-name>
+        </local-scheme>
+      </backing-map-scheme>
+      <autostart>true</autostart>
+    </distributed-scheme>
+
+    <distributed-scheme>
+      <scheme-name>GridEntity</scheme-name>
+      <service-name>EclipseLinkJPAReadWrite</service-name>
+      <serializer>
+        <class-name>oracle.eclipselink.coherence.integrated.cache.WrapperSerializer</class-name>
+      </serializer>
+      <thread-count>5</thread-count>
+      <backup-count>1</backup-count>
+      <backup-count-after-writebehind>0</backup-count-after-writebehind>
+      <backing-map-scheme>
+        <read-write-backing-map-scheme>
+          <internal-cache-scheme>
+            <local-scheme>
+              <high-units>250M</high-units>
+              <unit-calculator>binary</unit-calculator>
+              <expiry-delay>10m</expiry-delay>
+            </local-scheme>
+          </internal-cache-scheme>
+          <miss-cache-scheme>
+            <local-scheme>
+              <expiry-delay>10m</expiry-delay>
+            </local-scheme>
+          </miss-cache-scheme>
+          <cachestore-scheme>
+            <class-scheme>
+              <class-name>oracle.eclipselink.coherence.integrated.EclipseLinkJPACacheStore</class-name>
+              <init-params>
+                <init-param>
+                  <param-type>java.lang.String</param-type>
+                  <param-value>{cache-name}</param-value>
+                </init-param>
+                <init-param>
+                  <param-type>java.lang.String</param-type>
+                  <param-value>ops_domain_standalone_pu</param-value>
+                </init-param>
+              </init-params>
+            </class-scheme>
+          </cachestore-scheme>
+          <write-delay>60s</write-delay>
+          <write-batch-factor>.25</write-batch-factor>
+          <write-requeue-threshold>128</write-requeue-threshold>
+          <refresh-ahead-factor>.75</refresh-ahead-factor>
+        </read-write-backing-map-scheme>
+      </backing-map-scheme>
+      <autostart>true</autostart>
+    </distributed-scheme>
+
+    <distributed-scheme>
+      <scheme-name>GridRead</scheme-name>
+      <service-name>EclipseLinkJPAReadOnly</service-name>
+      <serializer>
+        <class-name>oracle.eclipselink.coherence.integrated.cache.WrapperSerializer</class-name>
+      </serializer>
+      <backing-map-scheme>
+        <read-write-backing-map-scheme>
+          <internal-cache-scheme>
+            <local-scheme/>
+          </internal-cache-scheme>
+          <!-- Define the cache scheme -->
+          <cachestore-scheme>
+            <class-scheme>
+              <class-name>oracle.eclipselink.coherence.integrated.EclipseLinkJPACacheLoader</class-name>
+              <init-params>
+                <init-param>
+                  <param-type>java.lang.String</param-type>
+                  <param-value>{cache-name}</param-value>
+                </init-param>
+                <init-param>
+                  <param-type>java.lang.String</param-type>
+                  <param-value>ops_domain_standalone_pu</param-value>
+                </init-param>
+              </init-params>
+            </class-scheme>
+          </cachestore-scheme>
+          <read-only>true</read-only>
+        </read-write-backing-map-scheme>
+      </backing-map-scheme>
+      <autostart>true</autostart>
+    </distributed-scheme>
+    <!-- END TOPLINK GRID CACHE SCHEME DEFINITION -->
+  </caching-schemes>
+</cache-config>

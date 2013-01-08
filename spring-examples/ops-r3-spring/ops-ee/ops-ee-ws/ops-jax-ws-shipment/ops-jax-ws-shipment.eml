@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_6">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<lib name="Maven: com.sun.xml.ws:jaxws-rt:2.1.3" scope="PROVIDED"/>
+	<lib name="Maven: javax.xml.ws:jaxws-api:2.1" scope="PROVIDED"/>
+	<lib name="Maven: javax.xml.bind:jaxb-api:2.1" scope="PROVIDED"/>
+	<lib name="Maven: javax.xml.stream:stax-api:1.0" scope="PROVIDED"/>
+	<lib name="Maven: javax.activation:activation:1.1" scope="PROVIDED"/>
+	<lib name="Maven: com.sun.xml.bind:jaxb-impl:2.1.6" scope="PROVIDED"/>
+	<lib name="Maven: com.sun.xml.messaging.saaj:saaj-impl:1.3" scope="PROVIDED"/>
+	<lib name="Maven: javax.xml.soap:saaj-api:1.3" scope="PROVIDED"/>
+	<lib name="Maven: com.sun.xml.stream.buffer:streambuffer:0.7" scope="PROVIDED"/>
+	<lib name="Maven: org.jvnet.staxex:stax-ex:1.2" scope="PROVIDED"/>
+	<lib name="Maven: junit:junit:3.8" scope="PROVIDED"/>
+	<lib name="Maven: com.sun.xml.stream:sjsxp:1.0" scope="PROVIDED"/>
+	<lib name="Maven: com.sun.org.apache.xml.internal:resolver:20050927" scope="PROVIDED"/>
+	<lib name="Maven: org.jvnet:mimepull:1.1" scope="PROVIDED"/>
+	<module name="ops-util" scope="PROVIDED"/>
+	<module name="ops-domain-model" scope="PROVIDED"/>
+	<module name="ops-services-impl" scope="PROVIDED"/>
+	<module name="ops-domain-services-api" scope="PROVIDED"/>
+	<module name="ops-services-api" scope="PROVIDED"/>
+	<lib name="Maven: javax:javaee-api:6.0" scope="PROVIDED"/>
+</component>

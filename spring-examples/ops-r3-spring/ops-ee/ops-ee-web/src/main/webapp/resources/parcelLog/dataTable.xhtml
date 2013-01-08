@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+<h:body>
+
+  <composite:interface>
+    <composite:attribute
+            name="parcelLogEventList"
+            type="java.util.List"
+            required="true"/>
+    <composite:attribute
+            name="tableId"
+            default="PLEDataTableId"
+            required="false"/>
+  </composite:interface>
+
+  <composite:implementation>
+    <h:outputStylesheet library="css" name="main.css" target="head"/>
+
+    <h:dataTable value="#{cc.attrs.parcelLogEventList}"
+                 id="#{cc.attrs.tableId}"
+                 var="event"
+                 styleClass="data-table"
+                 headerClass="table-header"
+                 rowClasses="row-odd,row-even"
+                 columnClasses="column-center, column-left">
+
+      <f:facet name="header">Parcel Log Events</f:facet>
+
+      <h:column>
+        <f:facet name="header">Event ID</f:facet>
+        <h:outputText value="#{event.id}"/>
+      </h:column>
+
+      <h:column>
+        <f:facet name="header">Parcel ID</f:facet>
+        <h:outputText value="#{event.parcelId}"/>
+      </h:column>
+      <h:column>
+        <f:facet name="header">Date</f:facet>
+        <h:outputText value="#{event.date}"/>
+      </h:column>
+      <h:column>
+        <f:facet name="header">Location</f:facet>
+        <h:outputText value="#{event.location}"/>
+      </h:column>
+      <h:column>
+        <f:facet name="header">Status</f:facet>
+        <h:outputText value="#{event.parcelStatus}"/>
+      </h:column>
+      <h:column>
+        <f:facet name="header">Message</f:facet>
+        <h:outputText value="#{event.message}"/>
+      </h:column>
+
+    </h:dataTable>
+  </composite:implementation>
+
+</h:body>
+
+</html>

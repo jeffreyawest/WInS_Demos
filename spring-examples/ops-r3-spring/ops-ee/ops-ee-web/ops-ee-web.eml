@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_6">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$/../ops-ee-web">
+		<excludeFolder url="file://$MODULE_DIR$/../ops-ee-web/target"/>
+	</contentEntry>
+	<module name="ops-domain-services-api" scope="PROVIDED"/>
+	<module name="ops-services-impl" scope="PROVIDED"/>
+	<module name="ops-util" scope="PROVIDED"/>
+	<module name="ops-services-api" scope="PROVIDED"/>
+	<module name="ops-domain-model" scope="PROVIDED"/>
+	<lib name="Maven: com.oracle.coherence:coherence:3.7" scope="PROVIDED"/>
+	<lib name="Maven: javax:javaee-api:6.0" scope="PROVIDED"/>
+</component>
