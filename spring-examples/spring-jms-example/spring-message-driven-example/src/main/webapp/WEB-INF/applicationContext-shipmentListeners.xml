@@ -10,8 +10,11 @@
   <context:property-placeholder location="WEB-INF/jndi.properties"/>
   <context:property-placeholder location="WEB-INF/jms.properties"/>
 
-  <bean id="orderQueueListener" class="com.oracle.demo.ops.jms.listener.shipment.NewShipmentMessageListenerMDP">
-    <property name="shipmentManager" ref="shipmentManager"/>
+  <bean id="orderQueueListener"
+        class="com.oracle.demo.ops.jms.listener.shipment.NewShipmentMessageListenerMDP">
+
+    <property name="shipmentManager"
+              ref="shipmentManager"/>
   </bean>
 
   <bean id="orderQueueMDP"

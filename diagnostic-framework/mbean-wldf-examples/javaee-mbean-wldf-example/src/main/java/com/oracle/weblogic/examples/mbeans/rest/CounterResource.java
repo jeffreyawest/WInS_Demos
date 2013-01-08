@@ -30,8 +30,6 @@ public class CounterResource
   @PostConstruct
   private void init()
   {
-
-//    t3://clsuter-vip:port
     try
     {
       Hashtable env = new Hashtable();

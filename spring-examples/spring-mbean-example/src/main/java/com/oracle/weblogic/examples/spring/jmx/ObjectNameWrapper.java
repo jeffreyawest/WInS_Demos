@@ -1,4 +1,4 @@
-package com.oracle.weblogic.demo.spring.jmx;
+package com.oracle.weblogic.examples.spring.jmx;
 
 import javax.management.MalformedObjectNameException;
 import javax.management.ObjectName;

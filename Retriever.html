@@ -1,10 +1,1001 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<link href="https://retriever.us.oracle.com/public/tabbed_panels.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+    /* CSS Document */
 
-</body>
-</html>
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+  }
+
+  ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+
+  li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: darkred;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    list-style: square;
+  }
+
+  li.link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: darkred;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    list-style: square;
+  }
+
+  li span {
+    color: rgb(51, 51, 51);
+  }
+
+  td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    padding-left: 10px;
+  }
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+    border-bottom: solid thin black;
+    width: 99%;
+    padding: 10px 0px 0px 0px;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 10px;
+    color: black;
+    width: 99%;
+  }
+
+  .redHeader {
+    height: 53px;
+    padding: 15px 0px 10px 20px;
+    background: rgb(255, 0, 0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255, 0, 0, 1) 0%, rgba(188, 0, 1, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 0, 0, 1)), color-stop(100%, rgba(188, 0, 1, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 0, 0, 1) 0%, rgba(188, 0, 1, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 0, 0, 1) 0%, rgba(188, 0, 1, 1) 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(255, 0, 0, 1) 0%, rgba(188, 0, 1, 1) 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ff0000', endColorstr = '#bc0001', GradientType = 0); /* IE6-9 */
+    background: linear-gradient(top, rgba(255, 0, 0, 1) 0%, rgba(188, 0, 1, 1) 100%); /* W3C */
+    color: #FFF;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .white {
+    color: #ffffff;
+  }
+
+  .blacklinks {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  a:link {
+    color: #666666;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: #BC0001;
+  }
+
+  a:hover {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #BC0001;
+    text-decoration: underline;
+  }
+
+  .greyBox {
+    box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    -moz-box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    -webkit-box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9A9A9A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+    background: #cecece; /* Old browsers */
+    background: -moz-linear-gradient(top, #cecece 0%, #fefefe 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cecece), color-stop(80%, #fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #cecece 0%, #fefefe 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #cecece 0%, #fefefe 80%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #cecece 0%, #fefefe 80%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#cecece', endColorstr = '#fefefe', GradientType = 0); /* IE6-9 */
+    background: linear-gradient(top, #cecece 0%, #fefefe 80%); /* W3C */
+  }
+
+  .redBox {
+    box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    -moz-box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    -webkit-box-shadow: 2px 3px 4px hsla(0, 0%, 0%, .15);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9A9A9A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    vertical-align: top;
+    background: #f08080; /* Old browsers */
+    background: -moz-linear-gradient(top, #f08080 0%, #fefefe 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f08080), color-stop(80%, #fefefe)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f08080 0%, #fefefe 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f08080 0%, #fefefe 80%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #f08080 0%, #fefefe 80%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f08080', endColorstr = '#fefefe', GradientType = 0); /* IE6-9 */
+    background: linear-gradient(top, #f08080 0%, #fefefe 80%); /* W3C */
+  }
+
+  .footer {
+    border-top: solid thin #000;
+    text-align: center;
+  }</style>
+<!--<link href="template_standard.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="https://retriever.us.oracle.com/public/tabbed_panels.js"></script>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+  <tr>
+    <td class="redHeader">
+      WebLogic Innovation Seminar (WInS) Program
+    </td>
+  </tr>
+  </tbody>
+</table>
+<br/>
+
+<!-- PUT THE NAMES OF YOUR TABS HERE - MUST BE A CORRESPONDING TITLE FOR EACH TAB -->
+<div class="TabbedPanels" id="TabbedPanels">
+
+<ul class="TabbedPanelsTabGroup">
+  <li class="TabbedPanelsTab" style="color:#000;" tabindex="0">Overview &amp; FAQ</li>
+  <li class="TabbedPanelsTab" style="color:#000;" tabindex="0">WInS Content Modules</li>
+  <li class="TabbedPanelsTab" style="color:#000;" tabindex="0">WInS VirtualBox VM</li>
+  <li class="TabbedPanelsTab" style="color:#000;" tabindex="0">Customer Testimonials</li>
+  <li class="TabbedPanelsTab" style="color:#000;" tabindex="0">HTML Email Invitation</li>
+</ul>
+
+<div class="TabbedPanelsContentGroup">
+<!-- TAB 1 - Starting Page -->
+<div class="TabbedPanelsContent">
+  <span id="cke_bm_182S" style="display: none; ">&nbsp;</span>
+  <table cellpadding="5" cellspacing="0" width="100%">
+    <tbody>
+    <tr>
+      <td style="padding-left:10px; padding-right:10px;">
+        <img alt="" src="/u/weblogic-examples.png" style="float: left; width: 150px; height: 150px; "/>
+
+        <h2>Program Overview</h2>
+
+        <p>
+          The WebLogic Innovation Seminar (WInS) program was created out of a need to protect and expand the existing install base of
+          WebLogic.&nbsp; WebLogic is a key component of the overall revenue for FMW. The WInS program consists of several modules that
+          correspond to key WebLogic features.&nbsp; The modules contain a presentation as well as a video demonstration of each feature.&nbsp;
+          By providing video demos we can guarantee consistent results when giving customer demos.&nbsp; However, SCs should seek to give
+          live demos when/where possible</p>
+        <br/>
+
+        <h2>
+          Overview Deck: <a
+            href="http://retriever.us.oracle.com/apex/f?p=121:22:2843611918550695::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:56386,112">http://retriever.us.oracle.com/apex/f?p=121:22:2843611918550695::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:56386,112</a><br/>
+          <br/>
+          <br/>
+          Goals and Objectives</h2>
+
+        <p>
+          The overarching goal of WInS is to protect and expand the existing WebLogic install base. This can be achieved by proactively
+          reaching out to customers and educating them on WebLogic&rsquo;s current and new features.&nbsp; Many of our customers are still
+          using BEA WebLogic and have not been shown the new features of Oracle WebLogic Server in quite some time.&nbsp; JBoss is actively
+          pursuing WebLogic accounts and is in contact with our customers on a frequent basis. As such, customers are up-to-date on JBoss
+          features but not as much with WebLogic.</p>
+        <span style="color:#ff0000;"><strong>We need to be proactive with our customer outreach, and WInS provides the content and structure
+          that you can use to defend your accounts!</strong><b>!</b></span>
+
+        <h2>
+          Areas of Focus</h2>
+
+        <p>
+          The modules of WInS are grouped into the categories below, and each module contains a presentaiton and a video demonstration:</p>
+        <ul>
+          <li class="link">
+            Technical Innovation
+          </li>
+          <li class="link">
+            Operational Readiness
+          </li>
+          <li class="link">
+            Developer Productivity
+          </li>
+          <li class="link">
+            Cloud Architecture
+          </li>
+        </ul>
+        <h1>
+          Getting Started</h1>
+
+        <h2>
+          How do I start the conversation about WInS with the customer?</h2>
+        <ul>
+          <li>
+            Some reps have successfully offered to do a &quot;WebLogic Health Check&rdquo;, contacting the customer to see how they are
+            doing with WebLogic. Most customers have at least one complaint or question, and are usually happy to hear from Oracle.
+          </li>
+          <li>
+            Some SCs position it as a PM roadshow to increase customer interest, and PM is happy to support critical customers. In the BEA
+            days, the WebLogic roadshow was very well received by customers.
+          </li>
+          <li>
+            Many customers have unfortunately not heard from Oracle since the BEA acquisition. This likely means that they are using an old
+            version of WebLogic. Version 8.1 was a great platform and we still have many customers running production apps on it today,
+            however these customers are mostly not aware of the significant enhancements we have made to the platform, and many of them
+            upgrade and buy more licenses when they become aware.
+          </li>
+          <li>
+            We have many customers still using iAS and we want them to migrate to WebLogic, and ideally to upgrade to WebLogic Suite. These
+            customers need Oracle to educate them on WebLogic so they can understand and appreciate the features it offers above and beyond
+            what OC4J/iAS can do.
+          </li>
+        </ul>
+        <h2>
+          How do I invite the customer to participate in the WInS program?</h2>
+
+        <p>
+          Send one of the Pre-made HTML Email invitation examples (Select the tab at the top of this page) or create your own personalized
+          email invitation.</p>
+
+        <h2>
+          How do I select modules?</h2>
+        <ul>
+          <li>
+            Each module is designed to address a specific feature of WebLogic with a focus on the differentiated features in the product.
+            Each module contains a presentation and a video demonstration. Videos were chosen as an approach to ensure high quality and
+            consistent delivery of the content. Modules are designed to be delivered in a 1-hour time slot with approximately 45 minutes of
+            presentation and 10-15 minutes of video demonstration. In order to design a session for a customer, an SC should select the
+            modules that are most relevant to the individual customer. For example, if the customer is not using JMS and there is no
+            opportunity to have them adopt WebLogic JMS, the JMS modules could be excluded.
+          </li>
+          <li>
+            Ideally, your team should know what your customers are using WebLogic for and should be able to select modules that would be
+            interesting to them. However, this may not be the case for all accounts.
+          </li>
+          <li>
+            We would like customers to have exposure to multiple aspects of WebLogic. This being the case, it is good to encourage customers
+            to select modules (or for you to propose modules) from multiple functional areas listed below.
+          </li>
+          <li>
+            We have several customers that have purchased WebLogic Suite but are not using all the features or products it comes with, such
+            as Coherence. If you have a customer who falls into this category, it is helpful to choose modules that cover the products they
+            have purchased, but are not actively using. When customers adopt our advanced and &lsquo;sticky&rsquo; features, they are
+            typically more satisfied with their investment, often buy more, and are less likely to move off of Oracle onto a competitor&rsquo;s
+            platform.
+          </li>
+          <li>
+            A solid approach is to provide the list of modules that we offer and give the customer the option of &quot;ordering from the
+            menu&quot;. This will ensure that the modules that you deliver are interesting to the customer.
+          </li>
+        </ul>
+        <h2>
+          How many modules should I select?</h2>
+        <ul>
+          <li>
+            The number of modules depends on the amount of time that the customer is willing to commit to the workshop.
+          </li>
+          <li>
+            Typically, we find that one module per 45-60 minutes is a good goal, however if there are not many questions, some modules can
+            be covered in 30 minutes.
+          </li>
+        </ul>
+        <h2>
+          How do I deliver each module?</h2>
+        <ul>
+          <li>
+            First, deliver the presentation. The presentations are designed to be around 3 minutes each.
+          </li>
+          <li>
+            If you are capable and prepared to do so, deliver a live demo with VirtualBox (planned for FY13 - preferred). Otherwise, show
+            the video and talk the customer through it.
+          </li>
+          <li>
+            Be sure to leave time for Q&amp;A at the end. <u>During the Q&amp;A, challenge the customer to think </u></li>
+        </ul>
+        <h1>
+          Structuring and Delivering the Workshop</h1>
+
+        <p>
+          Depending on the modules selected, you can work with the customer to group them for interested parties such that we make the most
+          of their time. Sometimes the Develoeprs are not interested in Operations and vice versa.<br/>
+          <br/>
+          Here are some examples that the field has used that are successful:</p>
+
+        <h2>
+          Single day events:</h2>
+        <ul>
+          <li class="link">
+            First half of hte day (3-4 hours): Developer Focused
+          </li>
+          <li class="link">
+            Second half of hte day (3-4 hours): Operations Focused
+          </li>
+        </ul>
+        <h2>
+          Multi-day events:</h2>
+        <ul>
+          <li class="link">
+            Day 1: Developer Focused
+          </li>
+          <li class="link">
+            Day 2: Operations Focused
+          </li>
+        </ul>
+        <h2>
+          Lunch and Learns</h2>
+        <ul>
+          <li class="link">
+            Two modules per day 11:30-1:30 or 12:00-2:00 for a week
+          </li>
+        </ul>
+        <h2>
+          What customers should I target?</h2>
+        <span style="font-size:16px;">Excellent customer targets for this program include, but are not limited to:</span>
+        <ul>
+          <li>
+            Those with a recently renewed ULA - to drive adoption of WebLogic for new projects.
+          </li>
+          <li>
+            Those with a ULA coming up for renewal - to remind them that WebLogic is the #1 App Server with the best features and lowest
+            TCO.
+          </li>
+          <li>
+            Those where WebLogic is being considered &ndash; this is an active opportunity to educate them about the product.
+          </li>
+        </ul>
+        <p>
+          <span style="color: red; font-size: 18px; font-weight: bold; font-style: italic;">Ideally, we want to talk to each and every WebLogic customer. There is no account that is too small or too large! </span>
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<!-- TAB 2 - WINS Modules -->
+<div class="TabbedPanelsContent">
+<h2>Common Customer Profiles &amp; Module Groupings</h2>
+<ul>
+  <li class="link">
+    <a href="#common_groups">All Groupings</a></li>
+  <li class="link">
+    <a href="#grouping_rac">Customers who use Oracle RAC</a></li>
+  <li class="link">
+    <a href="#grouping_jms">Customers who use WebLogic JMS</a></li>
+  <li class="link">
+    <a href="#grouping_customdev">Customers who do Custom Development with WebLogic</a></li>
+</ul>
+
+<a name="modules"></a>
+
+<h1>WInS Modules</h1>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+  <tr>
+    <td valign="top" width="2%">
+      <p>
+        &nbsp;</p>
+    </td>
+    <!--Road to Cloud-->
+    <td valign="top" width="30%">
+      <table cellpadding="5" cellspacing="5" class="greyBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <h1>
+              Road to Cloud</h1>
+
+            <p>
+              <strong>General</strong></p>
+            <ul type="disc">
+              <li class="link">
+                EM Cloud Management (Coming Soon)
+              </li>
+              <li class="link">
+                OVAB Life Cycle (Coming Soon)
+              </li>
+              <li class="link">
+                OVAB Generic Appliances (Coming Soon)
+              </li>
+              <li class="link">
+                OVM &amp; VM Templates (Coming Soon)
+              </li>
+              <li class="link">
+                OVM Management (Coming Soon)
+              </li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>
+        &nbsp;</p>
+    </td>
+    <td rowspan="3" valign="top" width="30%">
+      <table cellpadding="5" cellspacing="5" class="greyBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <h1>
+              Operational Readiness</h1>
+
+            <p>
+              <strong>New in 12c</strong></p>
+            <ul type="disc">
+              <li class="link">
+                Enterprise Manager Cloud Control (Soon)
+              </li>
+            </ul>
+            <p>
+              <strong>Management</strong></p>
+            <ul type="disc">
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:58813" target="_blank">JRockit
+                  Mission Control - JRMC</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:3192075252895415::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:60856,112"
+                   target="_blank">EM 12c - Business Transaction Management &amp; Real User Experience Insight</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:3192075252895415::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:60857,112">EM
+                  12c - Lifecycle &amp; Configuration Management</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:273748802092852::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:60858,112"
+                   target="_blank">EM 12c - Monitoring and Diagnostics</a></li>
+            </ul>
+            <p>
+              <strong>General</strong></p>
+            <ul type="disc">
+              <li class="link">
+                High Availability with WebLogic
+                <ul>
+                  <li class="link">
+                    TLogs in Database (new in 10.3.6/12c)
+                  </li>
+                  <li class="link">
+                    JMS Database Store Performance (new in 10.3.6/12c)
+                  </li>
+                </ul>
+              </li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59748" target="_blank">WL
+                  Clustering and Node Manager Basics</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59754" target="_blank">WL
+                  Debugging - Working with Logs and thread dumps</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59976">WL
+                  Diagnostic Framework - WLDF</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59755" target="_blank">WL
+                  Diagnostic Framework + Flight Recorder Integration</a></li>
+              <li class="link">
+                WL Domain Templates
+              </li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59756" target="_blank">WL
+                  Scripting Tool - WLST</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59757" target="_blank">WL
+                  Service and Server Migration</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59758" target="_blank">WL
+                  Work Managers and Self tuning thread pools</a></li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>
+        &nbsp;</p>
+    </td>
+    <td rowspan="3" valign="top" width="30%">
+      <table border="0" cellpadding="5" cellspacing="5" class="greyBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px; padding-right:10px; padding-top: 5px;">
+            <h1>Developer Productivity</h1>
+
+            <p><strong>New in 12c</strong></p>
+            <ul type="disc">
+              <li>
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:59889,112">Java
+                  EE 6 Support - Rapid Application Development</a></li>
+            </ul>
+            <p>
+              <strong>General</strong></p>
+            <ul type="disc">
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56963" target="_blank">WL
+                  Admin Port - Side by Side Deployment</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56966" target="_blank">WL
+                  CI+Build Tools - Ant-Maven-Hudson</a>&nbsp;(Enhanced in 12c)
+              </li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56384" target="_blank">WL
+                  Fast Swap - Rapid Redeployment</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56967" target="_blank">WL
+                  Shared Libraries - Filtering Classloaders - CAT</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56975" target="_blank">WL
+                  Spring Support</a></li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="5">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+    <td valign="top" width="30%">
+      <table cellpadding="5" cellspacing="5" class="greyBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <h1>Technical Innovation</h1>
+
+            <p><strong>New in 12c</strong></p>
+            <ul type="disc">
+              <li>
+                Exalogic Elastic Cloud Software 2.0 (Coming Soon)
+              </li>
+              <li>
+                Oracle Traffic Director (Coming Soon)
+              </li>
+            </ul>
+            <p>
+              <strong>General</strong></p>
+            <ul type="disc">
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:57616" target="_blank">Active
+                  GridLink for RAC</a>&nbsp;(Session Affinity new in 10.3.6/12c)
+              </li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:59759" target="_blank">ActiveCache
+                  - WL+Coherence Integration</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:57620" target="_blank">JMS
+                  Distributed Destinations</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:57619" target="_blank">JMS
+                  Store and Forward - SAF</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:57623" target="_blank">JMS
+                  Unit of Order - UOO</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:57623" target="_blank">JMS
+                  Unit of Work - UOW</a></li>
+              <li class="link">
+                <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:56976" target="_blank">JPA+Coherence
+                  - TopLink Grid</a></li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<a name="common_groups"></a>
+
+<h1>
+  Common Customer Profiles &amp; Module Groupings</h1>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+  <tr>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+    <td valign="top" width="45%">
+      <table cellpadding="5" cellspacing="5" class="redBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <a name="grouping_rac"></a>
+
+            <h1>Customers with Oracle RAC</h1>
+
+            <h2>Top Concerns:</h2>
+            <ul>
+              <li class="link">Maximizing High Availability</li>
+              <li class="link">Isolating apps from Database Downtime</li>
+              <li class="link">Combined Database + App Server Performance</li>
+            </ul>
+            <h2>
+              Commonly Selected Modules:</h2>
+            <ul type="disc">
+              <li class="link">Active GridLink for RAC</li>
+              <li class="link">Service/Server Migration</li>
+              <li class="link">Management - Monitoring &amp; Diagnostics</li>
+              <li class="link">Work Managers &amp; Self Tuning Thread Pools</li>
+            </ul>
+            <h2>Are you using Oracle RAC? Did you know...</h2>
+            <ul type="disc">
+              <li><span>Active GridLink for RAC isolates WebLogic from changes in a RAC topology, including planned and unplanned downtime?</span></li>
+              <li><span>Active GridLink for RAC increases the performance of transactional applications by 3x with the use of a new feature called XA Transaction Affinity?</span></li>
+              <li><span>Active GridLink for RAC increases the performance of Web Applications by ?x with the use of a new feature called Web Session Affinity?</span></li>
+              <li><span>Active GridLink for RAC improves the performance of applications using a RAC database and distribute the load on the RAC cluster more evenly by using a new feature called Runtime Connection Load Balancing?</span></li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+    <td rowspan="3" valign="top" width="45%">
+      <table cellpadding="5" cellspacing="5" class="redBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <a name="grouping_jms"></a>
+
+            <h1>Customers who use WebLogic JMS</h1>
+
+            <h2>Top Concerns:</h2>
+            <ul type="disc">
+              <li class="link">Messaging Throughput</li>
+              <li class="link">No Message Loss</li>
+              <li class="link">High Availability of JMS Runtime</li>
+            </ul>
+
+            <h2>Commonly Selected Modules:</h2>
+            <ul type="disc">
+              <li class="link">WL Clustering and Node Manager Basics</li>
+              <li class="link">JMS Distributed Destinations</li>
+              <li class="link">JMS Store and Forward - SAF</li>
+              <li class="link">JMS Unit of Order and Unit of Work</li>
+              <li class="link">Server/Service Migration</li>
+            </ul>
+            <h2>
+              Are you using WebLogic JMS? Did you know...</h2>
+            <ul type="disc">
+              <li><span>WebLogic has the fastest and most scalable JMS messaging engine on the market?</span></li>
+              <li><span>WebLogic can automatically fail-over a JMS server from one server to another with no user intervention using Automatic Service Migration?</span></li>
+              <li><span>WebLogic JMS has advanced message processing features including Unit of Work and Unit of Order that optionally group messages for better performance and guarantee processing of messages in the order they were created?</span></li>
+              <li><span>WebLogic JMS Store and Forward can enable reliable messaging by allowing a messaging client to send messages to a remote WebLogic JMS Server over an unreliable network connection?</span></li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top" width="2%">
+      <p>&nbsp;</p>
+    </td>
+    <td valign="top" width="45%">
+      <table cellpadding="5" cellspacing="5" class="redBox" width="100%">
+        <tbody>
+        <tr>
+          <td style="padding-left:10px;padding-right:10px; padding-top: 5px;">
+            <a name="grouping_customdev"></a>
+
+            <h1>Customers who do Custom Development</h1>
+
+            <h2>Top Concerns:</h2>
+            <ul>
+              <li class="link">Time to Market fir New Applications</li>
+              <li class="link">Standards Compliance</li>
+              <li class="link">Development Lifecycle</li>
+            </ul>
+
+            <h2>Commonly Selected Modules:</h2>
+
+            <ul type="disc">
+              <li class="link">Java EE6 Support</li>
+              <li class="link">Spring Support</li>
+              <li class="link">Ant, Maven & Hudson</li>
+              <li class="link">JRockit Mission Control</li>
+              <li class="link">WebLogic Scripting Tool</li>
+            </ul>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="5">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<!-- TAB 3 - WINS VM -->
+<div class="TabbedPanelsContent">
+  <h1>WInS VirtualBox VM</h1>
+
+  <p>
+    The WInS VirtualBox VM Image can be downloaded here:
+    <a href="http://retriever.us.oracle.com/apex/f?p=121:22:1248225164624239::NO:RP:P22_CONTAINER_ID:62138">http://retriever.us.oracle.com/apex/f?p=121:22:2367900446206445::NO:RP:P22_CONTAINER_ID,P22_PREV_PAGE:62138,112</a>
+  </p>
+
+  <h2>Instructions and Demo Videos coming soon...</h2>
+
+</div>
+<!-- TAB 4 - Customer Testimonials -->
+<div class="TabbedPanelsContent">
+  <h1>
+    Customer Testimonials</h1>
+  <img alt="" src="/u/Screen%20Shot%202012-06-05%20at%203_32_50%20PM%281%29.png" style="width: 900px; height: 507px; "/><br/>
+  <br/>
+  &nbsp;</div>
+<!-- TAB 5 - HTML Template-->
+<div class="TabbedPanelsContent">
+  <h1>
+    HTML Email Template</h1>
+
+  <h2>
+    Example:</h2>
+
+  <div bgcolor="#FFFFFF" style="color: rgb(0, 0, 0); font-family: Helvetica; font-size: 16px; " text="#000000">
+				<span style="font-size:16px;">Dear &lt;customer name&gt;,<br/>
+				<br/>
+				Would you like to learn how you can get more out of your existing WebLogic assets? Do more with what you already own, while saving money and time?&nbsp;<br/>
+				<br/>
+				If so, I would like to offer you a WebLogic Innovation Seminar (WInS) at your convenience. We have customized modul<span
+              style="font-family: Calibri; ">es on many advanced features and functionality available to you in your existing product today, to help you save on developer time and 3rd party software licenses and support.&nbsp;</span></span>
+  </div>
+  <div bgcolor="#FFFFFF" style="color: rgb(0, 0, 0); font-family: Helvetica; font-size: 16px; " text="#000000">
+    &nbsp;</div>
+  <div bgcolor="#FFFFFF" style="color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; " text="#000000">
+    <span style="font-size:16px;">Please find more&nbsp;information&nbsp;about the program below and contact us at your convenience to start planning a workshop. &nbsp;Thanks!</span><br/>
+
+    <div class="moz-text-html" lang="x-western" style="font-size: 16px; ">
+      <br/>
+      <table border="0" cellpadding="2" cellspacing="2" style="position: static; z-index: auto; " width="650">
+        <tbody>
+        <tr>
+          <td bgcolor="#ff0000" valign="top">
+            &nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <table border="1" cellpadding="2" cellspacing="2" style="position: static; z-index: auto; " width="100%">
+              <tbody>
+              <tr>
+                <td valign="top">
+                  <div align="center">
+                    <big><big><b>
+                      <small><font color="#ff0000"><big>WebLogic Innovations Seminar (WInS)</big></font></small>
+                    </b></big></big><br/>
+                    <big><b>Learn about the Latest and Greatest Features of the #1 App Server!</b></big></div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <table border="1" cellpadding="2" cellspacing="2" style="position: static; z-index: auto; " width="100%">
+              <tbody>
+              <tr>
+                <td valign="top">
+                  <font size="4"><b>ABOUT THE PROGRAM:</b></font><br/>
+                  <ul>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">The WInS program consists of bite-size content modules covering specific value-added features in WebLogic</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Each module is delivered in approximately 1 hour and consists of a presentation followed by a feature demonstration</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Workshops are intended to be run on-site, face to face with customers</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Content areas include:</span></span>
+                      <ul>
+                        <li>
+                          <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Developer Productivity</span></span></li>
+                        <li>
+                          <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Operational Readiness</span></span></li>
+                        <li>
+                          <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Technical Innovation</span></span></li>
+                        <li>
+                          <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Road to Cloud</span></span></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">We will work with you to determine the modules that are most interesting and relevant to customize a workshop specifically for you</span></span>
+                    </li>
+                  </ul>
+                  <font size="4"><b>WHY ARE WE DOING THIS?</b></font><br/>
+                  <ul>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Many customers are on older versions of WebLogic and are not up-to-date on the innovations that have been delivered in the latest WebLogic releases</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Many customers are not aware of the valuable features in WebLogic that they could be using, therefore not getting the most for their money</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Many enterprises view application servers as commodities; this is a misconception fostered by vendors whose solutions provide far less functionality, scalability, and reliability than WebLogic, not to mention its well-proven performance in the most mission critical of production deployments</span></span>
+                    </li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">By attending customized workshops on WebLogic, you will clearly see Oracle&#39;s superior offering, and learn how we help you reduce total cost of ownership</span></span>
+                    </li>
+                  </ul>
+                  <span style="font-size:16px;"><b>PRESENTED BY:</b>&nbsp;</span><br/>
+                  <ul>
+                    <li>
+                      <span style="font-size:14px;"><span
+                          style="color: rgb(0, 0, 0); ">Your Local/Regional Sales Consulting Team</span></span></li>
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Members of WebLogic Product Management&nbsp;</span></span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <table border="1" cellpadding="2" cellspacing="2" style="position: static; z-index: auto; " width="100%">
+              <tbody>
+              <tr>
+                <td valign="top">
+                  <span style="font-size:16px;"><b>CONTENT MODULES</b></span><br/>
+                  <ul class="MailOutline">
+                    <li>
+                      <span style="font-size:14px;"><span style="color: rgb(0, 0, 0); ">Please see the attached PDF for a full list of the content modules available in WInS</span></span>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <span style="font-size:16px;"><b>WHAT CUSTOMERS ARE SAYING ABOUT WINS:</b></span><br/>
+                  <ul>
+                    <li>
+                      <span style="color:#000000;"><small><i><font size="4">
+                        <small>&ldquo;I had no idea that we had paid for, but were not using, WebLogic Diagnostic Framework. This knowledge
+                          allowed us to save on license and support fees for another software package we had purchased to address this
+                          issue. This alone was worth our time spent in the WInS workshop, but we got so much more than that. Thank you for
+                          a productive day!&rdquo; &ndash;</small>
+                      </font></i><font size="4">
+                        <small>&nbsp;WInS Workshop customer, March 2012</small>
+                      </font></small></span></li>
+                    <li>
+                      <span style="color:#000000;"><small><i><font size="4">
+                        <small>&ldquo;The session was packed with lots of useful and interesting information. I can assure you that quite a
+                          few people have commented about how much they enjoyed it and how informative it was&rdquo;</small>
+                      </font></i><font size="4">
+                        <small><i>&nbsp;-&nbsp;</i>European Customer, January 2012</small>
+                      </font></small></span></li>
+                    <li>
+                      <small><font size="4">
+                        <small><span style="letter-spacing: 0pt; font-style: italic; vertical-align: baseline; ">&ldquo;</span><span
+                            style="font-style: italic; ">Good workshop, with excellent content, presented by very skilled people from Oracle</span><span
+                            style="letter-spacing: 0pt; font-style: italic; vertical-align: baseline; ">&rdquo;&nbsp;<i>-&nbsp;</i></span>
+                        </small>
+                      </font></small>
+                      <span id="OLK_SRC_BODY_SECTION"><small><font size="4">
+                        <small>European Global Retailer, Winter 2011</small>
+                      </font></small></span></li>
+                    <li>
+                      <small><span style="letter-spacing: 0pt; font-style: italic; vertical-align: baseline; "><font size="4">
+                        <small>&ldquo;Positively astonished about the WebLogic Suite capabilities in monitoring, administration and
+                          Coherence. Very satisfied with the workshop&rdquo; -&nbsp;</small>
+                      </font></span></small>
+                      <span id="OLK_SRC_BODY_SECTION"><small><font size="4">
+                        <small>European Major Mobile Provider, Fall 2011</small>
+                      </font></small></span></li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            &nbsp;</td>
+        </tr>
+        <tr>
+          <td bgcolor="#ff0000" valign="top">
+            &nbsp;</td>
+        </tr>
+        </tbody>
+      </table>
+      <br/>
+      <br/>
+      <br/>
+      &nbsp;</div>
+  </div>
+</div>
+
+<div>
+  <!--footer-->
+  <table border="0" cellpadding="2" width="100%">
+    <tbody>
+    <tr>
+      <td>
+        &nbsp;</td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <p>
+          For more information please contact jeffrey.west@oracle.com</p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- REQUIRED CLOSING MATERIAL -->
+<script type="text/javascript">
+  <!--
+  var TabbedPanels = new Spry.Widget.TabbedPanels("TabbedPanels");
+  //-->
+</script>
+</div>
+<br/>

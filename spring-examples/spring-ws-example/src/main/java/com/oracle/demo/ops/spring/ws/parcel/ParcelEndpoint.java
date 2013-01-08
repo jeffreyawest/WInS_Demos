@@ -64,6 +64,6 @@ public class ParcelEndpoint
   @Override
   public void publishParcelEvent(ParcelEvent event)
   {
-    //To change body of implemented methods use File | Settings | File Templates.
+
   }
 }

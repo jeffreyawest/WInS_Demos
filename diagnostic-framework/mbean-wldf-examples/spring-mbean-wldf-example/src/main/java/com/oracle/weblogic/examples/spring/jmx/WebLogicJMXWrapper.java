@@ -1,7 +1,5 @@
 package com.oracle.weblogic.examples.spring.jmx;
 
-import com.oracle.weblogic.examples.mbean.ObjectNameWrapper;
-
 import javax.management.*;
 import java.io.IOException;
 

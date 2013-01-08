@@ -1,4 +1,4 @@
-package com.oracle.weblogic.demo.spring.counter;
+package com.oracle.weblogic.examples.spring.counter;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,8 +27,9 @@ public class CounterBean
     return value;
   }
 
-  public void setValue(int value)
+  public int setValue(int value)
   {
     this.value = value;
+    return value;
   }
 }

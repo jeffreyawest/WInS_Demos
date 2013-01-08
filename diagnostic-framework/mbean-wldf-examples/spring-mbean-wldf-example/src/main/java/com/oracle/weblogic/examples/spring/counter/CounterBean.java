@@ -27,8 +27,9 @@ public class CounterBean
     return value;
   }
 
-  public void setValue(int value)
+  public int setValue(int value)
   {
     this.value = value;
+    return value;
   }
 }

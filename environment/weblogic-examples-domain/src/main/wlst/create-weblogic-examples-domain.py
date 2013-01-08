@@ -359,6 +359,7 @@ def createUOOResources(moduleName, clusterTarget, jmsServerTargets):
 
     #### Queue
     cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
+
     queue_name = 'com.oracle.example.jms.uoo.queue'
     queue = create(queue_name, 'UniformDistributedQueue')
     queue.setJNDIName(queue_name)
@@ -612,6 +613,34 @@ def createCoherenceServer(coh_server_name, cluster_name, machine_name, coh_liste
 
 ########################################
 
+def createSpringWLDFModule():
+    cd('/')
+    cmo.createWLDFSystemResource('SpringMBeanWLDFModule')
+
+    cd('/WLDFSystemResources/SpringMBeanWLDFModule')
+    cmo.setDescription('')
+    set('Targets',jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
+
+    cd('/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule')
+    cmo.createWatch('SpringCounterMBeanWatch')
+
+    cd('/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule/Watches/SpringCounterMBeanWatch')
+    cmo.setRuleType('Harvester')
+    cmo.setEnabled(true)
+    cmo.setRuleExpression('(${ServerRuntime//[com.oracle.weblogic.examples.spring.counter.CounterBeanMBean]counter.bean:Name=CounterBean//Value} = \'\')')
+    cmo.setAlarmType(None)
+
+    cd('/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule')
+    cmo.createJMSNotification('SpringCounterJMSNotification')
+
+    cd('/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule/JMSNotifications/SpringCounterJMSNotification')
+    cmo.setEnabled(true)
+    cmo.setDestinationJNDIName('com.oracle.example.jms.wldf.notification')
+    cmo.setConnectionFactoryJNDIName('com.oracle.example.jms.wldf.cf')
+
+############################################################################################################################################
+#BEGIN MAIN
+
 var_domain_dir = USER_PROJECTS + '/domains/' + DOMAIN_NAME
 print 'Creating domain in path=' + var_domain_dir
 
@@ -802,5 +831,8 @@ progress.printStatus()
 progress = deploy(appName='toplink-grid', path=WL_HOME + '/common/deployable-libraries/toplink-grid-1.0.jar', targets=cluster_name,
     libraryModule='true', libImplVersion='1.0', libSpecVersion='1.0')
 progress.printStatus()
+
+createSpringWLDFModule()
+
 
 shutdown()

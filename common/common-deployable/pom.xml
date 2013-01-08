@@ -47,6 +47,23 @@
     </profile>
 
     <profile>
+      <id>deploy-vbox1</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <properties>
+        <weblogic.Deployer.adminurl>t3://192.168.56.101:7001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
+        <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
+        <weblogic.Deployer.application.targets>cluster-1</weblogic.Deployer.application.targets>
+        <weblogic.Deployer.remote>true</weblogic.Deployer.remote>
+        <weblogic.Deployer.upload>true</weblogic.Deployer.upload>
+      </properties>
+
+    </profile>
+
+    <profile>
       <id>undeploy-on-clean</id>
 
       <activation>

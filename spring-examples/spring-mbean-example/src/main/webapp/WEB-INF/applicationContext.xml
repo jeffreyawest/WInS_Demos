@@ -7,16 +7,16 @@
 
   <context:annotation-config/>
 
-  <bean id="assembler" class="com.oracle.weblogic.demo.spring.jmx.WLDFAwareReflectiveMBeanInfoAssembler"/>
+  <bean id="assembler" class="com.oracle.weblogic.examples.spring.jmx.WLDFAwareReflectiveMBeanInfoAssembler"/>
 
   <!-- ##################### JMX MBean Config ##################### -->
 
-  <bean id="webLogicJMXWrapper" class="com.oracle.weblogic.demo.spring.jmx.WebLogicJMXWrapper">
+  <bean id="webLogicJMXWrapper" class="com.oracle.weblogic.examples.spring.jmx.WebLogicJMXWrapper">
     <constructor-arg ref="runtimeMBeanServerConnection"/>
     <property name="myString" value="JeffWest"/>
   </bean>
 
-  <bean id="counterBean" class="com.oracle.weblogic.demo.spring.counter.CounterBean">
+  <bean id="counterBean" class="com.oracle.weblogic.examples.spring.counter.CounterBean">
     <property name="value" value="1"/>
   </bean>
 

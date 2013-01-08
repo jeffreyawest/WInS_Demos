@@ -2,7 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="627bbfc0-2ae4-435f-90fd-bc778a987149" name="Default" comment="added some files and fixed typos.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Retriever.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-sender/pom.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/jms/WLDFMessageListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/src/main/java/com/oracle/example/jms/producer/SimpleJMSProducer.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/CounterBean.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/ObjectNameWrapper.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/WebLogicJMXWrapper.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WInS_Demos.ipr" afterPath="$PROJECT_DIR$/WInS_Demos.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WInS_Demos.iws" afterPath="$PROJECT_DIR$/WInS_Demos.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/src/main/webapp/WEB-INF/weblogic.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/src/main/webapp/WEB-INF/weblogic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common-deployable/pom.xml" afterPath="$PROJECT_DIR$/common/common-deployable/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" afterPath="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/pom.xml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" afterPath="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" />
     </list>
     <ignored path="WInS_Demos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -434,8 +469,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/pom.xml">
+      <file leaf-file-name="CounterController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="12" selection-start="0" selection-end="1428" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="21" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationMBeanLifeCycleListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/weblogic/ApplicationMBeanLifeCycleListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CounterResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6818182">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Common.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/Common.xsd">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -443,84 +532,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/pom.xml">
+      <file leaf-file-name="ServicesCommon.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="29" column="12" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/pom.xml">
+      <file leaf-file-name="CounterMXBean.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="8" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/pom.xml">
+      <file leaf-file-name="CounterMXBeanImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBeanImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="25" selection-start="1021" selection-end="1025" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="61" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="normal.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="26" selection-start="595" selection-end="595" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuditInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AuditInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.086872585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AccountBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="13" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/Account.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -533,25 +566,28 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/maven-examples/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/pom.xml" />
-        <option value="$PROJECT_DIR$/maven-examples/weblogic-integration-test-example/pom.xml" />
-        <option value="$PROJECT_DIR$/maven-examples/weblogic-deployment-example/pom.xml" />
-        <option value="$PROJECT_DIR$/maven-examples/simple-maven-example/pom.xml" />
-        <option value="$PROJECT_DIR$/maven-examples/deployment-profiles-example/pom.xml" />
-        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/pom.xml" />
-        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" />
-        <option value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-listener-solo/pom.xml" />
-        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/pom.xml" />
-        <option value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml" />
-        <option value="$PROJECT_DIR$/event-driven-architecture/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" />
         <option value="$PROJECT_DIR$/common/common-deployable/pom.xml" />
-        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/pom.xml" />
-        <option value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/pom.xml" />
-        <option value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/pom.xml" />
-        <option value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" />
+        <option value="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
+        <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" />
+        <option value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd" />
       </list>
     </option>
   </component>
@@ -578,46 +614,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Modules" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="WInS_Demos" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Modules" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="environment" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="WInS_Demos" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Modules" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="environment" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -657,7 +653,7 @@
     <option name="width" value="1620" />
     <option name="height" value="1028" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -713,7 +709,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="maven-examples" />
+              <option name="myItemId" value="spring-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jms-examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WInS_Demos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diagnostic-framework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -742,19 +766,21 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_directory_selection" value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settings.project.maven.runner" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="DefaultHtmlFileTemplate" value="Html" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
@@ -770,16 +796,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.oracle.weblogic.examples.spring.counter" />
       <recent name="com.oracle.example.jms.stuckthreads" />
       <recent name="com.oracle.example.jms" />
       <recent name="com.oracle.example.jms.jdbchogger" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-sender" />
       <recent name="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp" />
       <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper-war/src/main/filter" />
       <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper-war" />
       <recent name="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
-      <recent name="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/src/main/webapp/WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
@@ -983,6 +1010,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.UOOProducer" />
     </list>
@@ -1011,312 +1049,6 @@
     <configuration useDefault="true">$USER_HOME$/.subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/common" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/common" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/common/common-deployable" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/common/common-deployable" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/common/common-deployable/common-ejb" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/common/common-deployable/common-ejb" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/environment" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/environment" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/environment/saf-target-domain" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/environment/saf-target-domain" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/environment/weblogic-examples-domain" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/environment/weblogic-examples-domain" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-event-producer" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-event-producer" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/fast-swap" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/fast-swap" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/maven-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/maven-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/shared-libraries" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/shared-libraries" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/side-by-side-deployment" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/side-by-side-deployment" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-ejb-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-ejb-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-examples-common" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-examples-common" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-mbean-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-mbean-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-rest-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-rest-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/spring-examples/spring-ws-example" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/spring-examples/spring-ws-example" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/workmanager-examples/workmanager-web-app" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/../workshop-1035" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/../workshop-1035" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$/../workshop-1035" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/../workshop-1035" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1596,8 +1328,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="22" width="1620" height="1028" extended-state="0" />
-    <editor active="false" />
+    <frame x="60" y="22" width="1620" height="1028" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30319735" sideWeight="0.9964564" order="7" side_tool="false" content_ui="tabs" />
@@ -1612,21 +1344,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32745314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.21940464" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13295165" sideWeight="0.6515987" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24681933" sideWeight="0.6515987" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34840134" sideWeight="0.93603545" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17366412" sideWeight="0.6527012" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1908397" sideWeight="0.6527012" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3472988" sideWeight="0.93603545" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32741398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3263506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32745314" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1748,105 +1480,92 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/common-deployable/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="6" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0" />
+        <state line="19" column="13" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="41" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0" />
+        <state line="25" column="13" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/veryslow.jsp">
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="13" column="13" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-ws-example/pom (2).xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="16" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0" />
+        <state line="19" column="75" selection-start="1017" selection-end="1017" vertical-scroll-proportion="-12.954545" />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/WEB-INF/weblogic.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.534846" />
+        <state line="14" column="43" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/pom.xml">
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="12" selection-start="0" selection-end="1428" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="21" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/weblogic/ApplicationMBeanLifeCycleListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/Common.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/pom.xml">
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="8" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/pom.xml">
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBeanImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="12" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/pom.xml">
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="25" selection-start="1021" selection-end="1025" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="61" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0">
+        <state line="29" column="12" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/src/main/webapp/normal.jsp">
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="595" selection-end="595" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AccountBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/java/sessionbean/AuditInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast-swap/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.086872585">
+        <state line="65" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6818182">
           <folding />
         </state>
       </provider>
@@ -1893,7 +1612,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1905,7 +1624,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>workmanager-web-app</last-edited>
+          <last-edited>uoo-sender</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

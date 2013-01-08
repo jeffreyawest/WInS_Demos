@@ -1,8 +1,8 @@
 package com.oracle.weblogic.examples.spring.counter;
 
-import com.oracle.weblogic.demo.spring.jmx.WebLogicJMXWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,11 +15,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
-@RequestMapping(value = "/counter")
+@RequestMapping(value = "counter")
 public class CounterController
 {
   @Autowired
-  private com.oracle.weblogic.demo.spring.counter.CounterBean counter;
+  private CounterBean counter;
+
+  @RequestMapping(value = "/", method = RequestMethod.GET)
+  @ResponseBody
+  public int getValueRoot()
+  {
+    return counter.getValue();
+  }
 
   @RequestMapping(value = "/value", method = RequestMethod.GET)
   @ResponseBody
@@ -40,5 +47,12 @@ public class CounterController
   public int resetCounter()
   {
     return counter.reset();
+  }
+
+  @RequestMapping(value = "/set/{newValue}", method = RequestMethod.GET)
+  @ResponseBody
+  public int setValue(@PathVariable("newValue") int pNewValue)
+  {
+    return counter.setValue(pNewValue);
   }
 }

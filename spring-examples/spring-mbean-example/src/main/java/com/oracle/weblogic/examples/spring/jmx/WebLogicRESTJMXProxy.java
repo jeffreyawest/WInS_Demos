@@ -1,4 +1,4 @@
-package com.oracle.weblogic.demo.spring.jmx;
+package com.oracle.weblogic.examples.spring.jmx;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd
         http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
 
-  <wls:context-root>/jsf2-test</wls:context-root>
+  <wls:context-root>/split-storage</wls:context-root>
 
   <wls:session-descriptor>
     <wls:debug-enabled>true</wls:debug-enabled>

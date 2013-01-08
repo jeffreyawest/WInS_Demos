@@ -1,8 +1,5 @@
 package com.oracle.weblogic.examples.spring.jmx;
 
-import com.oracle.weblogic.examples.mbean.CounterBean;
-import com.oracle.weblogic.examples.mbean.ObjectNameWrapper;
-import com.oracle.weblogic.examples.mbean.WebLogicJMXWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

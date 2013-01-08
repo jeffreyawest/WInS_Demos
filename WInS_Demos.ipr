@@ -397,7 +397,7 @@
             <element id="module-output" name="jsf-bean-app-1" />
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="project" name="Maven: org.primefaces.themes:cupertino:1.0.3" />
+            <element id="library" level="project" name="Maven: org.primefaces.themes:vader:1.0.3" />
             <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.2" />
           </element>
         </element>
@@ -708,6 +708,9 @@
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
+  <component name="JsfProjectComponent">
+    <option name="faceletsSupport" value="ENABLED" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -716,7 +719,7 @@
     </option>
     <option name="activeProfiles">
       <list>
-        <option value="deploy-local" />
+        <option value="deploy-vbox1" />
         <option value="create-domain" />
       </list>
     </option>
@@ -942,7 +945,6 @@
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../workshop-1035/workshop-1035.iml" filepath="$PROJECT_DIR$/../workshop-1035/workshop-1035.iml" />
     </modules>
   </component>
   <component name="ProjectReloadState">
@@ -1075,19 +1077,13 @@
             </SvnBranchConfiguration>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../workshop-1035">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="trunkUrl" value="https://svn.java.net/svn/weblogic-examples~weblogic-workshops/workshop-1035" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
       </map>
     </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../workshop-1035" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
@@ -1368,6 +1364,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/cupertino/1.0.3/cupertino-1.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.primefaces.themes:vader:1.0.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/vader/1.0.3/vader-1.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/vader/1.0.3/vader-1.0.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/vader/1.0.3/vader-1.0.3-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.primefaces:primefaces:3.2">

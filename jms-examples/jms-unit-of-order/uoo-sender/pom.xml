@@ -18,6 +18,12 @@
 
   <!-- ==================================================================================== -->
 
+  <properties>
+    <demo.mainClass>com.oracle.example.jms.uoo.UOOProducer</demo.mainClass>
+  </properties>
+
+  <!-- ==================================================================================== -->
+
   <profiles>
 
     <profile>
@@ -43,7 +49,7 @@
                 </goals>
 
                 <configuration>
-                  <mainClass>com.oracle.example.jms.uoo.UOOProducer</mainClass>
+                  <mainClass>${demo.mainClass}}</mainClass>
                   <classpathScope>compile</classpathScope>
                 </configuration>
               </execution>

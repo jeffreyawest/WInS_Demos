@@ -54,7 +54,7 @@
   <dependencies>
     <dependency>
       <groupId>org.primefaces.themes</groupId>
-      <artifactId>cupertino</artifactId>
+      <artifactId>vader</artifactId>
     </dependency>
 
     <dependency>
