@@ -1,4 +1,4 @@
-package com.oracle.weblogic.demo.spring.counter;
+package com.oracle.weblogic.examples.spring.counter;
 
 import com.oracle.weblogic.demo.spring.jmx.WebLogicJMXWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CounterController
 {
   @Autowired
-  private CounterBean counter;
+  private com.oracle.weblogic.demo.spring.counter.CounterBean counter;
 
   @RequestMapping(value = "/value", method = RequestMethod.GET)
   @ResponseBody
