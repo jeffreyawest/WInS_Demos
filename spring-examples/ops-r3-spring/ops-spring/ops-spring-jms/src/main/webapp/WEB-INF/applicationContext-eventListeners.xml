@@ -54,7 +54,7 @@
 
     <jms:listener id="parcelLogUpdate"
                   destination="${jms.event.topic.name}"
-                  ref="updateParcelLogEventHandler"
+                  ref="updateParcelEventHandler"
                   method="handleEvent"
                   subscription="parcelLogUpdate_${weblogic.Name}"/>
   </jms:listener-container>
@@ -78,6 +78,7 @@
   <jms:listener-container connection-factory="jmsConnectionFactory"
                           message-converter="eventMessageConverter"
                           destination-resolver="jmsDestinationResolver"
+
                           client-id="SPR_packageDeliveryNotification_${weblogic.Name}"
                           destination-type="durableTopic">
 

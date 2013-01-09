@@ -664,8 +664,6 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ops-cache/ops-cache.iml" filepath="$PROJECT_DIR$/ops-cache/ops-cache.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-cache-config/ops-cache-config.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-cache-config/ops-cache-config.iml" group="ops-domain-tlg and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common.iml" filepath="$PROJECT_DIR$/ops-common/ops-common.iml" group="ops-common and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-deployable/ops-common-deployable.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-deployable/ops-common-deployable.iml" group="ops-common and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-common/ops-common-ejb/ops-common-ejb.iml" filepath="$PROJECT_DIR$/ops-common/ops-common-ejb/ops-common-ejb.iml" group="ops-common and modules" />
@@ -674,11 +672,8 @@
       <module fileurl="file://$PROJECT_DIR$/ops-core/ops-core.iml" filepath="$PROJECT_DIR$/ops-core/ops-core.iml" group="ops-core and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain.iml" group="ops-domain and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-model/ops-domain-model.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-model/ops-domain-model.iml" group="ops-domain and modules" />
-      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-model-tlg/ops-domain-model-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-model-tlg/ops-domain-model-tlg.iml" group="ops-domain-tlg and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" group="ops-domain and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" filepath="$PROJECT_DIR$/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" group="ops-domain and modules" />
-      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/ops-domain-services-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-services-tlg/ops-domain-services-tlg.iml" group="ops-domain-tlg and modules" />
-      <module fileurl="file://$PROJECT_DIR$/ops-domain-tlg/ops-domain-tlg.iml" filepath="$PROJECT_DIR$/ops-domain-tlg/ops-domain-tlg.iml" group="ops-domain-tlg and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee.iml" group="ops-ee and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" group="ops-ee and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-ee/ops-ee-rest/ops-ee-rest.iml" filepath="$PROJECT_DIR$/ops-ee/ops-ee-rest/ops-ee-rest.iml" group="ops-ee and modules" />
@@ -690,7 +685,6 @@
       <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services.iml" filepath="$PROJECT_DIR$/ops-services/ops-services.iml" group="ops-services and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services-api/ops-services-api.iml" filepath="$PROJECT_DIR$/ops-services/ops-services-api/ops-services-api.iml" group="ops-services and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-services/ops-services-impl/ops-services-impl.iml" filepath="$PROJECT_DIR$/ops-services/ops-services-impl/ops-services-impl.iml" group="ops-services and modules" />
-      <module fileurl="file://$PROJECT_DIR$/ops-shipment-notifier/ops-shipment-notifier.iml" filepath="$PROJECT_DIR$/ops-shipment-notifier/ops-shipment-notifier.iml" />
       <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-jms/ops-spring-jms.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-jms/ops-spring-jms.iml" group="ops-spring and modules" />
       <module fileurl="file://$PROJECT_DIR$/ops-spring/ops-spring-rest/ops-spring-rest.iml" filepath="$PROJECT_DIR$/ops-spring/ops-spring-rest/ops-spring-rest.iml" group="ops-spring and modules" />
@@ -739,7 +733,7 @@
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">

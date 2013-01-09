@@ -12,6 +12,11 @@
     Web application to deploy spring MDB in a servlet engine.
   </description>
 
+  <listener>
+    <listener-class>weblogic.spring.monitoring.WeblogicContextLoaderListener</listener-class>
+    <!-- instead of org.springframework.web.context.ContextLoaderListener -->
+  </listener>
+
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/applicationContext.xml</param-value>
@@ -55,10 +60,6 @@
   <!--<listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>-->
-
-  <listener>
-    <listener-class>weblogic.spring.monitoring.WeblogicContextLoaderListener</listener-class>
-  </listener>
 
 </web-app>
 

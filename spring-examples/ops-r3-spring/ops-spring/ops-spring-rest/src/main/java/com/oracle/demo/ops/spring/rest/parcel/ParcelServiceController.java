@@ -4,10 +4,12 @@ import com.oracle.demo.ops.domain.Parcel;
 import com.oracle.demo.ops.entitymanager.ParcelManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.registry.infomodel.PersonName;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
@@ -24,6 +26,8 @@ public class ParcelServiceController
 {
   @Autowired
   ParcelManager parcelManager;
+
+  PersonName jeff;
 
 
   @InitBinder

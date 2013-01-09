@@ -1,4 +1,4 @@
-package com.oracle.demo.ops.event.converter;
+package com.oracle.demo.ops.event.spring.converter;
 
 import com.oracle.demo.ops.xml.MyMarshaller;
 import org.springframework.jms.support.converter.MessageConversionException;

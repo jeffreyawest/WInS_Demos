@@ -23,15 +23,12 @@
   <modules>
     <module>ops-common</module>
     <module>ops-domain</module>
-    <module>ops-domain-tlg</module>
     <module>ops-core</module>
     <module>ops-services</module>
     <module>ops-ee</module>
     <module>ops-webapp</module>
     <module>ops-wldf</module>
     <module>ops-spring</module>
-    <module>ops-shipment-notifier</module>
-    <module>ops-cache</module>
   </modules>
 
   <build>

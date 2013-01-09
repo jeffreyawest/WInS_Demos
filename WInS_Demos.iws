@@ -2,42 +2,110 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="627bbfc0-2ae4-435f-90fd-bc778a987149" name="Default" comment="added some files and fixed typos.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Retriever.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-sender/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/jms/WLDFMessageListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/src/main/java/com/oracle/example/jms/producer/SimpleJMSProducer.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/CounterBean.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/ObjectNameWrapper.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbean/WebLogicJMXWrapper.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-deployable/ops-common-deployable (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ejb/ops-common-ejb (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-core (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl (1).iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven (1).iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-core/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-core/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/ops-spring-jms.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/ops-spring-rest.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws/ops-spring-ws.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/ops-spring-services.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-spring/ops-common-spring (1).iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops/jms/converters/ParcelLogEventMessageConverter.java" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops/event/converter/ParcelLogEventMessageConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WInS_Demos.ipr" afterPath="$PROJECT_DIR$/WInS_Demos.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WInS_Demos.iws" afterPath="$PROJECT_DIR$/WInS_Demos.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/src/main/webapp/WEB-INF/weblogic.xml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/src/main/webapp/WEB-INF/weblogic.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/common-deployable/pom.xml" afterPath="$PROJECT_DIR$/common/common-deployable/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" afterPath="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" afterPath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/javaee-mbean-wldf-example.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/javaee-mbean-wldf-example.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/spring-mbean-wldf-example.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/spring-mbean-wldf-example.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" afterPath="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" afterPath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/pom.xml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/ObjectNameWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" afterPath="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" afterPath="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" afterPath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-eventHandlers.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-eventHandlers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-eventListeners.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-eventListeners.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-jmsEnvironment.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-jmsEnvironment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext-shipmentListeners.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/jms.properties" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/jms.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/src/main/java/com/oracle/demo/ops/spring/rest/parcel/ParcelServiceController.java" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/src/main/java/com/oracle/demo/ops/spring/rest/parcel/ParcelServiceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/src/main/java/applicationContext-jpa.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/src/main/java/applicationContext-jpa.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/src/main/java/applicationContext-services.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/src/main/java/applicationContext-services.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service-r3.ipr" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service-r3.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service-r3.iws" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service-r3.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service.iml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/ops-r3-spring/pom.xml" afterPath="$PROJECT_DIR$/spring-examples/ops-r3-spring/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-examples.iml" afterPath="$PROJECT_DIR$/spring-examples/spring-examples.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" afterPath="$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" afterPath="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" />
     </list>
     <ignored path="WInS_Demos.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -469,91 +537,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CounterController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+      <file leaf-file-name="ParcelLogEventMessageConverter.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops/event/converter/ParcelLogEventMessageConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="12" selection-start="0" selection-end="1428" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="34" column="3" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.5568182">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CounterController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
+      <file leaf-file-name="ParcelLogEventMessageConverter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/src/main/java/com/oracle/demo/ops/event/spring/converter/ParcelLogEventMessageConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="21" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CounterBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationMBeanLifeCycleListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/weblogic/ApplicationMBeanLifeCycleListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="13" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CounterResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6818182">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Common.xsd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/Common.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServicesCommon.xsd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CounterMXBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CounterMXBeanImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBeanImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+            <state line="37" column="0" selection-start="0" selection-end="1650" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -572,15 +570,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/SpringRestJMXBean.java" />
-        <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
         <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java" />
         <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java" />
         <option value="$PROJECT_DIR$/common/common-deployable/pom.xml" />
         <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml" />
         <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/spring-examples/spring-ws-example/src/main/java/com/oracle/demo/ops/spring/ws/parcel/ParcelEndpoint.java" />
-        <option value="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" />
         <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java" />
         <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
@@ -588,6 +583,9 @@
         <option value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java" />
         <option value="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/rest/CounterResource.java" />
         <option value="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd" />
+        <option value="$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py" />
+        <option value="$PROJECT_DIR$/spring-examples/ops-r3-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops/event/converter/ParcelLogEventMessageConverter.java" />
       </list>
     </option>
   </component>
@@ -626,6 +624,106 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="spring-examples" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="spring-examples" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="event-driven-architecture" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Modules" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ModulesNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="event-driven-architecture" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WInS_Demos" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="oracle-parcel-service" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="oracle-parcel-service" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
           <option name="myItemId" value="Lifecycle" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
@@ -648,9 +746,9 @@
     <option name="vmOptions" value="-Xms1g -Xmx1g -XX:MaxPermSize=512m -XX:PermSize=512m" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="60" />
+    <option name="x" value="56" />
     <option name="y" value="22" />
-    <option name="width" value="1620" />
+    <option name="width" value="1624" />
     <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -699,48 +797,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jms-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WInS_Demos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diagnostic-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -766,7 +822,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -1324,12 +1380,16 @@
       <created>1353967737101</created>
       <updated>1353967737101</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="put code in an edit block">
+      <created>1357715813048</created>
+      <updated>1357715813049</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="22" width="1620" height="1028" extended-state="6" />
-    <editor active="true" />
+    <frame x="56" y="22" width="1624" height="1028" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30319735" sideWeight="0.9964564" order="7" side_tool="false" content_ui="tabs" />
@@ -1344,16 +1404,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="RESTClient" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.21940464" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17366412" sideWeight="0.6527012" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1908397" sideWeight="0.6527012" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3472988" sideWeight="0.93603545" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="EJB" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17258883" sideWeight="0.6736494" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33756346" sideWeight="0.6736494" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40352812" sideWeight="0.93603545" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1399,7 +1460,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some files and fixed typos." />
+    <option name="LAST_COMMIT_MESSAGE" value="put code in an edit block" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1412,7 +1473,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="renamed migration modules" />
     <MESSAGE value="updated to call migration module functino" />
     <MESSAGE value="removed reference to JSF libs" />
     <MESSAGE value="updated wait time" />
@@ -1437,6 +1497,7 @@
     <MESSAGE value="helper scripts" />
     <MESSAGE value="updated default goals on poms" />
     <MESSAGE value="added some files and fixed typos." />
+    <MESSAGE value="put code in an edit block" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1480,47 +1541,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicJMXWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WebLogicRESTJMXProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/jmx/WLDFAwareReflectiveMBeanInfoAssembler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/spring-rest-servlet.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="75" selection-start="1017" selection-end="1017" vertical-scroll-proportion="-12.954545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="17" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="43" selection-start="1312" selection-end="1312" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="0" selection-end="1428" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/src/main/java/com/oracle/weblogic/examples/spring/counter/CounterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="21" selection-start="1403" selection-end="1403" vertical-scroll-proportion="0.0" />
@@ -1541,32 +1561,67 @@
         <state line="47" column="5" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="19" selection-start="1663" selection-end="1663" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment/weblogic-examples-domain/src/main/wlst/create-weblogic-examples-domain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="834" column="69" selection-start="35165" selection-end="35165" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="26" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/Common.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBean.java">
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" />
+        <state line="29" column="12" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBeanImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
+        <state line="12" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.025684932" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/src/main/resources/xsd/ServicesCommon.xsd">
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/pom.xml">
+    <entry file="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.6818182">
-          <folding />
+        <state line="31" column="0" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="66" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/src/main/java/com/oracle/weblogic/examples/mbeans/CounterMXBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="158" selection-end="158" vertical-scroll-proportion="0.20547946" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/src/main/java/com/oracle/demo/ops/event/spring/converter/ParcelLogEventMessageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="0" selection-end="1650" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/src/main/java/com/oracle/demo/ops/event/converter/ParcelLogEventMessageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="3" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.5568182">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

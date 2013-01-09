@@ -5,7 +5,8 @@
 
   <import resource="applicationContext-jpa.xml"/>
 
-  <bean id="eventService" class="com.oracle.demo.ops.spring.services.impl.EventServiceImpl"/>
+  <bean id="eventService"
+        class="com.oracle.demo.ops.spring.services.impl.EventServiceImpl"/>
 
   <bean id="shipmentService" class="com.oracle.demo.ops.spring.services.impl.ShipmentServiceImpl">
     <property name="parcelManager" ref="parcelManager"/>
