@@ -809,6 +809,9 @@ for n in range(1, int(coh_server_count) + 1):
     createCoherenceServer(coh_server_name, coh_cluster_name, machine_name, coh_listen_address, coh_listen_port, coh_server_args,
         coh_server_cp)
 
+createSpringWLDFModule()
+
+
 save()
 activate(block="true")
 
@@ -831,8 +834,6 @@ progress.printStatus()
 progress = deploy(appName='toplink-grid', path=WL_HOME + '/common/deployable-libraries/toplink-grid-1.0.jar', targets=cluster_name,
     libraryModule='true', libImplVersion='1.0', libSpecVersion='1.0')
 progress.printStatus()
-
-createSpringWLDFModule()
 
 
 shutdown()
