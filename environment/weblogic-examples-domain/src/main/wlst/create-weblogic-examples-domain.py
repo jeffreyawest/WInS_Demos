@@ -846,7 +846,7 @@ for n in range(1, int(coh_server_count) + 1):
         coh_server_cp)
 
 createSpringWLDFModule()
-
+createSpringJMSTempResources()
 
 save()
 activate(block="true")
