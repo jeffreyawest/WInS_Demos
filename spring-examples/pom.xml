@@ -16,6 +16,7 @@
     <module>spring-examples-common</module>
     <module>spring-ejb-example</module>
     <module>spring-jms-example</module>
+    <module>spring-jms-temp</module>
     <module>spring-mbean-example</module>
     <module>spring-rest-example</module>
     <module>spring-ws-example</module>
