@@ -809,7 +809,7 @@ for n in range(1, int(coh_server_count) + 1):
     createCoherenceServer(coh_server_name, coh_cluster_name, machine_name, coh_listen_address, coh_listen_port, coh_server_args,
         coh_server_cp)
 
-createSpringWLDFModule()
+#createSpringWLDFModule()
 
 
 save()
