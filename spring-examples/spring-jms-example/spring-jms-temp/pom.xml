@@ -21,6 +21,22 @@
 
   <!-- ==================================================================================== -->
 
+  <build>
+    <defaultGoal>install</defaultGoal>
+
+    <plugins>
+
+      <plugin>
+        <groupId>com.oracle.weblogic</groupId>
+        <artifactId>wls-maven-plugin</artifactId>
+      </plugin>
+
+    </plugins>
+    
+  </build>
+
+  <!-- ==================================================================================== -->
+
   <dependencies>
 
     <dependency>
