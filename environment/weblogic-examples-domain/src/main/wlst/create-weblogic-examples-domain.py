@@ -431,6 +431,42 @@ def createUOWResources(moduleName, clusterTarget, jmsServerTargets):
 
 
 ########################################
+def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
+    cd('/')
+    jmsMySystemResource = create(moduleName, 'JMSSystemResource')
+    jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
+
+    cd('/JMSSystemResources/' + moduleName)
+    subdeployment = create('cluster-subdeployment', 'SubDeployment')
+    subdeployment.setTargets(jarray.array(jmsServerTargets, weblogic.management.configuration.TargetMBean))
+
+    cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
+
+    ######## Connection Factory
+    cf_name = 'jms/connectionFactory'
+    myCF = create(cf_name, 'ConnectionFactory')
+    cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0/ConnectionFactories/' + cf_name)
+
+    myCF.setJNDIName(cf_name)
+    myCF.setDefaultTargetingEnabled(true)
+
+    lbParams = create(cf_name, 'LoadBalancingParams')
+    lbParams.setLoadBalancingEnabled(true)
+    lbParams.setServerAffinityEnabled(false)
+
+    txParams = create(cf_name, 'TransactionParams')
+    txParams.setXAConnectionFactoryEnabled(true)
+
+    #### Queue
+    cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
+    queue_name = 'jms/testQueue'
+    queue = create(queue_name, 'UniformDistributedQueue')
+    queue.setJNDIName(queue_name)
+    queue.setDefaultTargetingEnabled(false)
+    queue.setSubDeploymentName('cluster-subdeployment')
+
+
+########################################
 def createSAFStoresAndAgents():
     for n in range(1, int(managed_server_count) + 1):
         targets = jarray.array([migratableTargetMBeans[n - 1]], weblogic.management.configuration.TargetMBean)
