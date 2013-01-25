@@ -14,11 +14,9 @@ public class InvoiceSenderServlet extends javax.servlet.http.HttpServlet
   protected void service(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException
   {
-    WebApplicationContext ctx = WebApplicationContextUtils
-        .getRequiredWebApplicationContext(this.getServletContext());
+    WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
 
-    InvoiceQueueSender sender = (InvoiceQueueSender) ctx
-        .getBean("jmsInvoiceSender");
+    InvoiceQueueSender sender = (InvoiceQueueSender) ctx.getBean("jmsInvoiceSender");
     sender.sendMesage();
   }
 }

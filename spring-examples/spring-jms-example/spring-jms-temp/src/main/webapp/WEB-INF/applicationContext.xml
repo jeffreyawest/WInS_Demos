@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+  <bean id="invoiceListener" class="jms.InvoiceMDB"/>
+
+  <bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
+    <property name="environment">
+      <props>
+        <prop key="java.naming.factory.initial">weblogic.jndi
+          .WLInitialContextFactory
+        </prop>
+        <prop key="java.naming.provider.url">t3://localhost:7001</prop>
+      </props>
+    </property>
+  </bean>
+
+  <bean id="queueConnectionFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiTemplate">
+      <ref bean="jndiTemplate"/>
+    </property>
+    <property name="jndiName">
+      <value>jms/connectionFactory</value>
+    </property>
+  </bean>
+
+  <bean id="jmsDestinationResolver" class="org.springframework.jms.support.destination.JndiDestinationResolver">
+    <property name="jndiTemplate">
+      <ref bean="jndiTemplate"/>
+    </property>
+    <property name="cache">
+      <value>true</value>
+    </property>
+  </bean>
+
+  <bean id="invoiceQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
+    <property name="connectionFactory">
+      <ref bean="queueConnectionFactory"/>
+    </property>
+    <property name="destinationResolver">
+      <ref bean="jmsDestinationResolver"/>
+    </property>
+  </bean>
+
+  <bean id="jmsInvoiceSender" class="jms.InvoiceQueueSender">
+    <property name="jmsTemplate">
+      <ref bean="invoiceQueueTemplate"/>
+    </property>
+
+  </bean>
+
+  <bean id="invoiceQueue" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiTemplate">
+      <ref bean="jndiTemplate"/>
+    </property>
+    <property name="jndiName">
+      <value>jms/testQueue</value>
+    </property>
+  </bean>
+  <bean id="Invoicelistener" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+    <property name="concurrentConsumers" value="5"/>
+    <property name="connectionFactory" ref="queueConnectionFactory"/>
+    <property name="destination" ref="invoiceQueue"/>
+    <property name="messageListener" ref="invoiceListener"/>
+  </bean>
+</beans>

@@ -1,21 +1,31 @@
 package jms;
 
-/**
- * **************************************************************************
- * <p/>
- * This code is provided for example purposes only.  Oracle does not assume
- * any responsibility or liability for the consequences of using this code.
- * If you choose to use this code for any reason, including but not limited
- * to its use as an example you do so at your own risk and without the support
- * of Oracle.
- * <p/>
- * ****************************************************************************
- * Created with IntelliJ IDEA because its awesome.
- * User: jeffreyawest
- * Date: 1/25/13
- * Time: 8:51 AM
- * To change this template use File | Settings | File Templates.
- */
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
+
 public class InvoiceQueueSender
 {
+  private JmsTemplate jmsTemplate;
+
+  public void setJmsTemplate(JmsTemplate jmsTemplate)
+  {
+    this.jmsTemplate = jmsTemplate;
+  }
+
+  public void sendMesage()
+  {
+    MessageCreator messageCreator = new MessageCreator()
+    {
+      public Message createMessage(Session session) throws JMSException
+      {
+        return session.createTextMessage("I am sending Invoice message");
+      }
+    };
+
+    jmsTemplate.send("jms/testQueue", messageCreator);
+  }
 }
