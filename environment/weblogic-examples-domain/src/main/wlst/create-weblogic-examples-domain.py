@@ -813,6 +813,7 @@ createOPSJMSResources('jms-module-ops', clusterMBean, jmsServerMBeans)
 createSAFSourceModules()
 createSAFStoresAndAgents()
 createMigrationJMSResources('jms-module-migration', clusterMBean, jmsServerMBeans)
+createSpringJMSTempResources('jms-module-temp', clusterMBean, jmsServerMBeans)
 
 updateDomain()
 
@@ -846,7 +847,8 @@ for n in range(1, int(coh_server_count) + 1):
         coh_server_cp)
 
 createSpringWLDFModule()
-createSpringJMSTempResources()
+
+
 
 save()
 activate(block="true")
