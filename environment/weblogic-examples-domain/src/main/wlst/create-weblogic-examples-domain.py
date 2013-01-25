@@ -618,8 +618,8 @@ def createSpringWLDFModule():
     cmo.createWLDFSystemResource('SpringMBeanWLDFModule')
 
     cd('/WLDFSystemResources/SpringMBeanWLDFModule')
-    cmo.setDescription('')
-    set('Targets',jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
+    cmo.setDescription('Spring_WLDF_Module')
+    #set('Targets',jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
 
     cd('/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule')
     cmo.createWatch('SpringCounterMBeanWatch')
@@ -809,7 +809,7 @@ for n in range(1, int(coh_server_count) + 1):
     createCoherenceServer(coh_server_name, coh_cluster_name, machine_name, coh_listen_address, coh_listen_port, coh_server_args,
         coh_server_cp)
 
-#createSpringWLDFModule()
+createSpringWLDFModule()
 
 
 save()
