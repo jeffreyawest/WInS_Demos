@@ -450,13 +450,6 @@ def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
     myCF.setJNDIName(cf_name)
     myCF.setDefaultTargetingEnabled(true)
 
-    lbParams = create(cf_name, 'LoadBalancingParams')
-    lbParams.setLoadBalancingEnabled(true)
-    lbParams.setServerAffinityEnabled(false)
-
-    txParams = create(cf_name, 'TransactionParams')
-    txParams.setXAConnectionFactoryEnabled(true)
-
     #### Queue
     cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
     queue_name = 'jms/testQueue'
