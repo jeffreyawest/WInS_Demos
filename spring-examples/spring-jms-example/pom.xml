@@ -15,9 +15,8 @@
   <modules>
     <module>spring-message-driven-example</module>
     <module>spring-jms-temp</module>
-	<module>spring-jms-standalone</module>
-	<module>JMSProducer</module>
-	<module>MessageDrivenBean</module>
-  </modules>
+	<module>spring-jms-sender</module>
+	<module>spring-jms-mdp</module>
+	</modules>
 
 </project>
