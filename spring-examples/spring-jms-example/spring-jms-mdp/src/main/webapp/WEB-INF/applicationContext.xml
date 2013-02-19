@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
-    "http://www.springframework.org/dtd/spring-beans.dtd">
-
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -37,7 +34,7 @@
   </bean>
 
   <jms:listener-container
-      connection-factory="jmsConnectionFactory"
+      connection-factory="connectionFactory"
       message-converter="eventMessageConverter"
       destination-resolver="jmsDestinationResolver">
 
