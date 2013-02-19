@@ -720,6 +720,8 @@ machine = createMachine(machine_name, 'Plain', '127.0.0.1', 5556)
 
 cd('/')
 clusterMBean = create(cluster_name, 'Cluster')
+
+# changed from consensus by JAW
 clusterMBean.setMigrationBasis('database')
 
 jdbcSystemResource = createPhysicalDataSource([datasource_jndi_name, 'com.oracle.demo.ops.jdbc.cluster-ds'], datasource_jdbc_driver,
