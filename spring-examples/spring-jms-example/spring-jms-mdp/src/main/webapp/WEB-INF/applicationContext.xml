@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
-"http://www.springframework.org/dtd/spring-beans.dtd">
+    "http://www.springframework.org/dtd/spring-beans.dtd">
 
-<beans>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xmlns:jms="http://www.springframework.org/schema/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms-3.0.xsd">
+
   <!-- this is the Message Driven POJO (MDP) -->
-  <bean id="messageListener" class="com.oracle.example.springjmsmdp.SpringMDP" />
+  <bean id="messageListener" class="com.oracle.example.spring.jms.mdp.SpringMDP"/>
 
-<bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
- <property name="environment">
-   <props>
-     <prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop>
-     <prop key="java.naming.provider.url">t3://localhost:7001</prop>
-   </props>
- </property>
-</bean>
-<bean id="connectionFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
- <property name="jndiTemplate">
-   <ref bean="jndiTemplate" />
- </property>
- <property name="jndiName">
-   <value>jms/connectionFactory</value>
- </property>
-</bean>
+  <!-- -->
+  <bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate"/>
 
-<bean id="queue" class="org.springframework.jndi.JndiObjectFactoryBean">
- <property name="jndiTemplate">
-   <ref bean="jndiTemplate" />
- </property>
- <property name="jndiName">
-   <value>jms/testQueue</value>
- </property>
-</bean>
+  <!-- -->
+  <jee:jndi-lookup id="connectionFactory"
+                   jndi-name="com.oracle.example.jms.spring.cf"
+                   expose-access-context="true"/>
 
-
-  <bean id="listenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
-    <property name="concurrentConsumers" value="5" />
-    <property name="connectionFactory" ref="connectionFactory" />
-    <property name="destination" ref="queue" />
-    <property name="messageListener" ref="messageListener" />
+  <!-- -->
+  <bean id="queue" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="jndiTemplate" ref="jndiTemplate"/>
+    <property name="jndiName" value="com.oracle.example.jms.spring.queue"/>
   </bean>
+
+  <!-- -->
+  <bean id="listenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+    <!-- -->
+    <property name="concurrentConsumers" value="5"/>
+    <property name="connectionFactory" ref="connectionFactory"/>
+    <property name="destination" ref="queue"/>
+    <property name="messageListener" ref="messageListener"/>
+  </bean>
+
+  <jms:listener-container
+      connection-factory="jmsConnectionFactory"
+      message-converter="eventMessageConverter"
+      destination-resolver="jmsDestinationResolver">
+
+    <jms:listener destination="${jms.event.queue.name}"
+                  ref="eventService"
+                  method="publishEventToTopic"/>
+
+  </jms:listener-container>
+
 </beans>
