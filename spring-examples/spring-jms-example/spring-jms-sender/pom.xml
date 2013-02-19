@@ -1,20 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-    <!-- ==================================================================================== -->
-
-    <!-- ==================================================================================== -->
-
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.oracle.weblogic.demo.wins</groupId>
-    <artifactId>spring-jms-standalone</artifactId>
-    <version>12.1.1.0</version>
+
+    <groupId>com.oracle.example</groupId>
+    <artifactId>spring-jms-sender</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>spring-jms-standalone</name>
 
-    <!-- ==================================================================================== -->
+    <name>spring-jms-sender</name>
 
-     <properties>
+    <properties>
         <weblogic.Deployer.adminurl>t3://127.0.0.1:7001</weblogic.Deployer.adminurl>
         <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
         <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
