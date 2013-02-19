@@ -443,7 +443,7 @@ def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
     cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
 
     ######## Connection Factory
-    cf_name = 'jms/connectionFactory'
+    cf_name = 'com.oracle.example.jms.spring.cf'
     myCF = create(cf_name, 'ConnectionFactory')
     cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0/ConnectionFactories/' + cf_name)
 
@@ -452,7 +452,8 @@ def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
 
     #### Queue
     cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-    queue_name = 'jms/testQueue'
+    queue_name = 'com.oracle.example.jms.spring.queue'
+
     queue = create(queue_name, 'UniformDistributedQueue')
     queue.setJNDIName(queue_name)
     queue.setDefaultTargetingEnabled(false)
@@ -808,6 +809,7 @@ createOPSJMSResources('jms-module-ops', clusterMBean, jmsServerMBeans)
 createSAFSourceModules()
 createSAFStoresAndAgents()
 createMigrationJMSResources('jms-module-migration', clusterMBean, jmsServerMBeans)
+
 createSpringJMSTempResources('jms-module-temp', clusterMBean, jmsServerMBeans)
 
 updateDomain()
