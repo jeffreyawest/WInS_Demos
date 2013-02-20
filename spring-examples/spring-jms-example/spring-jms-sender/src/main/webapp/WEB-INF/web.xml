@@ -12,7 +12,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j
 <servlet-name>QueueSenderServlet</servlet-name>
 <url-pattern>/QueueSenderServlet</url-pattern>
 </servlet-mapping>
-<listener>
-<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-</listener>
+ <listener>
+    <listener-class>weblogic.spring.monitoring.WeblogicContextLoaderListener</listener-class>
+  </listener>
 </web-app>
