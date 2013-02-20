@@ -2,6 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
 "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
+<!--It helps us to perform JNDI operations. It has methods to do lookup and binding operation. The web logic context details are configured using this interface -->
 <bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
 <property name="environment">
  <props>
@@ -10,16 +11,16 @@
  </props>
 </property>
 </bean>
-
+<!-- It is used to look up the JNDI object on startup and cache it. This interface is used to configure connection factory. -->
 <bean id="queueConnectionFactory" class="org.springframework.jndi.JndiObjectFactoryBean">
 <property name="jndiTemplate">
  <ref bean="jndiTemplate" />
 </property>
 <property name="jndiName">
- <value>jms/connectionFactory</value>
+ <value>com.oracle.example.jms.spring.cf</value>
 </property>
 </bean>
-
+<!-- It is used by JmsTemplate to resolve destination names  -->
 <bean id="jmsDestinationResolver" class="org.springframework.jms.support.destination.JndiDestinationResolver">
 <property name="jndiTemplate">
  <ref bean="jndiTemplate" />
@@ -28,7 +29,7 @@
  <value>true</value>
 </property>
 </bean>
-
+<!-- It is used to send messages. This requires information about connection factory and destination resolver while configuring -->
 <bean id="queueTemplate" class="org.springframework.jms.core.JmsTemplate">
 <property name="connectionFactory">
  <ref bean="queueConnectionFactory" />
@@ -38,6 +39,7 @@
 </property>
 </bean>
 
+<!-- Sender Bean -->
 <bean id="jmsSender" class="com.oracle.example.springjmssender.QueueSender">
 <property name="jmsTemplate">
  <ref bean="queueTemplate" />
