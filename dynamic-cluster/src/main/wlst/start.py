@@ -1,25 +1,38 @@
 
 loadProperties('counter.properties')
 #Paramaters
+
 #user='weblogic'
 #password='welcome1'
 #listenAddress='localhost'
-#listenPort=5556
+#listenPort=5554
 #adminPort=7001
-#Change parameter for this place
-#domainName='mydomain'	
-															 
-USER_PROJECTS='/u01/wls1212/user_projects/domains/'
+#domainName='dynamic-cluster-domain'
+														 
+#USER_PROJECTS='/u01/wls1212/user_projects/domains/'
+
 var_domain_dir = USER_PROJECTS + domainName
-APP_DIR ='D:\dynamicluster'
+APP_DIR='/labs/content/WInSDemos/dynamic-cluster/src/main/apps/'
+
+print ''
+print '============================================='
+print 'Connecting to Node Manager...'
+print '============================================='
+print ''
+
+nmConnect(user,password,listenAddress,listenPort,domainName,var_domain_dir,'plain')
+
+print ''
+print '============================================='
+print 'Connected to NODE MANAGER Successfully'
+print '============================================='
+print ''
 
 
 
-#Connect to the Node manager
-nmConnect(user,password,listenAddress,5556,domainName,var_domain_dir,'plain')
+
 
 #Start the Admin Server in Domain : mydomain
-
 adminServerStatus= nmServerStatus('AdminServer');
 if( adminServerStatus != 'RUNNING'):									
 	nmStart('AdminServer')
@@ -41,12 +54,12 @@ connect('weblogic','welcome1', 't3://localhost:7001');
 
 #Start the MyCluser-1 in Dynamic Cluster
 cluster1status= nmServerStatus('MyCluster-1');
-if( cluster1status == 'SHUTDOWN'):									
+if( cluster1status != 'RUNNING'):									
 	start('MyCluster-1','Server')
 	
 #Start the LoadBalancer Managed Server
 lbstatus= nmServerStatus('LoadBalancer');
-if( lbstatus == 'SHUTDOWN'):									
+if( lbstatus != 'RUNNING'):									
 	start('LoadBalancer','Server')
 
 
@@ -76,7 +89,7 @@ while 1:
 							count=count+ cr.getOpenSessionsCurrentCount();
 							if ( count>50 ):
 								cluster2status= nmServerStatus('MyCluster-2');
-								if( cluster2status == 'SHUTDOWN'):
+								if( cluster2status != 'RUNNING'):
 									start('MyCluster-2','Server')
 #								if ( count<100 ):
 #										cluster3status= nmServerStatus('MyCluster-3');
@@ -85,7 +98,7 @@ while 1:
 																		
 							if ( count>100 ):
 								cluster3status= nmServerStatus('MyCluster-3');
-								if( cluster3status == 'SHUTDOWN'):
+								if( cluster3status != 'RUNNING'):
 									start('MyCluster-3','Server')
 								
 								

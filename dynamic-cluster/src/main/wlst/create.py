@@ -1,17 +1,23 @@
 
-#loadProperties('counter.properties')
+loadProperties('counter.properties')
 
 #parameter Declaration
 
-user='weblogic'
-password='welcome1'
-listenAddress='localhost'
-listenPort=5556
-adminPort=7001
-domainName='dynamic-cluster-domain'
-														 
-USER_PROJECTS='/u01/wls1212/user_projects/domains/'
 var_domain_dir = USER_PROJECTS + domainName
+
+print ''
+print '============================================='
+print 'Connecting to Node Manager...'
+print '============================================='
+print ''
+
+nmConnect(user,password,listenAddress,listenPort,domainName,var_domain_dir,'plain')
+
+print ''
+print '============================================='
+print 'Connected to NODE MANAGER Successfully'
+print '============================================='
+print ''
 
 ############################################################################################################################################
 #BEGIN MAIN
@@ -23,14 +29,6 @@ var_domain_dir = USER_PROJECTS + domainName
 
 #startNodaManager()
 
-nmConnect(user,password,listenAddress,listenPort,domainName,var_domain_dir,'plain')
-#nmConnect('weblogic','welcome1','localhost','5556','dynamic-cluster-domain','/u01/wls1212/user_projects/domains/dynamic-cluster-domain', 'plain')
-print ''
-print '============================================='
-print 'Connected to NODE MANAGER Successfully...!!!'
-print '============================================='
-print ''
-
 adminServerStatus= nmServerStatus('AdminServer');
 if( adminServerStatus != 'RUNNING'):									
 	nmStart('AdminServer')
@@ -39,20 +37,35 @@ connect(user,password, 't3://' + listenAddress + ':' + str(adminPort))
 edit()
 startEdit()
 
-cmo.createMachine('MyMachine')
-
-activate()
-startEdit()
 cd('/')
 cmo.createServer('LoadBalancer')
 
 cd('/Servers/LoadBalancer')
 cmo.setListenAddress('localhost')
 cmo.setListenPort(7002)
+
+activate()
+
+startEdit()
+
+cd('/')
+cmo.createMachine('MyMachine')
+
+cd('/Machines/MyMachine/NodeManager/MyMachine')
+cmo.setNMType('Plain')
+cmo.setListenPort(5554)
+
+activate()
+
+startEdit()
+
+cd('/Servers/LoadBalancer')
 cmo.setMachine(getMBean('/Machines/MyMachine'))
 cmo.setCluster(None)
+
 cd('/Servers/LoadBalancer/SSL/LoadBalancer')
 cmo.setEnabled(false)
+
 activate()
 
 startEdit()
@@ -88,5 +101,6 @@ cmo.setServerNamePrefix('MyCluster-')
 
 save()
 activate()
+
 
 shutdown()

@@ -41,7 +41,7 @@
           <plugin>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>wls-maven-plugin</artifactId>
-            <version>12.1.1.0</version>
+            <version>12.1.2.0</version>
 
             <configuration>
               <user>weblogic</user>
@@ -59,8 +59,8 @@
                 </goals>
 
                 <configuration>
-                  <middlewareHome>/u01/wls1211/</middlewareHome>
-                  <weblogicHome>/u01/wls1211/wlserver_12.1/</weblogicHome>
+                  <middlewareHome>/u01/wls1212/</middlewareHome>
+                  <weblogicHome>/u01/wls1212/wlserver</weblogicHome>
 
 
                   <fileName>${project.basedir}/src/main/wlst/create.py</fileName>
@@ -95,7 +95,7 @@
           <plugin>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>wls-maven-plugin</artifactId>
-            <version>12.1.1.0</version>
+            <version>12.1.2.0</version>
 
             <configuration>
               <user>weblogic</user>
@@ -113,8 +113,8 @@
                 </goals>
 
                 <configuration>
-				<middlewareHome>/u01/wls1211/</middlewareHome>
-                  <weblogicHome>/u01/wls1211/wlserver_12.1/</weblogicHome>
+				<middlewareHome>/u01/wls1212/</middlewareHome>
+                  <weblogicHome>/u01/wls1212/wlserver</weblogicHome>
 
 
                   <fileName>${project.basedir}/src/main/wlst/start.py</fileName>
@@ -147,7 +147,7 @@
           <plugin>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>wls-maven-plugin</artifactId>
-            <version>12.1.1.0</version>
+            <version>12.1.2.0</version>
 
             <configuration>
               <user>weblogic</user>
@@ -165,8 +165,8 @@
                 </goals>
 
                <configuration>
-                  <middlewareHome>/u01/wls1211/</middlewareHome>
-                  <weblogicHome>/u01/wls1211/wlserver_12.1/</weblogicHome>
+                  <middlewareHome>/u01/wls1212/</middlewareHome>
+                  <weblogicHome>/u01/wls1212/wlserver</weblogicHome>
 
 
                   <fileName>${project.basedir}/src/main/wlst/stop.py</fileName>

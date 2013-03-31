@@ -6,12 +6,14 @@ loadProperties('counter.properties')
 #user='weblogic'
 #password='welcome1'
 #listenAddress='localhost'
-#listenPort=5556
+#listenPort=5554
 #adminPort=7001
-#domainName='mydomain'
-																 
+#domainName='dynamic-cluster-domain'
+														 
 USER_PROJECTS='/u01/wls1212/user_projects/domains/'
 var_domain_dir = USER_PROJECTS + domainName
+
+
 
 
 print ''
@@ -20,7 +22,7 @@ print 'Connecting to Node Manager...'
 print '============================================='
 print ''
 
-nmConnect(user,password,listenAddress, 5556,domainName,var_domain_dir,'plain')
+nmConnect(user,password,listenAddress,listenPort,domainName,var_domain_dir,'plain')
 
 print ''
 print '============================================='
@@ -38,6 +40,10 @@ edit()
 startEdit()
 #stop Server in Cluster if anyone is Running 
 #Stop the MyCluser-1 in Dynamic Cluster
+
+#Undeploying the Application
+undeploy('LoadBalancer')
+undeploy('Chat')
 
 cluster1status= nmServerStatus('MyCluster-1');
 if( cluster1status == 'RUNNING'):									
@@ -88,11 +94,10 @@ cd('/')
 cmo.destroyServerTemplate(getMBean('/ServerTemplates/MyCluster-Template'))
 
 activate()
+
 startEdit()
 
 editService.getConfigurationManager().removeReferencesToBean(getMBean('/Machines/MyMachine'))
-
-cd('/')
 cmo.destroyMachine(getMBean('/Machines/MyMachine'))
 
 activate()
