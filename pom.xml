@@ -41,7 +41,6 @@
     <module>side-by-side-deployment</module>
     <module>spring-examples</module>
     <module>workmanager-examples</module>
-    <module>websockets-examples</module>
   </modules>
 
 </project>
