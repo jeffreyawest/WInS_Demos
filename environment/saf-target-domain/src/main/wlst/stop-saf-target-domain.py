@@ -1,7 +1,5 @@
 import time
 
-loadProperties('environment.properties')
-
 DOMAIN_NAME = 'saf_target_domain'
 var_domain_dir = USER_PROJECTS + '/domains/' + DOMAIN_NAME
 
@@ -53,6 +51,7 @@ print 'Connecting to Node Manager...'
 print '============================================='
 print ''
 
+print 'nmConnect('+adminServer_Username+', '+adminServer_Password+', '+listen_address+', 5556, '+DOMAIN_NAME+', '+ var_domain_dir+', \'plain\')'
 nmConnect(adminServer_Username, adminServer_Password, listen_address, 5556, DOMAIN_NAME, var_domain_dir, 'plain')
 
 print ''

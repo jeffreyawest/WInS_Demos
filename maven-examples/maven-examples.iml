@@ -4,99 +4,11 @@
     <facet type="Python" name="Python">
       <configuration sdkName="" />
     </facet>
-    <facet type="web" name="Web">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web2">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web3">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp" relative="/" />
-        </webroots>
-      </configuration>
-      <facet type="struts" name="Struts">
-        <configuration>
-          <option name="myStrutsValidationEnabled" value="true" />
-          <option name="myTilesValidationEnabled" value="true" />
-          <option name="myValidatorValidationEnabled" value="true" />
-          <option name="myReportErrorsAsWarnings" value="true" />
-          <option name="mySuppressPropertiesValidation" value="false" />
-        </configuration>
-      </facet>
-    </facet>
-    <facet type="Osmorc" name="OSGi">
-      <configuration manifestGenerationMode="Manually" manifestLocation="weblogic-provisioning-example/Oracle/Software/modules/net.sf.antcontrib_1.1.0.0_1-0b2/META-INF/MANIFEST.MF" jarfileLocation="maven-examples.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="false" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
-        <additionalProperties />
-        <additionalJARContents />
-      </configuration>
-    </facet>
-    <facet type="javaeeApplication" name="javaEEApplication">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/weblogic-provisioning-example/Oracle/Software/wlserver/server/lib/consoleapp/META-INF/application.xml" />
-        </descriptors>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web4">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls_internal/9j4dqk/war" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web5">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Domains/mydomain/servers/AdminServer/tmp/_WL_internal/bea_wls9_async_response/8tpkys/war" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
-    <facet type="web" name="Web6">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp/WEB-INF/web.xml" />
-        </descriptors>
-        <webroots>
-          <root url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/webapp" relative="/" />
-        </webroots>
-      </configuration>
-    </facet>
-    <facet type="javaeeApplication" name="javaEEApplication2">
-      <configuration>
-        <descriptors>
-          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/weblogic-integration-test-example/Oracle/Software/wlserver/server/lib/consoleapp/META-INF/application.xml" />
-        </descriptors>
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>

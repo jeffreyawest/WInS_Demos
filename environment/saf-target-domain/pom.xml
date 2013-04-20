@@ -63,7 +63,8 @@
                   <weblogicHome>${weblogic.home}</weblogicHome>
 
                   <fileName>${project.basedir}/src/main/wlst/create-${domain.name}.py</fileName>
-                  <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>                </configuration>
+                  <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>
+                </configuration>
 
               </execution>
             </executions>
@@ -114,7 +115,8 @@
                   <weblogicHome>${weblogic.home}</weblogicHome>
 
                   <fileName>${project.basedir}/src/main/wlst/start-${domain.name}.py</fileName>
-                  <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>                </configuration>
+                  <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>
+                </configuration>
 
               </execution>
             </executions>

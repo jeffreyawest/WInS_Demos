@@ -1,7 +1,5 @@
 import time
 
-loadProperties('environment.properties')
-
 DOMAIN_NAME = 'saf_target_domain'
 
 datasource_jndi_name = 'jdbc.ds.weblogic_examples'

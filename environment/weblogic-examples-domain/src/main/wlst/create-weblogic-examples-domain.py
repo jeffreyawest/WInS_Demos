@@ -1,7 +1,5 @@
 import time
 
-loadProperties('environment.properties')
-
 DOMAIN_NAME = 'weblogic_examples_domain'
 
 datasource_jndi_name = 'jdbc.ds.weblogic_examples'
@@ -10,7 +8,7 @@ datasource_jdbc_driver = 'oracle.jdbc.OracleDriver'
 datasource_user = 'weblogic_examples_domain'
 datasource_password = 'weblogic_examples_domain'
 
-adminServer_ListenAddress = '127.0.0.1'
+adminServer_ListenAddress = 'wins-vbox'
 adminServer_ListenPort = 7001
 adminServer_AdministrationPort = 7200
 adminServer_Username = 'weblogic'
@@ -21,19 +19,19 @@ managed_server_name_base = 'ms'
 managed_server_port_base = '710'
 managed_server_admin_port_base = '720'
 
-listen_address = 'localhost'
+listen_address = 'wins-vbox'
 
 jms_sever_name_base = 'jms-server'
 cluster_name = 'cluster-1'
-machine_name = 'localhost'
+machine_name = 'wins-vbox'
 
 coh_cluster_name = 'coherence-cluster-1'
-coh_listen_address = '127.0.0.1'
+coh_listen_address = 'wins-vbox'
 coh_listen_port = 8088
 coh_ttl = 0
 coh_server_count = 2
 coh_server_cp = MW_HOME + '/modules/com.oracle.toplinkgrid_1.0.0.0_11-1-1-5-0.jar:' + MW_HOME + '/modules/org.eclipse.persistence_1.1.0.0_2-1.jar:' + MW_HOME + '/coherence_3.7/lib/coherence.jar:' + MW_HOME + '/modules/javax.management_1.2.1.jar:' + MW_HOME + '/modules/javax.management.remote_1.0.1.3.jar:' + MW_HOME + '/modules/javax.persistence_1.0.0.0_2-0-0.jar:' + MW_HOME + '/wlserver_12.1/server/lib/ojdbc6.jar:' + MW_HOME + '/coherence_3.7/lib/coherence-web-spi.war:' + MW_HOME + '/modules/features/weblogic.server.modules.coherence.server_12.1.1.0.jar '
-coh_server_args = '-Dtangosol.coherence.management.remote=true -Dtangosol.coherence.management=all -Dtangosol.coherence.distributed.localstorage=true -Dtangosol.coherence.session.localstorage=true -Dtangosol.coherence.cacheconfig=/labs/content/WInS_Demos/coherence-examples/session-cache-config.xml'
+coh_server_args = '-XX:FlightRecorderOptions=defaultrecording=true -Dtangosol.coherence.management.remote=true -Dtangosol.coherence.management=all -Dtangosol.coherence.distributed.localstorage=true -Dtangosol.coherence.session.localstorage=true -Dtangosol.coherence.cacheconfig=/labs/content/WInS_Demos/coherence-examples/session-cache-config.xml'
 
 
 ################################################### JDBC
@@ -539,7 +537,7 @@ def createSAFSourceModules():
 
     cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0/SAFRemoteContexts/remote-saf-context-1/')
     loginContext = create('remote-saf-context-1', 'SAFLoginContext')
-    loginContext.setLoginURL('t3://127.0.0.1:8101,127.0.0.1:8102')
+    loginContext.setLoginURL('t3://wins-vbox:8101,wins-vbox:8102')
     loginContext.setUsername('weblogic')
     loginContext.setPasswordEncrypted('welcome1')
 
@@ -717,7 +715,7 @@ except:
     dumpStack()
     exit()
 
-machine = createMachine(machine_name, 'Plain', '127.0.0.1', 5556)
+machine = createMachine(machine_name, 'Plain', 'wins-vbox', 5556)
 
 cd('/')
 clusterMBean = create(cluster_name, 'Cluster')
@@ -761,7 +759,7 @@ for n in range(1, int(managed_server_count) + 1):
     cd('/Servers/' + managedServerName)
     serverStart = create(managedServerName, 'ServerStart')
     serverStart.setArguments(
-        '-Xms256m -Xmx512m -Dtangosol.coherence.ttl=0 -Dtangosol.coherence.distributed.localstorage=false -Dtangosol.coherence.session.localstorage=false -Dtangosol.coherence.cacheconfig=/coherence-cache-config.xml')
+        '-XX:FlightRecorderOptions=defaultrecording=true -Xms256m -Xmx512m -Dtangosol.coherence.ttl=0 -Dtangosol.coherence.distributed.localstorage=false -Dtangosol.coherence.session.localstorage=false -Dtangosol.coherence.cacheconfig=/coherence-cache-config.xml')
 
     cd('/')
 

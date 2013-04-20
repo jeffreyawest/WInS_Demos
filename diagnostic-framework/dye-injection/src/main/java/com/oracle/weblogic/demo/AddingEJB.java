@@ -1,8 +1,10 @@
 package com.oracle.weblogic.demo;
 
+import weblogic.diagnostics.context.DiagnosticContextHelper;
+import weblogic.diagnostics.context.InvalidDyeException;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.inject.Named;
 
 /**
  * **************************************************************************
@@ -20,9 +22,35 @@ import javax.inject.Named;
  * Time: 11:11 PM
  * To change this template use File | Settings | File Templates.
  */
-@Stateless(name = "AddressServiceBean", mappedName = "ejb/AddressService")
-@LocalBean
+@Stateless
 public class AddingEJB
 {
+  public AddingEJB()
+  {}
 
+  public int add(int p1, int p2)
+  {
+    System.out.println("===EJB START========================================================================");
+
+    try
+    {
+      DiagnosticContextHelper.setDye(DiagnosticContextHelper.DYE_1, true);
+
+      System.out.println("\nEJB::ContextId=" + DiagnosticContextHelper.getContextId());
+      System.out.println("EJB::isDyedWith(USER1)=" + DiagnosticContextHelper.isDyedWith(DiagnosticContextHelper.USER1));
+      System.out.println("EJB::isDyedWith(USER2)=" + DiagnosticContextHelper.isDyedWith(DiagnosticContextHelper.USER2));
+      System.out.println("=======================");
+      System.out.println("EJB::isDyedWith(DYE_0)=" + DiagnosticContextHelper.isDyedWith(DiagnosticContextHelper.DYE_0));
+      System.out.println("EJB::isDyedWith(DYE_1)=" + DiagnosticContextHelper.isDyedWith(DiagnosticContextHelper.DYE_1));
+      System.out.println("EJB::isDyedWith(DYE_2)=" + DiagnosticContextHelper.isDyedWith(DiagnosticContextHelper.DYE_2));
+    }
+    catch (InvalidDyeException e)
+    {
+      e.printStackTrace();
+    }
+
+    System.out.println("===EJB FINISH========================================================================");
+
+    return p1+p2;
+  }
 }

@@ -13,6 +13,7 @@
   <!-- ==================================================================================== -->
 
   <modules>
+    <module>dye-injection</module>
     <module>mbean-wldf-examples</module>
     <module>wldf-notification-listener</module>
     <module>jdbc-connection-hogger</module>
