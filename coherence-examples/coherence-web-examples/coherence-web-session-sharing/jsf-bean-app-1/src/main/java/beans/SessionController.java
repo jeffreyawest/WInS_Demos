@@ -19,6 +19,12 @@ import java.util.logging.Logger;
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
  * <p/>
+ * This code is provided under the following licenses:
+ * <p/>
+ * GNU General Public License (GPL-2.0)
+ * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
+ * <p/>
+ * <p/>
  * ****************************************************************************
  * User: jeffrey.a.west
  * Date: Jul 27, 2011
