@@ -1,69 +1,76 @@
 import time
 
-loadProperties('environment.properties')
+domain_Name = 'weblogic_examples_domain'
+machine_ListenAddress = 'wins-vbox'
+jmsServer_BaseName = 'jms-server'
+cluster_Name = 'cluster-1'
+machine_Name = 'wins-vbox'
 
-DOMAIN_NAME = 'weblogic_examples_domain'
 
-print 'Creating DOMAIN:' + DOMAIN_NAME
+########################################################################################################################
 
-datasource_jndi_name = 'jdbc.ds.weblogic_examples'
-datasource_global_transactions = 'None'
-datasource_jdbc_driver = 'oracle.jdbc.OracleDriver'
-datasource_user = 'weblogic_examples_domain'
-datasource_password = 'weblogic_examples_domain'
+datasource_JndiName = 'jdbc.ds.weblogic_examples'
+datasource_GlobalTransactions = 'None'
+datasource_JdbcDriver = 'oracle.jdbc.OracleDriver'
+datasource_User = 'weblogic_examples_domain'
+datasource_Password = 'weblogic_examples_domain'
 
-adminServer_ListenAddress = 'wins-vbox.localdomain'
+########################################################################################################################
+
+adminServer_ListenAddress = 'wins-vbox'
 adminServer_ListenPort = 7001
 adminServer_AdministrationPort = 7200
 adminServer_Username = 'weblogic'
 adminServer_Password = 'welcome1'
-adminServer_AdministrationURL = 't3://' + adminServer_ListenAddress + ':' + str(adminServer_ListenPort)
-managed_server_count = 2
-managedServerName_base = 'ms'
-managed_server_port_base = '710'
-managed_server_admin_port_base = '720'
+adminServer_URL = 't3://' + adminServer_ListenAddress + ':' + str(adminServer_ListenPort)
+adminServer_StartupArgs = '-Xms=256m -Xmx=256m'\
+                          ' -Dweblogic.nodemanager.sslHostNameVerificationEnabled=false'\
+                          ' -Dweblogic.security.SSL.ignoreHostnameVerify=true'\
+                          ' -Dweblogic.security.SSL.ignoreHostnameVerification=true'\
+                          ' -Dweblogic.security.TrustKeyStore=DemoTrust'
 
-listen_address = 'wins-vbox.localdomain'
+########################################################################################################################
 
-jms_sever_name_base = 'jms-server'
-cluster_Name = 'cluster-1'
-machine_Name = 'wins-vbox'
-machine_ListenAddress = 'wins-vbox.localdomain'
+managedServer_Count = 2
+managedServer_BaseName = 'ms'
+managedServer_BasePort = '710'
+managedServer_BaseAdminPort = '720'
+managedServer_StartupArgs = '-XX:FlightRecorderOptions=defaultrecording=true '\
+                            ' -Xms256m -Xmx512m '\
+                            ' -Dtangosol.coherence.ttl=0 '\
+                            ' -Dtangosol.coherence.distributed.localstorage=false '\
+                            ' -Dtangosol.coherence.session.localstorage=false'\
+                            ' -Dtangosol.coherence.cacheconfig=/coherence-cache-config.xml'
 
-wins_demos_home = '/labs/content/WInS_Demos'
+########################################################################################################################
 
-coh_cluster_name = 'coherence-cluster-1'
-coh_listen_address = 'wins-vbox'
-coh_listen_port = 8088
-coh_ttl = 0
-coh_server_count = 2
+cohCluster_Name = 'coherence-cluster-1'
+coh_ListenAddress = 'wins-vbox'
+coh_ListenPort = 8088
+coh_TTL = 0
+cohServer_Count = 2
+cohServer_Classpath = MW_HOME + '/modules/com.oracle.toplinkgrid_1.0.0.0_11-1-1-5-0.jar:' +\
+                      MW_HOME + '/modules/org.eclipse.persistence_1.1.0.0_2-1.jar:' +\
+                      MW_HOME + '/coherence_3.7/lib/coherence.jar:' +\
+                      MW_HOME + '/modules/javax.management_1.2.1.jar:' +\
+                      MW_HOME + '/modules/javax.management.remote_1.0.1.3.jar:' +\
+                      MW_HOME + '/modules/javax.persistence_1.0.0.0_2-0-0.jar:' +\
+                      MW_HOME + '/wlserver_12.1/server/lib/ojdbc6.jar:' +\
+                      MW_HOME + '/coherence_3.7/lib/coherence-web-spi.war:' +\
+                      MW_HOME + '/modules/features/weblogic.server.modules.coherence.server_12.1.1.0.jar '
 
-jmsServerMBeans = []
-managedServerMBeans = []
-migratableTargetMBeans = []
-
-coh_server_cp = MW_HOME + '/modules/com.oracle.toplinkgrid_1.0.0.0_11-1-1-5-0.jar:'\
-                + MW_HOME + '/modules/org.eclipse.persistence_1.1.0.0_2-1.jar:'\
-                + MW_HOME + '/coherence_3.7/lib/coherence.jar:'\
-                + MW_HOME + '/modules/javax.management_1.2.1.jar:'\
-                + MW_HOME + '/modules/javax.management.remote_1.0.1.3.jar:'\
-                + MW_HOME + '/modules/javax.persistence_1.0.0.0_2-0-0.jar:'\
-                + MW_HOME + '/wlserver_12.1/server/lib/ojdbc6.jar:'\
-                + MW_HOME + '/coherence_3.7/lib/coherence-web-spi.war:'\
-                + MW_HOME + '/modules/features/weblogic.server.modules.coherence.server_12.1.1.0.jar '
-
-coh_server_args = '-Dtangosol.coherence.management.remote=true '\
-                  '-Dtangosol.coherence.management=all '\
-                  '-Dtangosol.coherence.distributed.localstorage=true '\
-                  '-Dtangosol.coherence.session.localstorage=true '\
-                  '-Dtangosol.coherence.cacheconfig=/labs/content/WInS_Demos/coherence-examples/session-cache-config.xml'
+cohServer_StartupArgs = '-Dtangosol.coherence.management.remote=true '\
+                        '-Dtangosol.coherence.management=all '\
+                        '-Dtangosol.coherence.distributed.localstorage=true '\
+                        '-Dtangosol.coherence.session.localstorage=true '\
+                        '-Dtangosol.coherence.cacheconfig=/labs/content/WInS_Demos/coherence-examples/session-cache-config.xml'
 
 
-
-
-################################################### JDBC
+########################################################################################################################
 
 def createPhysicalDataSource(jndiNames, driver, globalTX, url, user, passwd, target):
+  print '### createPhysicalDataSource #################################################################################'
+
   dsName = jndiNames[0]
 
   print 'Creating Physical DataSource ' + dsName
@@ -75,11 +82,7 @@ def createPhysicalDataSource(jndiNames, driver, globalTX, url, user, passwd, tar
   dataSourceParams = create('dataSourceParams', 'JDBCDataSourceParams')
   dataSourceParams.setGlobalTransactionsProtocol(globalTX)
   cd('JDBCDataSourceParams/NO_NAME_0')
-
-  try:
-    set('JNDINames', jarray.array(jndiNames, String))
-  except:
-    dumpStack()
+  set('JNDINames', jarray.array(jndiNames, String))
 
   cd('/JDBCSystemResource/' + dsName + '/JdbcResource/' + dsName)
   connPoolParams = create('connPoolParams', 'JDBCConnectionPoolParams')
@@ -109,10 +112,10 @@ def createPhysicalDataSource(jndiNames, driver, globalTX, url, user, passwd, tar
   print dsName + ' successfully created.'
   return jdbcSystemResource
 
-################################################### JMS Module
+########################################################################################################################
 
 def createBaseJMSResources(moduleName, clusterTarget, jmsServerTargets):
-  print 'Creating BASE JMS Resources...'
+  print '### createBaseJMSResources ###################################################################################'
 
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
@@ -177,10 +180,55 @@ def createBaseJMSResources(moduleName, clusterTarget, jmsServerTargets):
   topic.setSubDeploymentName('cluster-subdeployment')
 
 
-################################################### JMS Module
+########################################################################################################################
+
+def createOPSJMSResources(module_name, clusterTarget, jmsServerTargets):
+  print '### createOPSJMSResources ####################################################################################'
+
+  cd('/')
+  jmsMySystemResource = create(module_name, 'JMSSystemResource')
+  jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
+
+  cd('/JMSSystemResources/jms-module-ops')
+  subdeployment = create('cluster-subdeployment', 'SubDeployment')
+  subdeployment.setTargets(jarray.array(jmsServerTargets, weblogic.management.configuration.TargetMBean))
+
+  cd('/JMSSystemResource/jms-module-ops/JmsResource/NO_NAME_0')
+
+  myCF = create('com.oracle.demo.ops.jms.cf', 'ConnectionFactory')
+
+  cd('/JMSSystemResources/jms-module-ops/JmsResource/NO_NAME_0/ConnectionFactories/com.oracle.demo.ops.jms.cf')
+
+  myCF.setJNDIName('com.oracle.demo.ops.jms.cf')
+  myCF.setDefaultTargetingEnabled(true)
+  txParams = create('com.oracle.demo.ops.jms.cf', 'TransactionParams')
+  txParams.setXAConnectionFactoryEnabled(true)
+
+  cd('/JMSSystemResources/jms-module-ops/JmsResource/NO_NAME_0')
+  eventQueue = create('com.oracle.demo.ops.jms.eventQueue', 'UniformDistributedQueue')
+  eventQueue.setJNDIName('com.oracle.demo.ops.jms.eventQueue')
+  eventQueue.setDefaultTargetingEnabled(false)
+  eventQueue.setSubDeploymentName('cluster-subdeployment')
+
+  cd('/JMSSystemResources/jms-module-ops/JmsResource/NO_NAME_0')
+  shipmentQueue = create('com.oracle.demo.ops.jms.shipmentQueue', 'UniformDistributedQueue')
+
+  shipmentQueue.setJNDIName('com.oracle.demo.ops.jms.shipmentQueue')
+  shipmentQueue.setDefaultTargetingEnabled(false)
+  shipmentQueue.setSubDeploymentName('cluster-subdeployment')
+
+  cd('/JMSSystemResources/jms-module-ops/JmsResource/NO_NAME_0')
+  eventTopic = create('com.oracle.demo.ops.jms.eventTopic', 'UniformDistributedTopic')
+  eventTopic.setJNDIName('com.oracle.demo.ops.jms.eventTopic')
+  eventTopic.setForwardingPolicy('Partitioned')
+  eventTopic.setDefaultTargetingEnabled(false)
+  eventTopic.setSubDeploymentName('cluster-subdeployment')
+
+
+########################################################################################################################
 
 def createMigrationJMSResources(moduleName, clusterTarget, jmsServerTargets):
-  print 'Creating BASE JMS Resources...'
+  print '### createMigrationJMSResources ##############################################################################'
 
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
@@ -213,10 +261,10 @@ def createMigrationJMSResources(moduleName, clusterTarget, jmsServerTargets):
   queue.setSubDeploymentName('cluster-subdeployment')
 
 
-################################################### JMS Module
+########################################################################################################################
 
 def createOPSJMSResources(moduleName, clusterTarget, jmsServerTargets):
-  print 'Creating OPS JMS Resources...'
+  print '### createOPSJMSResources ####################################################################################'
 
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
@@ -264,8 +312,11 @@ def createOPSJMSResources(moduleName, clusterTarget, jmsServerTargets):
   topic.setDefaultTargetingEnabled(false)
   topic.setSubDeploymentName('cluster-subdeployment')
 
+########################################################################################################################
 
-def createUtilityJMSResources(moduleName, clusterTarget, jmsServerTargets):
+def createWLDFJMSResources(moduleName, clusterTarget, jmsServerTargets):
+  print '### createWLDFJMSResources ###################################################################################'
+
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
   jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
@@ -293,7 +344,7 @@ def createUtilityJMSResources(moduleName, clusterTarget, jmsServerTargets):
 
   #### Queue
   cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  queue_name = 'com.oracle.example.jms.util.notification'
+  queue_name = 'com.oracle.example.jms.wldf.notification'
   queue = create(queue_name, 'UniformDistributedQueue')
   queue.setJNDIName(queue_name)
   queue.setDefaultTargetingEnabled(false)
@@ -307,26 +358,29 @@ def createUtilityJMSResources(moduleName, clusterTarget, jmsServerTargets):
   queue.setDefaultTargetingEnabled(false)
   queue.setSubDeploymentName('cluster-subdeployment')
 
-  #### TOPIC
+  #### Queue
   cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  topic_name = 'com.oracle.example.jms.util.jdbchogger'
+  topic_name = 'com.oracle.example.jms.util.jdbcHogger'
   topic = create(topic_name, 'UniformDistributedTopic')
   topic.setJNDIName(topic_name)
   topic.setForwardingPolicy('Replicated')
   topic.setDefaultTargetingEnabled(false)
   topic.setSubDeploymentName('cluster-subdeployment')
 
-  #### TOPIC
+  #### Queue
   cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  topic_name = 'com.oracle.example.jms.util.stuck_thread_generator'
+  topic_name = 'com.oracle.example.jms.util.stuckThreadGenerator'
   topic = create(topic_name, 'UniformDistributedTopic')
   topic.setJNDIName(topic_name)
   topic.setForwardingPolicy('Replicated')
   topic.setDefaultTargetingEnabled(false)
   topic.setSubDeploymentName('cluster-subdeployment')
 
+########################################################################################################################
 
 def createUOOResources(moduleName, clusterTarget, jmsServerTargets):
+  print '### createUOOResources #######################################################################################'
+
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
   jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
@@ -362,46 +416,39 @@ def createUOOResources(moduleName, clusterTarget, jmsServerTargets):
   queue.setSubDeploymentName('cluster-subdeployment')
 
 
-def createWLDFJMSResources(moduleName, clusterTarget, jmsServerTargets):
-  cd('/')
-  jmsMySystemResource = create(moduleName, 'JMSSystemResource')
-  jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
+########################################################################################################################
 
-  cd('/JMSSystemResources/' + moduleName)
-  subdeployment = create('cluster-subdeployment', 'SubDeployment')
-  subdeployment.setTargets(jarray.array(jmsServerTargets, weblogic.management.configuration.TargetMBean))
+def getJMSServerName(n):
+  jms_server_name = jmsServer_BaseName + '-' + str(n)
+  return jms_server_name
 
-  cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
 
-  ######## Connection Factory
-  cf_name = 'com.oracle.example.jms.wldf.cf'
-  myCF = create(cf_name, 'ConnectionFactory')
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0/ConnectionFactories/' + cf_name)
+########################################################################################################################
 
-  myCF.setJNDIName(cf_name)
-  myCF.setDefaultTargetingEnabled(true)
+def getManagedServerListenPort(n):
+  managedServer_ListenPort = int(str(managedServer_BasePort) + str(n))
+  return managedServer_ListenPort
 
-  lbParams = create(cf_name, 'LoadBalancingParams')
-  lbParams.setLoadBalancingEnabled(true)
-  lbParams.setServerAffinityEnabled(false)
+########################################################################################################################
 
-  txParams = create(cf_name, 'TransactionParams')
-  txParams.setXAConnectionFactoryEnabled(true)
+def getManagedServerName(n):
+  managedServerName = managedServer_BaseName + '-' + str(n)
+  return managedServerName
 
-  #### Queue
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
+########################################################################################################################
 
-  queue_name = 'com.oracle.example.jms.wldf.notification'
-  queue = create(queue_name, 'UniformDistributedQueue')
-  queue.setJNDIName(queue_name)
-  queue.setDefaultTargetingEnabled(false)
-  queue.setSubDeploymentName('cluster-subdeployment')
+def getManagedServerAdminPort(n):
+  managedServer_AdminPort = int(str(managedServer_BaseAdminPort) + str(n))
+  return managedServer_AdminPort
 
+########################################################################################################################
 
 def createUOWResources(moduleName, clusterTarget, jmsServerTargets):
+  print '### createUOWResources #######################################################################################'
+
   cd('/')
-  jmsMySystemResource = create(moduleName, 'JMSSystemResource')
-  jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
+  myJmsSystemResource = create(moduleName, 'JMSSystemResource')
+  myJmsSystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
 
   cd('/JMSSystemResources/' + moduleName)
   subdeployment = create('cluster-subdeployment', 'SubDeployment')
@@ -461,92 +508,11 @@ def createUOWResources(moduleName, clusterTarget, jmsServerTargets):
   failureParams.setErrorDestination(errorQueue)
 
 
-########################################
-
-def createOPSEEResources(moduleName, clusterTarget, jmsServerTargets):
-  cd('/')
-  jmsMySystemResource = create(moduleName, 'JMSSystemResource')
-  jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
-
-  cd('/JMSSystemResources/' + moduleName)
-  subdeployment = create('cluster-subdeployment', 'SubDeployment')
-  subdeployment.setTargets(jarray.array(jmsServerTargets, weblogic.management.configuration.TargetMBean))
-
-  cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
-
-  ######## Connection Factory
-  cf_name = 'com.oracle.demo.ops.jms.cf'
-  myCF = create(cf_name, 'ConnectionFactory')
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0/ConnectionFactories/' + cf_name)
-
-  myCF.setJNDIName(cf_name)
-  myCF.setDefaultTargetingEnabled(true)
-
-  lbParams = create(cf_name, 'LoadBalancingParams')
-  lbParams.setLoadBalancingEnabled(true)
-  lbParams.setServerAffinityEnabled(false)
-
-  txParams = create(cf_name, 'TransactionParams')
-  txParams.setXAConnectionFactoryEnabled(true)
-
-  #### Queue
-  queue_name = 'com.oracle.demo.ops.jms.eventQueue'
-
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  queue = create(queue_name, 'UniformDistributedQueue')
-
-  queue.setJNDIName(queue_name)
-  queue.setDefaultTargetingEnabled(false)
-  queue.setSubDeploymentName('cluster-subdeployment')
-  queue.setLoadBalancingPolicy('Round-Robin')
-  queue.setResetDeliveryCountOnForward(true)
-  queue.setIncompleteWorkExpirationTime(30000)
-  queue.setForwardDelay(-1)
-  queue.setAttachSender('supports')
-  queue.setSAFExportPolicy('All')
-  queue.setProductionPausedAtStartup(false)
-  queue.setDefaultUnitOfOrder(false)
-  queue.setUnitOfOrderRouting('Hash')
-  queue.setUnitOfWorkHandlingPolicy('SingleMessageDelivery')
-  queue.setInsertionPausedAtStartup(false)
-  queue.setMessagingPerformancePreference(25)
-  queue.setConsumptionPausedAtStartup(false)
-
-  #### Queue
-  queue_name = 'com.oracle.demo.ops.jms.shipmentQueue'
-
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  queue = create(queue_name, 'UniformDistributedQueue')
-
-  queue.setJNDIName(queue_name)
-  queue.setDefaultTargetingEnabled(false)
-  queue.setSubDeploymentName('cluster-subdeployment')
-  queue.setLoadBalancingPolicy('Round-Robin')
-  queue.setResetDeliveryCountOnForward(true)
-  queue.setIncompleteWorkExpirationTime(30000)
-  queue.setForwardDelay(-1)
-  queue.setAttachSender('supports')
-  queue.setSAFExportPolicy('All')
-  queue.setProductionPausedAtStartup(false)
-  queue.setDefaultUnitOfOrder(false)
-  queue.setUnitOfOrderRouting('Hash')
-  queue.setUnitOfWorkHandlingPolicy('SingleMessageDelivery')
-  queue.setInsertionPausedAtStartup(false)
-  queue.setMessagingPerformancePreference(25)
-  queue.setConsumptionPausedAtStartup(false)
-
-  #TOPIC
-  topic_name = 'com.oracle.demo.ops.jms.eventTopic'
-  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0')
-  topic = create(topic_name, 'UniformDistributedTopic')
-  topic.setJNDIName(topic_name)
-  topic.setForwardingPolicy('Partitioned')
-  topic.setDefaultTargetingEnabled(false)
-  topic.setSubDeploymentName('cluster-subdeployment')
-
-########################################
+########################################################################################################################
 
 def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
+  print '### createSpringJMSTempResources #############################################################################'
+
   cd('/')
   jmsMySystemResource = create(moduleName, 'JMSSystemResource')
   jmsMySystemResource.setTargets(jarray.array([clusterTarget], weblogic.management.configuration.TargetMBean))
@@ -575,15 +541,18 @@ def createSpringJMSTempResources(moduleName, clusterTarget, jmsServerTargets):
   queue.setSubDeploymentName('cluster-subdeployment')
 
 
-########################################
+########################################################################################################################
+
 def createSAFStoresAndAgents():
-  for n in range(1, int(managed_server_count) + 1):
+  print '### createSAFStoresAndAgents #################################################################################'
+
+  for n in range(1, int(managedServer_Count) + 1):
     targets = jarray.array([migratableTargetMBeans[n - 1]], weblogic.management.configuration.TargetMBean)
 
     cd('/')
     jdbcStoreName = 'saf-store-' + str(n)
     jdbcStore = create(jdbcStoreName, 'JDBCStore')
-    jdbcStore.setDataSource(jdbcClusterDatasource)
+    jdbcStore.setDataSource(jdbcSystemResource)
     jdbcStore.setPrefixName('SAFSTORE' + str(n))
     jdbcStore.setTargets(targets)
 
@@ -607,10 +576,10 @@ def createSAFStoresAndAgents():
     safAgent.setDefaultRetryDelayBase(20000)
     safAgent.setWindowInterval(0)
 
-########################################
+########################################################################################################################
 
 def createSAFSourceModules():
-  print 'Creating SAF SOURCE JMS Resources...'
+  print '### createSAFSourceModules ###################################################################################'
 
   module_name = 'jms-module-saf-source'
 
@@ -638,7 +607,7 @@ def createSAFSourceModules():
   txParams = create(cf_name, 'TransactionParams')
   txParams.setXAConnectionFactoryEnabled(true)
 
-  ##################
+  ########################################################################################################################
 
   queue_name = 'com.oracle.example.jms.saf.local-queue'
   cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0')
@@ -647,16 +616,16 @@ def createSAFSourceModules():
   queue.setDefaultTargetingEnabled(false)
   queue.setSubDeploymentName('cluster-subdeployment')
 
-  ##################
+  ########################################################################################################################
 
   cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0')
   safRemoteContext = create('remote-saf-context-1', 'SAFRemoteContext')
 
   cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0/SAFRemoteContexts/remote-saf-context-1/')
   loginContext = create('remote-saf-context-1', 'SAFLoginContext')
-  loginContext.setLoginURL('t3://wins-vbox.localdomain:8101,wins-vbox.localdomain:8102')
-  #  loginContext.setUsername('weblogic')
-  #  loginContext.setPasswordEncrypted('welcome1')
+  loginContext.setLoginURL('t3://wins-vbox:8101,wins-vbox:8102')
+  loginContext.setUsername('weblogic')
+  loginContext.setPasswordEncrypted('welcome1')
 
   cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0')
   safErrorHandling = create('saf-error-handling', 'SAFErrorHandling')
@@ -690,6 +659,8 @@ def createSAFSourceModules():
 
 
 def createMachine(machine_name, nodemanager_type, listen_address, listen_port):
+  print '### createMachine ############################################################################################'
+
   cd('/')
   machine = create(machine_name, 'Machine')
 
@@ -703,13 +674,11 @@ def createMachine(machine_name, nodemanager_type, listen_address, listen_port):
 
   return machine
 
-########################################
+########################################################################################################################
 
-def createCoherenceCluster(coh_cluster_name,
-                           coh_listen_address,
-                           coh_listen_port,
-                           targets_array,
-                           coh_ttl):
+def createCoherenceCluster_online(coh_cluster_name, coh_listen_address, coh_listen_port, targets_array, coh_ttl):
+  print '@@@ createCoherenceCluster_online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+
   cd('/')
   cmo.createCoherenceClusterSystemResource(coh_cluster_name)
 
@@ -723,7 +692,7 @@ def createCoherenceCluster(coh_cluster_name,
   cmo.setMulticastListenPort(7777)
 
   cd('/CoherenceClusterSystemResources/' + coh_cluster_name)
-  cmo.addTarget(getMBean('/Clusters/' + cluster_Name))
+  set('Targets', targets_array)
 
   cd(
     '/CoherenceClusterSystemResources/' + coh_cluster_name + '/CoherenceClusterResource/' + coh_cluster_name + '/CoherenceClusterParams/' + coh_cluster_name + '/CoherenceClusterWellKnownAddresses/' + coh_cluster_name)
@@ -738,23 +707,30 @@ def createCoherenceCluster(coh_cluster_name,
     '/CoherenceClusterSystemResources/' + coh_cluster_name + '/CoherenceClusterResource/' + coh_cluster_name + '/CoherenceClusterParams/' + coh_cluster_name)
   cmo.setTimeToLive(coh_ttl)
 
-  #  cd('/Clusters/' + cluster_name)
-  #  cmo.setCoherenceClusterSystemResource(getMBean('/CoherenceClusterSystemResources/' + coh_cluster_name))
-
   print 'Created Cluster name=[' + coh_cluster_name + ']'
 
-########################################
+########################################################################################################################
 
+def createCoherenceServers_online(coh_cluster_name,
+                                  coh_listen_address,
+                                  coh_listen_port,
+                                  coh_server_args,
+                                  coh_server_count,
+                                  coh_server_cp,
+                                  machine_name):
+  print '@@@ createCoherenceServers_online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 
-def createCoherenceServer(coh_server_name,
-                          cluster_name, machine_name,
-                          coh_listen_address,
-                          coh_listen_port,
+  for n in range(1, int(coh_server_count) + 1):
+    coh_server_name = 'coh-' + str(n)
+    createCoherenceServer(coh_server_name, coh_cluster_name, machine_name, coh_listen_address, coh_listen_port,
                           coh_server_args,
-                          coh_server_cp):
-  print 'Creating Coherence Server JAVA_HOME=[' + JAVA_HOME + '] name=[' + coh_server_name + '] listenAddress=[' + coh_listen_address + '] listenPort=[' + str(
-    coh_listen_port) + '] classpath=[' + coh_server_cp + '] args=[' + coh_server_args + ']'
+                          coh_server_cp)
 
+########################################################################################################################
+
+
+def createCoherenceServer(coh_server_name, cluster_name, machine_name, coh_listen_address, coh_listen_port,
+                          coh_server_args, coh_server_cp):
   cd('/')
   cmo.createCoherenceServer(coh_server_name)
 
@@ -766,14 +742,16 @@ def createCoherenceServer(coh_server_name,
   cmo.setUnicastPortAutoAdjust(true)
 
   cd('/CoherenceServers/' + coh_server_name + '/CoherenceServerStart/' + coh_server_name)
-  cmo.setJavaHome(JAVA_HOME)
   cmo.setArguments(coh_server_args)
   cmo.setClassPath(coh_server_cp)
 
-  print 'Successfully created Coherence server name=[' + coh_server_name + ']'
+  print 'Created Coherence server name=[' + coh_server_name + ']'
 
-########################################
+########################################################################################################################
+
 def createForeignJMSSpringModules_online():
+  print '@@@ createForeignJMSSpringModules_online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+
   jms_module_name = 'jms-module-ops-spring'
 
   cd('/')
@@ -782,8 +760,8 @@ def createForeignJMSSpringModules_online():
   cd('/JMSSystemResources/' + jms_module_name)
   set('Targets', jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
 
-  for n in range(1, int(managed_server_count) + 1):
-    jms_server_name = jms_sever_name_base + '-' + str(n)
+  for n in range(1, int(managedServer_Count) + 1):
+    jms_server_name = jmsServer_BaseName + '-' + str(n)
     foreign_server_name = 'ops-spring-foreign-server-' + str(n)
 
     cd('/JMSSystemResources/' + jms_module_name)
@@ -810,9 +788,11 @@ def createForeignJMSSpringModules_online():
     cmo.setRemoteJNDIName(jms_server_name + '@com.oracle.demo.ops.jms.eventTopic')
     cmo.setLocalJNDIName('foreign.com.oracle.demo.ops.jms.eventTopic')
 
-########################################
+
+########################################################################################################################
 
 def createSpringWLDFModule_online():
+  print '@@@ createSpringWLDFModule_online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
   cd('/')
   cmo.createWLDFSystemResource('SpringMBeanWLDFModule')
 
@@ -839,111 +819,45 @@ def createSpringWLDFModule_online():
   cd(
     '/WLDFSystemResources/SpringMBeanWLDFModule/WLDFResource/SpringMBeanWLDFModule/WatchNotification/SpringMBeanWLDFModule/JMSNotifications/SpringCounterJMSNotification')
   cmo.setEnabled(true)
-  cmo.setDestinationJNDIName('com.oracle.example.jms.wldf.notification')
-  cmo.setConnectionFactoryJNDIName('com.oracle.example.jms.wldf.cf')
+  cmo.setDestinationJNDIName('com.oracle.example.jms.util.notification')
+  cmo.setConnectionFactoryJNDIName('com.oracle.example.jms.util.cf')
 
-########################################
+########################################################################################################################
 
-def createJavaEEWLDFModule_online():
-  cd('/')
-  cmo.createWLDFSystemResource('JavaEEMBeanWLDFModule')
+def createJMSModules(clusterMBean, jmsServerMBeans):
+  print '### Creating JMS Modules #####################################################################################'
+  createBaseJMSResources('jms-module-base', clusterMBean, jmsServerMBeans)
+  createUOWResources('jms-module-uow', clusterMBean, jmsServerMBeans)
+  createUOOResources('jms-module-uoo', clusterMBean, jmsServerMBeans)
+  createWLDFJMSResources('jms-module-wldf', clusterMBean, jmsServerMBeans)
+  createOPSJMSResources('jms-module-ops', clusterMBean, jmsServerMBeans)
+  createSAFSourceModules()
+  createSAFStoresAndAgents()
+  createMigrationJMSResources('jms-module-migration', clusterMBean, jmsServerMBeans)
+  createSpringJMSTempResources('jms-module-temp', clusterMBean, jmsServerMBeans)
 
-  cd('/WLDFSystemResources/JavaEEMBeanWLDFModule')
-  cmo.setDescription('JavaEE_WLDF_Module')
-  #set('Targets',jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
+########################################################################################################################
 
-  cd(
-    '/WLDFSystemResources/JavaEEMBeanWLDFModule/WLDFResource/JavaEEMBeanWLDFModule/WatchNotification/JavaEEMBeanWLDFModule')
-  cmo.createWatch('JavaEECounterMBeanWatch')
+def deploySharedLibraries():
+  print '@@@ Deploying Shared Libraries @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+  deploySharedLibrary('coherence', COHERENCE_HOME + '/lib/coherence.jar')
+  deploySharedLibrary('coherence-web-spi', COHERENCE_HOME + '/lib/coherence-web-spi.war')
+  deploySharedLibrary('active-cache', WL_HOME + '/common/deployable-libraries/active-cache-1.0.jar')
+  deploySharedLibrary('weblogic-spring', WL_HOME + '/server/lib/weblogic-spring.jar')
+  deploySharedLibrary('toplink-grid', WL_HOME + '/common/deployable-libraries/toplink-grid-1.0.jar')
 
-  cd(
-    '/WLDFSystemResources/JavaEEMBeanWLDFModule/WLDFResource/JavaEEMBeanWLDFModule/WatchNotification/JavaEEMBeanWLDFModule/Watches/JavaEECounterMBeanWatch')
-  cmo.setRuleType('Harvester')
-  cmo.setEnabled(true)
-  cmo.setRuleExpression(
-    '(${ServerRuntime//[com.oracle.weblogic.examples.mbeans.counter.CounterBeanMBean]counter.bean:Name=CounterBean//Value} = \'\')')
-  cmo.setAlarmType(None)
+########################################################################################################################
 
-  cd(
-    '/WLDFSystemResources/JavaEEMBeanWLDFModule/WLDFResource/JavaEEMBeanWLDFModule/WatchNotification/JavaEEMBeanWLDFModule')
-  cmo.createJMSNotification('JavaEECounterJMSNotification')
+def deploySharedLibrary(appName, appPath):
+  progress = deploy(appName=appName, path=appPath, targets=cluster_Name, libraryModule='true')
+  progress.printStatus()
 
-  cd(
-    '/WLDFSystemResources/JavaEEMBeanWLDFModule/WLDFResource/JavaEEMBeanWLDFModule/WatchNotification/JavaEEMBeanWLDFModule/JMSNotifications/JavaEECounterJMSNotification')
-  cmo.setEnabled(true)
-  cmo.setDestinationJNDIName('com.oracle.example.jms.wldf.notification')
-  cmo.setConnectionFactoryJNDIName('com.oracle.example.jms.wldf.cf')
+########################################################################################################################
 
-############################################################################################################################################
+def configureManagedServersOnline():
+  print '@@@ Configuring Managed Servers Online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 
-def getJMSServerName(n):
-  jms_server_name = jms_sever_name_base + '-' + str(n)
-  return jms_server_name
-
-
-############################################################################################################################################
-
-def getManagedServerListenPort(n):
-  managedServer_ListenPort = int(str(managed_server_port_base) + str(n))
-  return managedServer_ListenPort;
-
-############################################################################################################################################
-
-def getManagedServerName(n):
-  managedServerName = managedServerName_base + '-' + str(n)
-  return managedServerName;
-
-############################################################################################################################################
-
-def getManagedServerAdminPort(n):
-  managedServer_AdminPort = int(str(managed_server_admin_port_base) + str(n))
-  return managedServer_AdminPort
-
-############################################################################################################################################
-
-def createEventDrivenSpringModule_online(moduleName, clusterTarget, jmsServerTargets):
-  jms_module_name = moduleName
-
-  cd('/')
-  cmo.createJMSSystemResource(jms_module_name)
-
-  cd('/JMSSystemResources/' + jms_module_name)
-  set('Targets', jarray.array([ObjectName('com.bea:Name=cluster-1,Type=Cluster')], ObjectName))
-
-  for n in range(1, int(managed_server_count) + 1):
-    jms_server_name = getJMSServerName(n)
-    foreign_server_name = 'ops-spring-foreign-server-' + str(n)
-
-    # Subdeployment
-    cd('/JMSSystemResources/' + jms_module_name)
-    cmo.createSubDeployment(jms_server_name + '-subdeployment')
-    cd('/JMSSystemResources/' + jms_module_name + '/SubDeployments/' + jms_server_name + '-subdeployment')
-    set('Targets', jarray.array([ObjectName('com.bea:Name=' + jms_server_name + ',Type=JMSServer')], ObjectName))
-
-    cd('/JMSSystemResources/' + jms_module_name + '/JMSResource/' + jms_module_name)
-    cmo.createForeignServer(foreign_server_name)
-
-    # Targeting
-    cd(
-      '/JMSSystemResources/' + jms_module_name + '/JMSResource/' + jms_module_name + '/ForeignServers/' + foreign_server_name)
-    cmo.setDefaultTargetingEnabled(false)
-    cmo.setSubDeploymentName(jms_server_name + '-subdeployment')
-
-    # Foreign Destinations
-    cd(
-      '/JMSSystemResources/' + jms_module_name + '/JMSResource/' + jms_module_name + '/ForeignServers/' + foreign_server_name)
-    cmo.createForeignDestination('com.oracle.demo.ops.jms.eventTopic-' + str(n))
-
-    cd(
-      '/JMSSystemResources/' + jms_module_name + '/JMSResource/' + jms_module_name + '/ForeignServers/' + foreign_server_name + '/ForeignDestinations/com.oracle.demo.ops.jms.eventTopic-' + str(
-        n))
-    cmo.setRemoteJNDIName(jms_server_name + '@com.oracle.demo.ops.jms.eventTopic')
-    cmo.setLocalJNDIName('foreign.com.oracle.demo.ops.jms.eventTopic')
-
-############################################################################################################################################
-
-def configuraManagedServersOnline():
-  for n in range(1, int(managed_server_count) + 1):
+  for n in range(1, int(managedServer_Count) + 1):
     managedServer_Name = getManagedServerName(n)
     cd('/Servers/' + managedServer_Name + '/')
     cmo.setHealthCheckIntervalSeconds(60)
@@ -957,58 +871,24 @@ def configuraManagedServersOnline():
     cmo.setMaxStuckThreadTime(180)
     cmo.setStuckThreadCount(0)
 
-############################################################################################################################################
+########################################################################################################################
 
-def createCoherenceServers(coh_cluster_name, coh_listen_address, coh_listen_port, coh_server_args, coh_server_count,
-                           coh_server_cp, machine_Name):
-  for n in range(1, int(coh_server_count) + 1):
-    coh_server_name = 'coh-' + str(n)
-    createCoherenceServer(coh_server_name,
-                          coh_cluster_name, machine_Name,
-                          coh_listen_address,
-                          coh_listen_port,
-                          coh_server_args,
-                          coh_server_cp)
-
-############################################################################################################################################
-
-def deploySharedLibraries():
-
-  deploySharedLibrary('coherence', COHERENCE_HOME + '/lib/coherence.jar')
-  deploySharedLibrary('coherence-web-spi', COHERENCE_HOME + '/lib/coherence-web-spi.war')
-  deploySharedLibrary('active-cache', WL_HOME + '/common/deployable-libraries/active-cache-1.0.jar')
-  deploySharedLibrary('weblogic-spring', WL_HOME + '/server/lib/weblogic-spring.jar')
-  deploySharedLibrary('toplink-grid', WL_HOME + '/common/deployable-libraries/toplink-grid-1.0.jar')
-
-############################################################################################################################################
-
-def deploySharedLibrary(appName, appPath):
-  progress = deploy(appName=appName, path=appPath, targets=cluster_Name, libraryModule='true')
-  progress.printStatus()
-
-############################################################################################################################################
-#BEGIN MAIN
-
-var_domain_dir = USER_PROJECTS + '/domains/' + DOMAIN_NAME
-print 'Creating domain...'
-print '--var_domain_dir=' + var_domain_dir
-print '--DOMAIN_TEMPLATE=' + DOMAIN_TEMPLATE
-print '--adminServer_Username=' + adminServer_Username
-print '--adminServer_Password=' + adminServer_Password
+var_domain_dir = USER_PROJECTS + '/domains/' + domain_Name
+print 'Creating domain in path=' + var_domain_dir
 
 try:
-  createDomain(DOMAIN_TEMPLATE, var_domain_dir, adminServer_Username, adminServer_Password)
-  print 'Domain created Sucessfully'
+  createDomain(WL_HOME + '/common/templates/domains/wls.jar', var_domain_dir, adminServer_Username,
+               adminServer_Password)
+  print 'domain created'
 
   readDomain(var_domain_dir)
-  print 'Domain Read Successfully'
+  print 'read domain'
 
   cd('/')
   cmo.setExalogicOptimizationsEnabled(false)
   cmo.setClusterConstraintsEnabled(false)
   cmo.setGuardianEnabled(false)
-#  cmo.setAdministrationPort(int(adminServer_AdministrationPort))
-#  cmo.setAdministrationPortEnabled(true)
+  cmo.setAdministrationPortEnabled(false)
   cmo.setConsoleEnabled(true)
   cmo.setConsoleExtensionDirectory('console-ext')
   cmo.setProductionModeEnabled(false)
@@ -1018,27 +898,27 @@ try:
   cmo.setInternalAppsDeployOnDemandEnabled(false)
   cmo.setConsoleContextPath('console')
 
-  print 'Configuring Admin Server...'
   cd('/Servers/AdminServer')
   cmo.setListenPortEnabled(true)
+  cmo.setAdministrationPort(int(adminServer_AdministrationPort))
   cmo.setListenPort(int(adminServer_ListenPort))
-  cmo.setListenAddress(listen_address)
   cmo.setWeblogicPluginEnabled(false)
   cmo.setJavaCompiler('javac')
   cmo.setStartupMode('RUNNING')
-  cmo.setVirtualMachineName(DOMAIN_NAME + '_AdminServer')
+  cmo.setVirtualMachineName(domain_Name + '_AdminServer')
   cmo.setClientCertProxyEnabled(false)
 
-  print 'Configuring Admin Server ServerStart...'
   create('AdminServer', 'ServerStart')
+
   cd('/Servers/AdminServer/ServerStart/AdminServer')
+
   cmo.setJavaHome(JAVA_HOME)
-  cmo.setArguments('-Xms=256m -Xmx=256m -Dweblogic.nodemanager.sslHostNameVerificationEnabled=false -Dweblogic.security.SSL.ignoreHostnameVerify=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust')
+  cmo.setArguments(adminServer_StartupArgs)
 
 except:
   print 'Unable to create domain!'
   dumpStack()
-  exit()
+  exit(exitCode=1)
 
 try:
   print 'updating domain'
@@ -1046,56 +926,43 @@ try:
 except:
   print 'Unable to update domain'
   dumpStack()
-  exit()
+  exit(exitCode=1)
 
-def createJMSModules(clusterMBean, jmsServerMBeans):
-  createBaseJMSResources('jms-module-base', clusterMBean, jmsServerMBeans)
-  createUOWResources('jms-module-uow', clusterMBean, jmsServerMBeans)
-  createUOOResources('jms-module-uoo', clusterMBean, jmsServerMBeans)
-  createUtilityJMSResources('jms-module-util', clusterMBean, jmsServerMBeans)
-  createOPSJMSResources('jms-module-ops', clusterMBean, jmsServerMBeans)
-  createSAFSourceModules()
-  createSAFStoresAndAgents()
-  createWLDFJMSResources('jms-module-wldf', clusterMBean, jmsServerMBeans)
-  createMigrationJMSResources('jms-module-migration', clusterMBean, jmsServerMBeans)
-  createSpringJMSTempResources('jms-module-temp', clusterMBean, jmsServerMBeans)
-
-
-cd('/')
-machine = createMachine(machine_Name, 'Plain', machine_ListenAddress, 5556)
+machine = createMachine(machine_Name, 'Plain', 'wins-vbox', 5556)
 
 cd('/')
 clusterMBean = create(cluster_Name, 'Cluster')
 
 try:
-  jdbcClusterDatasource = createPhysicalDataSource(['com.oracle.demo.ops.jdbc.cluster-ds'],
-                                                                                          datasource_jdbc_driver,
-                                                                                          datasource_global_transactions
-                                                                                          ,
-                                                                                          datasource_jdbc_url,
-                                                                                          datasource_user,
-                                                                                          datasource_password,
-                                                                                          clusterMBean)
+  jdbcSystemResource = createPhysicalDataSource(['com.oracle.demo.ops.jdbc.cluster-ds'],
+                                                                                       datasource_JdbcDriver,
+                                                                                       datasource_GlobalTransactions,
+                                                                                       datasource_jdbc_url,
+                                                                                       datasource_User,
+                                                                                       datasource_Password,
+                                                                                       clusterMBean)
+
+  # changed from consensus by JAW
   clusterMBean.setMigrationBasis('database')
-
-  clusterMBean.setDataSourceForAutomaticMigration(jdbcClusterDatasource)
-
-
+  clusterMBean.setDataSourceForAutomaticMigration(jdbcSystemResource)
   ####### Create Managed Servers
 
-  print 'Creating ' + str(managed_server_count) + ' Managed Servers...'
+  print 'Creating ' + str(managedServer_Count) + ' Managed Servers...'
 
-  for n in range(1, int(managed_server_count) + 1):
-    managedServer_Name = getManagedServerName(n)
-    managedServer_ListenPort = getManagedServerListenPort(n)
-    managedServer_ListenAddress = listen_address
-    managedServer_AdminPort = getManagedServerAdminPort(n)
+  jmsServerMBeans = []
+  managedServerMBeans = []
+  migratableTargetMBeans = []
 
-    migratableTargetName = managedServer_Name + ' (migratable)'
+  for n in range(1, int(managedServer_Count) + 1):
+    managedServerName = managedServer_BaseName + '-' + str(n)
+    managedServer_ListenPort = int(str(managedServer_BasePort) + str(n))
+    managedServer_AdminPort = int(str(managedServer_BaseAdminPort) + str(n))
+    managedServer_ListenAddress = machine_ListenAddress
+    migratableTargetName = managedServerName + ' (migratable)'
 
-    print 'Creating Server Name=[' + managedServer_Name + '] with Listen Port: ' + str(managedServer_ListenPort)
+    print 'Creating Server Name=[' + managedServerName + '] with Listen Port: ' + str(managedServer_ListenPort)
     cd('/')
-    managedServer = create(managedServer_Name, 'Server')
+    managedServer = create(managedServerName, 'Server')
     managedServer.setListenPort(managedServer_ListenPort)
     managedServer.setListenAddress(managedServer_ListenAddress)
     managedServer.setAdministrationPort(managedServer_AdminPort)
@@ -1104,11 +971,10 @@ try:
     managedServer.setAutoRestart(false)
     managedServerMBeans.append(managedServer)
 
-    cd('/Servers/' + managedServer_Name)
-    managedServerStart = create(managedServer_Name, 'ServerStart')
-    managedServerStart.setArguments(
-      '-Xmx=512m -Xms=256m -Dweblogic.nodemanager.sslHostNameVerificationEnabled=false -Dweblogic.security.SSL.ignoreHostnameVerify=true -Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dtangosol.coherence.ttl=0 -Dtangosol.coherence.distributed.localstorage=true -Dtangosol.coherence.session.localstorage=true -Dtangosol.coherence.cacheconfig=' + wins_demos_home + '/coherence-examples/session-cache-config.xml -Dcom.sun.jersey.server.impl.cdi.lookupExtensionInBeanManager=true')
-    managedServerStart.setJavaHome(JAVA_HOME)
+    cd('/Servers/' + managedServerName)
+    serverStart = create(managedServerName, 'ServerStart')
+    serverStart.setJavaHome(JAVA_HOME)
+    serverStart.setArguments(managedServer_StartupArgs)
 
     cd('/')
 
@@ -1118,49 +984,53 @@ try:
     migratableTarget.setMigrationPolicy('failure-recovery')
     migratableTargetMBeans.append(migratableTarget)
 
+  for migratableTarget in migratableTargetMBeans:
     migratableTarget.setConstrainedCandidateServers(managedServerMBeans)
+    cd('/')
 
-    jmsServer_Name = getJMSServerName(n)
-    jdbcStoreName = jmsServer_Name + '-jdbcStore'
-    managedServer_Name = managedServerMBeans[n - 1].getName()
+  # SPLIT INTO DIFFERENT SCOPES BECAUSE IT WASNT WORKING IN A SINGLE SCOPE!
+  for n in range(1, int(managedServer_Count) + 1):
+    jmsServerName = jmsServer_BaseName + '-' + str(n)
+    jdbcStoreName = jmsServerName + '-jdbcStore'
+    managedServerName = managedServerMBeans[n - 1].getName()
 
-    print 'Managed Server Name: ' + managedServer_Name
+    print 'Managed Server Name: ' + managedServerName
 
     jmsServerTargets = jarray.array([migratableTargetMBeans[n - 1]], weblogic.management.configuration.TargetMBean)
 
     print 'Creating JMS JDBC Store [' + jdbcStoreName + ']'
     cd('/')
     jdbcStore = create(jdbcStoreName, 'JDBCStore')
-    jdbcStore.setDataSource(jdbcClusterDatasource)
+    jdbcStore.setDataSource(jdbcSystemResource)
     jdbcStore.setPrefixName('JMSSTORE' + str(n))
     jdbcStore.setTargets(jmsServerTargets)
 
-    print 'Creating JMS Server Name=[' + jmsServer_Name + ']'
+    print 'Creating JMS Server Name=[' + jmsServerName + ']'
     cd('/')
-    jmsServer = create(jmsServer_Name, 'JMSServer')
+    jmsServer = create(jmsServerName, 'JMSServer')
     jmsServerMBeans.append(jmsServer)
     jmsServer.setPersistentStore(jdbcStore)
     jmsServer.setTargets(jmsServerTargets)
 
-    cd('/')
-
   createJMSModules(clusterMBean, jmsServerMBeans)
-
-  cd('/')
-
-  createPhysicalDataSource([datasource_jndi_name],
-                                                 datasource_jdbc_driver,
-                                                 datasource_global_transactions,
-                                                 datasource_jdbc_url,
-                                                 datasource_user,
-                                                 datasource_password,
-                                                 clusterMBean)
-  updateDomain()
 
 except:
   dumpStack()
-  print 'Unable to complete domain offline steps'
-  exit()
+  exit(exitCode=1)
+
+try:
+  cd('/')
+
+  createPhysicalDataSource([datasource_JndiName],
+                                                datasource_JdbcDriver,
+                                                datasource_GlobalTransactions,
+                                                datasource_jdbc_url, datasource_User,
+                                                datasource_Password, clusterMBean)
+except:
+  dumpStack()
+  exit(exitCode=1)
+
+updateDomain()
 
 print ''
 print '-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-'
@@ -1170,6 +1040,7 @@ print ''
 
 ########################################################################################################################
 ########################################################################################################################
+########################################################################################################################
 
 print ''
 print '-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-'
@@ -1177,47 +1048,44 @@ print 'Beginning ONLINE configuration tasks'
 print '-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-'
 print ''
 
-print ''
-print '============================================='
-print 'Connecting to NODE MANAGER..'
-print '============================================='
-print ''
-
-nmConnect(adminServer_Username, adminServer_Password, machine_ListenAddress, 5556, DOMAIN_NAME, var_domain_dir, 'plain')
+nmConnect(adminServer_Username, adminServer_Password, machine_ListenAddress, 5556, domain_Name, var_domain_dir, 'plain')
 
 print ''
-print '============================================='
-print 'Starting AdminServer...'
-print '============================================='
+print '-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-'
+print 'Connected to NODE MANAGER Successfully...!!!'
+print '-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-==-'
 print ''
 
 nmStart('AdminServer')
 
-connect(adminServer_Username, adminServer_Password, adminServer_AdministrationURL)
+## ONLINE CONFIG  #####################################################
+
+connect(adminServer_Username, adminServer_Password, adminServer_URL)
+
+print '@@@ Connected to AdminServer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+
 
 edit()
 startEdit()
 
-configuraManagedServersOnline()
+configureManagedServersOnline()
 
-createCoherenceCluster(coh_cluster_name,
-                       coh_listen_address,
-                       coh_listen_port,
-                       jarray.array([ObjectName('com.bea:Name=' + cluster_Name + ',Type=Cluster')], ObjectName),
-                       coh_ttl)
+createCoherenceCluster_online(cohCluster_Name, coh_ListenAddress, coh_ListenPort,
+                              jarray.array([ObjectName('com.bea:Name=' + cluster_Name + ',Type=Cluster')], ObjectName),
+                              coh_TTL)
 
-createCoherenceServers(coh_cluster_name, coh_listen_address, coh_listen_port, coh_server_args, coh_server_count,
-                       coh_server_cp, machine_Name)
-
-print '============================================='
+createCoherenceServers_online(cohCluster_Name,
+                              coh_ListenAddress,
+                              coh_ListenPort,
+                              cohServer_StartupArgs,
+                              cohServer_Count,
+                              cohServer_Classpath,
+                              machine_Name)
 
 createSpringWLDFModule_online()
-createJavaEEWLDFModule_online()
+createForeignJMSSpringModules_online()
 
-print 'Creating OPS Modules'
-createEventDrivenSpringModule_online('jms-module-ops-foreign', clusterMBean, jmsServerMBeans)
-
-print '============================================='
+## DEPLOY LIBRARIES #####################################################
 
 save()
 activate(block="true")
