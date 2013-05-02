@@ -1,9 +1,22 @@
 package com.oracle.example.jms.deadlock;
 
 import com.oracle.example.jms.Constants;
-import com.oracle.example.jms.WLJMSProducer;
+import weblogic.jms.extensions.WLConnection;
+import weblogic.jms.extensions.WLMessageProducer;
+import weblogic.jms.extensions.WLSession;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.Queue;
+import javax.jms.Session;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.logging.Logger;
 
 /**
  * **************************************************************************
@@ -16,23 +29,83 @@ import java.util.Date;
  * <p/>
  * ****************************************************************************
  */
-public class DeadlockProducer
-    extends WLJMSProducer
+@Stateless(name = "DeadlockProducer", mappedName = "ejb/DeadlockProducer")
+@LocalBean
+public class DeadlockProducer implements Serializable
 {
   public static final String JMS_CF_JNDI = "com/oracle/example/jms/util/cf";
-  public static final String JMS_QUEUE_JNDI = "com.oracle.example.jms.util.deadlock";
+  public static final String JMS_QUEUE_JNDI = "com/oracle/example/jms/util/philosophers";
 
-  public static void main(String[] args)
+  private static final Logger logger = Logger.getLogger(DeadlockProducer.class.getName());
+
+  @Resource(name = JMS_CF_JNDI, type = ConnectionFactory.class)
+  private ConnectionFactory connectionFactory;
+
+  @Resource(name = JMS_QUEUE_JNDI, type = Queue.class)
+  private Queue queue;
+
+  private WLConnection connection;
+  private WLSession session;
+  private WLMessageProducer queueProducer;
+
+  @PostConstruct
+  public void initialize()
   {
-    WLJMSProducer sender = null;
     try
     {
-      sender = new WLJMSProducer(Constants.WL_INITIAL_CONTEXT, Constants.JMS_ENDPOINT_ADDRESS, Constants.USERNAME, Constants.PASSWORD, JMS_CF_JNDI, JMS_QUEUE_JNDI);
-      sender.sendMessageBatch("Batch=[" + Constants.filenameDateFormatter.format(new Date()) + "] Hello World!!", 50, 0);
+      connection = (WLConnection) connectionFactory.createConnection();
+      session = (WLSession) connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+      queueProducer = (WLMessageProducer) session.createProducer(queue);
     }
-    catch (Exception e)
+    catch (JMSException e)
+    {
+      if (connection != null)
+      {
+        try
+        {
+          connection.close();
+        }
+        catch (JMSException f)
+        {
+          e.printStackTrace();
+        }
+      }
+    }
+  }
+
+  @PreDestroy
+  public void closeConnection()
+  {
+    try
+    {
+      if (connection != null)
+      {
+        connection.close();
+      }
+    }
+    catch (JMSException e)
     {
       e.printStackTrace();
     }
+  }
+
+  public void doIt()
+  {
+    logger.info("Generating Deadlock!!!");
+    int BATCH_SIZE = 50;
+
+    try
+    {
+      for (int x = 0; x < BATCH_SIZE; x++)
+      {
+        logger.info("Sending message [ " + x + " / " + BATCH_SIZE + " ]");
+        queueProducer.send(session.createTextMessage("Batch=[" + Constants.filenameDateFormatter.format(new Date()) + "] Hello World!! [ " + x + " / " + BATCH_SIZE + " ]"));
+      }
+    }
+    catch (JMSException e)
+    {
+      e.printStackTrace();
+    }
+
   }
 }
