@@ -5,7 +5,7 @@
     <groupId>com.oracle.weblogic.demo.wins</groupId>
     <artifactId>common-ejb</artifactId>
     <version>12.1.1.0</version>
-    <relativePath>../common/common-deployable/pom.xml</relativePath>
+    <relativePath>../common/common-deployable/common-ejb/pom.xml</relativePath>
   </parent>
   <!-- ==================================================================================== -->
 
