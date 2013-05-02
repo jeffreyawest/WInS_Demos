@@ -41,6 +41,8 @@
     <module>side-by-side-deployment</module>
     <module>spring-examples</module>
     <module>workmanager-examples</module>
+    <module>mbean-examples</module>
+    <module>utility-applications</module>
   </modules>
 
 </project>
