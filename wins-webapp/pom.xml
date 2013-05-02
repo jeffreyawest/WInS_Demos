@@ -7,24 +7,21 @@
     <groupId>com.oracle.weblogic.demo.wins</groupId>
     <artifactId>common-deployable</artifactId>
     <version>12.1.1.0</version>
-    <relativePath>../../common/common-deployable/pom.xml</relativePath>
+    <relativePath>../common/common-deployable/pom.xml</relativePath>
   </parent>
 
   <!-- ==================================================================================== -->
 	
-  <artifactId>utility-webapp</artifactId>
+  <artifactId>wins-webapp</artifactId>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.oracle.weblogic.demo.wins</groupId>
   <packaging>war</packaging>
   <version>12.1.1.0</version>
-  <name>utility-webapp</name>
-  <url>http://java.net/projects/weblogic-examples</url>
+  <name>wins-webapp</name>
 
   <!-- ==================================================================================== -->
 
   <properties>
-    <weblogic.examples.svn.url>https://svn.java.net/svn/weblogic-examples~weblogic-12c-user-examples
-    </weblogic.examples.svn.url>
     <maven.build.timestamp.format>yyyyMMdd.HHmm</maven.build.timestamp.format>
   </properties>
 
@@ -34,31 +31,6 @@
     <defaultGoal>install</defaultGoal>
 
     <plugins>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.2</version>
-        <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
-          <archive>
-            <manifestEntries>
-              <Extension-Name>${project.artifactId}</Extension-Name>
-
-              <Specification-Title>${project.description}</Specification-Title>
-              <Specification-Version>${project.version}</Specification-Version>
-              <Specification-Vendor>Oracle</Specification-Vendor>
-
-              <Implementation-Title>${project.artifactId}</Implementation-Title>
-              <Implementation-Version>${project.version}.${maven.build.timestamp}
-              </Implementation-Version>
-              <Implementation-Vendor>Oracle</Implementation-Vendor>
-              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
-
-            </manifestEntries>
-          </archive>
-        </configuration>
-      </plugin>
 
       <plugin>
         <groupId>com.oracle.weblogic</groupId>

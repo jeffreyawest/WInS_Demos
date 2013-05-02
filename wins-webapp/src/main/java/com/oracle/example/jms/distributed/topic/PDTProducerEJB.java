@@ -1,4 +1,4 @@
-package com.oracle.example.jms.deadlock;
+package com.oracle.example.jms.distributed.topic;
 
 import com.oracle.example.jms.Constants;
 import weblogic.jms.extensions.WLConnection;
@@ -10,15 +10,12 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSException;
-import javax.jms.Queue;
-import javax.jms.Session;
-import java.io.Serializable;
+import javax.jms.*;
 import java.util.Date;
 import java.util.logging.Logger;
 
 /**
+ * /*
  * **************************************************************************
  * <p/>
  * This code is provided for example purposes only.  Oracle does not assume
@@ -27,22 +24,33 @@ import java.util.logging.Logger;
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
  * <p/>
+ * This code is provided under the following licenses:
+ * <p/>
+ * GNU General Public License (GPL-2.0)
+ * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
+ * <p/>
+ * <p/>
  * ****************************************************************************
+ * Created with IntelliJ IDEA because its awesome.
+ * User: jeffreyawest
+ * Date: 5/1/13
+ * Time: 10:52 PM
+ * To change this template use File | Settings | File Templates.
  */
-@Stateless(name = "DeadlockProducer", mappedName = "ejb/DeadlockProducer")
+@Stateless(name = "PDTProducerEJB", mappedName = "ejb/PDTProducer")
 @LocalBean
-public class DeadlockProducer implements Serializable
+public class PDTProducerEJB
 {
-  public static final String JMS_CF_JNDI = "com/oracle/example/jms/util/cf";
-  public static final String JMS_QUEUE_JNDI = "com/oracle/example/jms/util/philosophers";
+  public static final String JMS_CF_JNDI = "com/oracle/example/jms/base/cf";
+  public static final String JMS_TOPIC_JNDI = "com/oracle/example/jms/base/partitioned-topic";
 
-  private static final Logger logger = Logger.getLogger(DeadlockProducer.class.getName());
+  private static final Logger logger = Logger.getLogger(PDTProducerEJB.class.getName());
 
   @Resource(name = JMS_CF_JNDI, type = ConnectionFactory.class)
   private ConnectionFactory connectionFactory;
 
-  @Resource(name = JMS_QUEUE_JNDI, type = Queue.class)
-  private Queue queue;
+  @Resource(name = JMS_TOPIC_JNDI, type = Topic.class)
+  private Topic topic;
 
   private WLConnection connection;
   private WLSession session;
@@ -55,7 +63,7 @@ public class DeadlockProducer implements Serializable
     {
       connection = (WLConnection) connectionFactory.createConnection();
       session = (WLSession) connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-      queueProducer = (WLMessageProducer) session.createProducer(queue);
+      queueProducer = (WLMessageProducer) session.createProducer(topic);
     }
     catch (JMSException e)
     {
@@ -91,15 +99,23 @@ public class DeadlockProducer implements Serializable
 
   public void doIt()
   {
-    logger.info("Generating Deadlock!!!");
-    int BATCH_SIZE = 50;
+    int BATCH_SIZE = 4;
+    long sleepTime = 500;
+    String batchName=Constants.filenameDateFormatter.format(new Date());
 
     try
     {
       for (int x = 0; x < BATCH_SIZE; x++)
       {
-        logger.info("Sending message [ " + x + " / " + BATCH_SIZE + " ]");
-        queueProducer.send(session.createTextMessage("Batch=[" + Constants.filenameDateFormatter.format(new Date()) + "] Hello World!! [ " + x + " / " + BATCH_SIZE + " ]"));
+        queueProducer.send(session.createTextMessage("Batch=[" + batchName + "] Partitioned Distributed Topic!! [ " + x + " / " + BATCH_SIZE + " ]"));
+
+        try
+        {
+          Thread.sleep(sleepTime);
+        }
+        catch (InterruptedException ignore)
+        {
+        }
       }
     }
     catch (JMSException e)

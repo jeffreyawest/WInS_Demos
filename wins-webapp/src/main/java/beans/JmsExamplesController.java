@@ -1,6 +1,12 @@
 package beans;
 
-import com.oracle.example.jms.deadlock.DeadlockProducer;
+import com.oracle.example.jms.distributed.queue.QueueProducerEJB;
+import com.oracle.example.jms.distributed.topic.ClearScreenEJB;
+import com.oracle.example.jms.distributed.topic.PDTProducerEJB;
+import com.oracle.example.jms.distributed.topic.RDTProducerEJB;
+import com.oracle.example.jms.saf.SAFServerProducerEJB;
+import com.oracle.example.jms.uoo.UOOProducerEJB;
+import com.oracle.example.jms.uow.UOWProducerEJB;
 
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
@@ -10,23 +16,22 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
-import java.util.*;
 import java.util.logging.Logger;
 
 /**
-  * **************************************************************************
+ * **************************************************************************
  * <p/>
  * This code is provided for example purposes only.  Oracle does not assume
  * any responsibility or liability for the consequences of using this code.
  * If you choose to use this code for any reason, including but not limited
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
- *
+ * <p/>
  * This code is provided under the following licenses:
- *
+ * <p/>
  * GNU General Public License (GPL-2.0)
  * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
- *
+ * <p/>
  * <p/>
  * ****************************************************************************
  * User: jeffrey.a.west
@@ -36,14 +41,27 @@ import java.util.logging.Logger;
 
 @ManagedBean
 @SessionScoped
-public class UtilityController implements Serializable
+public class JmsExamplesController implements Serializable
 {
   static final long serialVersionUID = 43L;
-  private static final Logger logger = Logger.getLogger(UtilityController.class.getName());
+  private static final Logger logger = Logger.getLogger(JmsExamplesController.class.getName());
 
-  @EJB private DeadlockProducer deadlockProducer;
+  @EJB
+  private QueueProducerEJB queueProducerEJB;
+  @EJB
+  private ClearScreenEJB clearScreenEJB;
+  @EJB
+  private PDTProducerEJB pdtProducerEJB;
+  @EJB
+  private RDTProducerEJB rdtProducerEJB;
+  @EJB
+  private UOOProducerEJB uooProducerEJB;
+  @EJB
+  private UOWProducerEJB uowProducerEJB;
+  @EJB
+  private SAFServerProducerEJB safProducerEJB;
 
-  public UtilityController()
+  public JmsExamplesController()
   {
   }
 
@@ -56,22 +74,6 @@ public class UtilityController implements Serializable
   public void removeEntry(String pKey)
   {
     getSession().removeAttribute(pKey);
-  }
-
-  public String generateDeadlock()
-  {
-    logger.info("generateDeadlock");
-
-    try
-    {
-      deadlockProducer.doIt();
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-
-    return "success";
   }
 
   public HttpSession getSession()
@@ -151,5 +153,78 @@ public class UtilityController implements Serializable
     getFacesContext().addMessage(null, new FacesMessage("Session Invalidated", "User Request"));
   }
 
+  public String queueDemo()
+  {
+    queueProducerEJB.doIt();
 
+    return "success";
+  }
+
+  public String pdtDemo()
+  {
+    pdtProducerEJB.doIt();
+    return "success";
+  }
+
+  public String rdtDemo()
+  {
+    rdtProducerEJB.doIt();
+    return "success";
+  }
+
+  public String uowDemo()
+  {
+    uowProducerEJB.doIt();
+
+    return "success";
+  }
+
+  public String safDemo()
+  {
+    safProducerEJB.doIt();
+
+    return "success";
+  }
+
+  public String uooDemoMixed()
+  {
+    uooProducerEJB.sendMixedUOO();
+    return "success";
+  }
+
+  public String uooDemoDiscrete()
+  {
+    uooProducerEJB.sendDiscreteUOO();
+    return "success";
+  }
+
+  public String uooDemoNonUOO()
+  {
+    uooProducerEJB.sendRegularMessageBatch();
+    return "success";
+  }
+
+  public String uowDemoNonUOW()
+  {
+    uowProducerEJB.sendNonUOW();
+    return "success";
+  }
+
+  public String uowDemoDiscrete()
+  {
+    uowProducerEJB.sendDiscreteUOW();
+    return "success";
+  }
+
+  public String uowDemoIncomplete()
+  {
+    uowProducerEJB.sendIncompleteUOW();
+    return "success";
+  }
+
+  public String uowDemoSlow()
+  {
+    uowProducerEJB.sendSlowUOW();
+    return "success";
+  }
 }

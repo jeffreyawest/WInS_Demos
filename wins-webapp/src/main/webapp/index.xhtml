@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+    >
+<h:head>
+
+</h:head>
+<h:body>
+
+  <ui:composition template="/templates/common/layout.xhtml">
+
+    <ui:define name="content">
+
+      <h:form id="frm1" prependId="false">
+        <p:growl showDetail="true"/>
+
+
+        <p:panel header="Distributed JMS Examples">
+          <h:panelGrid columns="2">
+
+            <p:commandButton id="queue_button"
+                             value="Distributed Queue"
+                             ajax="false"
+                             action="#{jmsExamplesController.queueDemo}"/>
+
+            <div>Distributed Queue</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="pdt_button"
+                             value="Partitioned Distributed Topic"
+                             ajax="false"
+                             action="#{jmsExamplesController.pdtDemo}"/>
+
+            <div>Partitioned Distributed Topic</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="rdt_button"
+                             value="Replicated Distributed Topic"
+                             ajax="false"
+                             action="#{jmsExamplesController.rdtDemo}"/>
+
+            <div>Replicated Distributed Topic</div>
+
+          </h:panelGrid>
+
+        </p:panel>
+
+        <p:panel header="Advanced JMS Examples">
+          <h:panelGrid columns="2">
+
+            <p:commandButton id="saf_button"
+                             value="Store and Forward"
+                             ajax="false"
+                             action="#{jmsExamplesController.safDemo}"/>
+
+            <div>Store and Forward</div>
+
+          </h:panelGrid>
+
+        </p:panel>
+
+        <p:panel header="Unit of Order">
+          <h:panelGrid columns="2">
+
+            <p:commandButton id="nonuoo_button"
+                             value="Non Unit of Order"
+                             ajax="false"
+                             action="#{jmsExamplesController.uooDemoNonUOO}"/>
+
+            <div>Non Unit of Order</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="discreteuoo_button"
+                             value="Discrete UOO"
+                             ajax="false"
+                             action="#{jmsExamplesController.uooDemoDiscrete}"/>
+
+            <div>Discrete Unit of Order</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="mixeduoo_button"
+                             value="Mixed UOO"
+                             ajax="false"
+                             action="#{jmsExamplesController.uooDemoMixed}"/>
+
+            <div>Mixed Unit of Order</div>
+
+          </h:panelGrid>
+
+        </p:panel>
+
+        <p:panel header="Unit of Work">
+          <h:panelGrid columns="2">
+
+            <p:commandButton id="nonUOW_button"
+                             value="Non UOW"
+                             ajax="false"
+                             action="#{jmsExamplesController.uowDemoNonUOW}"/>
+
+            <div>Non Unit of Order</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="singleUOW_button"
+                             value="Single UOW"
+                             ajax="false"
+                             action="#{jmsExamplesController.uowDemoDiscrete}"/>
+
+            <div>Discrete Unit of Order</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="sadUOW_button"
+                             value="Incomplete UOW"
+                             ajax="false"
+                             action="#{jmsExamplesController.uowDemoIncomplete}"/>
+
+            <div>Mixed Unit of Order</div>
+
+            <!-- @@@@@@@@ -->
+
+            <p:commandButton id="slowUOW_button"
+                             value="Slow UOW"
+                             ajax="false"
+                             action="#{jmsExamplesController.uowDemoSlow}"/>
+
+            <div>Mixed Unit of Order</div>
+
+          </h:panelGrid>
+
+        </p:panel>
+
+        <br/>
+
+      </h:form>
+    </ui:define>
+
+  </ui:composition>
+</h:body>
+
+</html>
