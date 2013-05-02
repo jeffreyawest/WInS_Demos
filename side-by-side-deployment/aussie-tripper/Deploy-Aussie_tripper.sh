@@ -1,3 +1,4 @@
+#!/bin/sh
 . "${WL_HOME}/server/bin/setWLSEnv.sh
 
 echo CLASSPATH=${CLASSPATH}
