@@ -3,18 +3,17 @@
 
   <!-- ==================================================================================== -->
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.oracle.weblogic.demo.wins</groupId>
-  <artifactId>diagnostic-framework</artifactId>
-  <version>12.1.1.0</version>
-  <packaging>pom</packaging>
-  <name>diagnostic-framework</name>
-
   <!-- ==================================================================================== -->
 
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.oracle.weblogic.demo.wins</groupId>
+  <artifactId>mbean-examples</artifactId>
+  <version>12.1.1.0</version>
+  <packaging>pom</packaging>
+  <name>mbean-examples</name>
+
   <modules>
-    <module>dye-injection</module>
-    <module>wldf-notification-listener</module>
+    <module>javaee-mbean-example</module>
   </modules>
 
 </project>
