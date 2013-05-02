@@ -1,5 +1,7 @@
 import time
 
+loadProperties('environment.properties')
+
 domain_Name = 'weblogic_examples_domain'
 machine_ListenAddress = 'wins-vbox'
 jmsServer_BaseName = 'jms-server'
@@ -854,6 +856,12 @@ def deploySharedLibrary(appName, appPath):
 
 ########################################################################################################################
 
+def configureDomain_online():
+  cd('/JTA/weblogic_examples_domain')
+  cmo.setTimeoutSeconds(300)
+
+########################################################################################################################
+
 def configureManagedServersOnline():
   print '@@@ Configuring Managed Servers Online @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 
@@ -1067,6 +1075,8 @@ print '@@@ Connected to AdminServer @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 edit()
 startEdit()
+
+configureDomain_online()
 
 configureManagedServersOnline()
 

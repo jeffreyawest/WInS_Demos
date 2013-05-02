@@ -23,7 +23,6 @@
     <module>jdbc-connection-hogger</module>
     <module>stuck-thread-generator</module>
     <module>deadlock-generator</module>
-    <module>utility-webapp</module>
   </modules>
 
 </project>

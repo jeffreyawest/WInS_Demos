@@ -12,26 +12,20 @@ zerofree()
 
 sudo rm -Rf /tmp/*
 
-sqlplus '/ as sysdba' @/u01/content/weblogic-innovation-seminars/WInS_Demos/environment/domainSQL/truncate.sql >> /dev/null
+sqlplus '/ as sysdba' @/labs/content/WInS_Demos/environment/sql/truncate.sql
 
-if [ -d $DOMAINS ]; then
+killNodeManager.sh
+killWebLogic.sh
 
-  cd /u01/content/weblogic-innovations-seminars/WInS_Demos/environment
-  mvn -P stop-domain
+rm -Rf $DOMAINS
 
-  rm -Rf $DOMAINS
-fi
-
-cd /u01/content/oracle-parcel-service
+cd /labs/content/WInS_Demos
 mvn clean
 
-cd /u01/content/weblogic-innovations-seminars/WInS_Demos
+cd /labs/content/oracle-parcel-service
 mvn clean
 
-cd /u01/content/oracle-parcel-service
-mvn clean
-
-rm -Rf /u01/content/oracle-parcel-service/ops-weblogic/Oracle
+rm -Rf /labs/content/oracle-parcel-service/ops-weblogic/Oracle
 
 zerofree /tmp
 zerofree /u01

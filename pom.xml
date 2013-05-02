@@ -43,6 +43,7 @@
     <module>workmanager-examples</module>
     <module>mbean-examples</module>
     <module>utility-applications</module>
+    <module>wins-webapp</module>
   </modules>
 
 </project>

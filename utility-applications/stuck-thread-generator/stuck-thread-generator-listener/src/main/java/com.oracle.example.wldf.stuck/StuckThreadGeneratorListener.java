@@ -26,7 +26,7 @@ import java.sql.Connection;
 @MessageDriven(
     messageListenerInterface = MessageListener.class,
     name = "StuckThreadGeneratorListenerEJB",
-    mappedName = "com.oracle.example.jms.util.stuck_thread_generator",
+    mappedName = "com.oracle.example.jms.util.stuckThreadGenerator",
     activationConfig = {
         @ActivationConfigProperty(
             propertyName = "connectionFactoryJndiName",

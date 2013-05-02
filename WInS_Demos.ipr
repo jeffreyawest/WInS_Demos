@@ -121,13 +121,13 @@
       </root>
     </artifact>
     <artifact type="war" name="spring-mbean-wldf-example:war">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/target</output-path>
-      <root id="archive" name="spring-mbean-wldf-example.war">
+      <output-path>$PROJECT_DIR$/mbean-examples/spring-mbean-example/target</output-path>
+      <root id="archive" name="spring-mbean-example.war">
         <element id="artifact" artifact-name="spring-mbean-wldf-example:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="spring-mbean-wldf-example:war exploded">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/target/spring-mbean-wldf-example</output-path>
+      <output-path>$PROJECT_DIR$/mbean-examples/spring-mbean-example/target/spring-mbean-example</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="spring-mbean-wldf-example/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -239,13 +239,13 @@
       </root>
     </artifact>
     <artifact type="war" name="javaee-mbean-wldf-example:war">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/target</output-path>
-      <root id="archive" name="javaee-mbean-wldf-example.war">
+      <output-path>$PROJECT_DIR$/mbean-examples/javaee-mbean-example/target</output-path>
+      <root id="archive" name="javaee-mbean-example.war">
         <element id="artifact" artifact-name="javaee-mbean-wldf-example:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="javaee-mbean-wldf-example:war exploded">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/target/javaee-mbean-wldf-example</output-path>
+      <output-path>$PROJECT_DIR$/mbean-examples/javaee-mbean-example/target/javaee-mbean-example</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="javaee-mbean-wldf-example/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -350,16 +350,16 @@
             <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.1.1.RELEASE" />
             <element id="library" level="project" name="Maven: org.springframework:spring-web:3.1.1.RELEASE" />
             <element id="archive" name="ops-domain-services-api-2012.04.30.jar">
-              <element id="module-output" name="ops-domain-services-api" />
+              <element id="module-output" name="ops-domain-services-api (1)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-2012.04.30.jar">
-              <element id="module-output" name="ops-domain-services-impl" />
+              <element id="module-output" name="ops-domain-services-impl (1)" />
             </element>
             <element id="archive" name="ops-domain-model-2012.04.30.jar">
-              <element id="module-output" name="ops-domain-model" />
+              <element id="module-output" name="ops-domain-model (1)" />
             </element>
             <element id="archive" name="ops-util-2012.04.30.jar">
-              <element id="module-output" name="ops-util" />
+              <element id="module-output" name="ops-util (1)" />
             </element>
           </element>
         </element>
@@ -476,13 +476,13 @@
       </root>
     </artifact>
     <artifact type="war" name="hogger-listener:war">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/target</output-path>
+      <output-path>$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-listener/target</output-path>
       <root id="archive" name="hogger-listener-12.1.1.0.war">
         <element id="artifact" artifact-name="hogger-listener:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="hogger-listener:war exploded">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/target/hogger-listener-12.1.1.0</output-path>
+      <output-path>$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-listener/target/hogger-listener-12.1.1.0</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="hogger-listener/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -510,13 +510,13 @@
       </root>
     </artifact>
     <artifact type="war" name="stuck-thread-generator-listener:war">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/target</output-path>
+      <output-path>$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-listener/target</output-path>
       <root id="archive" name="stuck-thread-generator-listener-12.1.1.0.war">
         <element id="artifact" artifact-name="stuck-thread-generator-listener:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="stuck-thread-generator-listener:war exploded">
-      <output-path>$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/target/stuck-thread-generator-listener-12.1.1.0</output-path>
+      <output-path>$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-listener/target/stuck-thread-generator-listener-12.1.1.0</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="stuck-thread-generator-listener/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -633,22 +633,22 @@
           <element id="directory" name="lib">
             <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-services-impl-3.0.jar">
               <element id="module-output" name="ops-services-impl" />
             </element>
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
           </element>
         </element>
@@ -671,22 +671,22 @@
           <element id="directory" name="lib">
             <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-services-impl-3.0.jar">
               <element id="module-output" name="ops-services-impl" />
             </element>
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
           </element>
         </element>
@@ -708,19 +708,19 @@
           </element>
           <element id="directory" name="lib">
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
           </element>
         </element>
@@ -744,35 +744,35 @@
             <element id="library" level="project" name="Maven: org.primefaces:primefaces:2.2" />
             <element id="library" level="project" name="Maven: org.primefaces.themes:blitzer:1.0.0" />
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-services-impl-3.0.jar">
               <element id="module-output" name="ops-services-impl" />
             </element>
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
           </element>
         </element>
       </root>
     </artifact>
     <artifact type="war" name="ops-ee-message-driven (1):war">
-      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/target</output-path>
-      <root id="archive" name="ops-ee-message-driven-3.0.war">
+      <output-path>$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/target</output-path>
+      <root id="archive" name="ops-ee-message-driven-2012.04.30.war">
         <element id="artifact" artifact-name="ops-ee-message-driven (1):war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="ops-ee-message-driven (1):war exploded">
-      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/target/ops-ee-message-driven-3.0</output-path>
+      <output-path>$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/target/ops-ee-message-driven-2012.04.30</output-path>
       <root id="root">
         <element id="javaee-facet-resources" facet="ops-ee-message-driven (1)/web/Web" />
         <element id="directory" name="WEB-INF">
@@ -780,25 +780,16 @@
             <element id="module-output" name="ops-ee-message-driven (1)" />
           </element>
           <element id="directory" name="lib">
-            <element id="archive" name="ops-services-impl-3.0.jar">
-              <element id="module-output" name="ops-services-impl" />
-            </element>
-            <element id="archive" name="ops-util-3.0.jar">
+            <element id="archive" name="ops-util-2012.04.30.jar">
               <element id="module-output" name="ops-util (1)" />
             </element>
-            <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
-            </element>
-            <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
-            </element>
-            <element id="archive" name="ops-event-handlers-3.0.jar">
-              <element id="module-output" name="ops-event-handlers" />
-            </element>
-            <element id="archive" name="ops-domain-model-3.0.jar">
+            <element id="archive" name="ops-domain-model-2012.04.30.jar">
               <element id="module-output" name="ops-domain-model (1)" />
             </element>
-            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+            <element id="archive" name="ops-domain-services-api-2012.04.30.jar">
+              <element id="module-output" name="ops-domain-services-api (1)" />
+            </element>
+            <element id="archive" name="ops-domain-services-impl-2012.04.30.jar">
               <element id="module-output" name="ops-domain-services-impl (1)" />
             </element>
           </element>
@@ -850,19 +841,19 @@
             </element>
             <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-event-handlers-3.0.jar">
               <element id="module-output" name="ops-event-handlers" />
@@ -908,10 +899,10 @@
             <element id="library" level="project" name="Maven: wsdl4j:wsdl4j:1.6.1" />
             <element id="library" level="project" name="Maven: org.apache.ws.commons.schema:XmlSchema:1.4.7" />
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-spring-services-3.0.jar">
               <element id="module-output" name="ops-spring-services" />
@@ -920,13 +911,13 @@
             <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
             <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.5.RELEASE" />
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
             <element id="archive" name="ops-event-handlers-3.0.jar">
               <element id="module-output" name="ops-event-handlers" />
@@ -968,24 +959,239 @@
             <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.0.5.RELEASE" />
             <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.5.RELEASE" />
             <element id="archive" name="ops-services-api-3.0.jar">
-              <element id="module-output" name="ops-services-api" />
+              <element id="module-output" name="ops-services-api (1)" />
             </element>
             <element id="archive" name="ops-util-3.0.jar">
-              <element id="module-output" name="ops-util (1)" />
+              <element id="module-output" name="ops-util (2)" />
             </element>
             <element id="archive" name="ops-domain-services-api-3.0.jar">
-              <element id="module-output" name="ops-domain-services-api (1)" />
+              <element id="module-output" name="ops-domain-services-api (2)" />
             </element>
             <element id="archive" name="ops-domain-services-impl-3.0.jar">
-              <element id="module-output" name="ops-domain-services-impl (1)" />
+              <element id="module-output" name="ops-domain-services-impl (2)" />
             </element>
             <element id="archive" name="ops-domain-model-3.0.jar">
-              <element id="module-output" name="ops-domain-model (1)" />
+              <element id="module-output" name="ops-domain-model (2)" />
             </element>
             <element id="archive" name="ops-event-handlers-3.0.jar">
               <element id="module-output" name="ops-event-handlers" />
             </element>
             <element id="file-copy" path="/u01/wls1211/wlserver_12.1/server/lib/weblogic-spring.jar" output-file-name="weblogic-spring-12.1.1.0.jar" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="ops-ee-message-driven (2):war">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/target</output-path>
+      <root id="archive" name="ops-ee-message-driven-3.0.war">
+        <element id="artifact" artifact-name="ops-ee-message-driven (2):war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="ops-ee-message-driven (2):war exploded">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/target/ops-ee-message-driven-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-ee-message-driven (2)/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="ops-ee-message-driven (2)" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="archive" name="ops-services-impl-3.0.jar">
+              <element id="module-output" name="ops-services-impl" />
+            </element>
+            <element id="archive" name="ops-util-3.0.jar">
+              <element id="module-output" name="ops-util (2)" />
+            </element>
+            <element id="archive" name="ops-domain-services-api-3.0.jar">
+              <element id="module-output" name="ops-domain-services-api (2)" />
+            </element>
+            <element id="archive" name="ops-services-api-3.0.jar">
+              <element id="module-output" name="ops-services-api (1)" />
+            </element>
+            <element id="archive" name="ops-event-handlers-3.0.jar">
+              <element id="module-output" name="ops-event-handlers" />
+            </element>
+            <element id="library" level="project" name="Maven: com.oracle.demo.ops:ops-domain-model:3.0" />
+            <element id="archive" name="ops-domain-services-impl-3.0.jar">
+              <element id="module-output" name="ops-domain-services-impl (2)" />
+            </element>
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="dye-injection:war">
+      <output-path>$PROJECT_DIR$/diagnostic-framework/dye-injection/target</output-path>
+      <root id="archive" name="dye-injection.war">
+        <element id="artifact" artifact-name="dye-injection:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="dye-injection:war exploded">
+      <output-path>$PROJECT_DIR$/diagnostic-framework/dye-injection/target/dye-injection</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="dye-injection/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="dye-injection" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-domain-services-api (2):ejb">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/target</output-path>
+      <root id="archive" name="ops-domain-services-api-3.0.jar">
+        <element id="artifact" artifact-name="ops-domain-services-api (2):ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-domain-services-api (2):ejb exploded">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/target/ops-domain-services-api-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-domain-services-api (2)/ejb/EJB" />
+        <element id="module-output" name="ops-domain-services-api (2)" />
+      </root>
+    </artifact>
+    <artifact type="ejb-jar" name="ops-domain-services-impl (2):ejb">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/target</output-path>
+      <root id="archive" name="ops-domain-services-impl-3.0.jar">
+        <element id="artifact" artifact-name="ops-domain-services-impl (2):ejb exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-ejb" name="ops-domain-services-impl (2):ejb exploded">
+      <output-path>$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/target/ops-domain-services-impl-3.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="ops-domain-services-impl (2)/ejb/EJB" />
+        <element id="module-output" name="ops-domain-services-impl (2)" />
+      </root>
+    </artifact>
+    <artifact type="war" name="spring-mbean-example-2:war">
+      <output-path>$PROJECT_DIR$/mbean-examples/spring-mbean-example/target</output-path>
+      <root id="archive" name="spring-mbean-example-2.war">
+        <element id="artifact" artifact-name="spring-mbean-example-2:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="spring-mbean-example-2:war exploded">
+      <output-path>$PROJECT_DIR$/mbean-examples/spring-mbean-example/target/spring-mbean-example-2</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="spring-mbean-example-2/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="spring-mbean-example-2" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-core:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.0.4" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-web:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: cglib:cglib:2.2.2" />
+            <element id="library" level="project" name="Maven: asm:asm:3.3.1" />
+            <element id="library" level="project" name="Maven: commons-httpclient:commons-httpclient:3.1" />
+            <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.2" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-orm:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.1.1.RELEASE" />
+            <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.1.1.RELEASE" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="deadlock-listener:war">
+      <output-path>$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-listener/target</output-path>
+      <root id="archive" name="deadlock-listener-12.1.1.0.war">
+        <element id="artifact" artifact-name="deadlock-listener:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="deadlock-listener:war exploded">
+      <output-path>$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-listener/target/deadlock-listener-12.1.1.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="deadlock-listener/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="deadlock-listener" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="jvm-memory-consumer:war">
+      <output-path>$PROJECT_DIR$/utility-applications/jvm-memory-consumer/target</output-path>
+      <root id="archive" name="jvm-memory-consumer-12.1.1.0.war">
+        <element id="artifact" artifact-name="jvm-memory-consumer:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="jvm-memory-consumer:war exploded">
+      <output-path>$PROJECT_DIR$/utility-applications/jvm-memory-consumer/target/jvm-memory-consumer-12.1.1.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="jvm-memory-consumer/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="jvm-memory-consumer" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="utility-web-app:war">
+      <output-path>$PROJECT_DIR$/utility-applications/utility-webapp/target</output-path>
+      <root id="archive" name="utility-webapp-12.1.1.0.war">
+        <element id="artifact" artifact-name="utility-web-app:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="utility-web-app:war exploded">
+      <output-path>$PROJECT_DIR$/utility-applications/utility-webapp/target/utility-webapp-12.1.1.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="utility-web-app/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="utility-web-app" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.2" />
+            <element id="library" level="project" name="Maven: org.primefaces.themes:excite-bike:1.0.3" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="jms-examples-webapp:war">
+      <output-path>$PROJECT_DIR$/jms-examples/jms-examples-webapp/target</output-path>
+      <root id="archive" name="jms-examples-webapp-12.1.1.0.war">
+        <element id="artifact" artifact-name="jms-examples-webapp:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="jms-examples-webapp:war exploded">
+      <output-path>$PROJECT_DIR$/jms-examples/jms-examples-webapp/target/jms-examples-webapp-12.1.1.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="jms-examples-webapp/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="jms-examples-webapp" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.2" />
+            <element id="library" level="project" name="Maven: org.primefaces.themes:excite-bike:1.0.3" />
+          </element>
+        </element>
+      </root>
+    </artifact>
+    <artifact type="war" name="wins-webapp:war">
+      <output-path>$PROJECT_DIR$/wins-webapp/target</output-path>
+      <root id="archive" name="wins-webapp-12.1.1.0.war">
+        <element id="artifact" artifact-name="wins-webapp:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="wins-webapp:war exploded">
+      <output-path>$PROJECT_DIR$/wins-webapp/target/wins-webapp-12.1.1.0</output-path>
+      <root id="root">
+        <element id="javaee-facet-resources" facet="wins-webapp/web/Web" />
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="wins-webapp" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="project" name="Maven: org.primefaces:primefaces:3.2" />
+            <element id="library" level="project" name="Maven: org.primefaces.themes:excite-bike:1.0.3" />
           </element>
         </element>
       </root>
@@ -1080,22 +1286,24 @@
     <file type="web" url="file://$PROJECT_DIR$/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1" />
     <file type="web" url="file://$PROJECT_DIR$/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2" />
     <file type="web" url="file://$PROJECT_DIR$/coherence-web-examples/coherence-web-split-storage" />
-    <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener" />
-    <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example" />
-    <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example" />
-    <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener" />
+    <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/dye-injection" />
     <file type="web" url="file://$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener" />
     <file type="web" url="file://$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven" />
     <file type="web" url="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners" />
+    <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-examples-webapp" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-service-migration/migration-listener-solo" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-service-migration/queue-listener-solo" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener" />
     <file type="web" url="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener" />
+    <file type="web" url="file://$PROJECT_DIR$/mbean-examples/javaee-mbean-example" />
+    <file type="web" url="file://$PROJECT_DIR$/mbean-examples/spring-mbean-example-2" />
     <file type="web" url="file://$PROJECT_DIR$/mbean-wldf-examples/javaee-mbean-wldf-example" />
+    <file type="web" url="file://$PROJECT_DIR$/mbean-wldf-examples/javaee-mbean-wldf-example" />
+    <file type="web" url="file://$PROJECT_DIR$/mbean-wldf-examples/spring-mbean-wldf-example" />
     <file type="web" url="file://$PROJECT_DIR$/mbean-wldf-examples/spring-mbean-wldf-example" />
     <file type="web" url="file://$PROJECT_DIR$/side-by-side-deployment/aussie-tripper" />
     <file type="web" url="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven" />
@@ -1108,6 +1316,12 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws" />
     <file type="web" url="file://$PROJECT_DIR$/spring-examples/spring-mbean-example" />
     <file type="web" url="file://$PROJECT_DIR$/spring-examples/spring-rest-example" />
+    <file type="web" url="file://$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-listener" />
+    <file type="web" url="file://$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-listener" />
+    <file type="web" url="file://$PROJECT_DIR$/utility-applications/jvm-memory-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-listener" />
+    <file type="web" url="file://$PROJECT_DIR$/utility-applications/utility-webapp" />
+    <file type="web" url="file://$PROJECT_DIR$/wins-webapp" />
     <file type="web" url="file://$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app" />
     <file type="web" url="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app" />
   </component>
@@ -1144,14 +1358,20 @@
     </option>
     <option name="activeProfiles">
       <list>
-        <option value="enable-spring" />
-        <option value="deploy-vbox1" />
         <option value="create-domain" />
+        <option value="deploy-vbox1" />
+        <option value="enable-spring" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-listener-solo/pom.xml" />
+        <option value="$PROJECT_DIR$/mbean-examples/spring-mbean-example-2/pom.xml" />
+        <option value="$PROJECT_DIR$/mbean-examples/spring-mbean-example/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/utility-applications/utility-webapp/pom.xml" />
       </set>
     </option>
   </component>
@@ -1301,105 +1521,211 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WInS_Demos.iml" filepath="$PROJECT_DIR$/WInS_Demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WInS_Demos.iml" filepath="$PROJECT_DIR$/WInS_Demos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/aussie-tripper.iml" filepath="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/aussie-tripper.iml" />
       <module fileurl="file://$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/aussie-tripper.iml" filepath="$PROJECT_DIR$/side-by-side-deployment/aussie-tripper/aussie-tripper.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-examples.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-examples.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-examples.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-examples.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/coherence-web-session-sharing.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/coherence-web-session-sharing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/coherence-web-session-sharing.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/coherence-web-session-sharing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-split-storage/coherence-web-split-storage.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common-deployable/common-deployable.iml" filepath="$PROJECT_DIR$/common/common-deployable/common-deployable.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common-deployable/common-deployable.iml" filepath="$PROJECT_DIR$/common/common-deployable/common-deployable.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common-deployable/common-ejb/common-ejb.iml" filepath="$PROJECT_DIR$/common/common-deployable/common-ejb/common-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common-deployable/common-ejb/common-ejb.iml" filepath="$PROJECT_DIR$/common/common-deployable/common-ejb/common-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-generator.iml" filepath="$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-listener/deadlock-listener.iml" filepath="$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-listener/deadlock-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-sender/deadlock-sender.iml" filepath="$PROJECT_DIR$/utility-applications/deadlock-generator/deadlock-sender/deadlock-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/diagnostic-framework.iml" filepath="$PROJECT_DIR$/diagnostic-framework/diagnostic-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/diagnostic-framework.iml" filepath="$PROJECT_DIR$/diagnostic-framework/diagnostic-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/dye-injection/dye-injection.iml" filepath="$PROJECT_DIR$/diagnostic-framework/dye-injection/dye-injection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/environment/environment.iml" filepath="$PROJECT_DIR$/environment/environment.iml" />
       <module fileurl="file://$PROJECT_DIR$/environment/environment.iml" filepath="$PROJECT_DIR$/environment/environment.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/event-driven-architecture.iml" filepath="$PROJECT_DIR$/event-driven-architecture/event-driven-architecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/event-driven-architecture.iml" filepath="$PROJECT_DIR$/event-driven-architecture/event-driven-architecture.iml" />
       <module fileurl="file://$PROJECT_DIR$/fast-swap/fast-swap.iml" filepath="$PROJECT_DIR$/fast-swap/fast-swap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fast-swap/fast-swap.iml" filepath="$PROJECT_DIR$/fast-swap/fast-swap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" filepath="$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" filepath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-listener/hogger-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" filepath="$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" filepath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/hogger-sender/hogger-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mbean-examples/javaee-mbean-example/javaee-mbean-wldf-example.iml" filepath="$PROJECT_DIR$/mbean-examples/javaee-mbean-example/javaee-mbean-wldf-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/javaee-mbean-wldf-example.iml" filepath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/javaee-mbean-wldf-example/javaee-mbean-wldf-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/jdbc-connection-hogger.iml" filepath="$PROJECT_DIR$/utility-applications/jdbc-connection-hogger/jdbc-connection-hogger.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/jdbc-connection-hogger.iml" filepath="$PROJECT_DIR$/diagnostic-framework/jdbc-connection-hogger/jdbc-connection-hogger.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-distributed-destinations.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-distributed-destinations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-distributed-destinations.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-distributed-destinations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-examples.iml" filepath="$PROJECT_DIR$/jms-examples/jms-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-examples.iml" filepath="$PROJECT_DIR$/jms-examples/jms-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/jms-sender/jms-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-service-migration/jms-service-migration.iml" filepath="$PROJECT_DIR$/jms-examples/jms-service-migration/jms-service-migration.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-service-migration/jms-service-migration.iml" filepath="$PROJECT_DIR$/jms-examples/jms-service-migration/jms-service-migration.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/jms-store-and-forward.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/jms-store-and-forward.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/jms-store-and-forward.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/jms-store-and-forward.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/jms-unit-of-order.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/jms-unit-of-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/jms-unit-of-order.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/jms-unit-of-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/jms-unit-of-work.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/jms-unit-of-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/jms-unit-of-work.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/jms-unit-of-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-1/jsf-bean-app-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" filepath="$PROJECT_DIR$/coherence-examples/coherence-web-examples/coherence-web-session-sharing/jsf-bean-app-2/jsf-bean-app-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/jvm-memory-consumer/jvm-memory-consumer.iml" filepath="$PROJECT_DIR$/utility-applications/jvm-memory-consumer/jvm-memory-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven-examples/maven-examples.iml" filepath="$PROJECT_DIR$/maven-examples/maven-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-examples/maven-examples.iml" filepath="$PROJECT_DIR$/maven-examples/maven-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mbean-examples/mbean-examples.iml" filepath="$PROJECT_DIR$/mbean-examples/mbean-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/mbean-wldf-examples.iml" filepath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/mbean-wldf-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-service-migration/migration-sender/migration-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/ops-common-deployable.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/ops-common-deployable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/ops-common-deployable (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-deployable/ops-common-deployable (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-deployable/ops-common-deployable (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-deployable/ops-common-deployable (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-deployable/ops-common-deployable (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-deployable/ops-common-deployable (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/ops-common-ejb.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/ops-common-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/ops-common-ejb (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-ejb/ops-common-ejb (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ejb/ops-common-ejb (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ejb/ops-common-ejb (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ejb/ops-common-ejb (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ejb/ops-common-ejb (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/ops-common-spring.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/ops-common-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/ops-common-spring (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-common/ops-common-spring/ops-common-spring (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-spring/ops-common-spring (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-spring/ops-common-spring (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-spring/ops-common-spring (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-spring/ops-common-spring (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-common/ops-common-ws/ops-common-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-core/ops-core.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-core/ops-core (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-core (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-core (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-core (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-core (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-core (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-model/ops-domain-model (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-model/ops-domain-model (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-api/ops-domain-services-api (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-api/ops-domain-services-api (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-domain/ops-domain-services-impl/ops-domain-services-impl (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-domain/ops-domain-services-impl/ops-domain-services-impl (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-ee-message-driven/ops-ee-message-driven (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-message-driven/ops-ee-message-driven (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-rest/ops-ee-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-web/ops-ee-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-ee-ws (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-event-handlers/ops-event-handlers.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-event-producer/ops-event-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-parcel/ops-jax-ws-parcel.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-ee/ops-ee-ws/ops-jax-ws-shipment/ops-jax-ws-shipment.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-api/ops-services-api (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-services/ops-services-impl/ops-services-impl.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/ops-spring-jms.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/ops-spring-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/ops-spring-jms.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-jms/ops-spring-jms.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-spring-message-driven/ops-spring-message-driven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/ops-spring-rest.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/ops-spring-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/ops-spring-rest.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-rest/ops-spring-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/ops-spring-services.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/ops-spring-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/ops-spring-services.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-services/ops-spring-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws/ops-spring-ws.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws/ops-spring-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws/ops-spring-ws.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-spring/ops-spring-ws/ops-spring-ws.iml" />
       <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util.iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util (1).iml" filepath="$PROJECT_DIR$/event-driven-architecture/ops-core/ops-util/ops-util (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util (2).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-core/ops-util/ops-util (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-webapp/ops-webapp (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/ops-wldf/ops-wldf (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service.iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service (1).iml" filepath="$PROJECT_DIR$/spring-examples/ops-r3-spring/oracle-parcel-service (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/queue-listener/queue-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-sender/saf-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-source-forwarder/saf-source-forwarder.iml" />
       <module fileurl="file://$PROJECT_DIR$/environment/saf-target-domain/saf-target-domain.iml" filepath="$PROJECT_DIR$/environment/saf-target-domain/saf-target-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/environment/saf-target-domain/saf-target-domain.iml" filepath="$PROJECT_DIR$/environment/saf-target-domain/saf-target-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-store-and-forward/saf-target-listener/saf-target-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/shared-libraries/shared-libraries.iml" filepath="$PROJECT_DIR$/shared-libraries/shared-libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared-libraries/shared-libraries.iml" filepath="$PROJECT_DIR$/shared-libraries/shared-libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/side-by-side-deployment/side-by-side-deployment.iml" filepath="$PROJECT_DIR$/side-by-side-deployment/side-by-side-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/side-by-side-deployment/side-by-side-deployment.iml" filepath="$PROJECT_DIR$/side-by-side-deployment/side-by-side-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-ejb-example/spring-ejb-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-ejb-example/spring-ejb-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-ejb-example/spring-ejb-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-ejb-example/spring-ejb-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-examples.iml" filepath="$PROJECT_DIR$/spring-examples/spring-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-examples.iml" filepath="$PROJECT_DIR$/spring-examples/spring-examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-examples-common/spring-examples-common.iml" filepath="$PROJECT_DIR$/spring-examples/spring-examples-common/spring-examples-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-examples-common/spring-examples-common.iml" filepath="$PROJECT_DIR$/spring-examples/spring-examples-common/spring-examples-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-jms-example/spring-jms-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-jms-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-jms-example/spring-jms-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-jms-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-mbean-example/spring-mbean-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/spring-mbean-wldf-example.iml" filepath="$PROJECT_DIR$/diagnostic-framework/mbean-wldf-examples/spring-mbean-wldf-example/spring-mbean-wldf-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/spring-message-driven-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-jms-example/spring-message-driven-example/spring-message-driven-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-rest-example/spring-rest-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-ws-example/spring-ws-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-ws-example/spring-ws-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-examples/spring-ws-example/spring-ws-example.iml" filepath="$PROJECT_DIR$/spring-examples/spring-ws-example/spring-ws-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator.iml" filepath="$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator.iml" filepath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" filepath="$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" filepath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-listener/stuck-thread-generator-listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" filepath="$PROJECT_DIR$/utility-applications/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" filepath="$PROJECT_DIR$/diagnostic-framework/stuck-thread-generator/stuck-thread-generator-sender/stuck-thread-generator-sender.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" filepath="$PROJECT_DIR$/jms-examples/jms-distributed-destinations/topic-listeners/topic-listeners.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-listener/uoo-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-order/uoo-sender/uoo-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-listener/uow-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" filepath="$PROJECT_DIR$/jms-examples/jms-unit-of-work/uow-sender/uow-sender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utility-applications/utility-applications.iml" filepath="$PROJECT_DIR$/utility-applications/utility-applications.iml" />
       <module fileurl="file://$PROJECT_DIR$/environment/weblogic-examples-domain/weblogic-examples-domain.iml" filepath="$PROJECT_DIR$/environment/weblogic-examples-domain/weblogic-examples-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/environment/weblogic-examples-domain/weblogic-examples-domain.iml" filepath="$PROJECT_DIR$/environment/weblogic-examples-domain/weblogic-examples-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wins-webapp/wins-webapp.iml" filepath="$PROJECT_DIR$/wins-webapp/wins-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" filepath="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" filepath="$PROJECT_DIR$/diagnostic-framework/wldf-notification-listener/wldf-notification-listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-ejb-app/workmanager-ejb-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" filepath="$PROJECT_DIR$/workmanager-examples/workmanager-web-app/workmanager-web-app.iml" />
     </modules>
   </component>
@@ -1409,7 +1735,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.7_15" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RunManager">
@@ -1599,6 +1925,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/oracle/coherence/coherence/3.7/coherence-3.7-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.oracle.demo.ops:ops-domain-model:3.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/demo/ops/ops-domain-model/3.0/ops-domain-model-3.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/demo/ops/ops-domain-model/3.0/ops-domain-model-3.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/demo/ops/ops-domain-model/3.0/ops-domain-model-3.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.oracle.weblogic:weblogic-spring:12.1.1.0">
       <CLASSES>
         <root url="jar:///u01/wls1211/wlserver_12.1/server/lib/weblogic-spring.jar!/" />
@@ -1614,8 +1951,12 @@
       <CLASSES>
         <root url="jar:///u01/wls1211/wlserver_12.1/server/lib/weblogic.jar!/" />
       </CLASSES>
-      <JAVADOC />
-      <SOURCES />
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic/12.1.1.0/weblogic-12.1.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/oracle/weblogic/weblogic/12.1.1.0/weblogic-12.1.1.0-sources.jar!/" />
+      </SOURCES>
     </library>
     <library name="Maven: com.oracle.weblogic:wlclient:12.1.1.0">
       <CLASSES>
@@ -1791,17 +2132,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: commons-logging:commons-logging:1.0.4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: commons-logging:commons-logging:1.1">
@@ -2024,17 +2354,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/eclipselink/eclipselink/2.0/eclipselink-2.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.eclipse.persistence:eclipselink:2.3.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/eclipselink/2.3.0/eclipselink-2.3.0-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.jvnet.staxex:stax-ex:1.2">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/jvnet/staxex/stax-ex/1.2/stax-ex-1.2.jar!/" />
@@ -2088,6 +2407,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/cupertino/1.0.3/cupertino-1.0.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.primefaces.themes:excite-bike:1.0.3">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/excite-bike/1.0.3/excite-bike-1.0.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/excite-bike/1.0.3/excite-bike-1.0.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/primefaces/themes/excite-bike/1.0.3/excite-bike-1.0.3-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.primefaces.themes:vader:1.0.3">
@@ -2343,17 +2673,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.0.5.RELEASE/spring-jdbc-3.0.5.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-jdbc:3.1.1.RELEASE">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.1.1.RELEASE/spring-jdbc-3.1.1.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.1.1.RELEASE/spring-jdbc-3.1.1.RELEASE-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/3.1.1.RELEASE/spring-jdbc-3.1.1.RELEASE-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.springframework:spring-jms:3.0.5.RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jms/3.0.5.RELEASE/spring-jms-3.0.5.RELEASE.jar!/" />
@@ -2396,17 +2715,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.0.5.RELEASE/spring-orm-3.0.5.RELEASE-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.springframework:spring-orm:3.1.1.RELEASE">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.1.1.RELEASE/spring-orm-3.1.1.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.1.1.RELEASE/spring-orm-3.1.1.RELEASE-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/3.1.1.RELEASE/spring-orm-3.1.1.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework:spring-oxm:3.0.5.RELEASE">

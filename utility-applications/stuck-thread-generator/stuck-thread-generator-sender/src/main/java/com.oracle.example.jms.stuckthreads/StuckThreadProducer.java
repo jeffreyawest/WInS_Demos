@@ -20,7 +20,7 @@ public class StuckThreadProducer
     extends WLJMSProducer
 {
   public static final String JMS_CF_JNDI = "com/oracle/example/jms/util/cf";
-  public static final String JMS_QUEUE_JNDI = "com.oracle.example.jms.util.stuck_thread_generator";
+  public static final String JMS_QUEUE_JNDI = "com.oracle.example.jms.util.stuckThreadGenerator";
 
   public static void main(String[] args)
   {

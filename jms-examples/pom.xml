@@ -3,14 +3,14 @@
 
   <!-- ==================================================================================== -->
 
-  <!-- ==================================================================================== -->
-
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.oracle.weblogic.demo.wins</groupId>
   <artifactId>jms-examples</artifactId>
   <version>12.1.1.0</version>
   <packaging>pom</packaging>
   <name>jms-examples</name>
+
+  <!-- ==================================================================================== -->
 
   <modules>
     <module>jms-distributed-destinations</module>

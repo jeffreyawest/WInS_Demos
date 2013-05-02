@@ -20,7 +20,7 @@ public class HoggerProducer
     extends WLJMSProducer
 {
   public static final String JMS_CF_JNDI = "com/oracle/example/jms/util/cf";
-  public static final String JMS_QUEUE_JNDI = "com.oracle.example.jms.util.jdbchogger";
+  public static final String JMS_QUEUE_JNDI = "com.oracle.example.jms.util.jdbcHogger";
 
   public static void main(String[] args)
   {

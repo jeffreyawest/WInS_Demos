@@ -26,7 +26,7 @@ import java.sql.Connection;
 @MessageDriven(
     messageListenerInterface = MessageListener.class,
     name = "JDBCHoggerEJB",
-    mappedName = "com.oracle.example.jms.util.jdbchogger",
+    mappedName = "com.oracle.example.jms.util.jdbcHogger",
     activationConfig = {
         @ActivationConfigProperty(
             propertyName = "connectionFactoryJndiName",

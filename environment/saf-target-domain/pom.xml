@@ -64,6 +64,7 @@
 
                   <fileName>${project.basedir}/src/main/wlst/create-${domain.name}.py</fileName>
                   <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>
+                  <failOnError>true</failOnError>
                 </configuration>
 
               </execution>
