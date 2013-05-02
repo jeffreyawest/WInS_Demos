@@ -23,7 +23,7 @@
 
   <properties>
     <spring-jpa.version>2.0.8</spring-jpa.version>
-    <spring-framework.version>3.2.0.RELEASE</spring-framework.version>
+    <spring-framework.version>3.1.1.RELEASE</spring-framework.version>
     <spring-ws.version>2.0.2.RELEASE</spring-ws.version>
     <spring-oxm.version>1.5.9</spring-oxm.version>
   </properties>
@@ -34,6 +34,7 @@
     <defaultGoal>install</defaultGoal>
 
     <plugins>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
