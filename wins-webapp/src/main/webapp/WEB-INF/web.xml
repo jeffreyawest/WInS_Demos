@@ -8,7 +8,7 @@
 
   <context-param>
     <param-name>primefaces.THEME</param-name>
-    <param-value>excite-bike</param-value>
+    <param-value>cupertino</param-value>
   </context-param>
 
   <servlet>

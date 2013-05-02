@@ -9,10 +9,12 @@
     >
 <h:body>
   <ui:composition>
-    <h2>Utility Application for WebLogic Innovation Seminars Assets</h2>
-    <h:outputText value="Server: #{jmsExamplesController.webLogicServerName}"/>
-    <br/>
-    <h:outputText value="Session ID: #{jmsExamplesController.sessionId}"/>
+    <h2>WebLogic Innovation Seminars Assets</h2>
+
+    <div style="font-size: smaller;">
+      <h:outputText value="Server / Session : #{jmsExamplesController.webLogicServerName} / #{jmsExamplesController.sessionId}"/>
+    </div>
+
     <hr/>
   </ui:composition>
 </h:body>
