@@ -1,0 +1,17 @@
+# default: off
+# description:nodemanager as a service
+service nodemgrsvc
+{
+	type = UNLISTED
+	disable = no
+	socket_type = stream
+	protocol = tcp
+	wait = yes
+	user = oracle
+	port = 5556
+	flags = NOLIBWRAP
+	log_on_success += DURATION HOST USERID
+	server = /labs/java/jdk1.6.0_37_i586/jre/bin/java
+	env = LD_LIBRARY_PATH=/labs/Oracle/Middleware/wlserver_12.1/server/native/linux/i686 CLASSPATH=/labs/Oracle/Middleware/patch_wls1211/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/labs/Oracle/Middleware/patch_oepe100/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/labs/Oracle/Middleware/patch_ocp371/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/labs/java/jdk1.6.0_37_i586/lib/tools.jar:/labs/Oracle/Middleware/wlserver_12.1/server/lib/weblogic_sp.jar:/labs/Oracle/Middleware/wlserver_12.1/server/lib/weblogic.jar:/labs/Oracle/Middleware/modules/features/weblogic.server.modules_12.1.1.0.jar:/labs/Oracle/Middleware/wlserver_12.1/server/lib/webservices.jar:/labs/Oracle/Middleware/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/labs/Oracle/Middleware/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar:/labs/Oracle/Middleware/wlserver_12.1/common/derby/lib/derbynet.jar:/labs/Oracle/Middleware/wlserver_12.1/common/derby/lib/derbyclient.jar:/labs/Oracle/Middleware/wlserver_12.1/server/lib/xqrl.jar
+        server_args = -DNodeManagerHome=/labs/Oracle/Middleware/wlserver_12.1/common/nodemanager -Xms32m -Xmx200m -DListenPort=5556 -Djava.security.policy=labs/Oracle/Middleware/wlserver_12.1/server/lib/weblogic.policy -Dweblogic.nodemanager.javaHome=/labs/java/jdk1.6.0_37_i586 weblogic.NodeManager -v	
+}
