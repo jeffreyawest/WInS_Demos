@@ -25,6 +25,7 @@
     <coherence.home>/u01/wls1211/coherence_3.7</coherence.home>
 
     <weblogic.version>12.1.1.0</weblogic.version>
+    <weblogic.library.version>12.1.1.0</weblogic.library.version>
     <coherence.version>3.7.1</coherence.version>
 
     <XmlSchema.version>1.4.7</XmlSchema.version>
