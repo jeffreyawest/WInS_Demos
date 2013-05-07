@@ -21,12 +21,12 @@ import java.util.Hashtable;
  * If you choose to use this code for any reason, including but not limited
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
- *
+ * <p/>
  * This code is provided under the following licenses:
- *
+ * <p/>
  * GNU General Public License (GPL-2.0)
  * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
- *
+ * <p/>
  * <p/>
  * ****************************************************************************
  */
@@ -45,6 +45,8 @@ import java.util.Hashtable;
     })
 public class SAFForwarderBean implements MessageListener
 {
+  private final String mdbId = java.util.UUID.randomUUID().toString();
+
   public SAFForwarderBean()
   {
   }
@@ -57,7 +59,7 @@ public class SAFForwarderBean implements MessageListener
 
       try
       {
-        System.out.println("SAFForwarder::" + msg.getText());
+        System.out.println("SAFForwarder:: MDB=[" + mdbId + "] " + msg.getText());
         //msg.setText("[FW]" + msg.getText());
       }
       catch (JMSException e)

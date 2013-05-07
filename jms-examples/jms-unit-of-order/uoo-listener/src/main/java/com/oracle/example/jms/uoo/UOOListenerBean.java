@@ -5,19 +5,19 @@ import javax.ejb.MessageDriven;
 import javax.jms.*;
 
 /**
-  * **************************************************************************
+ * **************************************************************************
  * <p/>
  * This code is provided for example purposes only.  Oracle does not assume
  * any responsibility or liability for the consequences of using this code.
  * If you choose to use this code for any reason, including but not limited
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
- *
+ * <p/>
  * This code is provided under the following licenses:
- *
+ * <p/>
  * GNU General Public License (GPL-2.0)
  * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
- *
+ * <p/>
  * <p/>
  * ****************************************************************************
  * User: jeffrey.a.west
@@ -38,6 +38,8 @@ import javax.jms.*;
     })
 public class UOOListenerBean implements MessageListener
 {
+  private final String mdbId = java.util.UUID.randomUUID().toString();
+
   public UOOListenerBean()
   {
   }
@@ -54,7 +56,7 @@ public class UOOListenerBean implements MessageListener
         // Sleep for 2 seconds to demonstrate the messages are indeed
         // processes sequentially (in unit-of-order)
         Thread.sleep(2000);
-        System.out.println("UOO=[" + unitOfOrder + "] Message=[" + msg.getText() + "]");
+        System.out.println("UOOListener:: MDB=[" + mdbId + "] UOO=[" + unitOfOrder + "] Message=[" + msg.getText() + "]");
       }
       catch (JMSException e)
       {

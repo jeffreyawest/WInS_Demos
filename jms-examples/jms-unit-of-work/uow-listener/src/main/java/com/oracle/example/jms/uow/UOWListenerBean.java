@@ -5,15 +5,16 @@ import javax.ejb.MessageDriven;
 import javax.jms.*;
 import java.util.ArrayList;
 
-/*****************************************************************************
- *
+/**
+ * **************************************************************************
+ * <p/>
  * This code is provided for example purposes only.  Oracle does not assume
  * any responsibility or liability for the consequences of using this code.
  * If you choose to use this code for any reason, including but not limited
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
- *
- *****************************************************************************
+ * <p/>
+ * ****************************************************************************
  * User: jeffrey.a.west
  * Date: Jan 15, 2011
  * Time: 7:33:49 AM
@@ -33,6 +34,8 @@ import java.util.ArrayList;
     })
 public class UOWListenerBean implements MessageListener
 {
+  private final String mdbId = java.util.UUID.randomUUID().toString();
+
   public UOWListenerBean()
   {
   }
@@ -56,7 +59,7 @@ public class UOWListenerBean implements MessageListener
 
       try
       {
-        System.out.println("UOW=[" + unitOfWorkId + "] Text=[" + msg.getText() + "]");
+        System.out.println("UOWListener:: MDB=[" + mdbId + "] UOW=[" + unitOfWorkId + "] Text=[" + msg.getText() + "]");
       }
       catch (JMSException e)
       {
