@@ -27,23 +27,11 @@
 
     <h:panelGrid columns="2">
 
-      <h:link target="http://wins-vbox/jsf-bean-app-1"/>
+      <h:outputLink value="http://wins-vbox/jsf-bean-app-1">Coherence*Web Session Sharing - JSF App 1</h:outputLink>
 
-      <div>
-        Coherence*Web Session Sharing - JSF App 1
-      </div>
+      <h:outputLink value="http://wins-vbox/jsf-bean-app-2">Coherence*Web Session Sharing - JSF App 2</h:outputLink>
 
-      <h:link target="http://wins-vbox/jsf-bean-app-2"/>
-
-      <div>
-        Coherence*Web Session Sharing - JSF App 2
-      </div>
-
-      <h:link target="http://wins-vbox/jsp-app-1"/>
-
-      <div>
-        Coherence*Web Session Sharing - JSP App
-      </div>
+      <h:outputLink value="http://wins-vbox/jsp-app-1">Coherence*Web Session Sharing - JSP App</h:outputLink>
 
     </h:panelGrid>
 
@@ -53,19 +41,19 @@
 
     <h:panelGrid columns="2">
 
-      <h:link target="http://wins-vbox/dye-injection"/>
+      <h:outputLink value="http://wins-vbox/dye-injection"/>
 
       <div>
         Dye Injection - JSF App
       </div>
 
-      <h:link target="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
+      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
 
       <div>
         Dye Injection - Servlet
       </div>
 
-      <h:link target="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
+      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
 
       <div>
         Dye Injection - Servlet
@@ -249,7 +237,7 @@
     <!-- @@@@@@@@ -->
 
     <p:commandButton id="mixedUOW_button"
-                     value="Demo Single UOW (Queue)"
+                     value="Multiple/Mixed Units of Work (Queue)"
                      ajax="false"
                      action="#{jmsExamplesController.uowDemoMixed}"/>
 
