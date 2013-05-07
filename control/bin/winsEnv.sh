@@ -1,8 +1,4 @@
 #!/bin/sh
-# .bashrc
-
-# User specific aliases and functions
-# .bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -93,3 +89,5 @@ alias tcohtlg2="tail --lines=500 --follow=name --retry ${OPS_DOMAIN_HOME}/server
 alias ttns="tail  --lines=500 --follow=name --retry ${SW_BASE}/app/oracle/diag/tnslsnr/wins-vbox/listener/trace/listener.log"
 
 sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev eth4 > /dev/null 2>&1
+
+. /home/oracle/setProxy.sh
