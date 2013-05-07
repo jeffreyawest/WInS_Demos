@@ -31,6 +31,7 @@
   <modules>
     <module>common</module>
     <module>environment</module>
+    <module>wins-util</module>
 
     <module>event-driven-architecture</module>
     <module>fast-swap</module>
