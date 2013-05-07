@@ -1,7 +1,0 @@
--Xms128m
--Xmx256m
--Dtangosol.coherence.ttl=0
--Dtangosol.coherence.distributed.localstorage=false
--Dtangosol.coherence.session.localstorage=false
--Dtangosol.coherence.cacheconfig=/coherence-cache-config.xml 
--Xmanagement:autodiscovery=false,authenticate=false,remote=true,ssl=false,port=7191
