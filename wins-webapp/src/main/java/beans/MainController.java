@@ -5,14 +5,12 @@ import com.oracle.example.utility.JDBCHoggerEJB;
 import com.oracle.example.utility.StuckThreadGeneratorEJB;
 
 import javax.ejb.EJB;
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ActionEvent;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
-import java.util.*;
 import java.util.logging.Logger;
 
 /**
@@ -38,73 +36,15 @@ import java.util.logging.Logger;
 
 @ManagedBean
 @SessionScoped
-public class UtilityController implements Serializable
+public class MainController implements Serializable
 {
   static final long serialVersionUID = 43L;
-  private static final Logger logger = Logger.getLogger(UtilityController.class.getName());
+  private static final Logger logger = Logger.getLogger(MainController.class.getName());
 
-  @EJB
-  private DeadlockProducerEJB deadlockProducerEJB;
-  @EJB
-  private JDBCHoggerEJB jdbcHoggerEJB;
-  @EJB
-  private StuckThreadGeneratorEJB stuckThreadGeneratorEJB;
 
-  public UtilityController()
+
+  public MainController()
   {
-  }
-
-  public void removeSelectedAttribute(ActionEvent pEvent)
-  {
-
-  }
-
-
-  public void removeEntry(String pKey)
-  {
-    getSession().removeAttribute(pKey);
-  }
-
-
-  public void demoJdbcHogger(ActionEvent actionEvent)
-  {
-    logger.info("demoJdbcHogger");
-    try
-    {
-      jdbcHoggerEJB.doIt();
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-  }
-
-  public void demoStuckThreads(ActionEvent actionEvent)
-  {
-    logger.info("demoStuckThreads");
-    try
-    {
-      stuckThreadGeneratorEJB.doIt();
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-  }
-
-  public void generateDeadlock(ActionEvent actionEvent)
-  {
-    logger.info("generateDeadlock");
-
-    try
-    {
-      deadlockProducerEJB.doIt();
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-
   }
 
   public HttpSession getSession()

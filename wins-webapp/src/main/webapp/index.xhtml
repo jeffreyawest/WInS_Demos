@@ -17,7 +17,7 @@
 
 <h:form id="frm1" prependId="false">
 
-<p:growl showDetail="true"/>
+<p:growl id="growl" showDetail="true" sticky="false"/>
 
 <p:tabView id="tabView">
 
@@ -27,11 +27,9 @@
 
     <h:panelGrid columns="1">
 
-      <h:outputLink value="http://wins-vbox/jsf-bean-app-1">Coherence*Web Session Sharing - JSF App 1</h:outputLink>
-
-      <h:outputLink value="http://wins-vbox/jsf-bean-app-2">Coherence*Web Session Sharing - JSF App 2</h:outputLink>
-
-      <h:outputLink value="http://wins-vbox/jsp-app-1">Coherence*Web Session Sharing - JSP App</h:outputLink>
+      <h:outputLink value="http://127.0.0.1/jsf-bean-app-1">Coherence*Web Session Sharing - JSF App 1</h:outputLink>
+      <h:outputLink value="http://127.0.0.1/jsf-bean-app-2">Coherence*Web Session Sharing - JSF App 2</h:outputLink>
+      <h:outputLink value="http://127.0.0.1/jsp-app-1">Coherence*Web Session Sharing - JSP App</h:outputLink>
 
     </h:panelGrid>
 
@@ -41,9 +39,8 @@
 
     <h:panelGrid columns="1">
 
-      <h:outputLink value="http://wins-vbox/dye-injection">Dye Injection - JSF App</h:outputLink>
-
-      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123">Dye Injection - Servlet</h:outputLink>
+      <h:outputLink value="http://127.0.0.1/dye-injection">Dye Injection - JSF App</h:outputLink>
+      <h:outputLink value="http://127.0.0.1/AddingServlet?p1=2&amp;p2=123">Dye Injection - Servlet</h:outputLink>
 
     </h:panelGrid>
 
@@ -59,7 +56,8 @@
     <p:commandButton id="queue_button"
                      value="Demo Distributed Queue"
                      ajax="false"
-                     action="#{jmsExamplesController.queueDemo}"/>
+                     actionListener="#{jmsExamplesController.queueDemo}" update="growl"/>
+
 
     <div>
       <div style="font-weight: bold; text-decoration: underline">Distributed Queue</div>
@@ -67,12 +65,10 @@
       each message is consumed by only one consumer on one node of the cluster
     </div>
 
-    <!-- @@@@@@@@ -->
-
     <p:commandButton id="rdt_button"
                      value="Demo Replicated Distributed Topic"
                      ajax="false"
-                     action="#{jmsExamplesController.rdtDemo}"/>
+                     actionListener="#{jmsExamplesController.rdtDemo}" update="growl"/>
 
     <div>
       <div style="font-weight: bold; text-decoration: underline">Replicated Distributed Topic</div>
@@ -81,12 +77,10 @@
       replicated to all nodes of a cluster and is delivered to all consumers on each node.
     </div>
 
-    <!-- @@@@@@@@ -->
 
     <p:commandButton id="pdt_button"
                      value="Demo Partitioned Distributed Topic"
-                     ajax="false"
-                     action="#{jmsExamplesController.pdtDemo}"/>
+                     actionListener="#{jmsExamplesController.pdtDemo}" update="growl"/>
 
     <div>
       <div
@@ -106,8 +100,7 @@
 
     <p:commandButton id="saf_button"
                      value="Demo Store and Forward"
-                     ajax="false"
-                     action="#{jmsExamplesController.safDemo}"/>
+                     actionListener="#{jmsExamplesController.safDemo}" update="growl"/>
 
     <div>
       <div
@@ -130,8 +123,7 @@
 
     <p:commandButton id="nonuoo_button"
                      value="Demo Non Unit of Order (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uooDemoNonUOO}"/>
+                     actionListener="#{jmsExamplesController.uooDemoNonUOO}" update="growl"/>
 
     <div>
       <div
@@ -143,12 +135,9 @@
     </div>
 
 
-    <!-- @@@@@@@@ -->
-
     <p:commandButton id="discreteuoo_button"
                      value="Demo Discrete UOO (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uooDemoDiscrete}"/>
+                     actionListener="#{jmsExamplesController.uooDemoDiscrete}" update="growl"/>
 
     <div>
       <div
@@ -161,12 +150,10 @@
 
     </div>
 
-    <!-- @@@@@@@@ -->
 
     <p:commandButton id="mixeduoo_button"
                      value="Demo Mixed UOO (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uooDemoMixed}"/>
+                     actionListener="#{jmsExamplesController.uooDemoMixed}" update="growl"/>
 
     <div>
       <div
@@ -188,8 +175,7 @@
 
     <p:commandButton id="nonUOW_button"
                      value="Demo Non UOW (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uowDemoNonUOW}"/>
+                     actionListener="#{jmsExamplesController.uowDemoNonUOW}" update="growl"/>
 
     <div>
       <div
@@ -201,12 +187,10 @@
 
     </div>
 
-    <!-- @@@@@@@@ -->
 
     <p:commandButton id="singleUOW_button"
                      value="Demo Single UOW (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uowDemoDiscrete}"/>
+                     actionListener="#{jmsExamplesController.uowDemoDiscrete}" update="growl"/>
 
     <div>
       <div
@@ -220,12 +204,9 @@
     </div>
 
 
-    <!-- @@@@@@@@ -->
-
     <p:commandButton id="mixedUOW_button"
                      value="Multiple/Mixed Units of Work (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uowDemoMixed}"/>
+                     actionListener="#{jmsExamplesController.uowDemoMixed}" update="growl"/>
 
     <div>
       <div
@@ -239,12 +220,9 @@
     </div>
 
 
-    <!-- @@@@@@@@ -->
-
     <p:commandButton id="sadUOW_button"
                      value="Demo Incomplete UOW (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uowDemoIncomplete}"/>
+                     actionListener="#{jmsExamplesController.uowDemoIncomplete}" update="growl"/>
 
     <div>
       <div
@@ -256,12 +234,9 @@
     </div>
 
 
-    <!-- @@@@@@@@ -->
-
     <p:commandButton id="slowUOW_button"
                      value="Demo Slow UOW (Queue)"
-                     ajax="false"
-                     action="#{jmsExamplesController.uowDemoSlow}"/>
+                     actionListener="#{jmsExamplesController.uowDemoSlow}" update="growl"/>
 
     <div>
       <div
@@ -282,36 +257,31 @@
 <p:tab id="tab2" title="Utility">
 
   <p:panel header="Utility Options">
-    <h:panelGrid columns="2">
 
-      <!-- @@@@@@@@ -->
+    <h:panelGrid columns="2">
 
       <p:commandButton id="jdbcHogger_button"
                        value="Demo JDBC Connection Hogger"
-                       ajax="false"
-                       action="#{utilityController.demoJdbcHogger}"/>
+                       actionListener="#{utilityController.demoJdbcHogger}" update="growl"/>
 
       <div>
         <div
             style="font-weight: bold; text-decoration: underline">JDBC Hogger
         </div>
-        This demo will create contention on a JDBC Connection pool in the Managed Servers.  The purpose of this is to
+        This demo will create contention on a JDBC Connection pool in the Managed Servers. The purpose of this is to
         show the behavior of an overloaded JDBC Connection Pool and also to allow you to demonstrate WLDF Watches
         configured for the Connection Poool.
       </div>
 
-      <!-- @@@@@@@@ -->
-
       <p:commandButton id="stuckThreads_button"
-                       value="Demo Stuck Threads)"
-                       ajax="false"
-                       action="#{utilityController.demoStuckThreads}"/>
+                       value="Demo Stuck Threads"
+                       actionListener="#{utilityController.demoStuckThreads}" update="growl"/>
 
       <div>
         <div
             style="font-weight: bold; text-decoration: underline">Stuck Threads Generator
         </div>
-          This demo will generate stuck threads in the Managed Servers.  Stuck Threads are not a WebLogic problem.  WebLogic is
+        This demo will generate stuck threads in the Managed Servers. Stuck Threads are not a WebLogic problem. WebLogic is
         simply indicating that a thread may be stuck because it is working on the same thing for a long time.<br/>
         In this demo a batch of JMS messages will be sent and consumed by MDB's which simply sleep for 610s, thereby
         generating Stuck Thread notifications.
@@ -319,12 +289,12 @@
 
       <p:commandButton id="deadlock_button"
                        value="Generate Deadlock"
-                       ajax="false"
-                       action="#{utilityController.generateDeadlock}"/>
+                       actionListener="#{utilityController.generateDeadlock}" update="growl"/>
 
       <div>
         <div>This will deliver a set of messages to a Distributed Queue and generate a deadlock using the
-          <h:outputLink value="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining Philosophers</h:outputLink> problem
+          <h:outputLink
+              value="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining Philosophers</h:outputLink> problem
         </div>
         <div>
           This demo will produce a deadlock by putting messages into a JMS queue that are consumed by two types of MDBs -

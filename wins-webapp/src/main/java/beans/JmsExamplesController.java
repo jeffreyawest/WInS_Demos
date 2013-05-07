@@ -66,172 +66,82 @@ public class JmsExamplesController implements Serializable
   {
   }
 
-  public void removeSelectedAttribute(ActionEvent pEvent)
+  private void messageComplete(String demoName)
   {
-
+    FacesContext context = FacesContext.getCurrentInstance();
+    String message = demoName + " Demo Complete/Successful";
+    context.addMessage(null, new FacesMessage(message, message));
   }
 
 
-  public void removeEntry(String pKey)
-  {
-    getSession().removeAttribute(pKey);
-  }
-
-  public HttpSession getSession()
-  {
-    return (HttpSession) getFacesContext().getExternalContext().getSession(true);
-  }
-
-  public String getSessionId()
-  {
-    return getSession().getId();
-  }
-
-  public String getWebLogicServerName()
-  {
-    return System.getProperty("weblogic.Name");
-  }
-
-  public FacesContext getFacesContext()
-  {
-    FacesContext ctx = FacesContext.getCurrentInstance();
-
-    //ctx.get
-
-    return ctx;
-  }
-
-
-  public List<Map.Entry> getSessionAttributes()
-  {
-    List<Map.Entry> atts = new ArrayList();
-
-    Enumeration<String> attributes = getSession().getAttributeNames();
-
-    //logger.info("Session Attributes:");
-    //logger.info("======================================");
-    while (attributes.hasMoreElements())
-    {
-      String att = attributes.nextElement();
-
-      if (att.equals("com.sun.faces.renderkit.ServerSideStateHelper.LogicalViewMap")
-          || att.equals("javax.faces.request.charset"))
-      {
-        continue;
-      }
-
-      Object value = getSession().getAttribute(att);
-      atts.add(new AbstractMap.SimpleEntry(att, value));
-      //logger.info("Att name=[" + att + "] ObjectType=[" + value.getClass() + "] value=[" + value + "]");
-    }
-    //logger.info("======================================");
-
-    return atts;
-  }
-
-  public String invalidateSession()
-  {
-    invalidate();
-    return "/index";
-  }
-
-  public void invalidateSessionListener(ActionEvent event)
-  {
-    invalidate();
-  }
-
-  private void invalidate()
-  {
-    logger.info("INVALIDATING SESSION!! ID=[" + getSessionId() + "]");
-
-    getSession().invalidate();
-  }
-
-
-  public void invalidateSessionActionListener(ActionEvent event)
-  {
-    invalidateSession();
-    getFacesContext().addMessage(null, new FacesMessage("Session Invalidated", "User Request"));
-  }
-
-  public String queueDemo()
+  public void queueDemo(ActionEvent actionEvent)
   {
     queueProducerEJB.doIt();
-
-    return "success";
+    messageComplete("Distributed Queue");
   }
 
-  public String pdtDemo()
+  public void pdtDemo(ActionEvent actionEvent)
   {
     pdtProducerEJB.doIt();
-    return "success";
+    messageComplete("Partitioned Distributed Topic");
   }
 
-  public String rdtDemo()
+  public void rdtDemo(ActionEvent actionEvent)
   {
     rdtProducerEJB.doIt();
-    return "success";
+    messageComplete("Replicated Distributed Topic");
   }
 
-  public String uowDemo()
-  {
-    uowProducerEJB.doIt();
-
-    return "success";
-  }
-
-  public String safDemo()
+  public void safDemo(ActionEvent actionEvent)
   {
     safProducerEJB.doIt();
-
-    return "success";
+    messageComplete("Store and Forward");
   }
-
-  public String uooDemoMixed()
+  public void uooDemoMixed(ActionEvent actionEvent)
   {
     uooProducerEJB.sendMixedUOO();
-    return "success";
+    messageComplete("Mixed Unit of Order");
   }
 
-  public String uooDemoDiscrete()
+  public void uooDemoDiscrete(ActionEvent actionEvent)
   {
     uooProducerEJB.sendDiscreteUOO();
-    return "success";
+    messageComplete("Discrete Unit of Order");
   }
 
-  public String uooDemoNonUOO()
+  public void uooDemoNonUOO(ActionEvent actionEvent)
   {
     uooProducerEJB.sendRegularMessageBatch();
-    return "success";
+    messageComplete("Non-Unit of Order");
   }
 
-  public String uowDemoNonUOW()
+  public void uowDemoNonUOW(ActionEvent actionEvent)
   {
     uowProducerEJB.sendNonUOW();
-    return "success";
+    messageComplete("Non-Unit of Work");
   }
 
-  public String uowDemoMixed()
+  public void uowDemoMixed(ActionEvent actionEvent)
   {
     uowProducerEJB.sendMixedUOW();
-    return "success";
+    messageComplete("Mixed Unit of Work");
   }
 
-  public String uowDemoDiscrete()
+  public void uowDemoDiscrete(ActionEvent actionEvent)
   {
     uowProducerEJB.sendDiscreteUOW();
-    return "success";
+    messageComplete("Discrete Unit of Work");
   }
 
-  public String uowDemoIncomplete()
+  public void uowDemoIncomplete(ActionEvent actionEvent)
   {
     uowProducerEJB.sendIncompleteUOW();
-    return "success";
+    messageComplete("Incomplete Unit of Work");
   }
 
-  public String uowDemoSlow()
+  public void uowDemoSlow(ActionEvent actionEvent)
   {
     uowProducerEJB.sendSlowUOW();
-    return "success";
+    messageComplete("Slow Unit of Work");
   }
 }
