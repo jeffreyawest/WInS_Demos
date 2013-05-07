@@ -28,6 +28,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <plugins>
@@ -49,6 +51,12 @@
       <groupId>com.oracle.weblogic</groupId>
       <artifactId>weblogic</artifactId>
       <version>${weblogic.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle.weblogic.demo.wins</groupId>
+      <artifactId>wins-util</artifactId>
+      <version>12.1.1.0</version>
     </dependency>
 
     <dependency>

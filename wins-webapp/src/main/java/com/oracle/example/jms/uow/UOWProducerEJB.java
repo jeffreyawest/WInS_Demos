@@ -1,6 +1,7 @@
 package com.oracle.example.jms.uow;
 
 import com.oracle.example.jms.Constants;
+import com.oracle.example.util.CRC32Util;
 import weblogic.jms.extensions.WLConnection;
 import weblogic.jms.extensions.WLMessageProducer;
 import weblogic.jms.extensions.WLSession;
@@ -13,6 +14,7 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.jms.*;
+import java.util.zip.CRC32;
 
 /**
  * **************************************************************************
@@ -132,6 +134,58 @@ public class UOWProducerEJB
       System.out.println("Sending text: " + text);
       queueProducer.send(sendMsg);
       sleep(pIntervalTimeInMillis);
+    }
+
+    if (transacted)
+    {
+      sleep(pCommitWaitTime);
+      commitSession();
+    }
+
+    endSession();
+  }
+
+  private void sendMixedUnitOfWork(int pGroupCount, int pMessageCount, long pIntervalTimeInMillis, long pLastMessageWaitTime, long pCommitWaitTime) throws JMSException
+  {
+    boolean transacted = false;
+
+    if (pCommitWaitTime > 0)
+    {
+      transacted = true;
+    }
+
+    beginSession(transacted);
+
+    String unitOfWorkIds[] = new String[pGroupCount];
+
+    for (int i = 0; i < unitOfWorkIds.length; i++)
+    {
+      unitOfWorkIds[i] = (CRC32Util.getCRC32Checksum(java.util.UUID.randomUUID().toString()));
+    }
+
+    for (int i = 1; i <= pMessageCount; i++)
+    {
+      for (int n = 1; n < pGroupCount; n++)
+      {
+
+        String text = "UOW=[" + unitOfWorkIds[n] + "] message=[" + i + " of " + pMessageCount + "]";
+
+        final Message sendMsg = session.createTextMessage(text);
+
+        sendMsg.setStringProperty("JMS_BEA_UnitOfWork", unitOfWorkIds[n]);
+        sendMsg.setIntProperty("JMS_BEA_UnitOfWorkSequenceNumber", i);
+
+        if (i == pMessageCount)
+        {
+          System.out.println("Setting the UnitOfWorkEnd flag on last message UOW=[" + unitOfWorkIds[n] + "] message=[" + i + "]");
+          sendMsg.setBooleanProperty("JMS_BEA_IsUnitOfWorkEnd", true);
+          sleep(pLastMessageWaitTime);
+        }
+
+        System.out.println("Sending text: " + text);
+        queueProducer.send(sendMsg);
+        sleep(pIntervalTimeInMillis);
+      }
     }
 
     if (transacted)
@@ -275,6 +329,19 @@ public class UOWProducerEJB
     try
     {
       sendUnitOfWork(15, 1500, 5000, 0);
+    }
+    catch (JMSException e)
+    {
+      e.printStackTrace();
+    }
+  }
+
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
+  public void sendMixedUOW()
+  {
+    try
+    {
+      sendMixedUnitOfWork(3, 5, 1500, 1000, 0);
     }
     catch (JMSException e)
     {

@@ -211,6 +211,12 @@ public class JmsExamplesController implements Serializable
     return "success";
   }
 
+  public String uowDemoMixed()
+  {
+    uowProducerEJB.sendMixedUOW();
+    return "success";
+  }
+
   public String uowDemoDiscrete()
   {
     uowProducerEJB.sendDiscreteUOW();
