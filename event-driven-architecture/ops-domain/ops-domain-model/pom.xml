@@ -29,6 +29,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>install</defaultGoal>
 
         <plugins>
@@ -64,6 +66,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <!--<sourceDirectory>src</sourceDirectory>-->
@@ -95,5 +99,18 @@
       </plugin>-->
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>eclipselink</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>javax.persistence</artifactId>
+
+    </dependency>
+  </dependencies>
 
 </project>

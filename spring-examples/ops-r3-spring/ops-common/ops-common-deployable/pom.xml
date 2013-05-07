@@ -138,6 +138,8 @@
       <id>undeploy-on-clean</id>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
           <plugin>
             <groupId>com.oracle.weblogic</groupId>
@@ -170,6 +172,8 @@
     <profile>
       <id>enable-weblogic-deployment</id>
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
 
           <plugin>
@@ -210,6 +214,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <pluginManagement>
           <plugins>
             <plugin>
@@ -270,6 +276,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <pluginManagement>
           <plugins>
 
@@ -330,6 +338,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <plugins>

@@ -27,6 +27,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>test</defaultGoal>
 
         <plugins>
@@ -62,6 +64,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>test</defaultGoal>
 
         <plugins>
@@ -97,6 +101,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>test</defaultGoal>
 
         <plugins>
@@ -132,6 +138,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>test</defaultGoal>
 
         <plugins>

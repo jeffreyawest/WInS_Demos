@@ -20,6 +20,8 @@
   <name>spring-mbean-example</name>
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <plugins>

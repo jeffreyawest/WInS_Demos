@@ -20,7 +20,10 @@
   <name>ops-common-ws</name>
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
+
     <plugins>
       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>

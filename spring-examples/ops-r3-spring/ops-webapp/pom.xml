@@ -43,6 +43,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>deploy</defaultGoal>
   </build>
 

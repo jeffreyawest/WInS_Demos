@@ -19,6 +19,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <plugins>

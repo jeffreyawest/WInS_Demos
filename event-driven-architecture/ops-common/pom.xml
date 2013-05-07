@@ -36,6 +36,8 @@
   <!-- ======================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -201,6 +203,19 @@ which is all projects in this app -->
         <scope>system</scope>
         <systemPath>${weblogic.home}/server/lib/wlclient.jar</systemPath>
       </dependency>
+
+      <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>eclipselink</artifactId>
+        <version>2.3.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>javax.persistence</artifactId>
+        <version>2.0.0</version>
+      </dependency>
+
 
     </dependencies>
 

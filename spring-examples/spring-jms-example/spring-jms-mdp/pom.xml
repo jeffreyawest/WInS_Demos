@@ -22,12 +22,14 @@
   <name>spring-jms-mdp</name>
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <plugins>
 
       <plugin>
         <groupId>com.oracle.weblogic</groupId>
         <artifactId>wls-maven-plugin</artifactId>
-        <version>12.1.1.0</version>
+        <version>${weblogic.version}</version>
       </plugin>
 
     </plugins>

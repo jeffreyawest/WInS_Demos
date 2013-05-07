@@ -1,6 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+  <parent>
+    <groupId>com.oracle.weblogic.demo.wins</groupId>
+    <artifactId>common</artifactId>
+    <version>12.1.1.0</version>
+    <relativePath>../../../common/pom.xml</relativePath>
+  </parent>
+
   <!-- ==================================================================================== -->
 
   <artifactId>ops-common</artifactId>
@@ -13,7 +20,7 @@
 
   <!-- ==================================================================================== -->
 
-  <properties >
+  <properties>
 
     <ops.scm.url>https://www.samplecode.oracle.com/svn/ops-r2/</ops.scm.url>
 
@@ -50,6 +57,8 @@
   <!-- ======================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
@@ -131,21 +140,6 @@
 
   <!-- ==================================================================================== -->
 
-  <dependencies>
-
-    <!-- This makes the JAVA EE 6 API available for all chile projects,
-which is all projects in this app -->
-    <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>6.0</version>
-      <scope>provided</scope>
-    </dependency>
-
-  </dependencies>
-
-  <!-- ==================================================================================== -->
-
   <dependencyManagement>
     <dependencies>
 
@@ -213,25 +207,25 @@ which is all projects in this app -->
       <dependency>
         <groupId>com.oracle.coherence</groupId>
         <artifactId>coherence</artifactId>
-        <version>3.7</version>
+        <version>${coherence.version}</version>
       </dependency>
 
       <dependency>
         <groupId>com.oracle.weblogic</groupId>
         <artifactId>weblogic-spring</artifactId>
-        <version>12.1.1.0</version>
+        <version>${weblogic.version}</version>
       </dependency>
 
       <dependency>
         <groupId>org.eclipse.persistence</groupId>
         <artifactId>eclipselink</artifactId>
-        <version>2.3.0</version>
+        <version>${eclipselink.version}</version>
       </dependency>
 
       <dependency>
         <groupId>org.eclipse.persistence</groupId>
         <artifactId>javax.persistence</artifactId>
-        <version>2.0.0</version>
+        <version>${javax.persistence.version}</version>
       </dependency>
 
     </dependencies>
@@ -248,9 +242,9 @@ which is all projects in this app -->
       -->
       <url>http://www.eclipse.org/downloads/download.php?r=1&amp;nf=1&amp;file=/rt/eclipselink/maven.repo</url>
 
-     <snapshots>
+      <snapshots>
         <enabled>true</enabled>
-     </snapshots>
+      </snapshots>
     </repository>
 
     <repository>

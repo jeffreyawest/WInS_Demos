@@ -23,9 +23,9 @@
 
 
   <build>
-    <defaultGoal>install</defaultGoal>
-
     <finalName>${project.artifactId}</finalName>
+
+    <defaultGoal>install</defaultGoal>
 
     <plugins>
       <plugin>

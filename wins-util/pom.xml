@@ -5,19 +5,19 @@
 
   <parent>
     <groupId>com.oracle.weblogic.demo.wins</groupId>
-    <artifactId>common-deployable</artifactId>
+    <artifactId>common</artifactId>
     <version>12.1.1.0</version>
-    <relativePath>../common/common-deployable/pom.xml</relativePath>
+    <relativePath>../common/pom.xml</relativePath>
   </parent>
 
   <!-- ==================================================================================== -->
 	
-  <artifactId>wins-webapp</artifactId>
+  <artifactId>wins-util</artifactId>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.oracle.weblogic.demo.wins</groupId>
   <packaging>war</packaging>
   <version>12.1.1.0</version>
-  <name>wins-webapp</name>
+  <name>wins-util</name>
 
   <!-- ==================================================================================== -->
 
@@ -28,16 +28,10 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
+
     <defaultGoal>install</defaultGoal>
-
-    <plugins>
-
-      <plugin>
-        <groupId>com.oracle.weblogic</groupId>
-        <artifactId>wls-maven-plugin</artifactId>
-      </plugin>
-
-    </plugins>
 
   </build>
 
@@ -45,34 +39,6 @@
 
   <dependencies>
 
-    <dependency>
-      <groupId>com.oracle.weblogic</groupId>
-      <artifactId>weblogic</artifactId>
-      <version>${weblogic.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.primefaces</groupId>
-      <artifactId>primefaces</artifactId>
-      <version>3.2</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.primefaces.themes</groupId>
-      <artifactId>cupertino</artifactId>
-      <version>1.0.3</version>
-    </dependency>
-
   </dependencies>
-
-  <repositories>
-    <repository>
-      <id>prime-repo</id>
-      <name>PrimeFaces Maven Repository</name>
-      <url>http://repository.primefaces.org</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
-
 
 </project>

@@ -37,6 +37,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>install</defaultGoal>
 
 
@@ -78,6 +80,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>install</defaultGoal>
 
     <plugins>

@@ -23,6 +23,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <defaultGoal>deploy</defaultGoal>
     <finalName>ops-webapp-jquery</finalName>
     <plugins>

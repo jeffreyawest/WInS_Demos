@@ -27,12 +27,12 @@
 
   <!-- ==================================================================================== -->
 
-    <scm>
-      <connection>scm:svn:${project.scm.url}</connection>
-      <developerConnection>scm:svn:${project.scm.url}</developerConnection>
-      <url>${ops.scm.url}/${path.from.top}</url>
-    </scm>
-  
+  <scm>
+    <connection>scm:svn:${project.scm.url}</connection>
+    <developerConnection>scm:svn:${project.scm.url}</developerConnection>
+    <url>${ops.scm.url}/${path.from.top}</url>
+  </scm>
+
   <!-- ==================================================================================== -->
 
   <profiles>
@@ -40,6 +40,8 @@
       <id>enable-spring-deployment</id>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
           <plugin>
             <groupId>com.oracle.weblogic</groupId>
@@ -54,7 +56,10 @@
       <id>enable-eclipselink</id>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>deploy</defaultGoal>
+
         <plugins>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -123,6 +128,8 @@
       <id>enable-toplink-grid</id>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <defaultGoal>deploy</defaultGoal>
 
         <plugins>

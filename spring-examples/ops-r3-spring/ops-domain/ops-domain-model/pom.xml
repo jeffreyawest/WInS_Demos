@@ -44,6 +44,8 @@
       </activation>
 
       <build>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
           <plugin>
             <groupId>org.jvnet.jaxb2.maven2</groupId>
@@ -77,6 +79,8 @@
   <!-- ==================================================================================== -->
 
   <build>
+    <finalName>${project.artifactId}</finalName>
+
     <!--<sourceDirectory>src</sourceDirectory>-->
 
     <!--<resources>
@@ -112,6 +116,11 @@
       <groupId>org.eclipse.persistence</groupId>
       <artifactId>eclipselink</artifactId>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>javax.persistence</artifactId>
     </dependency>
   </dependencies>
 
