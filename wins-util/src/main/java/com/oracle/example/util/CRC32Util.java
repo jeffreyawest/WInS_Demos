@@ -1,5 +1,10 @@
 package com.oracle.example.util;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.CRC32;
+import java.util.zip.CheckedInputStream;
+
 /**
  * /*
  * **************************************************************************
@@ -21,8 +26,23 @@ package com.oracle.example.util;
  * User: jeffreyawest
  * Date: 5/7/13
  * Time: 2:01 PM
- * To change this template use File | Settings | File Templates.
  */
-public class CRC32Util
+public abstract class CRC32Util
 {
+  public static String getCRC32Checksum(String pString)
+  {
+    long decimalChecksum = 0;
+    String hexChecksum = null;
+
+    final String ZEROS = "00000000";
+    final int CRC32_CHECKSUM_LENGTH = 8;
+    CRC32 checksumEngine = new CRC32();
+
+    checksumEngine.update(pString.getBytes());
+    decimalChecksum = checksumEngine.getValue();
+    hexChecksum = Long.toHexString(decimalChecksum).toUpperCase();
+    hexChecksum = ZEROS.substring(0, CRC32_CHECKSUM_LENGTH - hexChecksum.length()) + hexChecksum;
+
+    return hexChecksum;
+  }
 }
