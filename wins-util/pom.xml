@@ -15,7 +15,7 @@
   <artifactId>wins-util</artifactId>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.oracle.weblogic.demo.wins</groupId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>12.1.1.0</version>
   <name>wins-util</name>
 
