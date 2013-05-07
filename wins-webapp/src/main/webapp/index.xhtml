@@ -25,7 +25,7 @@
 
   <p:panel header="Coherence*Web Examples">
 
-    <h:panelGrid columns="2">
+    <h:panelGrid columns="1">
 
       <h:outputLink value="http://wins-vbox/jsf-bean-app-1">Coherence*Web Session Sharing - JSF App 1</h:outputLink>
 
@@ -39,25 +39,11 @@
 
   <p:panel header="WLDF Examples">
 
-    <h:panelGrid columns="2">
+    <h:panelGrid columns="1">
 
-      <h:outputLink value="http://wins-vbox/dye-injection"/>
+      <h:outputLink value="http://wins-vbox/dye-injection">Dye Injection - JSF App</h:outputLink>
 
-      <div>
-        Dye Injection - JSF App
-      </div>
-
-      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
-
-      <div>
-        Dye Injection - Servlet
-      </div>
-
-      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123"/>
-
-      <div>
-        Dye Injection - Servlet
-      </div>
+      <h:outputLink value="http://wins-vbox/AddingServlet?p1=2&amp;p2=123">Dye Injection - Servlet</h:outputLink>
 
     </h:panelGrid>
 
@@ -298,6 +284,39 @@
   <p:panel header="Utility Options">
     <h:panelGrid columns="2">
 
+      <!-- @@@@@@@@ -->
+
+      <p:commandButton id="jdbcHogger_button"
+                       value="Demo JDBC Connection Hogger"
+                       ajax="false"
+                       action="#{utilityController.demoJdbcHogger}"/>
+
+      <div>
+        <div
+            style="font-weight: bold; text-decoration: underline">JDBC Hogger
+        </div>
+        This demo will create contention on a JDBC Connection pool in the Managed Servers.  The purpose of this is to
+        show the behavior of an overloaded JDBC Connection Pool and also to allow you to demonstrate WLDF Watches
+        configured for the Connection Poool.
+      </div>
+
+      <!-- @@@@@@@@ -->
+
+      <p:commandButton id="stuckThreads_button"
+                       value="Demo Stuck Threads)"
+                       ajax="false"
+                       action="#{utilityController.demoStuckThreads}"/>
+
+      <div>
+        <div
+            style="font-weight: bold; text-decoration: underline">Stuck Threads Generator
+        </div>
+          This demo will generate stuck threads in the Managed Servers.  Stuck Threads are not a WebLogic problem.  WebLogic is
+        simply indicating that a thread may be stuck because it is working on the same thing for a long time.<br/>
+        In this demo a batch of JMS messages will be sent and consumed by MDB's which simply sleep for 610s, thereby
+        generating Stuck Thread notifications.
+      </div>
+
       <p:commandButton id="deadlock_button"
                        value="Generate Deadlock"
                        ajax="false"
@@ -305,18 +324,7 @@
 
       <div>
         <div>This will deliver a set of messages to a Distributed Queue and generate a deadlock using the
-          Dining Philosophers problem originall formulated by Edsger Dijkstra:
-
-          <div
-              style="font-style: italic;">Five silent philosophers sit at a table around a bowl of spaghetti. A fork is placed between each pair of adjacent philosophers. (An alternative problem formulation uses rice and chopsticks instead of spaghetti and forks.)
-
-            Each philosopher must alternately think and eat. However, a philosopher can only eat spaghetti when he has both left and right forks. Each fork can be held by only one philosopher and so a philosopher can use the fork only if it's not being used by another philosopher. After he finishes eating, he needs to put down both forks so they become available to others. A philosopher can grab the fork on his right or the one on his left as they become available, but can't start eating before getting both of them.
-
-            Eating is not limited by the amount of spaghetti left: assume an infinite supply.
-
-            The problem is how to design a discipline of behavior (a concurrent algorithm) such that each philosopher won't starve; i.e., can forever continue to alternate between eating and thinking assuming that any philosopher cannot know when others may want to eat or think.
-          </div>
-
+          <h:outputLink value="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining Philosophers</h:outputLink> problem
         </div>
         <div>
           This demo will produce a deadlock by putting messages into a JMS queue that are consumed by two types of MDBs -

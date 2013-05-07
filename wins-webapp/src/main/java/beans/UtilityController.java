@@ -1,6 +1,8 @@
 package beans;
 
-import com.oracle.example.jms.deadlock.DeadlockProducerEJB;
+import com.oracle.example.utility.DeadlockProducerEJB;
+import com.oracle.example.utility.JDBCHoggerEJB;
+import com.oracle.example.utility.StuckThreadGeneratorEJB;
 
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
@@ -14,19 +16,19 @@ import java.util.*;
 import java.util.logging.Logger;
 
 /**
-  * **************************************************************************
+ * **************************************************************************
  * <p/>
  * This code is provided for example purposes only.  Oracle does not assume
  * any responsibility or liability for the consequences of using this code.
  * If you choose to use this code for any reason, including but not limited
  * to its use as an example you do so at your own risk and without the support
  * of Oracle.
- *
+ * <p/>
  * This code is provided under the following licenses:
- *
+ * <p/>
  * GNU General Public License (GPL-2.0)
  * COMMON DEVELOPMENT AND DISTRIBUTION LICENSE Version 1.0 (CDDL-1.0)
- *
+ * <p/>
  * <p/>
  * ****************************************************************************
  * User: jeffrey.a.west
@@ -41,7 +43,12 @@ public class UtilityController implements Serializable
   static final long serialVersionUID = 43L;
   private static final Logger logger = Logger.getLogger(UtilityController.class.getName());
 
-  @EJB private DeadlockProducerEJB deadlockProducer;
+  @EJB
+  private DeadlockProducerEJB deadlockProducerEJB;
+  @EJB
+  private JDBCHoggerEJB jdbcHoggerEJB;
+  @EJB
+  private StuckThreadGeneratorEJB stuckThreadGeneratorEJB;
 
   public UtilityController()
   {
@@ -58,13 +65,41 @@ public class UtilityController implements Serializable
     getSession().removeAttribute(pKey);
   }
 
+
+  public String demoJdbcHogger()
+  {
+
+    try
+    {
+      jdbcHoggerEJB.doIt();
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+    return "success";
+  }
+
+  public String demoStuckThreads()
+  {
+    try
+    {
+      stuckThreadGeneratorEJB.doIt();
+    }
+    catch (Exception e)
+    {
+      e.printStackTrace();
+    }
+    return "success";
+  }
+
   public String generateDeadlock()
   {
     logger.info("generateDeadlock");
 
     try
     {
-      deadlockProducer.doIt();
+      deadlockProducerEJB.doIt();
     }
     catch (Exception e)
     {
@@ -150,6 +185,5 @@ public class UtilityController implements Serializable
     invalidateSession();
     getFacesContext().addMessage(null, new FacesMessage("Session Invalidated", "User Request"));
   }
-
 
 }

@@ -1,4 +1,4 @@
-package com.oracle.example.jms.deadlock;
+package com.oracle.example.utility;
 
 import com.oracle.example.jms.Constants;
 import weblogic.jms.extensions.WLConnection;
