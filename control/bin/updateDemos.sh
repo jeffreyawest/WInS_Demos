@@ -12,4 +12,6 @@ cd ${LAB_DIR}
 git fetch --tags
 git merge ${TAG_NAME}
 
-read -p "Checkout complete. Press [Enter] to close the window"
+if [ "$1" != "nowait" ]; then
+  read -p "Checkout complete. Press [Enter] to close the window"
+ fi
