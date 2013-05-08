@@ -80,7 +80,59 @@
       </build>
 
     </profile>
+    <!-- +++++++++++++++++++++++++ -->
 
+    <profile>
+      <id>start-adminServer</id>
+
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <build>
+        <finalName>${project.artifactId}</finalName>
+
+        <defaultGoal>install</defaultGoal>
+
+        <plugins>
+
+          <plugin>
+            <groupId>com.oracle.weblogic</groupId>
+            <artifactId>wls-maven-plugin</artifactId>
+            <version>12.1.1.0</version>
+
+            <configuration>
+              <user>weblogic</user>
+              <password>welcome1</password>
+              <name>${project.build.finalName}</name>
+            </configuration>
+
+            <executions>
+              <execution>
+                <id>configure</id>
+                <phase>install</phase>
+
+                <goals>
+                  <goal>wlst</goal>
+                </goals>
+
+                <configuration>
+                  <middlewareHome>${middleware.home}</middlewareHome>
+                  <weblogicHome>${weblogic.home}</weblogicHome>
+
+                  <fileName>${project.basedir}/src/main/wlst/start-${domain.name}-adminServer.py</fileName>
+                  <propertiesFile>${project.basedir}/../environment.properties</propertiesFile>
+                </configuration>
+
+              </execution>
+            </executions>
+          </plugin>
+
+
+        </plugins>
+      </build>
+
+    </profile>
     <!-- +++++++++++++++++++++++++ -->
 
     <profile>
