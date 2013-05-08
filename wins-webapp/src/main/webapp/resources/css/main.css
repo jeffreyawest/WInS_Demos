@@ -8,6 +8,16 @@
     border: 3px solid white;
 }
 
+.section_header {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: small;
+}
+
+.section_description {
+    font-size: small;
+}
+
 .btnNull {
     float: left;
     font-size: x-small;
