@@ -18,4 +18,19 @@
     <dispatch-policy>wm/SAFTargetListener</dispatch-policy>
   </weblogic-enterprise-bean>
 
+  <work-manager>
+    <name>wm/SAFTargetListener</name>
+
+    <min-threads-constraint>
+      <name>wm/SAFTargetListener-MIN</name>
+      <count>10</count>
+    </min-threads-constraint>
+
+    <max-threads-constraint>
+      <name>wm/SAFTargetListener-MAX</name>
+      <count>20</count>
+    </max-threads-constraint>
+
+  </work-manager>
+
 </weblogic-ejb-jar>

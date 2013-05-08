@@ -15,41 +15,41 @@
                   http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd">
 
   <weblogic-enterprise-bean>
-    <ejb-name>QueueListenerAMDB</ejb-name>
-    <dispatch-policy>wm/QueueListenerA</dispatch-policy>
+    <ejb-name>ClearScreenBean</ejb-name>
+    <dispatch-policy>wm/TopicListeners</dispatch-policy>
   </weblogic-enterprise-bean>
 
   <weblogic-enterprise-bean>
-    <ejb-name>QueueListenerBMDB</ejb-name>
-    <dispatch-policy>wm/QueueListenerB</dispatch-policy>
+    <ejb-name>PDTListenerBeanA</ejb-name>
+    <dispatch-policy>wm/TopicListeners</dispatch-policy>
+  </weblogic-enterprise-bean>
+
+  <weblogic-enterprise-bean>
+    <ejb-name>PDTListenerBeanB</ejb-name>
+    <dispatch-policy>wm/TopicListeners</dispatch-policy>
+  </weblogic-enterprise-bean>
+
+  <weblogic-enterprise-bean>
+    <ejb-name>RDTListenerBeanA</ejb-name>
+    <dispatch-policy>wm/TopicListeners</dispatch-policy>
+  </weblogic-enterprise-bean>
+
+  <weblogic-enterprise-bean>
+    <ejb-name>RDTListenerBeanB</ejb-name>
+    <dispatch-policy>wm/TopicListeners</dispatch-policy>
   </weblogic-enterprise-bean>
 
   <work-manager>
-    <name>wm/QueueListenerA</name>
+    <name>wm/TopicListeners</name>
 
     <min-threads-constraint>
-      <name>wm/QueueListenerA-MIN</name>
+      <name>wm/TopicListeners-MIN</name>
       <count>10</count>
     </min-threads-constraint>
 
     <max-threads-constraint>
-      <name>wm/QueueListenerA-MAX</name>
-      <count>30</count>
-    </max-threads-constraint>
-
-  </work-manager>
-
-  <work-manager>
-    <name>wm/QueueListenerB</name>
-
-    <min-threads-constraint>
-      <name>wm/QueueListenerB-MIN</name>
-      <count>10</count>
-    </min-threads-constraint>
-
-    <max-threads-constraint>
-      <name>wm/QueueListenerB-MAX</name>
-      <count>30</count>
+      <name>wm/TopicListeners-MAX</name>
+      <count>50</count>
     </max-threads-constraint>
 
   </work-manager>

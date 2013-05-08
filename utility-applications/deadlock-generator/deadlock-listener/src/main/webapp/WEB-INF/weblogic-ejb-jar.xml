@@ -15,21 +15,26 @@
                   http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd">
 
   <weblogic-enterprise-bean>
-    <ejb-name>QueueListenerMDB</ejb-name>
-    <dispatch-policy>wm/QueueListener</dispatch-policy>
+    <ejb-name>PhilosopherEatThenThink</ejb-name>
+    <dispatch-policy>wm/Philosophers</dispatch-policy>
+  </weblogic-enterprise-bean>
+
+  <weblogic-enterprise-bean>
+    <ejb-name>PhilosopherThinkThenEat</ejb-name>
+    <dispatch-policy>wm/Philosophers</dispatch-policy>
   </weblogic-enterprise-bean>
 
   <work-manager>
-    <name>wm/QueueListener</name>
+    <name>wm/Philosophers</name>
 
     <min-threads-constraint>
-      <name>wm/QueueListener-MIN</name>
-      <count>25</count>
+      <name>wm/Philosophers-MIN</name>
+      <count>50</count>
     </min-threads-constraint>
 
     <max-threads-constraint>
-      <name>wm/QueueListener-MAX</name>
-      <count>50</count>
+      <name>wm/Philosophers-MAX</name>
+      <count>100</count>
     </max-threads-constraint>
 
   </work-manager>

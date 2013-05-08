@@ -15,7 +15,23 @@
                   http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd">
   <weblogic-enterprise-bean>
     <ejb-name>SAFSourceForwarderMDB</ejb-name>
-    <!--<dispatch-policy>wm/SAFForwarder</dispatch-policy>-->
+    <dispatch-policy>wm/SAFForwarder</dispatch-policy>
   </weblogic-enterprise-bean>
+
+
+  <work-manager>
+    <name>wm/SAFForwarder</name>
+
+    <min-threads-constraint>
+      <name>wm/SAFForwarder-MIN</name>
+      <count>10</count>
+    </min-threads-constraint>
+
+    <max-threads-constraint>
+      <name>wm/SAFForwarder-MAX</name>
+      <count>20</count>
+    </max-threads-constraint>
+
+  </work-manager>
 
 </weblogic-ejb-jar>
