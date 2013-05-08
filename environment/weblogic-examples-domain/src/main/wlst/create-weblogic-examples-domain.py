@@ -3,7 +3,7 @@ import time
 loadProperties('environment.properties')
 
 domain_Name = 'weblogic_examples_domain'
-machine_ListenAddress = 'wins-vbox'
+machine_ListenAddress = 'wins-vbox.localdomain'
 jmsServer_BaseName = 'jms-server'
 cluster_Name = 'cluster-1'
 machine_Name = 'wins-vbox'
@@ -19,7 +19,7 @@ datasource_Password = 'weblogic_examples_domain'
 
 ########################################################################################################################
 
-adminServer_ListenAddress = 'wins-vbox'
+adminServer_ListenAddress = 'wins-vbox.localdomain'
 adminServer_ListenPort = 7001
 adminServer_AdministrationPort = 7200
 adminServer_Username = 'weblogic'
@@ -47,9 +47,10 @@ managedServer_StartupArgs = '-XX:FlightRecorderOptions=defaultrecording=true '\
 ########################################################################################################################
 
 cohCluster_Name = 'coherence-cluster-1'
-coh_ListenAddress = 'wins-vbox'
-coh_ListenPort = 8088
-coh_TTL = 0
+cohCluster_ListenAddress = 'wins-vbox.localdomain'
+cohCluster_ListenPort = 8088
+cohCluster_TTL = 0
+
 cohServer_Count = 2
 cohServer_Classpath = MW_HOME + '/modules/com.oracle.toplinkgrid_1.0.0.0_11-1-1-5-0.jar:' +\
                       MW_HOME + '/modules/org.eclipse.persistence_1.1.0.0_2-1.jar:' +\
@@ -625,7 +626,7 @@ def createSAFSourceModules():
 
   cd('/JMSSystemResources/' + module_name + '/JmsResource/NO_NAME_0/SAFRemoteContexts/remote-saf-context-1/')
   loginContext = create('remote-saf-context-1', 'SAFLoginContext')
-  loginContext.setLoginURL('t3://wins-vbox:8101,wins-vbox:8102')
+  loginContext.setLoginURL('t3://wins-vbox.localdomain:8101,wins-vbox.localdomain:8102')
   loginContext.setUsername('weblogic')
   loginContext.setPasswordEncrypted('welcome1')
 
@@ -936,7 +937,7 @@ except:
   dumpStack()
   exit(exitCode=1)
 
-machine = createMachine(machine_Name, 'Plain', 'wins-vbox', 5556)
+machine = createMachine(machine_Name, 'Plain', machine_ListenAddress, 5556)
 
 cd('/')
 clusterMBean = create(cluster_Name, 'Cluster')
@@ -1080,13 +1081,13 @@ configureDomain_online()
 
 configureManagedServersOnline()
 
-createCoherenceCluster_online(cohCluster_Name, coh_ListenAddress, coh_ListenPort,
+createCoherenceCluster_online(cohCluster_Name, cohCluster_ListenAddress, cohCluster_ListenPort,
                               jarray.array([ObjectName('com.bea:Name=' + cluster_Name + ',Type=Cluster')], ObjectName),
-                              coh_TTL)
+                              cohCluster_TTL)
 
 createCoherenceServers_online(cohCluster_Name,
-                              coh_ListenAddress,
-                              coh_ListenPort,
+                              cohCluster_ListenAddress,
+                              cohCluster_ListenPort,
                               cohServer_StartupArgs,
                               cohServer_Count,
                               cohServer_Classpath,
