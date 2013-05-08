@@ -343,7 +343,7 @@ def createWLDFJMSResources(moduleName, clusterTarget, jmsServerTargets):
   lbParams.setServerAffinityEnabled(false)
 
   txParams = create(cf_name, 'TransactionParams')
-  txParams.setXAConnectionFactoryEnabled(false)
+  txParams.setXAConnectionFactoryEnabled(true)
 
   ######## Connection Factory
   cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
