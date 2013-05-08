@@ -4,7 +4,7 @@ killWebLogic.sh
 killNodeManager.sh
 
 echo "Removing directory ${DOMAINS}..."
-rm -Rf $DOMAINS
+rm -Rf ${DOMAINS}
 
 sqlplus '/ as sysdba' @sql/truncate.sql >> /dev/null
 
@@ -16,5 +16,3 @@ if [ "$?" == "0" ]; then
   mvn -P start-domain
 fi
 
-cd ../
-mvn install

@@ -27,7 +27,7 @@ import javax.jms.*;
 @MessageDriven(
     messageListenerInterface = MessageListener.class,
     name = "WLDFListenerEJB",
-    mappedName = "com.oracle.example.jms.wldf.notification",
+    mappedName = "com/oracle/example/jms/wldf/notification",
     activationConfig = {
         @ActivationConfigProperty(
             propertyName = "connectionFactoryJndiName",

@@ -343,6 +343,22 @@ def createWLDFJMSResources(moduleName, clusterTarget, jmsServerTargets):
   lbParams.setServerAffinityEnabled(false)
 
   txParams = create(cf_name, 'TransactionParams')
+  txParams.setXAConnectionFactoryEnabled(false)
+
+  ######## Connection Factory
+  cd('/JMSSystemResource/' + moduleName + '/JmsResource/NO_NAME_0')
+  cf_name = 'com.oracle.example.jms.wldf.cf'
+  myCF = create(cf_name, 'ConnectionFactory')
+  cd('/JMSSystemResources/' + moduleName + '/JmsResource/NO_NAME_0/ConnectionFactories/' + cf_name)
+
+  myCF.setJNDIName(cf_name)
+  myCF.setDefaultTargetingEnabled(true)
+
+  lbParams = create(cf_name, 'LoadBalancingParams')
+  lbParams.setLoadBalancingEnabled(true)
+  lbParams.setServerAffinityEnabled(false)
+
+  txParams = create(cf_name, 'TransactionParams')
   txParams.setXAConnectionFactoryEnabled(true)
 
   #### Queue
@@ -927,7 +943,7 @@ try:
 except:
   print 'Unable to create domain!'
   dumpStack()
-  exit(exitCode=1)
+  exit(1)
 
 try:
   print 'updating domain'
@@ -935,7 +951,7 @@ try:
 except:
   print 'Unable to update domain'
   dumpStack()
-  exit(exitCode=1)
+  exit(1)
 
 machine = createMachine(machine_Name, 'Plain', machine_ListenAddress, 5556)
 
@@ -1025,7 +1041,7 @@ try:
 
 except:
   dumpStack()
-  exit(exitCode=1)
+  exit(1)
 
 try:
   cd('/')
@@ -1037,7 +1053,7 @@ try:
                                                 datasource_Password, clusterMBean)
 except:
   dumpStack()
-  exit(exitCode=1)
+  exit(1)
 
 updateDomain()
 
