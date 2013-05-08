@@ -7,6 +7,7 @@ echo "Removing directory ${DOMAINS}..."
 rm -Rf ${DOMAINS}
 
 sqlplus '/ as sysdba' @sql/truncate.sql >> /dev/null
+sqlplus '/ as sysdba' @sql/reset_passwords.sql >> /dev/null
 
 echo "Creating Domains..."
 mvn -P create-domain
