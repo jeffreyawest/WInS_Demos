@@ -15,3 +15,6 @@ if [ "$?" == "0" ]; then
   echo "Starting Domains..."
   mvn -P start-domain
 fi
+
+cd ../
+mvn install
