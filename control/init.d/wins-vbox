@@ -1,5 +1,5 @@
 #!/bin/sh
-# chkconfig: 345 22 10
+# chkconfig: 345 99 10
 # description: WINS Virtualbox Configuration
 #
 # Set ORA_OWNER to the user id of the owner of the
