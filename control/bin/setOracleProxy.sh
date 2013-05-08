@@ -2,7 +2,6 @@
 
 PROXY_SCRIPT="/home/oracle/setProxy.sh"
 ORACLE_HTTP_PROXY="http://www-proxy.us.oracle.com:80"
-
 PROXY_MESSAGE="Proxy Configured for Oracle Network!!!"
 
 echo "#!/bin/sh" > ${PROXY_SCRIPT}

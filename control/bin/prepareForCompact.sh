@@ -10,7 +10,6 @@ zerofree()
   echo $FILE created and deleted...
 }
 
-sudo rm -Rf /tmp/*
 
 sqlplus '/ as sysdba' @/labs/content/WInS_Demos/environment/sql/truncate.sql
 
@@ -18,6 +17,7 @@ killNodeManager.sh
 killWebLogic.sh
 
 rm -Rf $DOMAINS
+sudo rm -Rf /tmp/*
 
 cd /labs/content/WInS_Demos
 mvn clean

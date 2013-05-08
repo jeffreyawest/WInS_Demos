@@ -1,10 +1,11 @@
 #!/bin/sh
 
 killWebLogic.sh
-killNodeManager.sh
 
 echo "Removing directory ${DOMAINS}..."
 rm -Rf ${DOMAINS}
+
+cd ${DEMOS_HOME}/environment
 
 sqlplus '/ as sysdba' @sql/truncate.sql >> /dev/null
 sqlplus '/ as sysdba' @sql/reset_passwords.sql >> /dev/null

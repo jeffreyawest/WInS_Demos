@@ -8,8 +8,6 @@ export LAB_DIR=${LABS_HOME}/${LAB_NAME}
 
 echo "Updating ${LAB_NAME} in ${LAB_DIR}..."
 
-. ${LABS_HOME}/WInS_Demos/control/bin/winsEnv.sh
-
 GIT_PROXY=`git config --get http.proxy`
 
 echo "GIT Proxy set to: ${GIT_PROXY}"

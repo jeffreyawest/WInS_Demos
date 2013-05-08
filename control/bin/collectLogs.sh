@@ -1,7 +1,5 @@
 #!/bin/sh
 
-. /labs/content/WInS_Demos/control/bin/winsEnv.sh
-
 DATE_STR=`date +"%Y%m%d_%H%M"`
 LOG_PATH="${DATE_STR}"
 echo LOG_PATH=$LOG_PATH

@@ -36,6 +36,8 @@ export COHERENCE_HOME="${MW_HOME}/coherence"
 
 export CONTENT_HOME="${USER_BASE}/content"
 export LABS_HOME="${CONTENT_HOME}/WInS_labs"
+export DEMOS_HOME="${CONTENT_HOME}/WInS_Demos/"
+
 export WORKSHOP_HOME="${CONTENT_HOME}/weblogic-workshop-1035"
 export USER_PROJECTS="${MW_HOME}/user_projects"
 export DOMAINS="${USER_PROJECTS}/domains"
