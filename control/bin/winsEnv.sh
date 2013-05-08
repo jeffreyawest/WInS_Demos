@@ -22,7 +22,7 @@ export PATH="${ORACLE_HOME}/bin:${PATH}"
 
 export THIRD_PARTY="/labs/third-party"
 
-export ANT_HOME="${THIRD_PARTY}/apache-ant-1.8.4/"
+export ANT_HOME="${THIRD_PARTY}/apache-ant-1.8.4"
 export M2_HOME="${THIRD_PARTY}/apache-maven-3.0.4"
 export MAVEN_HOME="${M2_HOME}"
 export MAVEN_OPTS="-Dweblogic.security.SSL.ignoreHostnameVerification=true -Dweblogic.security.TrustKeyStore=DemoTrust -Dweblogic.nodemanager.sslHostNameVerificationEnabled=false"
@@ -36,14 +36,14 @@ export COHERENCE_HOME="${MW_HOME}/coherence"
 
 export CONTENT_HOME="${USER_BASE}/content"
 export LABS_HOME="${CONTENT_HOME}/WInS_labs"
-export DEMOS_HOME="${CONTENT_HOME}/WInS_Demos/"
+export DEMOS_HOME="${CONTENT_HOME}/WInS_Demos"
 
 export WORKSHOP_HOME="${CONTENT_HOME}/weblogic-workshop-1035"
 export USER_PROJECTS="${MW_HOME}/user_projects"
 export DOMAINS="${USER_PROJECTS}/domains"
 export OPS_DOMAIN_HOME="${USER_PROJECTS}/domains/ops_domain"
 
-export JAVA_HOME="/labs/java/jrockit-jdk1.6.0_33-R28.2.4-4.1.0/"
+export JAVA_HOME="/labs/java/jrockit-jdk1.6.0_33-R28.2.4-4.1.0"
 export PATH="${JAVA_HOME}/bin:${PATH}:${ANT_HOME}/bin:${M2_HOME}/bin:${WL_HOME}/common/bin:${CONTENT_HOME}/WInS_Demos/control/bin"
 
 ###################################################################
