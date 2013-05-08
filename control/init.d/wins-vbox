@@ -8,6 +8,7 @@
 . /etc/rc.d/init.d/functions
 
 export ORACLE_OWNER=oracle
+DEMOS_HOME="/labs/content/WInS_Demos"
 
 service_name="WInS Virtualbox Configuration"
 logger="/usr/bin/logger -t rc.local "
@@ -15,9 +16,24 @@ logger="/usr/bin/logger -t rc.local "
 
 start_service()
 {
-	echo -n "Starting ${service_name}: "
+	echo -n "Updating WInS DemoS Code : "
+  su $ORACLE_OWNER -c "${DEMOS_HOME}/control/bin/updateDemos.sh >/dev/null 2>&1
 
-  #cp /u01/content/weblogic-innovation-seminars/WInS_Demos/control/network/ifcfg-eth4 /etc/sysconfig/network-scripts
+  if [ "${?}" == "0" ]; then
+    success
+  else
+    failure
+  fi
+
+	echo -n "Updating Oracle Parcel Service Code : "
+  su $ORACLE_OWNER -c "${DEMOS_HOME}/control/bin/updateOPS.sh >/dev/null 2>&1"
+
+  if [ "${?}" == "0" ]; then
+    success
+  else
+    failure
+  fi
+
   success
   echo
 }
