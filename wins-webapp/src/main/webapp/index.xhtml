@@ -17,8 +17,6 @@
 
 <h:form id="frm1" prependId="false">
 
-<p:growl id="growl" showDetail="true" sticky="false"/>
-
 <p:tabView id="tabView">
 
 <p:tab id="links" title="Links">
@@ -50,13 +48,15 @@
 
 <p:tab id="tab1" title="JMS Examples">
 
+<p:growl id="growl" showDetail="false" autoUpdate="true" sticky="false"/>
+
 <p:panel header="Distributed JMS Examples">
   <h:panelGrid columns="2">
 
     <p:commandButton id="queue_button"
                      value="Demo Distributed Queue"
                      ajax="false"
-                     actionListener="#{jmsExamplesController.queueDemo}" update="growl"/>
+                     actionListener="#{jmsExamplesController.queueDemo}"/>
 
 
     <div>
@@ -256,13 +256,16 @@
 
 <p:tab id="tab2" title="Utility">
 
+  <p:growl id="growl_utility" autoUpdate="true" showDetail="false" sticky="false"/>
+
+
   <p:panel header="Utility Options">
 
     <h:panelGrid columns="2">
 
       <p:commandButton id="jdbcHogger_button"
                        value="Demo JDBC Connection Hogger"
-                       actionListener="#{utilityController.demoJdbcHogger}" update="growl"/>
+                       actionListener="#{utilityController.demoJdbcHogger}"/>
 
       <div>
         <div
@@ -275,7 +278,7 @@
 
       <p:commandButton id="stuckThreads_button"
                        value="Demo Stuck Threads"
-                       actionListener="#{utilityController.demoStuckThreads}" update="growl"/>
+                       actionListener="#{utilityController.demoStuckThreads}"/>
 
       <div>
         <div
@@ -289,24 +292,28 @@
 
       <p:commandButton id="deadlock_button"
                        value="Generate Deadlock"
-                       actionListener="#{utilityController.generateDeadlock}" update="growl"/>
+                       actionListener="#{utilityController.generateDeadlock}"/>
 
-      <div>
-        <div>This will deliver a set of messages to a Distributed Queue and generate a deadlock using the
-          <h:outputLink
-              value="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining Philosophers</h:outputLink> problem
-        </div>
+      <h:panelGroup>
         <div>
-          This demo will produce a deadlock by putting messages into a JMS queue that are consumed by two types of MDBs -
-          One MDB who takes a lock on a shared EAT object and then tries for a lock on a THINK object while holding
-          the EAT lock. The other MDB acquires the THINK lock and then tries for the EAT lock while not releasing
-          the THINK lock.
-        </div>
-        <div
-            style="font-weight: bolder;">THIS WILL REQUIRE A DOMAIN RESTART. DO NOT EXECUTE THIS DEMO UNLESS YOU ARE PREPARED FOR THAT OUTCOME...
-        </div>
+          <div
+              style="font-weight: bold; text-decoration: underline">Deadlock Generator
+          </div>
 
-      </div>
+          <div>This will deliver a set of messages to a Distributed Queue and generate a deadlock using the
+            <h:outputLink
+                value="http://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining Philosophers</h:outputLink> problem
+            This demo will produce a deadlock by putting messages into a JMS queue that are consumed by two types of MDBs -
+            One MDB who takes a lock on a shared EAT object and then tries for a lock on a THINK object while holding
+            the EAT lock. The other MDB acquires the THINK lock and then tries for the EAT lock while not releasing
+            the THINK lock.
+          </div>
+          <div
+              style="font-weight: bolder;">THIS WILL REQUIRE A DOMAIN RESTART. DO NOT EXECUTE THIS DEMO UNLESS YOU ARE PREPARED FOR THAT OUTCOME...
+          </div>
+
+        </div>
+      </h:panelGroup>
 
     </h:panelGrid>
 
