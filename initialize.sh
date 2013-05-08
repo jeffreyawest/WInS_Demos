@@ -11,4 +11,4 @@ if [ "$?" == "0" ]; then
   mvn -DskipTests=true install
 fi
 
-echo "Initialization complete!!"
+echo "Initialization complete!!!"
