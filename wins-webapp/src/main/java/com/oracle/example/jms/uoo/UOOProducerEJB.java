@@ -133,6 +133,7 @@ public class UOOProducerEJB
     }
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   public void sendMessageBatch(String pMessageBase, int pMessageCount, long pIntervalTimeInMillis)
   throws JMSException
   {
@@ -148,6 +149,7 @@ public class UOOProducerEJB
     endSession();
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   private void sendDiscreteUnitOfOrder(String pMessage, int pMessageCount, int pIntervalTimeInMillis)
   throws JMSException
   {
@@ -169,6 +171,7 @@ public class UOOProducerEJB
 
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   private void sendParallelUnitsOfOrder(String pMessage, int pMessageCount, int pIntervalTimeInMillis)
   throws JMSException
   {

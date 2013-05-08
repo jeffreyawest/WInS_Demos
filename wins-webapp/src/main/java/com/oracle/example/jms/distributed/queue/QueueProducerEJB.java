@@ -10,6 +10,8 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.Queue;
@@ -100,6 +102,7 @@ public class QueueProducerEJB
     }
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   public void doIt()
   {
     int BATCH_SIZE = 4;

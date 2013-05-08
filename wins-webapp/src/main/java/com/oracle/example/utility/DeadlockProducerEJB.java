@@ -10,6 +10,8 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.jms.ConnectionFactory;
 import javax.jms.JMSException;
 import javax.jms.Queue;
@@ -89,10 +91,11 @@ public class DeadlockProducerEJB implements Serializable
     }
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   public void doIt()
   {
     logger.info("Generating Deadlock!!!");
-    int BATCH_SIZE = 50;
+    int BATCH_SIZE = 4;
 
     try
     {

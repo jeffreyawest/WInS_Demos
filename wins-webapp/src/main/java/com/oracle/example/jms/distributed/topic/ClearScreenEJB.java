@@ -10,6 +10,8 @@ import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import javax.jms.*;
 import java.util.Date;
 import java.util.logging.Logger;
@@ -97,6 +99,7 @@ public class ClearScreenEJB
     }
   }
 
+  @TransactionAttribute(TransactionAttributeType.NOT_SUPPORTED)
   public void doIt()
   {
     try
