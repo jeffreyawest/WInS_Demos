@@ -93,6 +93,7 @@ sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev eth4 > /dev/null 2>&1
 
 . /home/oracle/setProxy.sh
 
-echo ""
-echo "Ensure you have the latest WInS Demos code by running the \"Update WInS Demos\" command on the desktop!"
+echo "Please note:"
+echo "1) Ensure you have the latest WInS Demos code by running the \"Update WInS Demos\" command on the desktop!"
+echo "2) Ensure you have configured the proxy for the Oracle network if you are on the Oracle Network or VPN!"
 echo ""
