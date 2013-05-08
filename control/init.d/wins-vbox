@@ -17,7 +17,7 @@ logger="/usr/bin/logger -t rc.local "
 start_service()
 {
 	echo -n "Updating WInS DemoS Code : "
-  su $ORACLE_OWNER -c "${DEMOS_HOME}/control/bin/updateDemos.sh >/dev/null 2>&1
+  su $ORACLE_OWNER -c "${DEMOS_HOME}/control/bin/updateDemos.sh >/dev/null 2>&1"
 
   if [ "${?}" == "0" ]; then
     success
