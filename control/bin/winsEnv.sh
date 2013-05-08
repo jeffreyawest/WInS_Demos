@@ -73,6 +73,7 @@ alias tms2log="tail --lines=500 --follow=name --retry ${MS2LOG}"
 
 alias tsaf1="tail --lines=500 --follow=name --retry ${DOMAINS}/saf_target_domain/servers/ms-1/logs/ms-1.out"
 alias tsaf2="tail --lines=500 --follow=name --retry ${DOMAINS}/saf_target_domain/servers/ms-2/logs/ms-2.out"
+alias tsafadmin="tail --lines=500 --follow=name --retry ${DOMAINS}/saf_target_domain/servers/AdminServer/logs/AdminServer.out"
 
 alias tcoh1="tail --lines=500 --follow=name --retry ${DOMAINS}/weblogic_examples_domain/servers_coherence/coh-1/logs/coh-1.out"
 alias tcoh2="tail --lines=500 --follow=name --retry ${DOMAINS}/weblogic_examples_domain/servers_coherence/coh-2/logs/coh-2.out"
