@@ -54,17 +54,12 @@ public class UtilityController implements Serializable
   {
   }
 
-  public void removeSelectedAttribute(ActionEvent pEvent)
+  private void messageComplete(String message)
   {
+    FacesContext context = FacesContext.getCurrentInstance();
 
+    context.addMessage(null, new FacesMessage(message, message));
   }
-
-
-  public void removeEntry(String pKey)
-  {
-    getSession().removeAttribute(pKey);
-  }
-
 
   public void demoJdbcHogger(ActionEvent actionEvent)
   {
@@ -77,6 +72,7 @@ public class UtilityController implements Serializable
     {
       e.printStackTrace();
     }
+    messageComplete("JDBC Hogger Messages Sent!");
   }
 
   public void demoStuckThreads(ActionEvent actionEvent)
@@ -90,6 +86,7 @@ public class UtilityController implements Serializable
     {
       e.printStackTrace();
     }
+    messageComplete("Stuck Thread Generation has begun!");
   }
 
   public void generateDeadlock(ActionEvent actionEvent)
@@ -104,7 +101,7 @@ public class UtilityController implements Serializable
     {
       e.printStackTrace();
     }
-
+    messageComplete("Deadlock Generation has begun!");
   }
 
   public HttpSession getSession()
