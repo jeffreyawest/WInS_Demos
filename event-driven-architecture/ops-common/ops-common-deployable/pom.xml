@@ -61,7 +61,7 @@
 
               <executions>
                 <execution>
-                  <id>undeploy-on-clean</id>
+                  <id>uexec-ndeploy-on-clean</id>
                   <phase>clean</phase>
                   <goals>
                     <goal>undeploy</goal>

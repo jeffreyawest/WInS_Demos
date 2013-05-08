@@ -99,7 +99,7 @@
 
               <executions>
                 <execution>
-                  <id>undeploy-on-clean</id>
+                  <id>exec-undeploy-on-clean</id>
                   <phase>clean</phase>
                   <goals>
                     <goal>undeploy</goal>
