@@ -8,5 +8,5 @@ cd environment
 if [ "$?" == "0" ]; then
   echo "Installing applications into domains..."
   cd ../
-  mvn install
+  mvn -DskipTests=true install
 fi
