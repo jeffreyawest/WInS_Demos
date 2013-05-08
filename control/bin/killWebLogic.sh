@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pid_list=`ps aux|grep "weblogic.Name"|awk '{print $2}'`
+pid_list=`ps aux|grep "weblogic.Name"|grep -v "grep"|awk '{print $2}'`
 
 for pid in $pid_list
 do
