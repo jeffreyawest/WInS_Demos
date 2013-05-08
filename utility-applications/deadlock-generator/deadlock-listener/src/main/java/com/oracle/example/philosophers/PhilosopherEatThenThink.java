@@ -37,7 +37,6 @@ public class PhilosopherEatThenThink implements MessageListener
 {
   private static final String EAT = "EAT";
   private static final String THINK = "THINK";
-  public static final int SLEEP_TIME = 10000;
 
   @Resource(name = "jdbc.ds.weblogic_examples")
   private javax.sql.DataSource ds;
@@ -54,8 +53,8 @@ public class PhilosopherEatThenThink implements MessageListener
       logMessage("Firt Acquired!! on " + EAT);
       try
       {
-        logMessage("Sleeping " + SLEEP_TIME + "ms...");
-        Thread.sleep(SLEEP_TIME);
+        logMessage("Sleeping " + Constants.SLEEP_TIME + "ms...");
+        Thread.sleep(Constants.SLEEP_TIME);
       }
       catch (InterruptedException ignore)
       {
@@ -67,8 +66,8 @@ public class PhilosopherEatThenThink implements MessageListener
         logMessage("Second lock acquired on " + THINK);
         try
         {
-          logMessage("Sleeping " + SLEEP_TIME + "ms...");
-          Thread.sleep(SLEEP_TIME);
+          logMessage("Sleeping " + Constants.SLEEP_TIME + "ms...");
+          Thread.sleep(Constants.SLEEP_TIME);
         }
         catch (InterruptedException ignore)
         {
@@ -77,7 +76,7 @@ public class PhilosopherEatThenThink implements MessageListener
     }
   }
 
-  public static final void logMessage(String pMessage)
+  public static void logMessage(String pMessage)
   {
     System.out.println(Thread.currentThread().getName() + ": " + pMessage);
   }

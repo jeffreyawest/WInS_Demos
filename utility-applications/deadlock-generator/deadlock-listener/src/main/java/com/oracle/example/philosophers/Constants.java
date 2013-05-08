@@ -25,4 +25,5 @@ package com.oracle.example.philosophers;
  */
 public class Constants
 {
+  public static final long SLEEP_TIME = 30000;
 }
