@@ -92,3 +92,7 @@ alias ttns="tail  --lines=500 --follow=name --retry ${SW_BASE}/app/oracle/diag/t
 sudo route add -net 224.0.0.0 netmask 240.0.0.0 dev eth4 > /dev/null 2>&1
 
 . /home/oracle/setProxy.sh
+
+echo ""
+echo "Ensure you have the latest WInS Demos code by running the \"Update WInS Demos\" command on the desktop!"
+echo ""
