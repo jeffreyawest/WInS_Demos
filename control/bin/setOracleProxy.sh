@@ -16,5 +16,6 @@ echo ${PROXY_MESSAGE}
 chmod +x ${PROXY_SCRIPT}
 
 if [ "$1" == "wait" ]; then
-  read -p "Checkout complete. Press [Enter] to close the window"
+  echo "This window will close automatically in 5s..."
+  sleep 5
  fi
