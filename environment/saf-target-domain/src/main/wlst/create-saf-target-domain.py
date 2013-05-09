@@ -18,10 +18,10 @@ managed_server_name_base = 'ms'
 managed_server_port_base = '810'
 managed_server_count = 1
 
-listen_address = 'localhost'
+listen_address = 'wins-vbox.localdomain'
 jms_sever_name_base = 'jms-server'
 cluster_name = 'cluster-1'
-machine_name = 'localhost'
+machine_name = 'wins-vbox.localdomain'
 
 ################################################### JDBC
 

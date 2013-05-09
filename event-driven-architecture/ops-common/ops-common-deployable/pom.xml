@@ -31,7 +31,7 @@
       </activation>
 
       <properties>
-        <weblogic.Deployer.adminurl>t3://localhost:7001</weblogic.Deployer.adminurl>
+        <weblogic.Deployer.adminurl>t3://wins-vbox.localdomain:7001</weblogic.Deployer.adminurl>
         <weblogic.Deployer.user>weblogic</weblogic.Deployer.user>
         <weblogic.Deployer.password>welcome1</weblogic.Deployer.password>
         <weblogic.Deployer.application.targets>cluster-1</weblogic.Deployer.application.targets>

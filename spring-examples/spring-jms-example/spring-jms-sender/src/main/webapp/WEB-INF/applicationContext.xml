@@ -7,7 +7,7 @@
 <property name="environment">
  <props>
    <prop key="java.naming.factory.initial">weblogic.jndi.WLInitialContextFactory</prop>
-   <prop key="java.naming.provider.url">t3://localhost:7001</prop>
+   <prop key="java.naming.provider.url">t3://wins-vbox.localdomain:7001</prop>
  </props>
 </property>
 </bean>

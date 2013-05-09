@@ -12,7 +12,7 @@ cluster_name = 'cluster-1'
 managed_server_count = 2
 managed_server_name_base = 'ms'
 
-listen_address = 'localhost'
+listen_address = 'wins-vbox.localdomain'
 var_domain_dir = USER_PROJECTS + '/domains/' + DOMAIN_NAME
 
 coh_server_count = 2

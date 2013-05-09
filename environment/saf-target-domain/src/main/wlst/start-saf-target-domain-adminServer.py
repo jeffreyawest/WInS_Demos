@@ -10,7 +10,7 @@ adminServer_Password = 'welcome1'
 
 adminURL = 't3://' + adminServer_ListenAddress + ':' + str(adminServer_ListenPort)
 
-listen_address = 'localhost'
+listen_address = 'wins-vbox.localdomain'
 
 ########################################
 

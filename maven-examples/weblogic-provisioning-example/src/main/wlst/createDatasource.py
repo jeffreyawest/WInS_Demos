@@ -17,7 +17,7 @@ cd('/JDBCSystemResources/xe-datasource/JDBCResource/xe-datasource/JDBCDataSource
 set('JNDINames', jarray.array([String('cgDatasource')], String))
 
 cd('/JDBCSystemResources/xe-datasource/JDBCResource/xe-datasource/JDBCDriverParams/xe-datasource')
-cmo.setUrl('jdbc:oracle:thin:@localhost:1521:xe')
+cmo.setUrl('jdbc:oracle:thin:@wins-vbox.localdomain:1521:xe')
 cmo.setDriverName('oracle.jdbc.OracleDriver')
 setEncrypted('Password', 'Password_1326590775531', 'src/main/wlst/Script1326590585284Config',
     'src/main/wlst/Script1326590585284Secret')
