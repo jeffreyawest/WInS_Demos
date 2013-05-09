@@ -25,6 +25,8 @@ mvn clean
 cd /labs/content/oracle-parcel-service
 mvn clean
 
+find /u01/content/weblogic-innovations-seminars -name "*.sh" -exec chmod +rx {} \;
+
 rm -Rf /labs/content/oracle-parcel-service/ops-weblogic/Oracle
 
 zerofree /tmp
