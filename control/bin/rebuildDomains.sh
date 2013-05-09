@@ -2,6 +2,8 @@
 
 killWebLogic.sh
 
+. ${DEMOS_HOME}/control/bin/winsEnv.sh > /dev/null
+
 echo "Removing directory ${DOMAINS}..."
 rm -Rf ${DOMAINS}
 

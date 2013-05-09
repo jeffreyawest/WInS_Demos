@@ -6,6 +6,8 @@ export TAG_NAME="wins-vbox"
 export GIT_URL="http://github.com/jeffreyawest/oracle-parcel-service.git"
 export LAB_DIR=${LABS_HOME}/${LAB_NAME}
 
+. ${DEMOS_HOME}/control/bin/winsEnv.sh > /dev/null
+
 echo "Updating ${LAB_NAME} in ${LAB_DIR}..."
 
 GIT_PROXY=`git config --get http.proxy`
