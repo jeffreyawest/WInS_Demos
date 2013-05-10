@@ -15,11 +15,15 @@ GIT_PROXY=`git config --get http.proxy`
 echo "GIT Proxy set to: ${GIT_PROXY}"
 
 cd ${LAB_DIR}
-git fetch --tags
-git merge ${TAG_NAME}
 
-echo "If this operation fails please check your proxy settings, especially if you are on the Oracle network"
+git fetch --tags
+
+if [ "$?" == "0" ]; then
+    git merge ${TAG_NAME}
+  else
+    echo "The update operation has failed.  Please check your proxy settings, especially if you are on the Oracle network.  The GIT Proxy is set to: ${GIT_PROXY}"
+fi
 
 if [ "$1" == "wait" ]; then
   read -p "Checkout complete. Press [Enter] to close the window"
- fi
+fi
