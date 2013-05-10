@@ -12,7 +12,7 @@ echo "Updating ${LAB_NAME} in ${LAB_DIR}..."
 
 GIT_PROXY=`git config --get http.proxy`
 
-echo "GIT Proxy set to: ${GIT_PROXY}"
+echo "GIT Proxy set to: \"${GIT_PROXY}\""
 
 cd ${LAB_DIR}
 
