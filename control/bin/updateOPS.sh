@@ -18,6 +18,8 @@ cd ${LAB_DIR}
 git fetch --tags
 git merge ${TAG_NAME}
 
+echo "If this operation fails please check your proxy settings, especially if you are on the Oracle network"
+
 if [ "$1" == "wait" ]; then
   read -p "Checkout complete. Press [Enter] to close the window"
  fi
